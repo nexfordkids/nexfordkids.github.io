@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Nexford Kids International Preschool</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#f8fbff;
+color:#333;
+overflow-x:hidden;
+
+}
+
+/*************************
+COLORS
+**************************/
+
+:root{
+
+--orange:#ff6b35;
+--blue:#2b6df5;
+--green:#19b57d;
+--yellow:#ffd34d;
+--pink:#ff73b4;
+--purple:#7358ff;
+
+}
+
+/*************************
+HERO
+**************************/
+
+.contact-hero{
+
+padding:120px 8% 80px;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+background:linear-gradient(
+135deg,
+#fff8ef,
+#eef6ff);
+
+}
+
+.contact-hero h1{
+
+font-size:60px;
+
+font-weight:800;
+
+margin-bottom:15px;
+
+color:var(--orange);
+
+}
+
+.contact-hero p{
+
+font-size:18px;
+
+color:#666;
+
+margin-bottom:15px;
+
+}
+
+.breadcrumb{
+
+font-size:16px;
+
+font-weight:600;
+
+color:#2b6df5;
+
+}
+
+.breadcrumb span{
+
+color:#999;
+
+}
+
+/*************************
+DECORATIONS
+**************************/
+
+.circle1{
+
+position:absolute;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:#ffe8d9;
+
+left:-120px;
+top:-80px;
+
+}
+
+.circle2{
+
+position:absolute;
+
+width:180px;
+height:180px;
+
+border-radius:50%;
+
+background:#e4f2ff;
+
+right:-60px;
+top:40px;
+
+}
+
+.circle3{
+
+position:absolute;
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+background:#e6fff4;
+
+left:50%;
+bottom:-120px;
+
+transform:translateX(-50%);
+
+}
+
+.star{
+
+position:absolute;
+
+font-size:40px;
+
+animation:float 4s infinite;
+
+}
+
+.star1{
+
+left:80px;
+
+top:220px;
+
+color:#ffcb22;
+
+}
+
+.star2{
+
+right:80px;
+
+top:200px;
+
+color:#ff6b35;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*************************
+CONTACT SECTION
+**************************/
+
+.contact-section{
+
+padding:90px 8%;
+
+background:#fff;
+
+}
+
+.section-heading{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-heading h2{
+
+font-size:48px;
+
+font-weight:800;
+
+color:#3457c7;
+
+margin-bottom:15px;
+
+}
+
+.section-heading p{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:17px;
+
+line-height:30px;
+
+color:#666;
+
+}
+
+/*************************
+GRID
+**************************/
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:35px;
+
+}
+
+/*************************
+CARD
+**************************/
+
+.contact-card{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:30px;
+
+display:flex;
+
+gap:20px;
+
+align-items:flex-start;
+
+box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.contact-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:6px;
+
+height:100%;
+
+background:var(--orange);
+
+}
+
+.contact-icon{
+
+width:80px;
+
+height:80px;
+
+border-radius:20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:36px;
+
+color:#fff;
+
+flex-shrink:0;
+
+}
+
+.orange{
+
+background:#ff6b35;
+
+}
+
+.blue{
+
+background:#2b6df5;
+
+}
+
+.green{
+
+background:#18b88a;
+
+}
+
+.purple{
+
+background:#7358ff;
+
+}
+
+.contact-content h3{
+
+font-size:28px;
+
+margin-bottom:10px;
+
+color:#333;
+
+}
+
+.contact-content p{
+
+font-size:16px;
+
+line-height:28px;
+
+color:#666;
+
+}
+
+/*************************
+RESPONSIVE
+**************************/
+
+@media(max-width:992px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.contact-hero{
+
+padding:90px 20px 70px;
+
+}
+
+.contact-hero h1{
+
+font-size:42px;
+
+}
+
+.section-heading h2{
+
+font-size:34px;
+
+}
+
+.contact-section{
+
+padding:70px 20px;
+
+}
+
+.contact-card{
+
+flex-direction:column;
+
+text-align:center;
+
+align-items:center;
+
+}
+
+}
+
+/*==================================================
+ENQUIRY SECTION
+==================================================*/
+
+.enquiry-section{
+
+padding:90px 8%;
+
+background:#f8fbff;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.enquiry-wrapper{
+
+display:grid;
+
+grid-template-columns:1.2fr .8fr;
+
+gap:40px;
+
+align-items:start;
+
+}
+
+/****************************************/
+
+.contact-form{
+
+background:white;
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.contact-form h2{
+
+font-size:40px;
+
+color:#ff6b35;
+
+margin-bottom:10px;
+
+}
+
+.contact-form p{
+
+color:#666;
+
+margin-bottom:35px;
+
+line-height:28px;
+
+}
+
+/****************************************/
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+
+.input-group{
+
+display:flex;
+
+flex-direction:column;
+
+margin-bottom:22px;
+
+}
+
+.input-group label{
+
+font-weight:600;
+
+margin-bottom:8px;
+
+color:#444;
+
+}
+
+.input-group input,
+
+.input-group select,
+
+.input-group textarea{
+
+padding:16px 18px;
+
+border:2px solid #e5e5e5;
+
+border-radius:15px;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+width:100%;
+
+background:#fff;
+
+}
+
+.input-group input:focus,
+
+.input-group select:focus,
+
+.input-group textarea:focus{
+
+border-color:#2b6df5;
+
+box-shadow:0 0 12px rgba(43,109,245,.15);
+
+}
+
+.full-width{
+
+grid-column:1/-1;
+
+}
+
+textarea{
+
+resize:none;
+
+}
+
+/****************************************/
+
+.submit-btn{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:#18b88a;
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.submit-btn:hover{
+
+background:#14966f;
+
+transform:translateY(-4px);
+
+}
+
+/****************************************/
+
+.map-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.map-card h2{
+
+font-size:34px;
+
+color:#3457c7;
+
+margin-bottom:10px;
+
+}
+
+.map-card p{
+
+color:#666;
+
+margin-bottom:25px;
+
+line-height:28px;
+
+}
+
+.map-card iframe{
+
+width:100%;
+
+height:340px;
+
+border:none;
+
+border-radius:20px;
+
+margin-bottom:25px;
+
+}
+
+.campus-info{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:15px;
+
+}
+
+.campus-info div{
+
+padding:15px;
+
+background:#eef7ff;
+
+border-radius:15px;
+
+font-weight:600;
+
+}
+
+/****************************************/
+
+.form-decoration{
+
+position:absolute;
+
+border-radius:50%;
+
+opacity:.25;
+
+}
+
+.circle-left{
+
+width:220px;
+
+height:220px;
+
+background:#ffd84c;
+
+left:-90px;
+
+bottom:50px;
+
+}
+
+.circle-right{
+
+width:180px;
+
+height:180px;
+
+background:#b7e4ff;
+
+right:-60px;
+
+top:60px;
+
+}
+
+/****************************************/
+
+@media(max-width:992px){
+
+.enquiry-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.enquiry-section{
+
+padding:70px 20px;
+
+}
+
+.contact-form{
+
+padding:25px;
+
+}
+
+.contact-form h2{
+
+font-size:32px;
+
+}
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.map-card{
+
+padding:25px;
+
+}
+
+.map-card iframe{
+
+height:280px;
+
+}
+
+.submit-btn{
+
+width:100%;
+
+}
+
+}
+
+/*==================================================
+FAQ SECTION
+==================================================*/
+
+.faq-section{
+
+padding:90px 8%;
+
+background:#ffffff;
+
+}
+
+.faq-wrapper{
+
+display:grid;
+
+grid-template-columns:1.3fr .7fr;
+
+gap:40px;
+
+align-items:start;
+
+}
+
+.faq-container h2{
+
+font-size:42px;
+
+margin-bottom:35px;
+
+color:#ff6b35;
+
+}
+
+.faq-item{
+
+background:#fff;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+margin-bottom:18px;
+
+overflow:hidden;
+
+}
+
+.faq-question{
+
+width:100%;
+
+padding:22px 25px;
+
+border:none;
+
+background:white;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.faq-question span{
+
+font-size:26px;
+
+color:#2b6df5;
+
+}
+
+.faq-answer{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:max-height .35s ease;
+
+padding:0 25px;
+
+}
+
+.faq-answer p{
+
+padding-bottom:22px;
+
+line-height:28px;
+
+color:#666;
+
+}
+
+/****************************************/
+
+.office-info{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.info-box,
+
+.emergency-box{
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.info-box h3,
+
+.emergency-box h3{
+
+font-size:28px;
+
+margin-bottom:18px;
+
+color:#3457c7;
+
+}
+
+.info-box ul{
+
+list-style:none;
+
+}
+
+.info-box li{
+
+padding:10px 0;
+
+border-bottom:1px solid #ececec;
+
+}
+
+.info-box li:last-child{
+
+border:none;
+
+}
+
+.emergency-box{
+
+background:#18b88a;
+
+color:white;
+
+}
+
+.emergency-box h3{
+
+color:white;
+
+}
+
+.emergency-box p{
+
+margin-bottom:12px;
+
+line-height:28px;
+
+}
+
+/************************************************
+SOCIAL
+************************************************/
+
+.social-section{
+
+padding:90px 8%;
+
+text-align:center;
+
+background:#f8fbff;
+
+}
+
+.social-section h2{
+
+font-size:46px;
+
+color:#3457c7;
+
+margin-bottom:15px;
+
+}
+
+.social-section p{
+
+max-width:700px;
+
+margin:auto;
+
+color:#666;
+
+margin-bottom:45px;
+
+line-height:28px;
+
+}
+
+.social-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.social-card{
+
+background:white;
+
+padding:35px 20px;
+
+border-radius:25px;
+
+text-decoration:none;
+
+color:#333;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.social-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.social-card{
+
+font-size:55px;
+
+}
+
+.social-card h3{
+
+margin:18px 0 8px;
+
+font-size:24px;
+
+}
+
+.social-card span{
+
+color:#666;
+
+font-size:15px;
+
+}
+
+/****************************************/
+
+@media(max-width:992px){
+
+.faq-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.social-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.faq-section,
+
+.social-section{
+
+padding:70px 20px;
+
+}
+
+.faq-container h2{
+
+font-size:34px;
+
+}
+
+.social-section h2{
+
+font-size:34px;
+
+}
+
+.social-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*==========================================
+FOOTER
+==========================================*/
+
+.wave-divider{
+
+line-height:0;
+
+}
+
+.wave-divider svg{
+
+display:block;
+
+width:100%;
+
+height:110px;
+
+}
+
+.footer{
+
+background:#18b88a;
+
+padding:80px 20px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.footer-content{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.footer h2{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+font-weight:700;
+
+}
+
+.footer p{
+
+font-size:17px;
+
+line-height:30px;
+
+}
+
+.footer-links{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin:35px 0;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:#ffd84c;
+
+}
+
+.footer-social{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+margin-bottom:25px;
+
+}
+
+.footer-social a{
+
+width:55px;
+
+height:55px;
+
+background:white;
+
+color:#18b88a;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+font-size:24px;
+
+transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+transform:translateY(-8px);
+
+background:#ffd84c;
+
+}
+
+.copyright{
+
+opacity:.8;
+
+font-size:15px;
+
+}
+
+/*****************************************/
+
+#preloader{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+z-index:99999;
+
+transition:.6s;
+
+}
+
+.loader{
+
+width:80px;
+
+height:80px;
+
+border-radius:50%;
+
+border:8px solid #eeeeee;
+
+border-top:8px solid #18b88a;
+
+animation:spin 1s linear infinite;
+
+margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/*****************************************/
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+padding:60px 20px;
+
+}
+
+.footer h2{
+
+font-size:28px;
+
+}
+
+.footer-links{
+
+gap:15px;
+
+}
+
+.footer-social a{
+
+width:45px;
+
+height:45px;
+
+font-size:20px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!--================ HERO ================-->
+
+<section class="contact-hero">
+
+<div class="circle1"></div>
+
+<div class="circle2"></div>
+
+<div class="circle3"></div>
+
+<div class="star star1">⭐</div>
+
+<div class="star star2">🌈</div>
+
+<h1>
+
+Contact Us
+
+</h1>
+
+<p>
+
+We'd love to hear from you. Get in touch with our admission team.
+
+</p>
+
+<div class="breadcrumb">
+
+Home
+
+<span>></span>
+
+Contact
+
+</div>
+
+</section>
+
+<!--================ CONTACT INFO ================-->
+
+<section class="contact-section">
+
+<div class="section-heading">
+
+<h2>
+
+Get In Touch
+
+</h2>
+
+<p>
+
+Whether you have questions about admissions, curriculum, facilities, or school activities, our friendly team is here to help.
+
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<!-- ADDRESS -->
+
+<div class="contact-card">
+
+<div class="contact-icon orange">
+
+📍
+
+</div>
+
+<div class="contact-content">
+
+<h3>
+
+School Address
+
+</h3>
+
+<p>
+
+Nexford Kids International Preschool<br>
+
+123 Education Avenue<br>
+
+Hyderabad, Telangana<br>
+
+India - 500001
+
+</p>
+
+</div>
+
+</div>
+
+<!-- PHONE -->
+
+<div class="contact-card">
+
+<div class="contact-icon blue">
+
+📞
+
+</div>
+
+<div class="contact-content">
+
+<h3>
+
+Call Us
+
+</h3>
+
+<p>
+
+Admissions : +91 98765 43210<br>
+
+Office : +91 98765 43211<br>
+
+Support : +91 98765 43212
+
+</p>
+
+</div>
+
+</div>
+
+<!-- EMAIL -->
+
+<div class="contact-card">
+
+<div class="contact-icon green">
+
+📧
+
+</div>
+
+<div class="contact-content">
+
+<h3>
+
+Email Us
+
+</h3>
+
+<p>
+
+admissions@nexfordkids.com<br>
+
+info@nexfordkids.com<br>
+
+support@nexfordkids.com
+
+</p>
+
+</div>
+
+</div>
+
+<!-- HOURS -->
+
+<div class="contact-card">
+
+<div class="contact-icon purple">
+
+🕒
+
+</div>
+
+<div class="contact-content">
+
+<h3>
+
+Working Hours
+
+</h3>
+
+<p>
+
+Monday - Friday : 8:00 AM - 5:30 PM<br>
+
+Saturday : 9:00 AM - 2:00 PM<br>
+
+Sunday : Closed
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================
+CONTACT FORM SECTION
+========================================== -->
+
+<section class="enquiry-section">
+
+<div class="form-decoration circle-left"></div>
+<div class="form-decoration circle-right"></div>
+
+<div class="enquiry-wrapper">
+
+<!-- FORM -->
+
+<div class="contact-form">
+
+<h2>Admission Enquiry</h2>
+
+<p>
+Fill in the form below and our admission team will contact you shortly.
+</p>
+
+<form>
+
+<div class="form-grid">
+
+<div class="input-group">
+<label>Parent Name</label>
+<input type="text" placeholder="Enter Parent Name" required>
+</div>
+
+<div class="input-group">
+<label>Child Name</label>
+<input type="text" placeholder="Enter Child Name" required>
+</div>
+
+<div class="input-group">
+<label>Mobile Number</label>
+<input type="tel" placeholder="+91 98765 43210" required>
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+<input type="email" placeholder="example@email.com">
+</div>
+
+<div class="input-group">
+<label>Child Age</label>
+<input type="number" placeholder="Age">
+</div>
+
+<div class="input-group">
+<label>Program Interested</label>
+
+<select>
+
+<option>Select Program</option>
+
+<option>Play Group</option>
+
+<option>Nursery</option>
+
+<option>Junior KG</option>
+
+<option>Senior KG</option>
+
+<option>Day Care</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="input-group full-width">
+
+<label>Your Message</label>
+
+<textarea rows="6"
+placeholder="Write your message here..."></textarea>
+
+</div>
+
+<button class="submit-btn">
+
+Send Enquiry
+
+</button>
+
+</form>
+
+</div>
+
+<!-- MAP -->
+
+<div class="map-card">
+
+<h2>
+
+Visit Our Campus
+
+</h2>
+
+<p>
+
+Come and experience our vibrant learning environment.
+
+</p>
+
+<iframe
+src="https://www.google.com/maps?q=Hyderabad&output=embed"
+loading="lazy">
+</iframe>
+
+<div class="campus-info">
+
+<div>
+
+📍 Hyderabad, Telangana
+
+</div>
+
+<div>
+
+🚗 Parking Available
+
+</div>
+
+<div>
+
+🚌 School Transport
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+FAQ & OFFICE INFORMATION
+========================================== -->
+
+<section class="faq-section">
+
+<div class="faq-wrapper">
+
+<!-- FAQ -->
+
+<div class="faq-container">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+What is the admission process?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Complete the admission enquiry form, schedule a campus visit,
+meet our admission counselor, submit the required documents,
+and complete the enrollment process.
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+What documents are required?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Birth Certificate, Passport-size Photographs,
+Aadhar Card (Parent & Child), Address Proof,
+and previous school records (if applicable).
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Do you provide transport facilities?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Yes. Safe and GPS-enabled transport is available
+for selected routes.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+What are the school timings?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Monday to Friday:
+8:30 AM - 1:30 PM
+
+Day Care:
+Till 6:00 PM
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- OFFICE INFO -->
+
+<div class="office-info">
+
+<div class="info-box">
+
+<h3>Office Hours</h3>
+
+<ul>
+
+<li>Monday : 8:00 AM - 5:30 PM</li>
+
+<li>Tuesday : 8:00 AM - 5:30 PM</li>
+
+<li>Wednesday : 8:00 AM - 5:30 PM</li>
+
+<li>Thursday : 8:00 AM - 5:30 PM</li>
+
+<li>Friday : 8:00 AM - 5:30 PM</li>
+
+<li>Saturday : 9:00 AM - 2:00 PM</li>
+
+<li>Sunday : Closed</li>
+
+</ul>
+
+</div>
+
+<div class="emergency-box">
+
+<h3>Emergency Contact</h3>
+
+<p>
+
+📞 +91 98765 43210
+
+</p>
+
+<p>
+
+📧 emergency@nexfordkids.com
+
+</p>
+
+<p>
+
+Available 24×7 for urgent assistance.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+SOCIAL MEDIA
+========================================== -->
+
+<section class="social-section">
+
+<h2>
+
+Connect With Us
+
+</h2>
+
+<p>
+
+Stay connected with our latest events, activities, and admissions.
+
+</p>
+
+<div class="social-grid">
+
+<a href="#" class="social-card">
+
+📘
+
+<h3>Facebook</h3>
+
+<span>Follow Us</span>
+
+</a>
+
+<a href="#" class="social-card">
+
+📸
+
+<h3>Instagram</h3>
+
+<span>@nexfordkids</span>
+
+</a>
+
+<a href="#" class="social-card">
+
+▶️
+
+<h3>YouTube</h3>
+
+<span>Watch Videos</span>
+
+</a>
+
+<a href="#" class="social-card">
+
+💬
+
+<h3>WhatsApp</h3>
+
+<span>Chat With Us</span>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+SVG WAVE DIVIDER
+========================================== -->
+
+<div class="wave-divider">
+
+<svg viewBox="0 0 1440 180" preserveAspectRatio="none">
+
+<path fill="#18b88a"
+d="M0,96L80,90C160,85,320,75,480,90C640,105,800,150,960,150C1120,150,1280,105,1360,90L1440,75V180H0Z">
+</path>
+
+</svg>
+
+</div>
+
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<h2>Nexford Kids International Preschool</h2>
+
+<p>
+Inspiring Young Minds • Building Bright Futures
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="program.html">Programs</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-social">
+
+<a href="#">📘</a>
+
+<a href="#">📸</a>
+
+<a href="#">▶️</a>
+
+<a href="#">💬</a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Nexford Kids International Preschool. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- ==========================================
+PRELOADER
+========================================== -->
+
+<div id="preloader">
+
+<div class="loader"></div>
+
+<h3>Loading...</h3>
+
+</div>
+
+<script>
+
+/*=========================
+PRELOADER
+=========================*/
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+const loader=document.getElementById("preloader");
+
+loader.style.opacity="0";
+
+loader.style.visibility="hidden";
+
+},700);
+
+});
+
+/*=========================
+FAQ ACCORDION
+=========================*/
+
+document.querySelectorAll(".faq-question").forEach(question=>{
+
+question.addEventListener("click",()=>{
+
+const answer=question.nextElementSibling;
+
+const icon=question.querySelector("span");
+
+if(answer.style.maxHeight){
+
+answer.style.maxHeight=null;
+
+icon.textContent="+";
+
+}else{
+
+document.querySelectorAll(".faq-answer").forEach(item=>{
+
+item.style.maxHeight=null;
+
+});
+
+document.querySelectorAll(".faq-question span").forEach(i=>{
+
+i.textContent="+";
+
+});
+
+answer.style.maxHeight=answer.scrollHeight+"px";
+
+icon.textContent="−";
+
+}
+
+});
+
+});
+
+/*=========================
+SCROLL REVEAL
+=========================*/
+
+const revealItems=document.querySelectorAll(
+
+".contact-card,.faq-item,.info-box,.emergency-box,.social-card,.contact-form,.map-card"
+
+);
+
+function reveal(){
+
+revealItems.forEach(item=>{
+
+const top=item.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+
+item.classList.add("reveal");
+
+item.classList.add("active");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll",reveal);
+
+window.addEventListener("load",reveal);
+
+/*=========================
+3D HOVER
+=========================*/
+
+document.querySelectorAll(
+
+".contact-card,.social-card,.faq-item,.contact-form,.map-card"
+
+).forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+
+const y=e.clientY-rect.top;
+
+const rotateY=((x/rect.width)-0.5)*8;
+
+const rotateX=((y/rect.height)-0.5)*-8;
+
+card.style.transform=
+
+`perspective(900px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-8px)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="";
+
+});
+
+});
+
+/*=========================
+BACK TO TOP
+=========================*/
+
+const topBtn=document.createElement("button");
+
+topBtn.innerHTML="⬆";
+
+document.body.appendChild(topBtn);
+
+Object.assign(topBtn.style,{
+
+position:"fixed",
+
+right:"25px",
+
+bottom:"25px",
+
+width:"55px",
+
+height:"55px",
+
+border:"none",
+
+borderRadius:"50%",
+
+background:"#18b88a",
+
+color:"#fff",
+
+fontSize:"24px",
+
+cursor:"pointer",
+
+display:"none",
+
+boxShadow:"0 10px 25px rgba(0,0,0,.20)",
+
+zIndex:"9999",
+
+transition:"0.3s"
+
+});
+
+window.addEventListener("scroll",()=>{
+
+topBtn.style.display=window.scrollY>350?"block":"none";
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
+
+</body>
+
+</html>

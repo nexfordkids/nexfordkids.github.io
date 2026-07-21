@@ -1,0 +1,2570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Nexford Kids International Preschool</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fbff;
+overflow-x:hidden;
+color:#333;
+}
+
+/************************
+COLOR VARIABLES
+************************/
+
+:root{
+
+--primary:#17b890;
+--secondary:#ff6b35;
+--blue:#4169e1;
+--yellow:#ffd93d;
+--pink:#ff6fae;
+--light:#ffffff;
+--dark:#222;
+--gray:#666;
+
+}
+
+/************************
+SECTION
+************************/
+
+.about-section{
+
+width:100%;
+padding:70px 8%;
+position:relative;
+overflow:hidden;
+
+}
+
+/************************
+BACKGROUND SHAPES
+************************/
+
+.circle1{
+
+position:absolute;
+width:220px;
+height:220px;
+background:#e9fff8;
+border-radius:50%;
+top:-80px;
+left:-80px;
+z-index:-1;
+
+}
+
+.circle2{
+
+position:absolute;
+width:160px;
+height:160px;
+background:#fff5d4;
+border-radius:50%;
+right:-50px;
+top:120px;
+z-index:-1;
+
+}
+
+.blob{
+
+position:absolute;
+width:250px;
+height:250px;
+background:#eef8ff;
+border-radius:45%;
+bottom:-80px;
+left:35%;
+transform:rotate(25deg);
+z-index:-1;
+
+}
+
+/************************
+LAYOUT
+************************/
+
+.about-container{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+flex-wrap:wrap;
+
+}
+
+.about-left{
+
+flex:1;
+min-width:350px;
+
+}
+
+.about-right{
+
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+min-width:350px;
+
+}
+
+/************************
+TITLE
+************************/
+
+.section-title{
+
+font-size:52px;
+font-weight:800;
+color:#111;
+margin-bottom:10px;
+line-height:1.1;
+
+}
+
+.title-line{
+
+width:120px;
+height:6px;
+background:linear-gradient(90deg,var(--yellow),var(--secondary));
+border-radius:30px;
+margin-bottom:25px;
+
+}
+
+/************************
+TEXT
+************************/
+
+.about-text{
+
+font-size:17px;
+line-height:32px;
+color:#555;
+margin-bottom:25px;
+
+}
+
+.highlight{
+
+color:var(--primary);
+font-weight:700;
+
+}
+
+/************************
+IMAGE CARD
+************************/
+
+.image-card{
+
+width:430px;
+height:540px;
+background:white;
+border-radius:35px;
+box-shadow:0 20px 50px rgba(0,0,0,.12);
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+position:relative;
+
+}
+
+/************************
+PLACEHOLDER
+************************/
+
+.image-placeholder{
+
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(145deg,#fdfdfd,#f3f9ff);
+
+}
+
+.image-placeholder img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+.placeholder-text{
+
+font-size:24px;
+font-weight:700;
+color:#888;
+
+}
+
+/************************
+FLOATING SHAPES
+************************/
+
+.star{
+
+position:absolute;
+font-size:45px;
+color:#ffd93d;
+animation:float 4s infinite ease-in-out;
+
+}
+
+.star1{
+
+top:20px;
+left:-20px;
+
+}
+
+.star2{
+
+bottom:50px;
+right:-20px;
+
+}
+
+.dot{
+
+position:absolute;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#17b890;
+
+}
+
+.dot1{
+
+top:100px;
+right:40px;
+
+}
+
+.dot2{
+
+bottom:120px;
+left:50px;
+background:#ff6b35;
+
+}
+
+.wave{
+
+position:absolute;
+width:140px;
+height:20px;
+border-radius:20px;
+background:#dff8ff;
+bottom:30px;
+right:70px;
+transform:rotate(-12deg);
+
+}
+
+/************************
+BUTTON
+************************/
+
+.learn-btn{
+
+display:inline-block;
+margin-top:10px;
+padding:15px 35px;
+background:linear-gradient(90deg,var(--primary),#0bb38c);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.35s;
+
+}
+
+.learn-btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+/************************
+ANIMATION
+************************/
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+
+}
+
+.fadeUp{
+
+animation:fadeUp .9s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/*************************************************
+FOUNDER • VISION • MISSION
+*************************************************/
+
+.info-section{
+
+margin-top:45px;
+
+}
+
+.info-box{
+
+margin-bottom:35px;
+padding-bottom:20px;
+border-bottom:1px dashed #dcdcdc;
+
+}
+
+.info-box:last-child{
+
+border-bottom:none;
+
+}
+
+.info-title{
+
+font-size:36px;
+font-weight:800;
+margin-bottom:12px;
+position:relative;
+display:inline-block;
+
+}
+
+.info-title::after{
+
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:70px;
+height:5px;
+border-radius:30px;
+
+}
+
+.founder{
+
+color:#17b890;
+
+}
+
+.founder::after{
+
+background:#17b890;
+
+}
+
+.vision{
+
+color:#4169e1;
+
+}
+
+.vision::after{
+
+background:#4169e1;
+
+}
+
+.mission{
+
+color:#ff6b35;
+
+}
+
+.mission::after{
+
+background:#ff6b35;
+
+}
+
+.info-text{
+
+font-size:16px;
+line-height:31px;
+color:#555;
+text-align:justify;
+
+}
+
+.info-text strong{
+
+color:#222;
+
+}
+
+.info-card{
+
+background:#ffffff;
+border-radius:18px;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+transition:.35s;
+
+}
+
+.info-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+/******************************************
+RIGHT SIDE DESIGN
+******************************************/
+
+.about-right{
+
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
+
+/******** IMAGE ********/
+
+.image-card{
+
+width:420px;
+
+height:520px;
+
+background:white;
+
+border-radius:35px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+overflow:hidden;
+
+position:relative;
+
+z-index:5;
+
+}
+
+.family-placeholder{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+height:100%;
+
+background:linear-gradient(135deg,#fff9ec,#eef9ff);
+
+font-size:80px;
+
+}
+
+.family-placeholder h3{
+
+margin-top:20px;
+
+font-size:30px;
+
+color:#333;
+
+}
+
+.family-placeholder p{
+
+font-size:15px;
+
+color:#666;
+
+margin-top:10px;
+
+}
+
+/******************************************
+DECORATIVE SHAPES
+******************************************/
+
+.shape{
+
+position:absolute;
+
+border-radius:50%;
+
+z-index:1;
+
+animation:floatShape 6s infinite ease-in-out;
+
+}
+
+.pink{
+
+width:90px;
+
+height:90px;
+
+background:#ffd2ec;
+
+top:20px;
+
+left:-20px;
+
+}
+
+.blue{
+
+width:120px;
+
+height:120px;
+
+background:#dff2ff;
+
+right:-25px;
+
+top:120px;
+
+}
+
+.green{
+
+width:80px;
+
+height:80px;
+
+background:#dcffe8;
+
+bottom:180px;
+
+left:20px;
+
+}
+
+@keyframes floatShape{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/******************************************
+ZIGZAG
+******************************************/
+
+.zigzag{
+
+position:absolute;
+
+width:180px;
+
+height:18px;
+
+background:repeating-linear-gradient(
+-45deg,
+#7dd87d 0 12px,
+transparent 12px 24px
+);
+
+bottom:120px;
+
+left:-30px;
+
+transform:rotate(-15deg);
+
+opacity:.5;
+
+}
+
+/******************************************
+BADGES
+******************************************/
+
+.badge-row{
+
+display:flex;
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+.badge{
+
+width:170px;
+
+height:170px;
+
+border-radius:50%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:700;
+
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+.badge:hover{
+
+transform:scale(1.08);
+
+}
+
+.gold{
+
+background:linear-gradient(135deg,#ffe680,#d4a300);
+
+color:#222;
+
+}
+
+.silver{
+
+background:linear-gradient(135deg,#f2f2f2,#bcbcbc);
+
+color:#222;
+
+}
+
+.badge-circle{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+}
+
+.badge h4{
+
+font-size:16px;
+
+}
+
+.badge h3{
+
+font-size:26px;
+
+}
+
+/******************************************
+BOTTOM ICONS
+******************************************/
+
+.bottom-icons{
+
+display:flex;
+
+gap:20px;
+
+margin-top:35px;
+
+}
+
+.icon-card{
+
+width:110px;
+
+height:110px;
+
+background:white;
+
+border-radius:20px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+transition:.3s;
+
+font-size:36px;
+
+}
+
+.icon-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.icon-card p{
+
+margin-top:10px;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+
+/**************************************************
+WHY SECTION
+**************************************************/
+
+.why-section{
+
+padding:90px 8%;
+background:#ffffff;
+position:relative;
+overflow:hidden;
+
+}
+
+.why-container{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:70px;
+flex-wrap:wrap;
+
+}
+
+/******** LEFT ********/
+
+.why-left{
+
+flex:1;
+display:flex;
+justify-content:center;
+
+}
+
+.brain-card{
+
+width:420px;
+height:520px;
+background:#fff;
+border-radius:35px;
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+position:relative;
+overflow:hidden;
+
+}
+
+.brain-bg{
+
+position:absolute;
+width:320px;
+height:320px;
+background:#e8fff5;
+border-radius:50%;
+top:-60px;
+right:-60px;
+
+}
+
+.brain-icon{
+
+font-size:140px;
+text-align:center;
+margin-top:70px;
+
+}
+
+.brain-content{
+
+padding:35px;
+text-align:center;
+
+}
+
+.brain-content h1{
+
+font-size:80px;
+color:#17b890;
+font-weight:800;
+
+}
+
+.brain-content h4{
+
+font-size:28px;
+margin:10px 0;
+color:#222;
+
+}
+
+.brain-content p{
+
+font-size:17px;
+line-height:30px;
+color:#666;
+
+}
+
+/******** RIGHT ********/
+
+.why-right{
+
+flex:1;
+min-width:350px;
+
+}
+
+.mini-title{
+
+display:inline-block;
+padding:8px 18px;
+background:#17b890;
+color:white;
+border-radius:50px;
+font-size:14px;
+font-weight:600;
+margin-bottom:20px;
+
+}
+
+.why-right h2{
+
+font-size:50px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:25px;
+color:#222;
+
+}
+
+.why-right p{
+
+font-size:17px;
+line-height:31px;
+color:#666;
+margin-bottom:25px;
+
+}
+
+/******** FEATURES ********/
+
+.feature-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-top:20px;
+
+}
+
+.feature-box{
+
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+transition:.35s;
+
+}
+
+.feature-box:hover{
+
+transform:translateY(-8px);
+
+}
+
+.feature-icon{
+
+font-size:45px;
+margin-bottom:15px;
+
+}
+
+.feature-box h4{
+
+font-size:20px;
+color:#222;
+
+}
+
+/*====================================================
+RESPONSIVE DESIGN
+====================================================*/
+
+/************ Large Laptop ************/
+
+@media (max-width:1400px){
+
+.about-section,
+.why-section{
+
+padding:70px 6%;
+
+}
+
+.image-card{
+
+width:380px;
+height:480px;
+
+}
+
+.brain-card{
+
+width:380px;
+height:480px;
+
+}
+
+.section-title{
+
+font-size:48px;
+
+}
+
+.why-right h2{
+
+font-size:44px;
+
+}
+
+}
+
+/************ Tablet ************/
+
+@media (max-width:992px){
+
+.about-container,
+.why-container{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.about-left,
+.about-right,
+.why-left,
+.why-right{
+
+width:100%;
+
+}
+
+.title-line{
+
+margin:20px auto;
+
+}
+
+.about-text,
+.info-text,
+.why-right p{
+
+text-align:center;
+
+}
+
+.info-title::after{
+
+left:50%;
+transform:translateX(-50%);
+
+}
+
+.learn-btn{
+
+margin:auto;
+
+}
+
+.image-card{
+
+width:100%;
+max-width:450px;
+
+}
+
+.brain-card{
+
+width:100%;
+max-width:450px;
+
+}
+
+.badge-row{
+
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+.bottom-icons{
+
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+.feature-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/************ Mobile ************/
+
+@media (max-width:768px){
+
+.about-section,
+.why-section{
+
+padding:60px 20px;
+
+}
+
+.section-title{
+
+font-size:38px;
+
+}
+
+.info-title{
+
+font-size:28px;
+
+}
+
+.why-right h2{
+
+font-size:34px;
+
+}
+
+.about-text,
+.info-text,
+.why-right p{
+
+font-size:15px;
+line-height:28px;
+
+}
+
+.image-card{
+
+height:420px;
+
+}
+
+.brain-card{
+
+height:430px;
+
+}
+
+.brain-icon{
+
+font-size:100px;
+
+}
+
+.brain-content h1{
+
+font-size:60px;
+
+}
+
+.badge{
+
+width:140px;
+height:140px;
+
+}
+
+.badge h3{
+
+font-size:22px;
+
+}
+
+.badge h4{
+
+font-size:14px;
+
+}
+
+.icon-card{
+
+width:90px;
+height:90px;
+font-size:30px;
+
+}
+
+.feature-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.feature-box{
+
+padding:20px;
+
+}
+
+}
+
+/************ Small Phones ************/
+
+@media (max-width:480px){
+
+.section-title{
+
+font-size:32px;
+
+}
+
+.info-title{
+
+font-size:24px;
+
+}
+
+.why-right h2{
+
+font-size:28px;
+
+}
+
+.image-card{
+
+height:340px;
+border-radius:25px;
+
+}
+
+.brain-card{
+
+height:360px;
+border-radius:25px;
+
+}
+
+.brain-icon{
+
+font-size:80px;
+
+}
+
+.brain-content{
+
+padding:20px;
+
+}
+
+.brain-content h1{
+
+font-size:48px;
+
+}
+
+.brain-content h4{
+
+font-size:22px;
+
+}
+
+.badge-row{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+.bottom-icons{
+
+gap:12px;
+
+}
+
+.icon-card{
+
+width:80px;
+height:80px;
+font-size:26px;
+
+}
+
+}
+
+/*====================================================
+PREMIUM HOVER EFFECTS
+====================================================*/
+
+.image-card,
+.brain-card,
+.badge,
+.icon-card,
+.feature-box,
+.info-card{
+
+transition:all .4s ease;
+
+}
+
+.image-card:hover{
+
+transform:translateY(-12px);
+box-shadow:0 30px 60px rgba(0,0,0,.18);
+
+}
+
+.brain-card:hover{
+
+transform:translateY(-12px);
+box-shadow:0 30px 60px rgba(0,0,0,.18);
+
+}
+
+.badge:hover{
+
+transform:translateY(-8px) scale(1.05);
+
+}
+
+.icon-card:hover{
+
+transform:translateY(-10px) rotate(4deg);
+
+}
+
+.feature-box:hover{
+
+transform:translateY(-10px);
+
+}
+
+.learn-btn:hover{
+
+transform:translateY(-6px) scale(1.03);
+
+}
+
+/*====================================================
+FLOATING DECORATIONS
+====================================================*/
+
+.circle1,
+.circle2,
+.blob,
+.shape{
+
+animation:floatAnimation 6s ease-in-out infinite;
+
+}
+
+@keyframes floatAnimation{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/*====================================================
+SCROLL ANIMATION
+====================================================*/
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*====================================================
+CUSTOM SCROLLBAR
+====================================================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eef4ff;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#17b890;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#0d9d78;
+
+}
+
+/*====================================================
+TEXT SELECTION
+====================================================*/
+
+::selection{
+
+background:#17b890;
+
+color:white;
+
+}
+
+/*====================================================
+SMOOTH IMAGE ZOOM
+====================================================*/
+
+.image-placeholder img{
+
+transition:transform .6s ease;
+
+}
+
+.image-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+/*==============================
+RIPPLE EFFECT
+==============================*/
+
+.learn-btn{
+
+position:relative;
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.5);
+
+transform:scale(0);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
+
+/*==============================
+SCROLL ACTIVE
+==============================*/
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*=========================================
+WAVE DIVIDER
+=========================================*/
+
+.wave-divider{
+
+line-height:0;
+
+margin-top:80px;
+
+}
+
+.wave-divider svg{
+
+display:block;
+
+width:100%;
+
+height:120px;
+
+}
+
+/*=========================================
+FOOTER
+=========================================*/
+
+.footer{
+
+background:#17b890;
+
+color:white;
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.footer-container{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.footer h2{
+
+font-size:34px;
+
+margin-bottom:20px;
+
+font-weight:700;
+
+}
+
+.footer p{
+
+font-size:17px;
+
+line-height:30px;
+
+opacity:.95;
+
+}
+
+.footer-social{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+margin:35px 0;
+
+}
+
+.footer-social a{
+
+width:55px;
+
+height:55px;
+
+background:white;
+
+color:#17b890;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:24px;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.footer-social a:hover{
+
+transform:translateY(-8px) rotate(10deg);
+
+background:#ffd93d;
+
+}
+
+.copyright{
+
+margin-top:30px;
+
+font-size:15px;
+
+opacity:.8;
+
+}
+
+/*=========================================
+PRELOADER
+=========================================*/
+
+#preloader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:white;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+transition:.6s;
+
+}
+
+.loader-circle{
+
+width:80px;
+
+height:80px;
+
+border:8px solid #eee;
+
+border-top:8px solid #17b890;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+#preloader h3{
+
+color:#17b890;
+
+font-size:22px;
+
+font-weight:600;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="about-section">
+
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="blob"></div>
+
+<div class="about-container">
+
+<div class="about-left fadeUp">
+
+<h1 class="section-title">
+About Us
+</h1>
+
+<div class="title-line"></div>
+
+<p class="about-text">
+
+Nexford Kids International Preschool is committed to delivering a modern early childhood education inspired by global teaching practices.
+
+We focus on creating a nurturing, engaging, and multicultural learning environment where children develop confidence, creativity, communication, and essential life skills from an early age.
+
+</p>
+
+<p class="about-text">
+
+Every classroom encourages
+<span class="highlight">curiosity</span>,
+<span class="highlight">critical thinking</span>,
+<span class="highlight">social development</span>,
+and
+<span class="highlight">hands-on learning</span>
+through interactive activities.
+
+</p>
+
+<a href="#" class="learn-btn">
+Learn More
+</a>
+
+</div>
+
+<div class="about-right fadeUp">
+
+<div class="star star1">★</div>
+
+<div class="star star2">★</div>
+
+<div class="dot dot1"></div>
+
+<div class="dot dot2"></div>
+
+<div class="wave"></div>
+
+<div class="image-card">
+
+<div class="image-placeholder">
+
+<!-- Replace with your image -->
+
+<img src="images/about-family.png" alt="About Image"
+onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+<div class="placeholder-text" style="display:none;">
+Family Image
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="info-section">
+
+<div class="info-card">
+
+<div class="info-box">
+
+<h2 class="info-title founder">
+Founder
+</h2>
+
+<p class="info-text">
+
+Founder of Nexford Kids International Preschool, dedicated to
+building a joyful, safe and inspiring learning environment.
+With a vision to bring international standards of preschool
+education, the institution nurtures young minds and prepares
+children for a rapidly changing world through creativity,
+confidence and character development.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h2 class="info-title vision">
+Vision
+</h2>
+
+<p class="info-text">
+
+To establish Nexford Kids as a leading international preschool
+that nurtures confident, curious and independent learners.
+
+We aim to provide a strong global foundation that empowers
+children to explore, adapt and succeed in an ever-changing
+world while embracing kindness, leadership and lifelong learning.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h2 class="info-title mission">
+Mission
+</h2>
+
+<p class="info-text">
+
+Our mission is to create a child-centered learning environment
+based on international early childhood education practices.
+
+We focus on experiential learning, creativity,
+communication, critical thinking, collaboration and life skills
+through modern teaching methods and a caring atmosphere that
+supports the holistic development of every child.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="info-section">
+
+<div class="info-card">
+
+<div class="info-box">
+
+<h2 class="info-title founder">
+Founder
+</h2>
+
+<p class="info-text">
+
+Founder of Nexford Kids International Preschool, dedicated to
+building a joyful, safe and inspiring learning environment.
+With a vision to bring international standards of preschool
+education, the institution nurtures young minds and prepares
+children for a rapidly changing world through creativity,
+confidence and character development.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h2 class="info-title vision">
+Vision
+</h2>
+
+<p class="info-text">
+
+To establish Nexford Kids as a leading international preschool
+that nurtures confident, curious and independent learners.
+
+We aim to provide a strong global foundation that empowers
+children to explore, adapt and succeed in an ever-changing
+world while embracing kindness, leadership and lifelong learning.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h2 class="info-title mission">
+Mission
+</h2>
+
+<p class="info-text">
+
+Our mission is to create a child-centered learning environment
+based on international early childhood education practices.
+
+We focus on experiential learning, creativity,
+communication, critical thinking, collaboration and life skills
+through modern teaching methods and a caring atmosphere that
+supports the holistic development of every child.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="about-right fadeUp">
+
+<div class="shape pink"></div>
+<div class="shape blue"></div>
+<div class="shape green"></div>
+
+<div class="zigzag"></div>
+
+<div class="image-card">
+
+<div class="image-placeholder">
+
+<img src="images/family.png"
+alt="Family"
+onerror="this.style.display='none';document.getElementById('familyPlaceholder').style.display='flex';">
+
+<div id="familyPlaceholder" class="family-placeholder">
+
+👨‍👩‍👧‍👦
+
+<h3>Family Image</h3>
+
+<p>
+Replace with your Preschool Family Photo
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="badge-row">
+
+<div class="badge gold">
+
+<div class="badge-circle">
+
+🏆
+
+</div>
+
+<h4>Certified</h4>
+
+<h3>ISO 9001</h3>
+
+</div>
+
+<div class="badge silver">
+
+<div class="badge-circle">
+
+⭐
+
+</div>
+
+<h4>Certified</h4>
+
+<h3>ISO 27001</h3>
+
+</div>
+
+</div>
+
+<div class="bottom-icons">
+
+<div class="icon-card">
+
+🏫
+
+<p>School</p>
+
+</div>
+
+<div class="icon-card">
+
+🛡️
+
+<p>Safety</p>
+
+</div>
+
+<div class="icon-card">
+
+📚
+
+<p>Learning</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+WHY PRESCHOOL SECTION
+=========================================== -->
+
+<section class="why-section">
+
+<div class="why-container">
+
+<div class="why-left">
+
+<div class="brain-card">
+
+<div class="brain-bg"></div>
+
+<div class="brain-icon">
+
+🧠
+
+</div>
+
+<div class="brain-content">
+
+<h1>85%</h1>
+
+<h4>Brain Development</h4>
+
+<p>
+A child's brain develops nearly
+<strong>85%</strong> before the age of
+five, making preschool education one
+of the most important stages of life.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="why-right">
+
+<span class="mini-title">
+
+Why Preschool?
+
+</span>
+
+<h2>
+
+Why is Preschool
+Necessary for Kids?
+
+</h2>
+
+<p>
+
+Preschool provides the foundation for a child's
+social, emotional, physical and intellectual
+development. Through engaging activities,
+children learn how to communicate, solve
+problems, think creatively and interact
+confidently with others.
+
+</p>
+
+<p>
+
+A structured preschool environment nurtures
+independence, curiosity, imagination and
+discipline while preparing children for
+primary education and lifelong learning.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-box">
+
+<div class="feature-icon">🎨</div>
+
+<h4>Creativity</h4>
+
+</div>
+
+<div class="feature-box">
+
+<div class="feature-icon">📚</div>
+
+<h4>Learning</h4>
+
+</div>
+
+<div class="feature-box">
+
+<div class="feature-icon">🤝</div>
+
+<h4>Social Skills</h4>
+
+</div>
+
+<div class="feature-box">
+
+<div class="feature-icon">💡</div>
+
+<h4>Confidence</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/*=====================================================
+SCROLL REVEAL ANIMATION
+=====================================================*/
+
+const revealElements = document.querySelectorAll(
+'.about-left,.about-right,.info-card,.why-left,.why-right,.feature-box,.badge,.icon-card'
+);
+
+function revealOnScroll(){
+
+const windowHeight = window.innerHeight;
+
+revealElements.forEach((element)=>{
+
+const elementTop = element.getBoundingClientRect().top;
+
+if(elementTop < windowHeight-120){
+
+element.classList.add("active");
+element.classList.add("reveal");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll",revealOnScroll);
+
+window.addEventListener("load",revealOnScroll);
+
+
+/*=====================================================
+COUNTER ANIMATION
+=====================================================*/
+
+const counter=document.querySelector(".brain-content h1");
+
+let started=false;
+
+function startCounter(){
+
+if(!counter) return;
+
+const top=counter.getBoundingClientRect().top;
+
+if(top<window.innerHeight-80 && !started){
+
+started=true;
+
+let count=0;
+
+const timer=setInterval(()=>{
+
+count++;
+
+counter.innerHTML=count+"%";
+
+if(count>=85){
+
+clearInterval(timer);
+
+}
+
+},25);
+
+}
+
+}
+
+window.addEventListener("scroll",startCounter);
+
+window.addEventListener("load",startCounter);
+
+
+/*=====================================================
+FLOATING MOUSE EFFECT
+=====================================================*/
+
+const cards=document.querySelectorAll(
+'.image-card,.brain-card,.feature-box,.icon-card,.badge'
+);
+
+cards.forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+
+const y=e.clientY-rect.top;
+
+const rotateY=((x/rect.width)-0.5)*12;
+
+const rotateX=((y/rect.height)-0.5)*-12;
+
+card.style.transform=
+`perspective(900px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-8px)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="perspective(900px) rotateX(0) rotateY(0)";
+
+});
+
+});
+
+
+/*=====================================================
+BUTTON RIPPLE EFFECT
+=====================================================*/
+
+const buttons=document.querySelectorAll(".learn-btn");
+
+buttons.forEach(button=>{
+
+button.addEventListener("click",function(e){
+
+const circle=document.createElement("span");
+
+const size=Math.max(this.clientWidth,this.clientHeight);
+
+circle.style.width=size+"px";
+circle.style.height=size+"px";
+
+circle.style.left=e.offsetX-size/2+"px";
+circle.style.top=e.offsetY-size/2+"px";
+
+circle.classList.add("ripple");
+
+const old=this.querySelector(".ripple");
+
+if(old){
+
+old.remove();
+
+}
+
+this.appendChild(circle);
+
+});
+
+});
+
+
+/*=====================================================
+SMOOTH SCROLL LINKS
+=====================================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+
+/*=====================================================
+NAVBAR SHADOW (if navbar exists)
+=====================================================*/
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector("header");
+
+if(nav){
+
+if(window.scrollY>50){
+
+nav.style.boxShadow="0 10px 25px rgba(0,0,0,.10)";
+
+}
+
+else{
+
+nav.style.boxShadow="none";
+
+}
+
+}
+
+});
+
+
+/*=====================================================
+PARALLAX BACKGROUND SHAPES
+=====================================================*/
+
+window.addEventListener("mousemove",(e)=>{
+
+const x=e.clientX/window.innerWidth;
+
+const y=e.clientY/window.innerHeight;
+
+document.querySelectorAll(".circle1,.circle2,.blob,.shape").forEach(shape=>{
+
+shape.style.transform=
+`translate(${x*15}px,${y*15}px)`;
+
+});
+
+});
+
+
+/*=====================================================
+AUTO HIGHLIGHT FEATURE BOXES
+=====================================================*/
+
+const featureBoxes=document.querySelectorAll(".feature-box");
+
+let activeIndex=0;
+
+setInterval(()=>{
+
+featureBoxes.forEach(box=>{
+
+box.style.boxShadow="0 10px 25px rgba(0,0,0,.08)";
+
+});
+
+if(featureBoxes.length){
+
+featureBoxes[activeIndex].style.boxShadow=
+"0 15px 35px rgba(23,184,144,.35)";
+
+activeIndex++;
+
+if(activeIndex>=featureBoxes.length){
+
+activeIndex=0;
+
+}
+
+}
+
+},1800);
+
+
+/*=====================================================
+TYPEWRITER EFFECT
+=====================================================*/
+
+const heading=document.querySelector(".section-title");
+
+if(heading){
+
+const text=heading.innerText;
+
+heading.innerHTML="";
+
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+heading.innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,80);
+
+}
+
+}
+
+typing();
+
+}
+
+/*=========================================
+PRELOADER
+=========================================*/
+
+window.addEventListener("load",function(){
+
+const preloader=document.getElementById("preloader");
+
+setTimeout(()=>{
+
+preloader.style.opacity="0";
+
+preloader.style.visibility="hidden";
+
+},800);
+
+});
+
+/*=========================================
+BACK TO TOP BUTTON
+=========================================*/
+
+const topBtn=document.createElement("button");
+
+topBtn.innerHTML="⬆";
+
+topBtn.id="topButton";
+
+document.body.appendChild(topBtn);
+
+Object.assign(topBtn.style,{
+
+position:"fixed",
+
+bottom:"30px",
+
+right:"30px",
+
+width:"55px",
+
+height:"55px",
+
+border:"none",
+
+borderRadius:"50%",
+
+background:"#17b890",
+
+color:"#fff",
+
+fontSize:"24px",
+
+cursor:"pointer",
+
+display:"none",
+
+boxShadow:"0 10px 25px rgba(0,0,0,.2)",
+
+zIndex:"9999",
+
+transition:"0.3s"
+
+});
+
+window.addEventListener("scroll",()=>{
+
+topBtn.style.display=window.scrollY>400?"block":"none";
+
+});
+
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+</script>
+
+</section>
+
+<!-- ==========================================
+WAVE DIVIDER
+========================================== -->
+
+<div class="wave-divider">
+
+<svg viewBox="0 0 1440 180" preserveAspectRatio="none">
+
+<path fill="#17b890"
+d="M0,96L60,90.7C120,85,240,75,360,90.7C480,107,600,149,720,149.3C840,149,960,107,1080,90.7C1200,75,1320,85,1380,90.7L1440,96L1440,181L1380,181C1320,181,1200,181,1080,181C960,181,840,181,720,181C600,181,480,181,360,181C240,181,120,181,60,181L0,181Z"></path>
+
+</svg>
+
+</div>
+
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<h2>Nexford Kids International Preschool</h2>
+
+<p>
+
+Building Bright Minds, Happy Hearts and Future Leaders through
+modern early childhood education.
+
+</p>
+
+<div class="footer-social">
+
+<a href="#">🌐</a>
+
+<a href="#">📘</a>
+
+<a href="#">📸</a>
+
+<a href="#">▶️</a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Nexford Kids International Preschool.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- ==========================================
+PRELOADER
+========================================== -->
+
+<div id="preloader">
+
+<div class="loader-circle"></div>
+
+<h3>Loading...</h3>
+
+</div>

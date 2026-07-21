@@ -1,0 +1,12377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nexford Kids International Preschool</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+HEADER
+========================================== -->
+
+<style>
+
+:root{
+
+    --primary:#FF6B6B;
+    --secondary:#FFD93D;
+    --blue:#4D96FF;
+    --green:#6BCB77;
+    --purple:#9B5DE5;
+
+    --dark:#1F2937;
+    --text:#555;
+    --white:#ffffff;
+    --light:#F8FAFC;
+
+    --shadow:0 10px 35px rgba(0,0,0,.08);
+    --shadow-hover:0 18px 40px rgba(0,0,0,.15);
+
+    --radius:18px;
+    --transition:.35s ease;
+
+}
+
+
+/*==========================================================
+RESET
+==========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#fff;
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:90px 0;
+
+}
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+
+/*==========================================================
+HEADINGS
+==========================================================*/
+
+h1,
+h2,
+h3,
+h4{
+
+    color:var(--dark);
+
+    font-weight:700;
+
+}
+
+h1{
+
+    font-size:58px;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-size:40px;
+
+}
+
+h3{
+
+    font-size:24px;
+
+}
+
+p{
+
+    color:var(--text);
+
+    font-size:17px;
+
+}
+
+
+/*==========================================================
+COMMON BUTTONS
+==========================================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 32px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 36px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 36px;
+
+    background:#fff;
+
+    color:var(--blue);
+
+    border:2px solid var(--blue);
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--blue);
+
+    color:#fff;
+
+}
+
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:#fff;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+
+    transition:.4s;
+
+}
+
+.nav-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    height:88px;
+
+}
+
+
+/*==========================================================
+LOGO
+==========================================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:58px;
+
+}
+
+.logo h2{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    font-weight:800;
+
+}
+
+.logo span{
+
+    color:var(--blue);
+
+}
+
+
+/*==========================================================
+NAVIGATION
+==========================================================*/
+
+.navbar ul{
+
+    display:flex;
+
+    gap:34px;
+
+    align-items:center;
+
+}
+
+.navbar a{
+
+    color:var(--dark);
+
+    font-weight:600;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.navbar a:hover{
+
+    color:var(--primary);
+
+}
+
+.navbar a.active{
+
+    color:var(--primary);
+
+}
+
+.navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+.navbar a:hover::after,
+
+.navbar a.active::after{
+
+    width:100%;
+
+}
+
+
+/*==========================================================
+HEADER BUTTONS
+==========================================================*/
+
+.header-buttons{
+
+    display:flex;
+
+    gap:14px;
+
+}
+
+.franchise-btn{
+
+    background:var(--secondary);
+
+    color:#222;
+
+}
+
+.franchise-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#ffc107;
+
+}
+
+.admission-btn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.admission-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==========================================================
+MOBILE MENU
+==========================================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    color:var(--dark);
+
+}
+
+
+/*==========================================================
+UTILITY CLASSES
+==========================================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.mb-30{
+
+    margin-bottom:30px;
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+.rounded{
+
+    border-radius:var(--radius);
+
+}
+
+.bg-light{
+
+    background:var(--light);
+
+}
+
+/*==========================================================
+PART 1B-2
+HERO SECTION
+==========================================================*/
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    padding-top:120px;
+    background:linear-gradient(135deg,#FFF8EF 0%,#F8FBFF 50%,#FFF7FC 100%);
+}
+
+/* Hero Layout */
+
+.hero-container{
+    width:min(1200px,92%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+    position:relative;
+    z-index:5;
+}
+
+/*==========================================================
+LEFT CONTENT
+==========================================================*/
+
+.hero-content{
+    animation:fadeLeft 1s ease;
+}
+
+.hero-tag{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    background:#fff;
+
+    color:var(--primary);
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    color:var(--dark);
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    color:#666;
+
+    margin-bottom:40px;
+
+    max-width:600px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/*==========================================================
+FEATURE BOXES
+==========================================================*/
+
+.hero-features{
+
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.feature{
+
+    background:#fff;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.feature{
+
+    font-size:26px;
+
+}
+
+.feature span{
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:var(--dark);
+
+}
+
+/*==========================================================
+RIGHT IMAGE
+==========================================================*/
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.image-card{
+
+    width:470px;
+
+    height:560px;
+
+    background:#fff;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    box-shadow:0 35px 80px rgba(0,0,0,.12);
+
+    position:relative;
+
+}
+
+.image-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.image-placeholder{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:120px;
+
+    background:linear-gradient(135deg,#FFD93D,#FFB703);
+
+}
+
+/*==========================================================
+ABC BLOCKS
+==========================================================*/
+
+.abc{
+
+    position:absolute;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    animation:float 4s ease-in-out infinite;
+
+    box-shadow:var(--shadow);
+
+}
+
+.abc1{
+
+    top:40px;
+    left:-35px;
+
+    background:var(--primary);
+
+}
+
+.abc2{
+
+    top:180px;
+    right:-35px;
+
+    background:var(--green);
+
+    animation-delay:1s;
+
+}
+
+.abc3{
+
+    bottom:45px;
+    left:-25px;
+
+    background:var(--blue);
+
+    animation-delay:2s;
+
+}
+
+/*==========================================================
+DECORATIVE SHAPES
+==========================================================*/
+
+.shape{
+
+    position:absolute;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.triangle{
+
+    width:70px;
+    height:70px;
+
+    background:var(--secondary);
+
+    clip-path:polygon(50% 0%,0% 100%,100% 100%);
+
+    right:-10px;
+    bottom:90px;
+
+}
+
+.square{
+
+    width:55px;
+    height:55px;
+
+    background:var(--purple);
+
+    border-radius:15px;
+
+    left:25px;
+    bottom:-15px;
+
+    transform:rotate(18deg);
+
+}
+
+.circle-shape{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    right:60px;
+    top:-20px;
+
+}
+
+/*==========================================================
+BACKGROUND DECORATIONS
+==========================================================*/
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    opacity:.20;
+
+}
+
+.circle1{
+
+    width:260px;
+    height:260px;
+
+    background:var(--secondary);
+
+    top:-80px;
+    left:-90px;
+
+}
+
+.circle2{
+
+    width:220px;
+    height:220px;
+
+    background:var(--blue);
+
+    bottom:-90px;
+    right:-70px;
+
+}
+
+.circle3{
+
+    width:150px;
+    height:150px;
+
+    background:var(--primary);
+
+    top:120px;
+    right:120px;
+
+}
+
+/*==========================================================
+STARS
+==========================================================*/
+
+.star{
+
+    position:absolute;
+
+    font-size:32px;
+
+    animation:twinkle 2s infinite;
+
+}
+
+.star1{
+
+    left:10%;
+    top:22%;
+
+}
+
+.star2{
+
+    right:16%;
+    top:14%;
+
+}
+
+/*==========================================================
+CLOUDS
+==========================================================*/
+
+.cloud{
+
+    position:absolute;
+
+    font-size:70px;
+
+    opacity:.70;
+
+    animation:cloudMove 12s linear infinite;
+
+}
+
+.cloud1{
+
+    left:-120px;
+
+    top:100px;
+
+}
+
+.cloud2{
+
+    right:-120px;
+
+    top:210px;
+
+    animation-delay:5s;
+
+}
+
+/*==========================================================
+BALLOONS
+==========================================================*/
+
+.balloon{
+
+    position:absolute;
+
+    font-size:48px;
+
+    animation:balloon 6s ease-in-out infinite;
+
+}
+
+.balloon1{
+
+    left:4%;
+
+    bottom:90px;
+
+}
+
+.balloon2{
+
+    right:7%;
+
+    top:220px;
+
+    animation-delay:2s;
+
+}
+
+/*==========================================================
+RAINBOW
+==========================================================*/
+
+.rainbow{
+
+    position:absolute;
+
+    right:12%;
+
+    top:65px;
+
+    font-size:90px;
+
+    opacity:.25;
+
+}
+
+/*==========================================================
+OWL
+==========================================================*/
+
+.owl{
+
+    position:absolute;
+
+    left:8%;
+
+    bottom:120px;
+
+    font-size:70px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+/*==========================================================
+PART 1B-3
+STATISTICS + ANIMATIONS + RESPONSIVE
+==========================================================*/
+
+
+/*==========================================================
+STATISTICS SECTION
+==========================================================*/
+
+.statistics{
+    position:relative;
+    background:#ffffff;
+    padding:70px 0 100px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.stat-card{
+
+    background:#fff;
+
+    text-align:center;
+
+    padding:40px 25px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:6px;
+
+    background:linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary),
+    var(--blue));
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.stat-icon{
+
+    width:85px;
+    height:85px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#FFF5E5;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.stat-card:nth-child(2) .stat-icon{
+
+    background:#EEF6FF;
+
+}
+
+.stat-card:nth-child(3) .stat-icon{
+
+    background:#FFF0F4;
+
+}
+
+.stat-card:nth-child(4) .stat-icon{
+
+    background:#EEFFF1;
+
+}
+
+.counter{
+
+    font-size:44px;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#555;
+
+}
+
+
+/*==========================================================
+COMMON ANIMATIONS
+==========================================================*/
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes twinkle{
+
+    0%{
+
+        transform:scale(.8);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.8);
+
+        opacity:.4;
+
+    }
+
+}
+
+
+@keyframes balloon{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-30px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes cloudMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(180px);
+
+    }
+
+}
+
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+@keyframes rotateSlow{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*==========================================================
+SCROLL REVEAL CLASSES
+==========================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:1100px){
+
+.hero-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    gap:60px;
+
+}
+
+.hero-content{
+
+    order:2;
+
+}
+
+.hero-image{
+
+    order:1;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-features{
+
+    max-width:650px;
+
+    margin:50px auto 0;
+
+}
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+.header{
+
+    padding:0;
+
+}
+
+.navbar{
+
+    position:absolute;
+
+    top:88px;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    display:none;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+.navbar.active{
+
+    display:block;
+
+}
+
+.navbar ul{
+
+    flex-direction:column;
+
+    gap:0;
+
+}
+
+.navbar li{
+
+    border-bottom:1px solid #eee;
+
+}
+
+.navbar a{
+
+    display:block;
+
+    padding:18px 25px;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.header-buttons{
+
+    display:none;
+
+}
+
+.hero{
+
+    padding-top:130px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.hero-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.image-card{
+
+    width:100%;
+
+    max-width:360px;
+
+    height:430px;
+
+}
+
+.abc{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:22px;
+
+}
+
+.circle1{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+.circle2{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+.circle3{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.rainbow{
+
+    font-size:60px;
+
+}
+
+.owl{
+
+    font-size:50px;
+
+}
+
+.stats-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.counter{
+
+    font-size:36px;
+
+}
+
+}
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero-tag{
+
+    font-size:13px;
+
+    padding:10px 18px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.feature{
+
+    padding:16px;
+
+}
+
+.stat-card{
+
+    padding:30px 20px;
+
+}
+
+}
+
+/*==========================================================
+HOME PART 2
+ABOUT PREVIEW
+==========================================================*/
+
+.about-preview{
+
+    background:#fff;
+
+    position:relative;
+
+}
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    position:relative;
+
+}
+
+.about-card{
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-card img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.about-placeholder{
+
+    height:500px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:120px;
+
+    background:#FFEFD5;
+
+}
+
+.experience-box{
+
+    position:absolute;
+
+    right:-25px;
+
+    bottom:30px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.experience-box h2{
+
+    color:#fff;
+
+    font-size:42px;
+
+}
+
+.floating-star{
+
+    position:absolute;
+
+    top:-20px;
+
+    left:-20px;
+
+    font-size:40px;
+
+    animation:float 4s infinite;
+
+}
+
+.floating-heart{
+
+    position:absolute;
+
+    right:10px;
+
+    top:40px;
+
+    font-size:38px;
+
+    animation:float 5s infinite;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    background:#FFF1F1;
+
+    color:var(--primary);
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.about-content h2{
+
+    font-size:44px;
+
+    margin-bottom:20px;
+
+    line-height:1.3;
+
+}
+
+.about-content h2 span{
+
+    color:var(--primary);
+
+}
+
+.ethics-title{
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+}
+
+.ethics-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.ethics-card{
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.ethics-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.ethics-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#FFF5E5;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.ethics-card h4{
+
+    margin-bottom:10px;
+
+}
+
+@media(max-width:992px){
+
+.about-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-content{
+
+    text-align:center;
+
+}
+
+.ethics-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.experience-box{
+
+    position:relative;
+
+    right:auto;
+
+    bottom:auto;
+
+    margin-top:20px;
+
+    display:inline-block;
+
+}
+
+}
+
+/*==========================================================
+HOME PART 3
+VISION • MISSION
+==========================================================*/
+
+.vision-mission{
+
+    background:#F9FCFF;
+
+    position:relative;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:auto auto 70px;
+
+}
+
+.section-header h2{
+
+    font-size:46px;
+
+    margin:18px 0;
+
+}
+
+.section-header h2 span{
+
+    color:var(--primary);
+
+}
+
+.vision-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    margin-bottom:55px;
+
+}
+
+.vision-card{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.vision-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.vision-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#FFF4E8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.values-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.value-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.value-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+    background:#FFF5E5;
+
+}
+
+.value-card h4{
+
+    margin-bottom:12px;
+
+}
+
+@media(max-width:992px){
+
+    .vision-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .values-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .values-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .section-header h2{
+
+        font-size:34px;
+
+    }
+
+    .vision-card{
+
+        padding:35px;
+
+    }
+
+}
+
+/*==========================================================
+HOME PART 4
+OUR PROGRAMS
+==========================================================*/
+
+.home-programs{
+
+    background:#FFFDF8;
+
+}
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.program-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.program-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.program-image{
+
+    position:relative;
+
+    height:230px;
+
+    overflow:hidden;
+
+}
+
+.program-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.program-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.program-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:90px;
+
+    background:#FFF5E5;
+
+}
+
+.age-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.program-content{
+
+    padding:25px;
+
+}
+
+.program-content h3{
+
+    margin-bottom:12px;
+
+}
+
+.program-content p{
+
+    margin-bottom:18px;
+
+}
+
+.program-content ul{
+
+    margin-bottom:25px;
+
+}
+
+.program-content ul li{
+
+    padding:6px 0;
+
+    color:#555;
+
+}
+
+.program-btn{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    background:var(--blue);
+
+    color:#fff;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.program-btn:hover{
+
+    background:var(--primary);
+
+}
+
+@media(max-width:1100px){
+
+.program-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.program-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.program-image{
+
+    height:250px;
+
+}
+
+}
+
+/*==========================================================
+HOME PART 5
+WHY CHOOSE US
+==========================================================*/
+
+.why-home{
+
+    background:#F8FCFF;
+
+}
+
+.why-container{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+.why-card{
+
+    background:#fff;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.why-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+    background:#FFF4E8;
+
+}
+
+.why-card h3{
+
+    margin-bottom:12px;
+
+    font-size:20px;
+
+}
+
+.why-image{
+
+    position:relative;
+
+}
+
+.why-image-card{
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.why-image-card img{
+
+    width:100%;
+
+    height:650px;
+
+    object-fit:cover;
+
+}
+
+.why-placeholder{
+
+    height:650px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:130px;
+
+    background:#FFF4E8;
+
+}
+
+.achievement-box{
+
+    position:absolute;
+
+    left:-20px;
+
+    bottom:40px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:25px 30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow-hover);
+
+    text-align:center;
+
+}
+
+.achievement-box h2{
+
+    color:#fff;
+
+    font-size:46px;
+
+    margin-bottom:8px;
+
+}
+
+.achievement-box span{
+
+    font-weight:600;
+
+}
+
+@media(max-width:1100px){
+
+.why-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.why-grid{
+
+    order:2;
+
+}
+
+.why-image{
+
+    order:1;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.why-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.why-image-card img,
+
+.why-placeholder{
+
+    height:450px;
+
+}
+
+.achievement-box{
+
+    position:relative;
+
+    left:auto;
+
+    bottom:auto;
+
+    margin-top:20px;
+
+    display:inline-block;
+
+}
+
+}
+
+/*==========================================================
+HOME PART 6B-1
+CURRICULUM SECTION
+==========================================================*/
+
+.curriculum-home{
+
+    position:relative;
+
+    background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+
+    overflow:hidden;
+
+}
+
+.curriculum-home::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,217,61,.18);
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.curriculum-home::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(77,150,255,.10);
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+.curriculum-wrapper{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:1fr 420px 1fr;
+
+    gap:45px;
+
+    align-items:center;
+
+    margin-top:70px;
+
+    z-index:2;
+
+}
+
+
+/*==========================================================
+LEFT & RIGHT COLUMNS
+==========================================================*/
+
+.curriculum-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.curriculum-column.left{
+
+    align-items:flex-end;
+
+}
+
+.curriculum-column.right{
+
+    align-items:flex-start;
+
+}
+
+
+/*==========================================================
+CURRICULUM CARDS
+==========================================================*/
+
+.curriculum-card{
+
+    width:100%;
+
+    max-width:360px;
+
+    background:#ffffff;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.curriculum-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:var(--primary);
+
+}
+
+.curriculum-column.right .curriculum-card::before{
+
+    left:auto;
+
+    right:0;
+
+    background:var(--blue);
+
+}
+
+.curriculum-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.curriculum-card h3{
+
+    font-size:23px;
+
+    color:var(--dark);
+
+    margin-bottom:14px;
+
+    line-height:1.35;
+
+}
+
+.curriculum-card p{
+
+    font-size:15px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+/*==========================================================
+CURRICULUM ICONS
+==========================================================*/
+
+.curriculum-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+    background:#FFF5E5;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.curriculum-card:hover .curriculum-icon{
+
+    transform:rotate(10deg) scale(1.08);
+
+}
+
+.curriculum-column.left .curriculum-card:nth-child(2) .curriculum-icon{
+
+    background:#EEF6FF;
+
+}
+
+.curriculum-column.left .curriculum-card:nth-child(3) .curriculum-icon{
+
+    background:#EEFFF3;
+
+}
+
+.curriculum-column.right .curriculum-card:nth-child(1) .curriculum-icon{
+
+    background:#FFF0F7;
+
+}
+
+.curriculum-column.right .curriculum-card:nth-child(2) .curriculum-icon{
+
+    background:#EEF8FF;
+
+}
+
+.curriculum-column.right .curriculum-card:nth-child(3) .curriculum-icon{
+
+    background:#FFF8E8;
+
+}
+
+
+/*==========================================================
+CARD CONNECTORS
+==========================================================*/
+
+.curriculum-column.left .curriculum-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    right:-40px;
+
+    width:40px;
+
+    height:2px;
+
+    background:#D8E5F8;
+
+}
+
+.curriculum-column.right .curriculum-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:-40px;
+
+    width:40px;
+
+    height:2px;
+
+    background:#D8E5F8;
+
+}
+
+/*==========================================================
+HOME PART 6B-2
+CENTER CIRCLE + LEARNING PATH
+==========================================================*/
+
+/*==========================================================
+CENTER SECTION
+==========================================================*/
+
+.curriculum-center{
+
+    position:relative;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:3;
+
+}
+
+.center-circle{
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.center-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:3px dashed rgba(255,107,107,.35);
+
+    border-radius:50%;
+
+    animation:rotateSlow 24s linear infinite;
+
+}
+
+.center-circle::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    border:10px solid rgba(77,150,255,.08);
+
+}
+
+.center-circle img{
+
+    width:82%;
+
+    height:82%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.curriculum-placeholder{
+
+    width:82%;
+
+    height:82%;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:120px;
+
+    background:linear-gradient(135deg,#FFD93D,#FFB703);
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.curriculum-center h3{
+
+    margin-top:28px;
+
+    font-size:30px;
+
+    color:var(--dark);
+
+}
+
+.curriculum-center p{
+
+    margin-top:10px;
+
+    color:#666;
+
+    max-width:320px;
+
+    line-height:1.8;
+
+}
+
+
+/*==========================================================
+FLOATING DECORATIONS
+==========================================================*/
+
+.curriculum-center::before{
+
+    content:"⭐";
+
+    position:absolute;
+
+    top:15px;
+
+    left:25px;
+
+    font-size:34px;
+
+    animation:twinkle 2s infinite;
+
+}
+
+.curriculum-center::after{
+
+    content:"🎈";
+
+    position:absolute;
+
+    bottom:25px;
+
+    right:25px;
+
+    font-size:42px;
+
+    animation:balloon 6s ease-in-out infinite;
+
+}
+
+
+/*==========================================================
+CENTER CONNECTORS
+==========================================================*/
+
+.curriculum-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:160px;
+
+    transform:translateX(-50%);
+
+    width:2px;
+
+    height:320px;
+
+    background:linear-gradient(
+    transparent,
+    rgba(77,150,255,.25),
+    transparent);
+
+}
+
+.curriculum-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:318px;
+
+    transform:translateX(-50%);
+
+    width:420px;
+
+    height:2px;
+
+    background:linear-gradient(
+    to right,
+    rgba(255,107,107,.20),
+    rgba(77,150,255,.20));
+
+}
+
+
+/*==========================================================
+LEARNING JOURNEY
+==========================================================*/
+
+.learning-path{
+
+    margin-top:90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.path-box{
+
+    min-width:140px;
+
+    background:#fff;
+
+    padding:18px 28px;
+
+    border-radius:50px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.path-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.path-box span{
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:var(--dark);
+
+}
+
+.path-arrow{
+
+    font-size:34px;
+
+    color:var(--primary);
+
+    animation:pulse 2s infinite;
+
+}
+
+
+/*==========================================================
+HOVER EFFECTS
+==========================================================*/
+
+.curriculum-card:hover{
+
+    background:#FFFDF8;
+
+}
+
+.curriculum-card:hover h3{
+
+    color:var(--primary);
+
+}
+
+.curriculum-card:hover::before{
+
+    width:8px;
+
+}
+
+.center-circle:hover{
+
+    transform:scale(1.03);
+
+    transition:.4s;
+
+}
+
+/*==========================================================
+HOME PART 6B-3
+RESPONSIVE + FINAL POLISH
+==========================================================*/
+
+
+/*==========================================================
+LARGE TABLETS
+==========================================================*/
+
+@media (max-width:1200px){
+
+    .curriculum-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+    }
+
+    .curriculum-column{
+
+        align-items:center !important;
+
+    }
+
+    .curriculum-card{
+
+        max-width:700px;
+
+    }
+
+    .curriculum-card::after{
+
+        display:none;
+
+    }
+
+    .curriculum-wrapper::before,
+    .curriculum-wrapper::after{
+
+        display:none;
+
+    }
+
+}
+
+
+/*==========================================================
+TABLETS
+==========================================================*/
+
+@media (max-width:992px){
+
+    .curriculum-home{
+
+        padding:80px 0;
+
+    }
+
+    .curriculum-center{
+
+        order:-1;
+
+    }
+
+    .center-circle{
+
+        width:280px;
+
+        height:280px;
+
+    }
+
+    .curriculum-placeholder{
+
+        font-size:90px;
+
+    }
+
+    .curriculum-center h3{
+
+        font-size:28px;
+
+    }
+
+    .learning-path{
+
+        gap:15px;
+
+    }
+
+    .path-box{
+
+        min-width:120px;
+
+        padding:16px 24px;
+
+    }
+
+}
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+
+    .curriculum-home{
+
+        padding:70px 0;
+
+    }
+
+    .curriculum-wrapper{
+
+        gap:35px;
+
+    }
+
+    .center-circle{
+
+        width:230px;
+
+        height:230px;
+
+    }
+
+    .curriculum-placeholder{
+
+        font-size:72px;
+
+    }
+
+    .curriculum-center h3{
+
+        font-size:24px;
+
+    }
+
+    .curriculum-center p{
+
+        font-size:15px;
+
+        padding:0 10px;
+
+    }
+
+    .curriculum-card{
+
+        padding:22px;
+
+    }
+
+    .curriculum-card h3{
+
+        font-size:20px;
+
+    }
+
+    .curriculum-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:28px;
+
+    }
+
+    .learning-path{
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    .path-arrow{
+
+        transform:rotate(90deg);
+
+        font-size:28px;
+
+    }
+
+    .path-box{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+}
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+    .center-circle{
+
+        width:190px;
+
+        height:190px;
+
+    }
+
+    .curriculum-placeholder{
+
+        font-size:60px;
+
+    }
+
+    .curriculum-center::before,
+
+    .curriculum-center::after{
+
+        display:none;
+
+    }
+
+    .curriculum-card{
+
+        border-radius:18px;
+
+        padding:18px;
+
+    }
+
+    .curriculum-card h3{
+
+        font-size:18px;
+
+    }
+
+    .curriculum-card p{
+
+        font-size:14px;
+
+    }
+
+    .curriculum-icon{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:24px;
+
+    }
+
+    .path-box{
+
+        padding:14px 18px;
+
+    }
+
+    .path-box span{
+
+        font-size:15px;
+
+    }
+
+}
+
+
+/*==========================================================
+FINAL POLISH
+==========================================================*/
+
+.curriculum-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.curriculum-card:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.curriculum-card:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+.center-circle{
+
+    transition:.4s ease;
+
+}
+
+.center-circle:hover{
+
+    transform:translateY(-8px) scale(1.04);
+
+}
+
+.path-box{
+
+    cursor:pointer;
+
+}
+
+.path-box:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.path-box:hover span{
+
+    color:#fff;
+
+}
+
+.curriculum-home .section-header{
+
+    margin-bottom:60px;
+
+}
+
+.curriculum-home .section-tag{
+
+    letter-spacing:1px;
+
+}
+
+.curriculum-card,
+.path-box,
+.center-circle{
+
+    will-change:transform;
+
+}
+
+/*==========================================================
+HOME PART 7B-1
+ACTIVITIES GALLERY
+==========================================================*/
+
+.activities-home{
+
+    position:relative;
+
+    background:linear-gradient(180deg,#FFFDF8 0%,#F8FCFF 100%);
+
+    overflow:hidden;
+
+}
+
+.activities-home::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,217,61,.18);
+
+    top:-140px;
+
+    left:-140px;
+
+}
+
+.activities-home::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(77,150,255,.12);
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+.activities-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+
+/*==========================================================
+ACTIVITY CARD
+==========================================================*/
+
+.activity-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.activity-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+/*==========================================================
+IMAGE
+==========================================================*/
+
+.activity-image{
+
+    position:relative;
+
+    height:240px;
+
+    overflow:hidden;
+
+}
+
+.activity-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.activity-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.activity-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:90px;
+
+    background:linear-gradient(
+        135deg,
+        #FFD93D,
+        #FFEAA7
+    );
+
+}
+
+
+/*==========================================================
+OVERLAY
+==========================================================*/
+
+.activity-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.45),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:1;
+
+}
+
+.activity-card:hover .activity-image::before{
+
+    opacity:1;
+
+}
+
+.activity-image::after{
+
+    content:"Explore";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%) scale(.8);
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    opacity:0;
+
+    z-index:2;
+
+    transition:.35s;
+
+}
+
+.activity-card:hover .activity-image::after{
+
+    opacity:1;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+
+/*==========================================================
+CONTENT
+==========================================================*/
+
+.activity-content{
+
+    padding:28px;
+
+}
+
+.activity-content h3{
+
+    font-size:24px;
+
+    color:var(--dark);
+
+    margin-bottom:12px;
+
+    transition:.35s;
+
+}
+
+.activity-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+.activity-card:hover h3{
+
+    color:var(--primary);
+
+}
+
+
+/*==========================================================
+DECORATIVE ICON
+==========================================================*/
+
+.activity-card::before{
+
+    content:"⭐";
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    z-index:3;
+
+    transition:.35s;
+
+}
+
+.activity-card:hover::before{
+
+    transform:rotate(20deg) scale(1.1);
+
+}
+
+
+/*==========================================================
+BOTTOM BORDER
+==========================================================*/
+
+.activity-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+    transition:.45s;
+
+}
+
+.activity-card:hover::after{
+
+    width:100%;
+
+}
+
+
+/*==========================================================
+STAGGER EFFECT
+==========================================================*/
+
+.activity-card:nth-child(2){
+
+    margin-top:25px;
+
+}
+
+.activity-card:nth-child(5){
+
+    margin-top:25px;
+
+}
+
+
+/*==========================================================
+ANIMATION
+==========================================================*/
+
+.activity-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.activity-card:nth-child(2){
+
+    animation-delay:.10s;
+
+}
+
+.activity-card:nth-child(3){
+
+    animation-delay:.20s;
+
+}
+
+.activity-card:nth-child(4){
+
+    animation-delay:.30s;
+
+}
+
+.activity-card:nth-child(5){
+
+    animation-delay:.40s;
+
+}
+
+.activity-card:nth-child(6){
+
+    animation-delay:.50s;
+
+}
+
+/*==========================================================
+HOME PART 7B-2
+STATISTICS + RESPONSIVE + FINAL POLISH
+==========================================================*/
+
+
+/*==========================================================
+STATISTICS SECTION
+==========================================================*/
+
+.school-stats{
+
+    position:relative;
+
+    padding:90px 0;
+
+    background:linear-gradient(
+        135deg,
+        #4D96FF,
+        #6BCB77
+    );
+
+    overflow:hidden;
+
+}
+
+.school-stats::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-140px;
+
+    left:-120px;
+
+}
+
+.school-stats::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+
+/*==========================================================
+STAT GRID
+==========================================================*/
+
+.stats-wrapper{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+/*==========================================================
+STAT CARD
+==========================================================*/
+
+.stat-box{
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    padding:35px 25px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.20);
+
+    transition:.35s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.22);
+
+}
+
+.stat-box .stat-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.stat-box .counter{
+
+    color:#fff;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+}
+
+.stat-box p{
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+
+/*==========================================================
+HOVER EFFECT
+==========================================================*/
+
+.stat-box:hover .stat-icon{
+
+    animation:pulse .8s;
+
+}
+
+.stat-box:hover .counter{
+
+    color:#FFD93D;
+
+}
+
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media(max-width:1100px){
+
+.activities-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.stats-wrapper{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.activity-card:nth-child(2),
+
+.activity-card:nth-child(5){
+
+    margin-top:0;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.activities-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.stats-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.activity-image{
+
+    height:220px;
+
+}
+
+.stat-box{
+
+    padding:30px 20px;
+
+}
+
+.stat-box .counter{
+
+    font-size:40px;
+
+}
+
+}
+
+
+@media(max-width:480px){
+
+.activities-home{
+
+    padding:70px 0;
+
+}
+
+.school-stats{
+
+    padding:70px 0;
+
+}
+
+.activity-content{
+
+    padding:22px;
+
+}
+
+.activity-content h3{
+
+    font-size:21px;
+
+}
+
+.activity-content p{
+
+    font-size:14px;
+
+}
+
+.stat-box{
+
+    border-radius:18px;
+
+}
+
+.stat-box .stat-icon{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:32px;
+
+}
+
+.stat-box .counter{
+
+    font-size:34px;
+
+}
+
+.stat-box p{
+
+    font-size:15px;
+
+}
+
+}
+
+
+/*==========================================================
+FINAL POLISH
+==========================================================*/
+
+.activities-home .section-header,
+
+.school-stats{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.activity-card,
+
+.stat-box{
+
+    will-change:transform;
+
+}
+
+.activity-card:hover,
+
+.stat-box:hover{
+
+    cursor:pointer;
+
+}
+
+/*==========================================================
+HOME PART 8B-1
+TESTIMONIALS SECTION
+==========================================================*/
+
+.testimonials-home{
+
+    position:relative;
+
+    background:linear-gradient(180deg,#FFFDF8 0%,#F8FBFF 100%);
+
+    overflow:hidden;
+
+    padding:100px 0;
+
+}
+
+.testimonials-home::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,107,107,.12);
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.testimonials-home::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(77,150,255,.10);
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+
+/*==========================================================
+SLIDER
+==========================================================*/
+
+.testimonial-slider{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:60px;
+
+    z-index:2;
+
+}
+
+.testimonial-track{
+
+    width:100%;
+
+    overflow:hidden;
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+/*==========================================================
+TESTIMONIAL CARD
+==========================================================*/
+
+.testimonial-card{
+
+    flex:0 0 100%;
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.testimonial-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+}
+
+
+/*==========================================================
+QUOTE ICON
+==========================================================*/
+
+.quote-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:#FFF4E8;
+
+    color:var(--primary);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+    transition:.35s;
+
+}
+
+.testimonial-card:hover .quote-icon{
+
+    transform:rotate(-12deg) scale(1.08);
+
+}
+
+
+/*==========================================================
+TEXT
+==========================================================*/
+
+.testimonial-card p{
+
+    font-size:17px;
+
+    color:#555;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+
+/*==========================================================
+RATING
+==========================================================*/
+
+.rating{
+
+    font-size:24px;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+
+}
+
+
+/*==========================================================
+PARENT INFO
+==========================================================*/
+
+.parent-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.parent-photo{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+    border:4px solid #FFD93D;
+
+    background:#ffffff;
+
+}
+
+.parent-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.parent-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    background:#FFF5E5;
+
+}
+
+.parent-info h4{
+
+    color:var(--dark);
+
+    margin-bottom:5px;
+
+    font-size:20px;
+
+}
+
+.parent-info span{
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+
+/*==========================================================
+SLIDER BUTTONS
+==========================================================*/
+
+.slider-btn{
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    color:var(--primary);
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.prev-btn{
+
+    margin-right:25px;
+
+}
+
+.next-btn{
+
+    margin-left:25px;
+
+}
+
+.slider-btn:hover{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    transform:scale(1.08);
+
+}
+
+
+/*==========================================================
+SLIDER DOTS
+==========================================================*/
+
+.testimonial-dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:35px;
+
+}
+
+.dot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#d6d6d6;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.dot.active{
+
+    width:42px;
+
+    border-radius:30px;
+
+    background:var(--primary);
+
+}
+
+
+/*==========================================================
+ANIMATION
+==========================================================*/
+
+.testimonial-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+/*==========================================================
+HOME PART 8B-2
+RESPONSIVE + SLIDER EFFECTS + FINAL POLISH
+==========================================================*/
+
+
+/*==========================================================
+SLIDER EFFECTS
+==========================================================*/
+
+.testimonial-track{
+
+    transition:transform .7s ease;
+
+    will-change:transform;
+
+}
+
+.testimonial-card{
+
+    opacity:.98;
+
+    transform:scale(.98);
+
+}
+
+.testimonial-card.active{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+.testimonial-card:hover{
+
+    background:#FFFDF9;
+
+}
+
+.testimonial-card:hover .parent-photo{
+
+    transform:scale(1.08);
+
+    transition:.35s;
+
+}
+
+.parent-photo{
+
+    transition:.35s;
+
+}
+
+.testimonial-card:hover .rating{
+
+    transform:scale(1.05);
+
+    transition:.35s;
+
+}
+
+
+/*==========================================================
+DECORATIVE EFFECTS
+==========================================================*/
+
+.testimonials-home .section-header{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.testimonials-home .section-header::before{
+
+    content:"💛";
+
+    position:absolute;
+
+    left:-40px;
+
+    top:-10px;
+
+    font-size:36px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+.testimonials-home .section-header::after{
+
+    content:"⭐";
+
+    position:absolute;
+
+    right:-40px;
+
+    top:-10px;
+
+    font-size:34px;
+
+    animation:twinkle 2s infinite;
+
+}
+
+
+/*==========================================================
+CARD HIGHLIGHT
+==========================================================*/
+
+.testimonial-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+    transition:.4s;
+
+}
+
+.testimonial-card:hover::after{
+
+    width:100%;
+
+}
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:992px){
+
+    .testimonial-card{
+
+        padding:35px;
+
+    }
+
+    .testimonial-card p{
+
+        font-size:16px;
+
+    }
+
+    .slider-btn{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:22px;
+
+    }
+
+}
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+    .testimonial-slider{
+
+        flex-direction:column;
+
+        gap:25px;
+
+    }
+
+    .prev-btn,
+
+    .next-btn{
+
+        margin:0;
+
+    }
+
+    .testimonial-track{
+
+        width:100%;
+
+    }
+
+    .testimonial-card{
+
+        padding:30px 25px;
+
+    }
+
+    .quote-icon{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:34px;
+
+    }
+
+    .parent-photo{
+
+        width:65px;
+
+        height:65px;
+
+    }
+
+    .parent-info h4{
+
+        font-size:18px;
+
+    }
+
+    .parent-info span{
+
+        font-size:14px;
+
+    }
+
+}
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+    .testimonials-home{
+
+        padding:70px 0;
+
+    }
+
+    .testimonial-card{
+
+        padding:25px 20px;
+
+        border-radius:22px;
+
+    }
+
+    .testimonial-card p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .rating{
+
+        font-size:20px;
+
+        letter-spacing:2px;
+
+    }
+
+    .slider-btn{
+
+        width:46px;
+
+        height:46px;
+
+        font-size:20px;
+
+    }
+
+    .testimonial-dots{
+
+        gap:10px;
+
+    }
+
+    .dot{
+
+        width:12px;
+
+        height:12px;
+
+    }
+
+    .dot.active{
+
+        width:34px;
+
+    }
+
+}
+
+
+/*==========================================================
+FINAL POLISH
+==========================================================*/
+
+.testimonial-card,
+.slider-btn,
+.dot{
+
+    will-change:transform;
+
+}
+
+.slider-btn:active{
+
+    transform:scale(.95);
+
+}
+
+.dot:hover{
+
+    background:var(--secondary);
+
+}
+
+.testimonial-card,
+.parent-photo,
+.quote-icon,
+.rating{
+
+    transition:all .35s ease;
+
+}
+
+/*==========================================================
+HOME PART 9B-1
+AWARDS & NEWS SECTION
+==========================================================*/
+
+.awards-news{
+
+    position:relative;
+
+    padding:100px 0;
+
+    background:linear-gradient(180deg,#FFFDF8 0%,#F8FCFF 100%);
+
+    overflow:hidden;
+
+}
+
+.awards-news::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,217,61,.12);
+
+    top:-140px;
+
+    left:-140px;
+
+}
+
+.awards-news::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(77,150,255,.10);
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+
+/*==========================================================
+AWARDS GRID
+==========================================================*/
+
+.awards-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+    margin-bottom:90px;
+
+}
+
+
+/*==========================================================
+AWARD CARD
+==========================================================*/
+
+.award-card{
+
+    position:relative;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+}
+
+.award-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.award-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+}
+
+.award-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    background:#FFF6DF;
+
+    margin-bottom:25px;
+
+    transition:.35s;
+
+}
+
+.award-card:hover .award-icon{
+
+    transform:rotate(12deg) scale(1.1);
+
+}
+
+.award-card h3{
+
+    font-size:24px;
+
+    color:var(--dark);
+
+    margin-bottom:15px;
+
+}
+
+.award-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+.award-year{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+
+/*==========================================================
+NEWS GRID
+==========================================================*/
+
+.news-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*==========================================================
+NEWS CARD
+==========================================================*/
+
+.news-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.news-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+/*==========================================================
+NEWS IMAGE
+==========================================================*/
+
+.news-image{
+
+    position:relative;
+
+    height:240px;
+
+    overflow:hidden;
+
+}
+
+.news-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.news-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.news-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:90px;
+
+    background:linear-gradient(
+        135deg,
+        #FFD93D,
+        #FFEAA7
+    );
+
+}
+
+.news-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.40),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:1;
+
+}
+
+.news-card:hover .news-image::before{
+
+    opacity:1;
+
+}
+
+
+/*==========================================================
+NEWS CONTENT
+==========================================================*/
+
+.news-content{
+
+    padding:28px;
+
+}
+
+.news-date{
+
+    display:inline-block;
+
+    margin-bottom:14px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+.news-content h3{
+
+    font-size:23px;
+
+    color:var(--dark);
+
+    margin-bottom:14px;
+
+    transition:.35s;
+
+}
+
+.news-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    margin-bottom:22px;
+
+}
+
+.news-card:hover h3{
+
+    color:var(--primary);
+
+}
+
+
+/*==========================================================
+BOTTOM BORDER EFFECT
+==========================================================*/
+
+.award-card::after,
+
+.news-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+    transition:.4s;
+
+}
+
+.award-card:hover::after,
+
+.news-card:hover::after{
+
+    width:100%;
+
+}
+
+
+/*==========================================================
+ENTRY ANIMATION
+==========================================================*/
+
+.award-card,
+
+.news-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.award-card:nth-child(2),
+
+.news-card:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.award-card:nth-child(3),
+
+.news-card:nth-child(3){
+
+    animation-delay:.30s;
+
+}
+
+/*==========================================================
+HOME PART 9B-2
+RESPONSIVE + FINAL POLISH
+==========================================================*/
+
+
+/*==========================================================
+CARD INTERACTIONS
+==========================================================*/
+
+.award-card,
+.news-card{
+    will-change:transform;
+}
+
+.award-card:hover .award-year{
+    background:var(--secondary);
+    transform:scale(1.05);
+}
+
+.award-year{
+    transition:all .35s ease;
+}
+
+.news-card:hover .btn{
+    transform:translateX(6px);
+}
+
+.news-card .btn{
+    transition:all .35s ease;
+}
+
+.news-card:hover .news-date{
+    color:var(--secondary);
+}
+
+.news-date{
+    transition:.35s;
+}
+
+
+/*==========================================================
+DECORATIVE ICONS
+==========================================================*/
+
+.awards-news .section-header{
+    position:relative;
+    z-index:2;
+}
+
+.awards-news .section-header::before{
+    content:"🏆";
+    position:absolute;
+    left:-45px;
+    top:-12px;
+    font-size:38px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.awards-news .section-header::after{
+    content:"🎉";
+    position:absolute;
+    right:-45px;
+    top:-10px;
+    font-size:34px;
+    animation:twinkle 2.5s infinite;
+}
+
+
+/*==========================================================
+NEWS IMAGE BADGE
+==========================================================*/
+
+.news-image::after{
+
+    content:"Latest";
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    padding:8px 18px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    z-index:2;
+
+}
+
+
+/*==========================================================
+AWARD GLOW
+==========================================================*/
+
+.award-card:hover{
+
+    background:#FFFDF8;
+
+}
+
+.award-card:hover .award-icon{
+
+    box-shadow:0 15px 35px rgba(255,217,61,.35);
+
+}
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media (max-width:1024px){
+
+    .awards-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .award-card:last-child{
+
+        grid-column:1 / -1;
+
+        max-width:450px;
+
+        margin:auto;
+
+    }
+
+    .news-wrapper{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .news-card:last-child{
+
+        grid-column:1 / -1;
+
+        max-width:500px;
+
+        margin:auto;
+
+    }
+
+}
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+
+    .awards-news{
+
+        padding:80px 0;
+
+    }
+
+    .awards-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+        margin-bottom:60px;
+
+    }
+
+    .news-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .award-card{
+
+        padding:35px 25px;
+
+    }
+
+    .award-icon{
+
+        width:80px;
+
+        height:80px;
+
+        font-size:38px;
+
+    }
+
+    .news-image{
+
+        height:220px;
+
+    }
+
+    .news-content{
+
+        padding:24px;
+
+    }
+
+    .news-content h3{
+
+        font-size:21px;
+
+    }
+
+}
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+    .awards-news{
+
+        padding:70px 0;
+
+    }
+
+    .award-card{
+
+        border-radius:20px;
+
+        padding:28px 20px;
+
+    }
+
+    .award-icon{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:34px;
+
+    }
+
+    .award-card h3{
+
+        font-size:20px;
+
+    }
+
+    .award-card p{
+
+        font-size:14px;
+
+    }
+
+    .award-year{
+
+        padding:8px 18px;
+
+        font-size:13px;
+
+    }
+
+    .news-card{
+
+        border-radius:20px;
+
+    }
+
+    .news-image{
+
+        height:200px;
+
+    }
+
+    .news-content{
+
+        padding:20px;
+
+    }
+
+    .news-content h3{
+
+        font-size:20px;
+
+    }
+
+    .news-content p{
+
+        font-size:14px;
+
+    }
+
+    .news-image::after{
+
+        font-size:12px;
+
+        padding:7px 14px;
+
+    }
+
+}
+
+
+/*==========================================================
+ACCESSIBILITY
+==========================================================*/
+
+.news-card .btn:focus,
+.award-card:focus{
+
+    outline:3px solid rgba(77,150,255,.35);
+
+    outline-offset:4px;
+
+}
+
+
+/*==========================================================
+FINAL POLISH
+==========================================================*/
+
+.awards-grid,
+.news-wrapper{
+
+    position:relative;
+    z-index:2;
+
+}
+
+.award-card,
+.news-card,
+.award-icon,
+.award-year,
+.news-image img,
+.news-card .btn{
+
+    transition:all .35s ease;
+
+}
+
+/*==========================================================
+HOME PART 10B-1
+PARTNERS & FRANCHISE
+==========================================================*/
+
+.partners-franchise{
+
+    position:relative;
+
+    padding:100px 0;
+
+    background:linear-gradient(180deg,#F8FCFF 0%,#FFFDF8 100%);
+
+    overflow:hidden;
+
+}
+
+.partners-franchise::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:340px;
+
+    height:340px;
+
+    border-radius:50%;
+
+    background:rgba(77,150,255,.10);
+
+    top:-170px;
+
+    left:-170px;
+
+}
+
+.partners-franchise::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,217,61,.15);
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+
+/*==========================================================
+PARTNERS GRID
+==========================================================*/
+
+.partners-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+    margin-bottom:90px;
+
+}
+
+
+/*==========================================================
+PARTNER CARD
+==========================================================*/
+
+.partner-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.partner-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.partner-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+}
+
+
+/*==========================================================
+PARTNER LOGO
+==========================================================*/
+
+.partner-logo{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#F8FAFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    margin-bottom:22px;
+
+    transition:.35s;
+
+}
+
+.partner-logo img{
+
+    width:80%;
+
+    height:80%;
+
+    object-fit:contain;
+
+}
+
+.partner-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:52px;
+
+    background:linear-gradient(
+        135deg,
+        #FFD93D,
+        #FFEAA7
+    );
+
+}
+
+.partner-card:hover .partner-logo{
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+.partner-card h4{
+
+    font-size:21px;
+
+    color:var(--dark);
+
+    transition:.35s;
+
+}
+
+.partner-card:hover h4{
+
+    color:var(--primary);
+
+}
+
+
+/*==========================================================
+FRANCHISE BANNER
+==========================================================*/
+
+.franchise-banner{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:50px;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--blue)
+    );
+
+    border-radius:32px;
+
+    padding:60px;
+
+    color:#fff;
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-bottom:80px;
+
+}
+
+.franchise-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+.franchise-tag{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.15);
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.franchise-content h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    line-height:1.3;
+
+}
+
+.franchise-content p{
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+    font-size:17px;
+
+}
+
+.franchise-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/*==========================================================
+FRANCHISE IMAGE
+==========================================================*/
+
+.franchise-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.franchise-image img{
+
+    width:100%;
+
+    max-width:380px;
+
+    border-radius:24px;
+
+}
+
+.franchise-placeholder{
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:120px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(8px);
+
+}
+
+
+/*==========================================================
+GROWTH GRID
+==========================================================*/
+
+.growth-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*==========================================================
+GROWTH CARD
+==========================================================*/
+
+.growth-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.growth-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.growth-card h3{
+
+    font-size:46px;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+.growth-card p{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+
+/*==========================================================
+BOTTOM BORDER EFFECT
+==========================================================*/
+
+.partner-card::after,
+
+.growth-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+    transition:.4s;
+
+}
+
+.partner-card:hover::after,
+
+.growth-card:hover::after{
+
+    width:100%;
+
+}
+
+
+/*==========================================================
+ENTRY ANIMATION
+==========================================================*/
+
+.partner-card,
+
+.growth-card,
+
+.franchise-banner{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.partner-card:nth-child(2),
+
+.partner-card:nth-child(5){
+
+    animation-delay:.15s;
+
+}
+
+.partner-card:nth-child(3),
+
+.partner-card:nth-child(6){
+
+    animation-delay:.30s;
+
+}
+
+/*==========================================================
+HOME PART 10B-2
+RESPONSIVE + FINAL POLISH
+==========================================================*/
+
+
+/*==========================================================
+INTERACTIONS
+==========================================================*/
+
+.partner-card,
+.growth-card,
+.franchise-banner{
+    will-change:transform;
+}
+
+.partner-card:hover .partner-logo{
+    box-shadow:0 15px 35px rgba(77,150,255,.20);
+}
+
+.partner-card:hover{
+    background:#FFFDF9;
+}
+
+.growth-card:hover h3{
+    color:var(--secondary);
+    transform:scale(1.08);
+}
+
+.growth-card h3{
+    transition:.35s;
+}
+
+.franchise-banner:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+}
+
+.franchise-image img,
+.franchise-placeholder{
+    transition:.4s;
+}
+
+.franchise-banner:hover .franchise-image img,
+.franchise-banner:hover .franchise-placeholder{
+    transform:scale(1.04);
+}
+
+
+/*==========================================================
+DECORATIVE ELEMENTS
+==========================================================*/
+
+.partners-franchise .section-header{
+    position:relative;
+    z-index:2;
+}
+
+.partners-franchise .section-header::before{
+
+    content:"🤝";
+
+    position:absolute;
+
+    left:-45px;
+
+    top:-10px;
+
+    font-size:38px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+.partners-franchise .section-header::after{
+
+    content:"🏫";
+
+    position:absolute;
+
+    right:-45px;
+
+    top:-10px;
+
+    font-size:36px;
+
+    animation:twinkle 2.5s infinite;
+
+}
+
+
+/*==========================================================
+FRANCHISE BUTTONS
+==========================================================*/
+
+.franchise-buttons .btn{
+
+    transition:.35s;
+
+}
+
+.franchise-buttons .btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==========================================================
+FLOATING SHAPES
+==========================================================*/
+
+.franchise-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    bottom:-50px;
+
+    left:-40px;
+
+}
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:1024px){
+
+    .partners-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .growth-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .franchise-banner{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:40px;
+
+    }
+
+    .franchise-buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+    .partners-franchise{
+
+        padding:80px 0;
+
+    }
+
+    .partners-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+        margin-bottom:60px;
+
+    }
+
+    .partner-card{
+
+        padding:30px 22px;
+
+    }
+
+    .partner-logo{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+    .franchise-banner{
+
+        padding:40px 30px;
+
+        border-radius:24px;
+
+    }
+
+    .franchise-content h2{
+
+        font-size:32px;
+
+    }
+
+    .franchise-content p{
+
+        font-size:16px;
+
+    }
+
+    .growth-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+}
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+    .partners-franchise{
+
+        padding:70px 0;
+
+    }
+
+    .partner-card{
+
+        border-radius:20px;
+
+    }
+
+    .partner-logo{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .partner-placeholder{
+
+        font-size:42px;
+
+    }
+
+    .partner-card h4{
+
+        font-size:18px;
+
+    }
+
+    .franchise-banner{
+
+        padding:30px 20px;
+
+    }
+
+    .franchise-content h2{
+
+        font-size:26px;
+
+    }
+
+    .franchise-tag{
+
+        font-size:13px;
+
+        padding:8px 16px;
+
+    }
+
+    .franchise-placeholder{
+
+        width:220px;
+
+        height:220px;
+
+        font-size:80px;
+
+    }
+
+    .growth-card{
+
+        padding:28px 20px;
+
+        border-radius:20px;
+
+    }
+
+    .growth-card h3{
+
+        font-size:38px;
+
+    }
+
+    .growth-card p{
+
+        font-size:15px;
+
+    }
+
+}
+
+
+/*==========================================================
+ACCESSIBILITY
+==========================================================*/
+
+.partner-card:focus,
+.growth-card:focus,
+.franchise-buttons .btn:focus{
+
+    outline:3px solid rgba(77,150,255,.35);
+
+    outline-offset:4px;
+
+}
+
+
+/*==========================================================
+FINAL POLISH
+==========================================================*/
+
+.partner-card,
+.partner-logo,
+.growth-card,
+.franchise-banner,
+.franchise-image img,
+.franchise-placeholder,
+.franchise-buttons .btn{
+
+    transition:all .35s ease;
+
+}
+
+.partners-grid,
+.growth-grid{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==========================================================
+HOME PART 11B-1
+CONTACT PREVIEW & ENQUIRY SECTION
+==========================================================*/
+
+.contact-preview{
+
+    position:relative;
+
+    padding:100px 0;
+
+    background:linear-gradient(180deg,#FFFDF8 0%,#F7FBFF 100%);
+
+    overflow:hidden;
+
+}
+
+.contact-preview::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,217,61,.12);
+
+    top:-140px;
+
+    left:-140px;
+
+}
+
+.contact-preview::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(77,150,255,.10);
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+
+/*==========================================================
+CONTACT GRID
+==========================================================*/
+
+.contact-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+    margin-bottom:80px;
+
+}
+
+
+/*==========================================================
+CONTACT CARD
+==========================================================*/
+
+.contact-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+}
+
+.contact-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#FFF6E6;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+    margin-bottom:22px;
+
+    transition:.35s;
+
+}
+
+.contact-card:hover .contact-icon{
+
+    transform:rotate(12deg) scale(1.08);
+
+}
+
+.contact-card h3{
+
+    font-size:22px;
+
+    color:var(--dark);
+
+    margin-bottom:15px;
+
+}
+
+.contact-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+/*==========================================================
+CONTACT WRAPPER
+==========================================================*/
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*==========================================================
+ENQUIRY BOX
+==========================================================*/
+
+.enquiry-box{
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.enquiry-box h3{
+
+    font-size:30px;
+
+    color:var(--dark);
+
+    margin-bottom:30px;
+
+}
+
+.form-group{
+
+    margin-bottom:20px;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:2px solid #eeeeee;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    transition:.35s;
+
+    outline:none;
+
+    background:#fff;
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(255,165,0,.15);
+
+}
+
+
+/*==========================================================
+LOCATION BOX
+==========================================================*/
+
+.location-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+
+/*==========================================================
+MAP
+==========================================================*/
+
+.mini-map{
+
+    height:320px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    background:#ffffff;
+
+}
+
+.mini-map img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.map-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:120px;
+
+    background:linear-gradient(
+        135deg,
+        #4D96FF,
+        #6BCB77
+    );
+
+    color:#ffffff;
+
+}
+
+
+/*==========================================================
+TOUR CARD
+==========================================================*/
+
+.tour-card{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--blue)
+    );
+
+    color:#ffffff;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.tour-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.10);
+
+    right:-70px;
+
+    top:-70px;
+
+}
+
+.tour-card h3{
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+}
+
+.tour-card p{
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+    font-size:16px;
+
+}
+
+.tour-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/*==========================================================
+BOTTOM EFFECT
+==========================================================*/
+
+.contact-card::after,
+.enquiry-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary),
+        var(--blue)
+    );
+
+    transition:.4s;
+
+}
+
+.contact-card:hover::after,
+.enquiry-box:hover::after{
+
+    width:100%;
+
+}
+
+
+/*==========================================================
+ANIMATION
+==========================================================*/
+
+.contact-card,
+.enquiry-box,
+.location-box{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+/*==========================================================
+HOME PART 11B-2
+RESPONSIVE + FINAL POLISH
+==========================================================*/
+
+
+/*==========================================================
+INTERACTIVE EFFECTS
+==========================================================*/
+
+.contact-card,
+.enquiry-box,
+.tour-card{
+
+    will-change:transform;
+
+}
+
+.contact-card:hover{
+
+    background:#FFFDF9;
+
+}
+
+.contact-card:hover .contact-icon{
+
+    box-shadow:0 15px 35px rgba(255,165,0,.25);
+
+}
+
+.enquiry-box{
+
+    transition:all .35s ease;
+
+}
+
+.enquiry-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+.tour-card{
+
+    transition:all .35s ease;
+
+}
+
+.tour-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.tour-card:hover .btn{
+
+    transform:translateY(-3px);
+
+}
+
+.tour-buttons .btn{
+
+    transition:all .35s ease;
+
+}
+
+.mini-map{
+
+    transition:all .35s ease;
+
+}
+
+.mini-map:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+
+
+/*==========================================================
+DECORATIVE ELEMENTS
+==========================================================*/
+
+.contact-preview .section-header{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.contact-preview .section-header::before{
+
+    content:"📍";
+
+    position:absolute;
+
+    left:-45px;
+
+    top:-10px;
+
+    font-size:36px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+.contact-preview .section-header::after{
+
+    content:"🎈";
+
+    position:absolute;
+
+    right:-45px;
+
+    top:-10px;
+
+    font-size:34px;
+
+    animation:twinkle 2.5s infinite;
+
+}
+
+
+/*==========================================================
+FORM PLACEHOLDER
+==========================================================*/
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+
+    color:#999;
+
+}
+
+.form-group select{
+
+    cursor:pointer;
+
+}
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:1024px){
+
+    .contact-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .contact-wrapper{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .location-box{
+
+        margin-top:10px;
+
+    }
+
+}
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+    .contact-preview{
+
+        padding:80px 0;
+
+    }
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+        margin-bottom:60px;
+
+    }
+
+    .contact-card{
+
+        padding:30px 24px;
+
+    }
+
+    .enquiry-box{
+
+        padding:30px;
+
+    }
+
+    .enquiry-box h3{
+
+        font-size:26px;
+
+    }
+
+    .mini-map{
+
+        height:260px;
+
+    }
+
+    .tour-card{
+
+        padding:30px;
+
+    }
+
+    .tour-card h3{
+
+        font-size:26px;
+
+    }
+
+    .tour-buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+    .contact-preview{
+
+        padding:70px 0;
+
+    }
+
+    .contact-card{
+
+        border-radius:20px;
+
+    }
+
+    .contact-icon{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:32px;
+
+    }
+
+    .contact-card h3{
+
+        font-size:20px;
+
+    }
+
+    .contact-card p{
+
+        font-size:14px;
+
+    }
+
+    .enquiry-box{
+
+        padding:25px 20px;
+
+        border-radius:22px;
+
+    }
+
+    .enquiry-box h3{
+
+        font-size:22px;
+
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+
+        padding:14px 16px;
+
+        font-size:14px;
+
+    }
+
+    .mini-map{
+
+        height:220px;
+
+        border-radius:20px;
+
+    }
+
+    .map-placeholder{
+
+        font-size:90px;
+
+    }
+
+    .tour-card{
+
+        padding:25px 20px;
+
+        border-radius:22px;
+
+    }
+
+    .tour-card h3{
+
+        font-size:22px;
+
+    }
+
+    .tour-card p{
+
+        font-size:14px;
+
+    }
+
+    .tour-buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .tour-buttons .btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+
+/*==========================================================
+ACCESSIBILITY
+==========================================================*/
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.contact-card:focus,
+.enquiry-box:focus,
+.tour-card:focus{
+
+    outline:none;
+
+}
+
+.tour-buttons .btn:focus{
+
+    outline:3px solid rgba(255,255,255,.35);
+
+    outline-offset:4px;
+
+}
+
+
+/*==========================================================
+FINAL POLISH
+==========================================================*/
+
+.contact-grid,
+.contact-wrapper{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.contact-card,
+.contact-icon,
+.enquiry-box,
+.tour-card,
+.mini-map,
+.form-group input,
+.form-group select,
+.form-group textarea,
+.tour-buttons .btn{
+
+    transition:all .35s ease;
+
+}
+
+/*==========================================================
+HOME PART 12B-1
+PREMIUM FOOTER
+==========================================================*/
+
+.footer{
+
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        #183153 0%,
+        #254E70 50%,
+        #2E5E86 100%
+    );
+
+    color:#ffffff;
+
+    padding:90px 0 0;
+
+    overflow:hidden;
+
+}
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    top:-220px;
+
+    left:-180px;
+
+}
+
+.footer::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.04);
+
+    bottom:-150px;
+
+    right:-120px;
+
+}
+
+
+/*==========================================================
+FOOTER GRID
+==========================================================*/
+
+.footer-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;
+
+    gap:40px;
+
+    padding-bottom:60px;
+
+}
+
+
+/*==========================================================
+LOGO
+==========================================================*/
+
+.footer-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.footer-logo img{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:contain;
+
+}
+
+.footer-logo-placeholder{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.15);
+
+    font-size:30px;
+
+}
+
+
+/*==========================================================
+COLUMN
+==========================================================*/
+
+.footer-column h3{
+
+    margin-bottom:22px;
+
+    font-size:22px;
+
+    color:#FFD93D;
+
+}
+
+.footer-column p{
+
+    color:rgba(255,255,255,.82);
+
+    line-height:1.9;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+/*==========================================================
+LISTS
+==========================================================*/
+
+.footer-column ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.footer-column ul li{
+
+    margin-bottom:14px;
+
+}
+
+.footer-column ul li a{
+
+    color:rgba(255,255,255,.82);
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.footer-column ul li a:hover{
+
+    color:#FFD93D;
+
+    padding-left:8px;
+
+}
+
+.footer-contact li{
+
+    color:rgba(255,255,255,.82);
+
+    line-height:1.9;
+
+}
+
+
+/*==========================================================
+SOCIAL ICONS
+==========================================================*/
+
+.footer-social{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.footer-social a{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,.10);
+
+    color:#fff;
+
+    font-size:22px;
+
+    transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+    background:#FFD93D;
+
+    color:#183153;
+
+    transform:translateY(-5px);
+
+}
+
+
+/*==========================================================
+NEWSLETTER
+==========================================================*/
+
+.newsletter-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.newsletter-form input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    outline:none;
+
+}
+
+.newsletter-form input::placeholder{
+
+    color:rgba(255,255,255,.65);
+
+}
+
+.newsletter-form button{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    background:#FFD93D;
+
+    color:#183153;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.newsletter-form button:hover{
+
+    background:#ffffff;
+
+}
+
+
+/*==========================================================
+BOTTOM
+==========================================================*/
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    padding:28px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.footer-bottom p{
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.footer-bottom strong{
+
+    color:#FFD93D;
+
+}
+
+.footer-bottom-links{
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-bottom-links a{
+
+    color:rgba(255,255,255,.75);
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.footer-bottom-links a:hover{
+
+    color:#FFD93D;
+
+}
+
+
+/*==========================================================
+BACK TO TOP
+==========================================================*/
+
+.back-to-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.back-to-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.back-to-top:hover{
+
+    transform:translateY(-5px);
+
+    background:var(--secondary);
+
+}
+
+
+/*==========================================================
+PRELOADER
+==========================================================*/
+
+#preloader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:.6s;
+
+}
+
+.loader{
+
+    text-align:center;
+
+}
+
+.loader-circle{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto auto 20px;
+
+    border-radius:50%;
+
+    border:8px solid #eeeeee;
+
+    border-top-color:var(--primary);
+
+    animation:loaderSpin 1s linear infinite;
+
+}
+
+.loader h3{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+/*==========================================================
+LOADER ANIMATION
+==========================================================*/
+
+@keyframes loaderSpin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*==========================================================
+HOME PART 12B-2
+RESPONSIVE FOOTER + FINAL POLISH
+==========================================================*/
+
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media (max-width:1200px){
+
+    .footer-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:35px;
+
+    }
+
+}
+
+
+@media (max-width:992px){
+
+    .footer{
+
+        padding-top:80px;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:35px;
+
+    }
+
+    .footer-logo{
+
+        font-size:24px;
+
+    }
+
+    .footer-column h3{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media (max-width:768px){
+
+    .footer{
+
+        padding-top:70px;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        text-align:center;
+
+    }
+
+    .footer-logo{
+
+        justify-content:center;
+
+    }
+
+    .footer-social{
+
+        justify-content:center;
+
+    }
+
+    .footer-column ul{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .footer-contact{
+
+        align-items:center;
+
+    }
+
+    .newsletter-form{
+
+        max-width:420px;
+
+        margin:auto;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:18px;
+
+    }
+
+    .footer-bottom-links{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+    .footer{
+
+        padding-top:60px;
+
+    }
+
+    .footer-grid{
+
+        gap:30px;
+
+    }
+
+    .footer-logo{
+
+        font-size:22px;
+
+    }
+
+    .footer-logo img,
+
+    .footer-logo-placeholder{
+
+        width:55px;
+
+        height:55px;
+
+    }
+
+    .footer-column h3{
+
+        font-size:19px;
+
+    }
+
+    .footer-column p,
+
+    .footer-column li,
+
+    .footer-column a{
+
+        font-size:14px;
+
+    }
+
+    .footer-social{
+
+        gap:12px;
+
+    }
+
+    .footer-social a{
+
+        width:44px;
+
+        height:44px;
+
+        font-size:20px;
+
+    }
+
+    .newsletter-form input,
+
+    .newsletter-form button{
+
+        padding:14px;
+
+        font-size:14px;
+
+    }
+
+    .footer-bottom{
+
+        padding:22px 0;
+
+    }
+
+    .footer-bottom p{
+
+        font-size:13px;
+
+    }
+
+    .footer-bottom-links{
+
+        gap:15px;
+
+    }
+
+    .back-to-top{
+
+        width:48px;
+
+        height:48px;
+
+        right:18px;
+
+        bottom:18px;
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/*==========================================================
+HOVER EFFECTS
+==========================================================*/
+
+.footer-logo{
+
+    transition:all .35s ease;
+
+}
+
+.footer-logo:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.footer-column ul li{
+
+    transition:.35s;
+
+}
+
+.footer-column ul li:hover{
+
+    transform:translateX(6px);
+
+}
+
+.footer-social a{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.footer-social a::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    transform:scale(0);
+
+    transition:.35s;
+
+}
+
+.footer-social a:hover::before{
+
+    transform:scale(1);
+
+}
+
+.newsletter-form button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.newsletter-form button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==========================================================
+ACCESSIBILITY
+==========================================================*/
+
+.footer a:focus,
+
+.newsletter-form input:focus,
+
+.newsletter-form button:focus,
+
+.back-to-top:focus{
+
+    outline:3px solid rgba(255,217,61,.45);
+
+    outline-offset:4px;
+
+}
+
+
+/*==========================================================
+FINAL POLISH
+==========================================================*/
+
+.footer-grid,
+
+.footer-bottom{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.footer-logo,
+
+.footer-column,
+
+.footer-social a,
+
+.newsletter-form input,
+
+.newsletter-form button,
+
+.footer-bottom-links a,
+
+.back-to-top{
+
+    transition:all .35s ease;
+
+}
+
+.footer *{
+
+    box-sizing:border-box;
+
+}
+
+</style>
+
+<header class="header">
+
+<div class="container nav-container">
+
+<a href="index.html" class="logo">
+
+<img src="images/logo.png"
+alt="Nexford Kids Logo"
+onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+
+<h2 style="display:none;">NEXFORD <span>KIDS</span></h2>
+
+</a>
+
+<nav class="navbar" id="navbar">
+
+<ul>
+
+<li><a href="index.html" class="active">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="program.html">Programs</a></li>
+
+<li><a href="whychoose.html">Why Choose Us</a></li>
+
+<li><a href="testimonials.html">Testimonials</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="franchise.html">Franchise</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="header-buttons">
+
+<a href="franchise.html" class="btn franchise-btn">
+
+Franchise
+
+</a>
+
+<a href="contact.html" class="btn admission-btn">
+
+Admission
+
+</a>
+
+</div>
+
+<div class="menu-toggle" id="menuToggle">
+
+☰
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ==========================================
+HERO SECTION
+========================================== -->
+
+<section class="hero">
+
+<!-- Decorations -->
+
+<div class="circle circle1"></div>
+
+<div class="circle circle2"></div>
+
+<div class="circle circle3"></div>
+
+<div class="star star1">⭐</div>
+
+<div class="star star2">⭐</div>
+
+<div class="cloud cloud1">☁️</div>
+
+<div class="cloud cloud2">☁️</div>
+
+<div class="balloon balloon1">🎈</div>
+
+<div class="balloon balloon2">🎈</div>
+
+<div class="rainbow">
+
+🌈
+
+</div>
+
+<div class="owl">
+
+🦉
+
+</div>
+
+<div class="hero-container">
+
+<!-- LEFT -->
+
+<div class="hero-content">
+
+<div class="hero-tag">
+
+🌟 Admissions Open 2026–27
+
+</div>
+
+<h1>
+
+Play
+
+<span>Learn</span>
+
+Grow
+
+With Joy
+
+</h1>
+
+<p>
+
+Welcome to Nexford Kids International Preschool.
+
+We provide a joyful, activity-based learning environment that nurtures creativity, confidence, communication, curiosity, and lifelong learning through an internationally inspired early childhood curriculum.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="contact.html" class="primary-btn">
+
+Enroll Now
+
+</a>
+
+<a href="program.html" class="secondary-btn">
+
+Explore Programs
+
+</a>
+
+</div>
+
+<!-- FEATURES -->
+
+<div class="hero-features">
+
+<div class="feature">
+
+🎨
+
+<span>Creative Learning</span>
+
+</div>
+
+<div class="feature">
+
+🧩
+
+<span>Activity Based</span>
+
+</div>
+
+<div class="feature">
+
+👩‍🏫
+
+<span>Expert Teachers</span>
+
+</div>
+
+<div class="feature">
+
+🚌
+
+<span>Transport</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="hero-image">
+
+<div class="image-card">
+
+<img src="images/hero-kids.png"
+
+alt="Happy Kids"
+
+onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+<div class="image-placeholder" style="display:none;">
+
+👧👦
+
+</div>
+
+</div>
+
+<div class="abc abc1">
+
+A
+
+</div>
+
+<div class="abc abc2">
+
+B
+
+</div>
+
+<div class="abc abc3">
+
+C
+
+</div>
+
+<div class="shape triangle"></div>
+
+<div class="shape square"></div>
+
+<div class="shape circle-shape"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+STATISTICS
+========================================== -->
+
+<section class="statistics">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+🎓
+
+</div>
+
+<h2 class="counter"
+
+data-target="15000">
+
+0
+
+</h2>
+
+<p>
+
+Happy Students
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+🏫
+
+</div>
+
+<h2 class="counter"
+
+data-target="200">
+
+0
+
+</h2>
+
+<p>
+
+Branches
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+🏆
+
+</div>
+
+<h2 class="counter"
+
+data-target="25">
+
+0
+
+</h2>
+
+<p>
+
+Awards
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+
+🌍
+
+</div>
+
+<h2 class="counter"
+
+data-target="30">
+
+0
+
+</h2>
+
+<p>
+
+Cities
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--==========================================================
+HOME PART 2
+ABOUT PREVIEW
+===========================================================-->
+
+<section class="about-preview">
+
+    <div class="container about-container">
+
+        <!-- LEFT -->
+
+        <div class="about-image">
+
+            <div class="about-card">
+
+                <img src="images/about-home.jpg"
+                     alt="About Nexford Kids"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                <div class="about-placeholder" style="display:none;">
+                    👨‍👩‍👧‍👦
+                </div>
+
+            </div>
+
+            <div class="experience-box">
+
+                <h2>10+</h2>
+
+                <span>Years of Excellence</span>
+
+            </div>
+
+            <div class="floating-star">⭐</div>
+
+            <div class="floating-heart">💖</div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="about-content reveal">
+
+            <span class="section-tag">
+
+                ABOUT US
+
+            </span>
+
+            <h2>
+
+                Building Bright Futures Through
+
+                <span>Love & Learning</span>
+
+            </h2>
+
+            <p>
+
+                At Nexford Kids International Preschool,
+                every child is encouraged to explore,
+                imagine and learn through fun-filled
+                experiences. Our child-centric curriculum
+                develops confidence, creativity,
+                communication and social skills in a
+                safe and caring environment.
+
+            </p>
+
+            <h3 class="ethics-title">
+
+                Our Work Ethics
+
+            </h3>
+
+            <div class="ethics-grid">
+
+                <div class="ethics-card">
+
+                    <div class="ethics-icon">❤️</div>
+
+                    <h4>Love & Care</h4>
+
+                    <p>
+                        Every child is treated with
+                        affection and respect.
+                    </p>
+
+                </div>
+
+                <div class="ethics-card">
+
+                    <div class="ethics-icon">🎨</div>
+
+                    <h4>Creative Learning</h4>
+
+                    <p>
+                        Fun activities that inspire
+                        imagination and curiosity.
+                    </p>
+
+                </div>
+
+                <div class="ethics-card">
+
+                    <div class="ethics-icon">🛡️</div>
+
+                    <h4>Safe Campus</h4>
+
+                    <p>
+                        CCTV monitored classrooms
+                        and secure environment.
+                    </p>
+
+                </div>
+
+                <div class="ethics-card">
+
+                    <div class="ethics-icon">🌍</div>
+
+                    <h4>Global Curriculum</h4>
+
+                    <p>
+                        International teaching
+                        methodology with local values.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <a href="about.html" class="primary-btn mt-30">
+
+                Read More →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 3
+VISION • MISSION • CORE VALUES
+===========================================================-->
+
+<section class="vision-mission">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">
+                OUR FOUNDATION
+            </span>
+
+            <h2>
+                Vision, Mission &
+                <span>Core Values</span>
+            </h2>
+
+            <p>
+                We believe every child deserves a joyful beginning where learning,
+                creativity, confidence, and kindness grow together.
+            </p>
+
+        </div>
+
+        <div class="vision-grid">
+
+            <!-- Vision -->
+
+            <div class="vision-card reveal">
+
+                <div class="vision-icon">
+                    🌟
+                </div>
+
+                <h3>
+                    Our Vision
+                </h3>
+
+                <p>
+                    To inspire children to become confident,
+                    compassionate and lifelong learners through
+                    world-class early childhood education.
+                </p>
+
+            </div>
+
+            <!-- Mission -->
+
+            <div class="vision-card reveal">
+
+                <div class="vision-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Our Mission
+                </h3>
+
+                <p>
+                    To provide a safe, engaging and activity-based
+                    learning environment that nurtures every child's
+                    intellectual, emotional and social development.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="values-grid">
+
+            <div class="value-card reveal">
+
+                <div class="value-icon">❤️</div>
+
+                <h4>Care & Love</h4>
+
+                <p>
+                    Every child is respected, valued and cared for.
+                </p>
+
+            </div>
+
+            <div class="value-card reveal">
+
+                <div class="value-icon">🎨</div>
+
+                <h4>Creativity</h4>
+
+                <p>
+                    Inspiring imagination through fun-filled activities.
+                </p>
+
+            </div>
+
+            <div class="value-card reveal">
+
+                <div class="value-icon">📚</div>
+
+                <h4>Learning</h4>
+
+                <p>
+                    Hands-on education that develops curiosity.
+                </p>
+
+            </div>
+
+            <div class="value-card reveal">
+
+                <div class="value-icon">🌍</div>
+
+                <h4>Global Outlook</h4>
+
+                <p>
+                    International curriculum with Indian values.
+                </p>
+
+            </div>
+
+            <div class="value-card reveal">
+
+                <div class="value-icon">🤝</div>
+
+                <h4>Respect</h4>
+
+                <p>
+                    Building confidence, teamwork and empathy.
+                </p>
+
+            </div>
+
+            <div class="value-card reveal">
+
+                <div class="value-icon">🛡️</div>
+
+                <h4>Safety</h4>
+
+                <p>
+                    Secure campus with hygiene and child protection.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 4
+OUR PROGRAMS
+===========================================================-->
+
+<section class="home-programs">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">
+                OUR PROGRAMS
+            </span>
+
+            <h2>
+                Learning Designed For
+                <span>Every Stage</span>
+            </h2>
+
+            <p>
+                Every age group receives a carefully designed curriculum that
+                balances play, creativity, language, social interaction,
+                confidence and foundational academics.
+            </p>
+
+        </div>
+
+        <div class="program-grid">
+
+            <!-- PLAY GROUP -->
+
+            <div class="program-card reveal">
+
+                <div class="program-image">
+
+                    <img src="images/playgroup.jpg"
+                    alt="Play Group"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="program-placeholder" style="display:none;">
+                        🧸
+                    </div>
+
+                    <span class="age-badge">
+                        Age 2–3
+                    </span>
+
+                </div>
+
+                <div class="program-content">
+
+                    <h3>Play Group</h3>
+
+                    <p>
+
+                        Fun-filled learning through music,
+                        games, storytelling and sensory activities.
+
+                    </p>
+
+                    <ul>
+
+                        <li>✔ Social Skills</li>
+
+                        <li>✔ Fine Motor Skills</li>
+
+                        <li>✔ Creative Play</li>
+
+                    </ul>
+
+                    <a href="program.html" class="program-btn">
+
+                        Learn More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- NURSERY -->
+
+            <div class="program-card reveal">
+
+                <div class="program-image">
+
+                    <img src="images/nursery.jpg"
+                    alt="Nursery"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="program-placeholder" style="display:none;">
+                        🎨
+                    </div>
+
+                    <span class="age-badge">
+                        Age 3–4
+                    </span>
+
+                </div>
+
+                <div class="program-content">
+
+                    <h3>Nursery</h3>
+
+                    <p>
+
+                        Interactive learning with phonics,
+                        numbers, art and creative exploration.
+
+                    </p>
+
+                    <ul>
+
+                        <li>✔ Language Development</li>
+
+                        <li>✔ Art & Craft</li>
+
+                        <li>✔ Music Activities</li>
+
+                    </ul>
+
+                    <a href="program.html" class="program-btn">
+
+                        Learn More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- JUNIOR KG -->
+
+            <div class="program-card reveal">
+
+                <div class="program-image">
+
+                    <img src="images/jkg.jpg"
+                    alt="Junior KG"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="program-placeholder" style="display:none;">
+                        📚
+                    </div>
+
+                    <span class="age-badge">
+                        Age 4–5
+                    </span>
+
+                </div>
+
+                <div class="program-content">
+
+                    <h3>Junior KG</h3>
+
+                    <p>
+
+                        Developing literacy, numeracy,
+                        confidence and independent thinking.
+
+                    </p>
+
+                    <ul>
+
+                        <li>✔ Reading Skills</li>
+
+                        <li>✔ STEM Activities</li>
+
+                        <li>✔ Team Learning</li>
+
+                    </ul>
+
+                    <a href="program.html" class="program-btn">
+
+                        Learn More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- SENIOR KG -->
+
+            <div class="program-card reveal">
+
+                <div class="program-image">
+
+                    <img src="images/skg.jpg"
+                    alt="Senior KG"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="program-placeholder" style="display:none;">
+                        🎓
+                    </div>
+
+                    <span class="age-badge">
+                        Age 5–6
+                    </span>
+
+                </div>
+
+                <div class="program-content">
+
+                    <h3>Senior KG</h3>
+
+                    <p>
+
+                        Preparing children for primary school
+                        with confidence and strong fundamentals.
+
+                    </p>
+
+                    <ul>
+
+                        <li>✔ School Readiness</li>
+
+                        <li>✔ Leadership Skills</li>
+
+                        <li>✔ Communication</li>
+
+                    </ul>
+
+                    <a href="program.html" class="program-btn">
+
+                        Learn More →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 5
+WHY CHOOSE NEXFORD KIDS
+===========================================================-->
+
+<section class="why-home">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">WHY CHOOSE US</span>
+
+            <h2>
+                Why Parents Choose
+                <span>Nexford Kids</span>
+            </h2>
+
+            <p>
+                We create a joyful learning environment where children grow
+                academically, socially, emotionally and creatively through
+                modern teaching methods and caring educators.
+            </p>
+
+        </div>
+
+        <div class="why-container">
+
+            <!-- LEFT -->
+
+            <div class="why-grid">
+
+                <div class="why-card reveal">
+                    <div class="why-icon">🌍</div>
+                    <h3>International Curriculum</h3>
+                    <p>Globally inspired early childhood education.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-icon">👩‍🏫</div>
+                    <h3>Qualified Teachers</h3>
+                    <p>Experienced teachers with child-focused methods.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-icon">🎨</div>
+                    <h3>Activity Based Learning</h3>
+                    <p>Learning through play, projects and exploration.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-icon">🛡️</div>
+                    <h3>Safe Campus</h3>
+                    <p>CCTV surveillance and secure classrooms.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-icon">💻</div>
+                    <h3>Smart Classrooms</h3>
+                    <p>Technology-enabled interactive learning.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-icon">📱</div>
+                    <h3>Parent App</h3>
+                    <p>Daily updates, attendance and communication.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-icon">🚌</div>
+                    <h3>Transportation</h3>
+                    <p>GPS-enabled safe transportation services.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-icon">🍎</div>
+                    <h3>Healthy Environment</h3>
+                    <p>Clean classrooms promoting healthy habits.</p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="why-image reveal">
+
+                <div class="why-image-card">
+
+                    <img src="images/why-home.jpg"
+                    alt="Happy Students"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="why-placeholder" style="display:none;">
+                        👧👦
+                    </div>
+
+                </div>
+
+                <div class="achievement-box">
+
+                    <h2>98%</h2>
+
+                    <span>Parent Satisfaction</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 6A
+INTERNATIONAL CURRICULUM
+===========================================================-->
+
+<section class="curriculum-home">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">
+                OUR CURRICULUM
+            </span>
+
+            <h2>
+
+                International Learning
+                <span>Framework</span>
+
+            </h2>
+
+            <p>
+
+                Our curriculum blends play-based learning with
+                internationally inspired early childhood practices,
+                helping children build strong academic, creative,
+                emotional and social foundations.
+
+            </p>
+
+        </div>
+
+        <div class="curriculum-wrapper">
+
+            <!-- LEFT COLUMN -->
+
+            <div class="curriculum-column left">
+
+                <div class="curriculum-card reveal">
+
+                    <div class="curriculum-icon">
+                        🗣️
+                    </div>
+
+                    <h3>
+                        Language &
+                        Communication
+                    </h3>
+
+                    <p>
+
+                        Vocabulary, phonics,
+                        storytelling,
+                        conversation
+                        and listening skills.
+
+                    </p>
+
+                </div>
+
+                <div class="curriculum-card reveal">
+
+                    <div class="curriculum-icon">
+                        🔢
+                    </div>
+
+                    <h3>
+
+                        Mathematics
+
+                    </h3>
+
+                    <p>
+
+                        Numbers,
+                        counting,
+                        patterns,
+                        logic
+                        and problem solving.
+
+                    </p>
+
+                </div>
+
+                <div class="curriculum-card reveal">
+
+                    <div class="curriculum-icon">
+                        🌎
+                    </div>
+
+                    <h3>
+
+                        World Around Us
+
+                    </h3>
+
+                    <p>
+
+                        Nature,
+                        science,
+                        environment
+                        and discovery.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CENTER -->
+
+            <div class="curriculum-center reveal">
+
+                <div class="center-circle">
+
+                    <img src="images/curriculum-center.png"
+
+                    alt="Curriculum"
+
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="curriculum-placeholder"
+                    style="display:none;">
+
+                        🎒
+
+                    </div>
+
+                </div>
+
+                <h3>
+
+                    Holistic
+                    Development
+
+                </h3>
+
+                <p>
+
+                    Learning through
+                    Play • Explore • Imagine • Create
+
+                </p>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+
+            <div class="curriculum-column right">
+
+                <div class="curriculum-card reveal">
+
+                    <div class="curriculum-icon">
+                        🎨
+                    </div>
+
+                    <h3>
+
+                        Creative Arts
+
+                    </h3>
+
+                    <p>
+
+                        Drawing,
+                        colouring,
+                        music,
+                        dance
+                        and imagination.
+
+                    </p>
+
+                </div>
+
+                <div class="curriculum-card reveal">
+
+                    <div class="curriculum-icon">
+                        ⚽
+                    </div>
+
+                    <h3>
+
+                        Physical
+                        Development
+
+                    </h3>
+
+                    <p>
+
+                        Gross motor,
+                        fine motor,
+                        sports,
+                        yoga
+                        and fitness.
+
+                    </p>
+
+                </div>
+
+                <div class="curriculum-card reveal">
+
+                    <div class="curriculum-icon">
+                        ❤️
+                    </div>
+
+                    <h3>
+
+                        Social &
+                        Emotional
+
+                    </h3>
+
+                    <p>
+
+                        Confidence,
+                        teamwork,
+                        kindness,
+                        empathy
+                        and leadership.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Learning Journey -->
+
+        <div class="learning-path reveal">
+
+            <div class="path-box">
+
+                <span>Play</span>
+
+            </div>
+
+            <div class="path-arrow">
+
+                ➜
+
+            </div>
+
+            <div class="path-box">
+
+                <span>Explore</span>
+
+            </div>
+
+            <div class="path-arrow">
+
+                ➜
+
+            </div>
+
+            <div class="path-box">
+
+                <span>Create</span>
+
+            </div>
+
+            <div class="path-arrow">
+
+                ➜
+
+            </div>
+
+            <div class="path-box">
+
+                <span>Learn</span>
+
+            </div>
+
+            <div class="path-arrow">
+
+                ➜
+
+            </div>
+
+            <div class="path-box">
+
+                <span>Grow</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 7A
+ACTIVITIES + STATISTICS
+===========================================================-->
+
+<section class="activities-home">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">
+                DAILY ACTIVITIES
+            </span>
+
+            <h2>
+
+                Learning Through
+                <span>Fun Activities</span>
+
+            </h2>
+
+            <p>
+
+                Every day is filled with exciting experiences that help
+                children learn, explore, imagine, and build confidence.
+
+            </p>
+
+        </div>
+
+        <!-- Activities Grid -->
+
+        <div class="activities-grid">
+
+            <!-- Activity 1 -->
+
+            <div class="activity-card reveal">
+
+                <div class="activity-image">
+
+                    <img src="images/activity-art.jpg"
+                    alt="Art & Craft"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="activity-placeholder"
+                    style="display:none;">
+
+                        🎨
+
+                    </div>
+
+                </div>
+
+                <div class="activity-content">
+
+                    <h3>
+
+                        Art & Craft
+
+                    </h3>
+
+                    <p>
+
+                        Drawing, painting and creative
+                        expression activities.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Activity 2 -->
+
+            <div class="activity-card reveal">
+
+                <div class="activity-image">
+
+                    <img src="images/activity-music.jpg"
+                    alt="Music"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="activity-placeholder"
+                    style="display:none;">
+
+                        🎵
+
+                    </div>
+
+                </div>
+
+                <div class="activity-content">
+
+                    <h3>
+
+                        Music & Dance
+
+                    </h3>
+
+                    <p>
+
+                        Rhythm, movement and joyful
+                        performances.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Activity 3 -->
+
+            <div class="activity-card reveal">
+
+                <div class="activity-image">
+
+                    <img src="images/activity-reading.jpg"
+                    alt="Reading"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="activity-placeholder"
+                    style="display:none;">
+
+                        📚
+
+                    </div>
+
+                </div>
+
+                <div class="activity-content">
+
+                    <h3>
+
+                        Story Time
+
+                    </h3>
+
+                    <p>
+
+                        Interactive storytelling and
+                        language development.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Activity 4 -->
+
+            <div class="activity-card reveal">
+
+                <div class="activity-image">
+
+                    <img src="images/activity-sports.jpg"
+                    alt="Sports"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="activity-placeholder"
+                    style="display:none;">
+
+                        ⚽
+
+                    </div>
+
+                </div>
+
+                <div class="activity-content">
+
+                    <h3>
+
+                        Sports & Games
+
+                    </h3>
+
+                    <p>
+
+                        Outdoor games that build teamwork
+                        and coordination.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Activity 5 -->
+
+            <div class="activity-card reveal">
+
+                <div class="activity-image">
+
+                    <img src="images/activity-stem.jpg"
+                    alt="STEM"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="activity-placeholder"
+                    style="display:none;">
+
+                        🧩
+
+                    </div>
+
+                </div>
+
+                <div class="activity-content">
+
+                    <h3>
+
+                        STEM Fun
+
+                    </h3>
+
+                    <p>
+
+                        Simple experiments and hands-on
+                        discovery learning.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Activity 6 -->
+
+            <div class="activity-card reveal">
+
+                <div class="activity-image">
+
+                    <img src="images/activity-yoga.jpg"
+                    alt="Yoga"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="activity-placeholder"
+                    style="display:none;">
+
+                        🧘
+
+                    </div>
+
+                </div>
+
+                <div class="activity-content">
+
+                    <h3>
+
+                        Yoga & Wellness
+
+                    </h3>
+
+                    <p>
+
+                        Mindfulness, breathing exercises
+                        and healthy habits.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+STATISTICS
+===========================================================-->
+
+<section class="school-stats">
+
+    <div class="container">
+
+        <div class="stats-wrapper">
+
+            <div class="stat-box reveal">
+
+                <div class="stat-icon">
+
+                    👦
+
+                </div>
+
+                <h2 class="counter"
+                data-target="15000">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Happy Students
+
+                </p>
+
+            </div>
+
+            <div class="stat-box reveal">
+
+                <div class="stat-icon">
+
+                    👩‍🏫
+
+                </div>
+
+                <h2 class="counter"
+                data-target="250">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Qualified Teachers
+
+                </p>
+
+            </div>
+
+            <div class="stat-box reveal">
+
+                <div class="stat-icon">
+
+                    🏫
+
+                </div>
+
+                <h2 class="counter"
+                data-target="200">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Preschool Branches
+
+                </p>
+
+            </div>
+
+            <div class="stat-box reveal">
+
+                <div class="stat-icon">
+
+                    🏆
+
+                </div>
+
+                <h2 class="counter"
+                data-target="50">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    National Awards
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 8A
+PARENT TESTIMONIALS
+===========================================================-->
+
+<section class="testimonials-home">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">
+                TESTIMONIALS
+            </span>
+
+            <h2>
+
+                What Our
+                <span>Parents Say</span>
+
+            </h2>
+
+            <p>
+
+                Parents are our biggest supporters.
+                Their experiences reflect our commitment
+                to providing joyful early childhood education.
+
+            </p>
+
+        </div>
+
+        <!-- Slider -->
+
+        <div class="testimonial-slider">
+
+            <button class="slider-btn prev-btn">
+
+                &#10094;
+
+            </button>
+
+            <div class="testimonial-track">
+
+                <!-- CARD 1 -->
+
+                <div class="testimonial-card reveal active">
+
+                    <div class="quote-icon">
+
+                        ❝
+
+                    </div>
+
+                    <p>
+
+                        My daughter enjoys coming to school every
+                        day. The teachers are caring and the
+                        activities have improved her confidence
+                        tremendously.
+
+                    </p>
+
+                    <div class="rating">
+
+                        ⭐⭐⭐⭐⭐
+
+                    </div>
+
+                    <div class="parent-info">
+
+                        <div class="parent-photo">
+
+                            <img src="images/parent1.jpg"
+                            alt="Parent 1"
+                            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                            <div class="parent-placeholder"
+                            style="display:none;">
+
+                                👩
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Priya Sharma
+
+                            </h4>
+
+                            <span>
+
+                                Parent of Nursery Student
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div class="testimonial-card reveal">
+
+                    <div class="quote-icon">
+
+                        ❝
+
+                    </div>
+
+                    <p>
+
+                        The curriculum is engaging and my son has
+                        developed excellent communication skills.
+                        We highly recommend Nexford Kids.
+
+                    </p>
+
+                    <div class="rating">
+
+                        ⭐⭐⭐⭐⭐
+
+                    </div>
+
+                    <div class="parent-info">
+
+                        <div class="parent-photo">
+
+                            <img src="images/parent2.jpg"
+                            alt="Parent 2"
+                            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                            <div class="parent-placeholder"
+                            style="display:none;">
+
+                                👨
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Rahul Verma
+
+                            </h4>
+
+                            <span>
+
+                                Parent of Junior KG Student
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="testimonial-card reveal">
+
+                    <div class="quote-icon">
+
+                        ❝
+
+                    </div>
+
+                    <p>
+
+                        We appreciate the caring environment,
+                        modern teaching methods and excellent
+                        communication between teachers and parents.
+
+                    </p>
+
+                    <div class="rating">
+
+                        ⭐⭐⭐⭐⭐
+
+                    </div>
+
+                    <div class="parent-info">
+
+                        <div class="parent-photo">
+
+                            <img src="images/parent3.jpg"
+                            alt="Parent 3"
+                            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                            <div class="parent-placeholder"
+                            style="display:none;">
+
+                                👩
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Sneha Reddy
+
+                            </h4>
+
+                            <span>
+
+                                Parent of Senior KG Student
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 4 -->
+
+                <div class="testimonial-card reveal">
+
+                    <div class="quote-icon">
+
+                        ❝
+
+                    </div>
+
+                    <p>
+
+                        Every child receives individual attention.
+                        The learning environment is fun,
+                        safe and inspiring for young learners.
+
+                    </p>
+
+                    <div class="rating">
+
+                        ⭐⭐⭐⭐⭐
+
+                    </div>
+
+                    <div class="parent-info">
+
+                        <div class="parent-photo">
+
+                            <img src="images/parent4.jpg"
+                            alt="Parent 4"
+                            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                            <div class="parent-placeholder"
+                            style="display:none;">
+
+                                👨
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Arjun Patel
+
+                            </h4>
+
+                            <span>
+
+                                Parent of Play Group Student
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="slider-btn next-btn">
+
+                &#10095;
+
+            </button>
+
+        </div>
+
+        <!-- Slider Dots -->
+
+        <div class="testimonial-dots">
+
+            <span class="dot active"></span>
+
+            <span class="dot"></span>
+
+            <span class="dot"></span>
+
+            <span class="dot"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+HOME PART 9A
+AWARDS & LATEST NEWS
+=========================================================== -->
+
+<section class="awards-news">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">
+                ACHIEVEMENTS & UPDATES
+            </span>
+
+            <h2>
+
+                Awards &
+                <span>Latest News</span>
+
+            </h2>
+
+            <p>
+
+                Discover our achievements, exciting events,
+                and the latest updates from Nexford Kids
+                International Preschool.
+
+            </p>
+
+        </div>
+
+
+        <!-- ==========================================
+        AWARDS SECTION
+        =========================================== -->
+
+        <div class="awards-grid">
+
+            <!-- Award 1 -->
+
+            <div class="award-card reveal">
+
+                <div class="award-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Best Preschool Award
+                </h3>
+
+                <p>
+
+                    Recognized for excellence in early childhood
+                    education and innovative learning practices.
+
+                </p>
+
+                <span class="award-year">
+                    2025
+                </span>
+
+            </div>
+
+            <!-- Award 2 -->
+
+            <div class="award-card reveal">
+
+                <div class="award-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Parent Choice Award
+                </h3>
+
+                <p>
+
+                    Awarded for outstanding parent satisfaction,
+                    child development and learning experience.
+
+                </p>
+
+                <span class="award-year">
+                    2024
+                </span>
+
+            </div>
+
+            <!-- Award 3 -->
+
+            <div class="award-card reveal">
+
+                <div class="award-icon">
+                    🥇
+                </div>
+
+                <h3>
+                    Excellence in Education
+                </h3>
+
+                <p>
+
+                    Honored for providing a safe,
+                    engaging and internationally inspired
+                    preschool curriculum.
+
+                </p>
+
+                <span class="award-year">
+                    2023
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+        LATEST NEWS
+        =========================================== -->
+
+        <div class="news-wrapper">
+
+            <!-- News Card 1 -->
+
+            <article class="news-card reveal">
+
+                <div class="news-image">
+
+                    <img src="images/news1.jpg"
+                         alt="Annual Day"
+
+                         onerror="this.style.display='none';
+                                  this.nextElementSibling.style.display='flex';">
+
+                    <div class="news-placeholder"
+                         style="display:none;">
+
+                        🎭
+
+                    </div>
+
+                </div>
+
+                <div class="news-content">
+
+                    <span class="news-date">
+
+                        📅 15 July 2026
+
+                    </span>
+
+                    <h3>
+
+                        Annual Day Celebration
+
+                    </h3>
+
+                    <p>
+
+                        Students showcased dance,
+                        music, storytelling and creative
+                        performances during our Annual Day event.
+
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-outline">
+
+                        Read More
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- News Card 2 -->
+
+            <article class="news-card reveal">
+
+                <div class="news-image">
+
+                    <img src="images/news2.jpg"
+                         alt="STEM Workshop"
+
+                         onerror="this.style.display='none';
+                                  this.nextElementSibling.style.display='flex';">
+
+                    <div class="news-placeholder"
+                         style="display:none;">
+
+                        🔬
+
+                    </div>
+
+                </div>
+
+                <div class="news-content">
+
+                    <span class="news-date">
+
+                        📅 08 July 2026
+
+                    </span>
+
+                    <h3>
+
+                        STEM Fun Workshop
+
+                    </h3>
+
+                    <p>
+
+                        Hands-on science activities
+                        encouraged curiosity, creativity
+                        and problem-solving skills.
+
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-outline">
+
+                        Read More
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- News Card 3 -->
+
+            <article class="news-card reveal">
+
+                <div class="news-image">
+
+                    <img src="images/news3.jpg"
+                         alt="Admissions"
+
+                         onerror="this.style.display='none';
+                                  this.nextElementSibling.style.display='flex';">
+
+                    <div class="news-placeholder"
+                         style="display:none;">
+
+                        🎒
+
+                    </div>
+
+                </div>
+
+                <div class="news-content">
+
+                    <span class="news-date">
+
+                        📅 Admissions Open
+
+                    </span>
+
+                    <h3>
+
+                        Admissions 2026–27
+
+                    </h3>
+
+                    <p>
+
+                        Enroll your little one in a joyful
+                        learning environment with international
+                        standards and caring educators.
+
+                    </p>
+
+                    <a href="#"
+                       class="btn btn-primary">
+
+                        Apply Now
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 10A
+PARTNERS & FRANCHISE
+===========================================================-->
+
+<section class="partners-franchise">
+
+    <div class="container">
+
+        <!--==============================
+        SECTION HEADER
+        ===============================-->
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">
+
+                PARTNERS & FRANCHISE
+
+            </span>
+
+            <h2>
+
+                Trusted <span>Partners</span> &
+                Franchise Opportunities
+
+            </h2>
+
+            <p>
+
+                We collaborate with trusted educational partners
+                and welcome passionate entrepreneurs to become
+                part of the Nexford Kids International Preschool family.
+
+            </p>
+
+        </div>
+
+        <!--==============================
+        PARTNER LOGOS
+        ===============================-->
+
+        <div class="partners-grid">
+
+            <div class="partner-card reveal">
+
+                <div class="partner-logo">
+
+                    <img src="images/partner1.png"
+                    alt="Partner Logo"
+
+                    onerror="this.style.display='none';
+                    this.nextElementSibling.style.display='flex';">
+
+                    <div class="partner-placeholder"
+                    style="display:none;">
+
+                        🏫
+
+                    </div>
+
+                </div>
+
+                <h4>
+
+                    Education Partner
+
+                </h4>
+
+            </div>
+
+
+            <div class="partner-card reveal">
+
+                <div class="partner-logo">
+
+                    <img src="images/partner2.png"
+                    alt="Partner Logo"
+
+                    onerror="this.style.display='none';
+                    this.nextElementSibling.style.display='flex';">
+
+                    <div class="partner-placeholder"
+                    style="display:none;">
+
+                        🌎
+
+                    </div>
+
+                </div>
+
+                <h4>
+
+                    Global Curriculum
+
+                </h4>
+
+            </div>
+
+
+            <div class="partner-card reveal">
+
+                <div class="partner-logo">
+
+                    <img src="images/partner3.png"
+                    alt="Partner Logo"
+
+                    onerror="this.style.display='none';
+                    this.nextElementSibling.style.display='flex';">
+
+                    <div class="partner-placeholder"
+                    style="display:none;">
+
+                        📚
+
+                    </div>
+
+                </div>
+
+                <h4>
+
+                    Learning Resources
+
+                </h4>
+
+            </div>
+
+
+            <div class="partner-card reveal">
+
+                <div class="partner-logo">
+
+                    <img src="images/partner4.png"
+                    alt="Partner Logo"
+
+                    onerror="this.style.display='none';
+                    this.nextElementSibling.style.display='flex';">
+
+                    <div class="partner-placeholder"
+                    style="display:none;">
+
+                        🤝
+
+                    </div>
+
+                </div>
+
+                <h4>
+
+                    Community Partner
+
+                </h4>
+
+            </div>
+
+
+            <div class="partner-card reveal">
+
+                <div class="partner-logo">
+
+                    <img src="images/partner5.png"
+                    alt="Partner Logo"
+
+                    onerror="this.style.display='none';
+                    this.nextElementSibling.style.display='flex';">
+
+                    <div class="partner-placeholder"
+                    style="display:none;">
+
+                        💡
+
+                    </div>
+
+                </div>
+
+                <h4>
+
+                    Innovation Partner
+
+                </h4>
+
+            </div>
+
+
+            <div class="partner-card reveal">
+
+                <div class="partner-logo">
+
+                    <img src="images/partner6.png"
+                    alt="Partner Logo"
+
+                    onerror="this.style.display='none';
+                    this.nextElementSibling.style.display='flex';">
+
+                    <div class="partner-placeholder"
+                    style="display:none;">
+
+                        🎓
+
+                    </div>
+
+                </div>
+
+                <h4>
+
+                    Academic Excellence
+
+                </h4>
+
+            </div>
+
+        </div>
+
+        <!--==============================
+        FRANCHISE CTA
+        ===============================-->
+
+        <div class="franchise-banner reveal">
+
+            <div class="franchise-content">
+
+                <span class="franchise-tag">
+
+                    🚀 START YOUR OWN PRESCHOOL
+
+                </span>
+
+                <h2>
+
+                    Become a Nexford Kids Franchise Partner
+
+                </h2>
+
+                <p>
+
+                    Build a rewarding education business with
+                    comprehensive training, curriculum support,
+                    marketing assistance, and operational guidance.
+
+                </p>
+
+                <div class="franchise-buttons">
+
+                    <a href="franchise.html"
+                    class="btn btn-primary">
+
+                        Apply for Franchise
+
+                    </a>
+
+                    <a href="contact.html"
+                    class="btn btn-outline">
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="franchise-image">
+
+                <img src="images/franchise.png"
+                alt="Franchise"
+
+                onerror="this.style.display='none';
+                this.nextElementSibling.style.display='flex';">
+
+                <div class="franchise-placeholder"
+                style="display:none;">
+
+                    🏫
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==============================
+        BUSINESS HIGHLIGHTS
+        ===============================-->
+
+        <div class="growth-grid">
+
+            <div class="growth-card reveal">
+
+                <h3>
+
+                    200+
+
+                </h3>
+
+                <p>
+
+                    Preschool Centers
+
+                </p>
+
+            </div>
+
+            <div class="growth-card reveal">
+
+                <h3>
+
+                    15,000+
+
+                </h3>
+
+                <p>
+
+                    Happy Students
+
+                </p>
+
+            </div>
+
+            <div class="growth-card reveal">
+
+                <h3>
+
+                    250+
+
+                </h3>
+
+                <p>
+
+                    Expert Teachers
+
+                </p>
+
+            </div>
+
+            <div class="growth-card reveal">
+
+                <h3>
+
+                    98%
+
+                </h3>
+
+                <p>
+
+                    Parent Satisfaction
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 11A
+CONTACT PREVIEW & CALL TO ACTION
+===========================================================-->
+
+<section class="contact-preview">
+
+    <div class="container">
+
+        <!--==============================
+        SECTION HEADER
+        ===============================-->
+
+        <div class="section-header reveal">
+
+            <span class="section-tag">
+                CONTACT US
+            </span>
+
+            <h2>
+                Let's Build Your Child's
+                <span>Bright Future</span>
+            </h2>
+
+            <p>
+                We'd love to meet you and your little one.
+                Visit our preschool, schedule a school tour,
+                or contact us for admission enquiries.
+            </p>
+
+        </div>
+
+        <!--==============================
+        CONTACT INFORMATION
+        ===============================-->
+
+        <div class="contact-grid">
+
+            <!-- Address -->
+
+            <div class="contact-card reveal">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>Visit Our Campus</h3>
+
+                <p>
+
+                    Nexford Kids International Preschool<br>
+
+                    Your City, State - 500001<br>
+
+                    India
+
+                </p>
+
+            </div>
+
+            <!-- Phone -->
+
+            <div class="contact-card reveal">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <h3>Call Us</h3>
+
+                <p>
+
+                    +91 98765 43210
+
+                    <br>
+
+                    +91 91234 56789
+
+                </p>
+
+            </div>
+
+            <!-- Email -->
+
+            <div class="contact-card reveal">
+
+                <div class="contact-icon">
+                    ✉️
+                </div>
+
+                <h3>Email Us</h3>
+
+                <p>
+
+                    info@nexfordkids.com
+
+                    <br>
+
+                    admissions@nexfordkids.com
+
+                </p>
+
+            </div>
+
+            <!-- Hours -->
+
+            <div class="contact-card reveal">
+
+                <div class="contact-icon">
+                    🕒
+                </div>
+
+                <h3>Working Hours</h3>
+
+                <p>
+
+                    Monday – Saturday
+
+                    <br>
+
+                    9:00 AM – 6:00 PM
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!--==============================
+        CONTACT CONTENT
+        ===============================-->
+
+        <div class="contact-wrapper">
+
+            <!--==========================
+            QUICK ENQUIRY FORM
+            ===========================-->
+
+            <div class="enquiry-box reveal">
+
+                <h3>
+
+                    Quick Admission Enquiry
+
+                </h3>
+
+                <form>
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            placeholder="Parent Name"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="tel"
+                            placeholder="Phone Number"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <select required>
+
+                            <option value="">
+
+                                Select Program
+
+                            </option>
+
+                            <option>
+
+                                Play Group
+
+                            </option>
+
+                            <option>
+
+                                Nursery
+
+                            </option>
+
+                            <option>
+
+                                Junior KG
+
+                            </option>
+
+                            <option>
+
+                                Senior KG
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <textarea
+                            rows="5"
+                            placeholder="Your Message"></textarea>
+
+                    </div>
+
+                    <button
+                        class="btn btn-primary"
+                        type="submit">
+
+                        Submit Enquiry
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!--==========================
+            MAP & CTA
+            ===========================-->
+
+            <div class="location-box reveal">
+
+                <div class="mini-map">
+
+                    <img
+                        src="images/map.jpg"
+                        alt="School Location"
+
+                        onerror="this.style.display='none';
+                        this.nextElementSibling.style.display='flex';">
+
+                    <div
+                        class="map-placeholder"
+                        style="display:none;">
+
+                        🗺️
+
+                    </div>
+
+                </div>
+
+                <div class="tour-card">
+
+                    <h3>
+
+                        Schedule a School Tour
+
+                    </h3>
+
+                    <p>
+
+                        Experience our classrooms,
+                        meet our educators,
+                        and explore our learning environment.
+
+                    </p>
+
+                    <div class="tour-buttons">
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-primary">
+
+                            Book a Tour
+
+                        </a>
+
+                        <a
+                            href="tel:+919876543210"
+                            class="btn btn-outline">
+
+                            Call Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+HOME PART 12A
+PREMIUM FOOTER
+===========================================================-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!--==================================
+            ABOUT
+            ===================================-->
+
+            <div class="footer-column">
+
+                <a href="index.html" class="footer-logo">
+
+                    <img src="images/logo.png"
+                         alt="Nexford Kids Logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                    <div class="footer-logo-placeholder"
+                         style="display:none;">
+
+                        🏫
+
+                    </div>
+
+                    <span>
+
+                        Nexford Kids
+
+                    </span>
+
+                </a>
+
+                <p>
+
+                    Nexford Kids International Preschool
+                    provides a joyful, safe and inspiring
+                    learning environment where every child
+                    can explore, discover and grow with confidence.
+
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#" aria-label="Facebook">
+
+                        <span>📘</span>
+
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+
+                        <span>📷</span>
+
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+
+                        <span>▶️</span>
+
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+
+                        <span>💼</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!--==================================
+            QUICK LINKS
+            ===================================-->
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Quick Links
+
+                </h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="program.html">Programs</a></li>
+
+                    <li><a href="whychoose.html">Why Choose Us</a></li>
+
+                    <li><a href="testimonials.html">Testimonials</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                    <li><a href="franchise.html">Franchise</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <!--==================================
+            PROGRAMS
+            ===================================-->
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Our Programs
+
+                </h3>
+
+                <ul>
+
+                    <li><a href="#">Play Group</a></li>
+
+                    <li><a href="#">Nursery</a></li>
+
+                    <li><a href="#">Junior KG</a></li>
+
+                    <li><a href="#">Senior KG</a></li>
+
+                    <li><a href="#">Summer Camp</a></li>
+
+                    <li><a href="#">Day Care</a></li>
+
+                    <li><a href="#">Activity Classes</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <!--==================================
+            CONTACT
+            ===================================-->
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Contact Info
+
+                </h3>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        📍 Your City, State, India
+
+                    </li>
+
+                    <li>
+
+                        📞 +91 98765 43210
+
+                    </li>
+
+                    <li>
+
+                        ✉️ info@nexfordkids.com
+
+                    </li>
+
+                    <li>
+
+                        🕘 Mon - Sat
+
+                        <br>
+
+                        9:00 AM - 6:00 PM
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!--==================================
+            NEWSLETTER
+            ===================================-->
+
+            <div class="footer-column newsletter">
+
+                <h3>
+
+                    Newsletter
+
+                </h3>
+
+                <p>
+
+                    Subscribe to receive school news,
+                    admissions updates and upcoming events.
+
+                </p>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required>
+
+                    <button
+                        type="submit">
+
+                        Subscribe
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!--==================================
+        FOOTER BOTTOM
+        ===================================-->
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026
+                <strong>Nexford Kids International Preschool</strong>.
+                All Rights Reserved.
+
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+
+                    Privacy Policy
+
+                </a>
+
+                <a href="#">
+
+                    Terms & Conditions
+
+                </a>
+
+                <a href="#">
+
+                    Sitemap
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!--==================================
+BACK TO TOP BUTTON
+===================================-->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to Top">
+
+    ↑
+
+</button>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /*======================================================
+    ELEMENTS
+    ======================================================*/
+
+    const header = document.querySelector("header");
+
+    const navToggle = document.querySelector(".menu-toggle");
+
+    const navMenu = document.querySelector(".nav-menu");
+
+    const navLinks = document.querySelectorAll(".nav-menu a");
+
+    const backToTop = document.getElementById("backToTop");
+
+
+    /*======================================================
+    MOBILE MENU
+    ======================================================*/
+
+    if (navToggle && navMenu) {
+
+        navToggle.addEventListener("click", () => {
+
+            navMenu.classList.toggle("active");
+
+            navToggle.classList.toggle("active");
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navMenu.classList.remove("active");
+
+                navToggle.classList.remove("active");
+
+            });
+
+        });
+
+    }
+
+
+    /*======================================================
+    STICKY HEADER
+    ======================================================*/
+
+    function updateHeader() {
+
+        if (!header) return;
+
+        if (window.scrollY > 80) {
+
+            header.classList.add("sticky");
+
+        } else {
+
+            header.classList.remove("sticky");
+
+        }
+
+    }
+
+    window.addEventListener("scroll", updateHeader);
+
+    updateHeader();
+
+
+    /*======================================================
+    SMOOTH SCROLL
+    ======================================================*/
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+        anchor.addEventListener("click", function (e) {
+
+            const targetId = this.getAttribute("href");
+
+            if (targetId === "#") return;
+
+            const target = document.querySelector(targetId);
+
+            if (!target) return;
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "start"
+
+            });
+
+        });
+
+    });
+
+
+    /*======================================================
+    ACTIVE NAVIGATION
+    ======================================================*/
+
+    const sections = document.querySelectorAll("section");
+
+    function updateActiveMenu() {
+
+        let currentSection = "";
+
+        sections.forEach(section => {
+
+            const top = section.offsetTop - 140;
+
+            const height = section.offsetHeight;
+
+            if (window.scrollY >= top &&
+                window.scrollY < top + height) {
+
+                currentSection = section.getAttribute("id");
+
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            const href = link.getAttribute("href");
+
+            if (href === "#" + currentSection) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    }
+
+    window.addEventListener("scroll", updateActiveMenu);
+
+    updateActiveMenu();
+
+
+    /*======================================================
+    BACK TO TOP BUTTON
+    ======================================================*/
+
+    if (backToTop) {
+
+        function toggleBackToTop() {
+
+            if (window.scrollY > 500) {
+
+                backToTop.classList.add("show");
+
+            } else {
+
+                backToTop.classList.remove("show");
+
+            }
+
+        }
+
+        window.addEventListener("scroll", toggleBackToTop);
+
+        toggleBackToTop();
+
+        backToTop.addEventListener("click", () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    }
+
+});
+
+
+/*==========================================================
+HOME PART 12C-2
+SCROLL REVEAL • COUNTERS • PERFORMANCE
+==========================================================*/
+
+/*==========================================================
+SCROLL REVEAL
+==========================================================*/
+
+const revealElements = document.querySelectorAll(
+    ".reveal, .section-title, .card, .feature-card, .program-card, .activity-card, .testimonial-card, .award-card, .news-card"
+);
+
+if ("IntersectionObserver" in window) {
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+
+    });
+
+    revealElements.forEach(element => {
+
+        revealObserver.observe(element);
+
+    });
+
+} else {
+
+    revealElements.forEach(element => {
+
+        element.classList.add("active");
+
+    });
+
+}
+
+
+/*==========================================================
+ANIMATED COUNTERS
+==========================================================*/
+
+const counters = document.querySelectorAll("[data-counter]");
+
+if (counters.length > 0) {
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            const counter = entry.target;
+
+            const target = parseInt(counter.dataset.counter, 10);
+
+            const duration = 2000;
+
+            const start = performance.now();
+
+            function animate(now) {
+
+                const progress = Math.min((now - start) / duration, 1);
+
+                counter.textContent = Math.floor(progress * target).toLocaleString();
+
+                if (progress < 1) {
+
+                    requestAnimationFrame(animate);
+
+                } else {
+
+                    counter.textContent = target.toLocaleString();
+
+                }
+
+            }
+
+            requestAnimationFrame(animate);
+
+            observer.unobserve(counter);
+
+        });
+
+    }, {
+
+        threshold: 0.35
+
+    });
+
+    counters.forEach(counter => {
+
+        counterObserver.observe(counter);
+
+    });
+
+}
+
+
+/*==========================================================
+LAZY IMAGE FADE-IN
+==========================================================*/
+
+const images = document.querySelectorAll("img");
+
+images.forEach(image => {
+
+    image.addEventListener("load", () => {
+
+        image.classList.add("loaded");
+
+    });
+
+});
+
+
+/*==========================================================
+WINDOW RESIZE OPTIMIZATION
+==========================================================*/
+
+let resizeTimer;
+
+window.addEventListener("resize", () => {
+
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+
+        window.dispatchEvent(new Event("optimizedResize"));
+
+    }, 200);
+
+});
+
+
+/*==========================================================
+UTILITY
+==========================================================*/
+
+function debounce(fn, delay = 150) {
+
+    let timer;
+
+    return function (...args) {
+
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+
+            fn.apply(this, args);
+
+        }, delay);
+
+    };
+
+}
+
+
+/*==========================================================
+REDUCE MOTION SUPPORT
+==========================================================*/
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (prefersReducedMotion.matches) {
+
+    document.documentElement.classList.add("reduce-motion");
+
+}
+
+
+/*==========================================================
+CONSOLE MESSAGE
+==========================================================*/
+
+console.log(
+    "%cNexford Kids International Preschool",
+    "color:#183153;font-size:18px;font-weight:bold;"
+);
+
+console.log(
+    "%cHomepage loaded successfully.",
+    "color:#28a745;font-size:13px;"
+);
+
+
+/*==========================================================
+FINAL INITIALIZATION
+==========================================================*/
+
+window.dispatchEvent(new Event("optimizedResize"));
+
+document.body.classList.add("page-loaded");
+
+/*==========================================================
+HOME PART 12D
+FINAL JAVASCRIPT
+==========================================================*/
+
+/*==========================================================
+TESTIMONIAL SLIDER
+==========================================================*/
+
+(function () {
+
+    const slider = document.querySelector(".testimonial-slider");
+
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll(".testimonial-card");
+
+    const prevBtn = document.querySelector(".testimonial-prev");
+
+    const nextBtn = document.querySelector(".testimonial-next");
+
+    const dots = document.querySelectorAll(".testimonial-dot");
+
+    let current = 0;
+
+    let autoSlide;
+
+    function showSlide(index) {
+
+        if (slides.length === 0) return;
+
+        if (index < 0) index = slides.length - 1;
+
+        if (index >= slides.length) index = 0;
+
+        current = index;
+
+        slides.forEach((slide, i) => {
+
+            slide.classList.toggle("active", i === current);
+
+        });
+
+        dots.forEach((dot, i) => {
+
+            dot.classList.toggle("active", i === current);
+
+        });
+
+    }
+
+    function nextSlide() {
+
+        showSlide(current + 1);
+
+    }
+
+    function prevSlide() {
+
+        showSlide(current - 1);
+
+    }
+
+    function startAutoSlide() {
+
+        stopAutoSlide();
+
+        autoSlide = setInterval(nextSlide, 5000);
+
+    }
+
+    function stopAutoSlide() {
+
+        clearInterval(autoSlide);
+
+    }
+
+    nextBtn?.addEventListener("click", () => {
+
+        nextSlide();
+
+        startAutoSlide();
+
+    });
+
+    prevBtn?.addEventListener("click", () => {
+
+        prevSlide();
+
+        startAutoSlide();
+
+    });
+
+    dots.forEach((dot, index) => {
+
+        dot.addEventListener("click", () => {
+
+            showSlide(index);
+
+            startAutoSlide();
+
+        });
+
+    });
+
+    slider.addEventListener("mouseenter", stopAutoSlide);
+
+    slider.addEventListener("mouseleave", startAutoSlide);
+
+    showSlide(0);
+
+    startAutoSlide();
+
+})();
+
+
+/*==========================================================
+PRELOADER
+==========================================================*/
+
+window.addEventListener("load", () => {
+
+    const preloader = document.getElementById("preloader");
+
+    if (!preloader) return;
+
+    setTimeout(() => {
+
+        preloader.style.opacity = "0";
+
+        preloader.style.visibility = "hidden";
+
+        setTimeout(() => {
+
+            preloader.remove();
+
+        }, 600);
+
+    }, 600);
+
+});
+
+
+/*==========================================================
+BUTTON RIPPLE EFFECT
+==========================================================*/
+
+document.querySelectorAll(".btn").forEach(button => {
+
+    button.addEventListener("click", function (e) {
+
+        const ripple = document.createElement("span");
+
+        const rect = this.getBoundingClientRect();
+
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = size + "px";
+
+        ripple.style.height = size + "px";
+
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+        ripple.className = "ripple";
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+
+            ripple.remove();
+
+        }, 600);
+
+    });
+
+});
+
+
+/*==========================================================
+NEWSLETTER FORM
+==========================================================*/
+
+const newsletter = document.querySelector(".newsletter-form");
+
+if (newsletter) {
+
+    newsletter.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const email = this.querySelector("input[type='email']");
+
+        if (!email.value.trim()) {
+
+            alert("Please enter your email address.");
+
+            return;
+
+        }
+
+        alert("🎉 Thank you for subscribing!");
+
+        this.reset();
+
+    });
+
+}
+
+
+/*==========================================================
+HERO PARALLAX
+==========================================================*/
+
+const hero = document.querySelector(".hero");
+
+if (hero) {
+
+    hero.addEventListener("mousemove", function (e) {
+
+        const x = (e.clientX / window.innerWidth - 0.5) * 15;
+
+        const y = (e.clientY / window.innerHeight - 0.5) * 15;
+
+        this.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
+
+    });
+
+}
+
+
+/*==========================================================
+KEYBOARD ACCESSIBILITY
+==========================================================*/
+
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Escape") {
+
+        document.querySelector(".nav-menu")?.classList.remove("active");
+
+        document.querySelector(".menu-toggle")?.classList.remove("active");
+
+    }
+
+});
+
+
+/*==========================================================
+IMAGE FALLBACK
+==========================================================*/
+
+document.querySelectorAll("img").forEach(img => {
+
+    img.onerror = function () {
+
+        this.style.opacity = "0.4";
+
+        this.alt = "Image unavailable";
+
+    };
+
+});
+
+
+/*==========================================================
+PAGE READY
+==========================================================*/
+
+console.log("=======================================");
+
+console.log("NEXFORD KIDS INTERNATIONAL PRESCHOOL");
+
+console.log("Homepage Version 1.0");
+
+console.log("Status : READY");
+
+console.log("=======================================");
+
+</script>
+
+
+<!--==================================
+PRELOADER
+===================================-->
+
+<div id="preloader">
+
+    <div class="loader">
+
+        <div class="loader-circle"></div>
+
+        <h3>
+
+            Nexford Kids
+
+        </h3>
+
+    </div>
+
+</div>
+
