@@ -1,4 +1,3062 @@
-<!DOCTYPE html>
+<!--=========================================
+        PHASE 1.1 – HEADER HTML
+==========================================-->
+
+<!-- Header Start -->
+<header class="main-header" id="home">
+
+
+    <!--==============================
+            Main Navigation
+    ==============================-->
+
+    <div class="header-wrapper">
+
+        <div class="container">
+
+            <div class="navbar">
+
+                <!-- Logo -->
+                <a href="#" class="logo">
+
+                    <img src="assets/images/logo.png"
+                         alt="School Logo">
+
+                </a>
+
+                <!-- Navigation -->
+                <nav class="nav-menu">
+
+                    <ul class="nav-list">
+
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">
+                                About
+                            </a>
+                        </li>
+
+                    
+
+                        <li class="nav-item">
+                            <a href="#curriculum" class="nav-link">
+                                Curriculum
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#franchise" class="nav-link">
+                                Franchise
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#gallery" class="nav-link">
+                                Gallery
+                            </a>
+                        </li>
+
+                    
+
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+
+                    <a href="francise.html" class="btn btn-primary">
+    <span>Apply For Franchise</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="menu-toggle"
+                        aria-label="Toggle Menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<style>
+    
+    /*==================================================
+        PHASE 1.2 – HEADER BASE CSS
+==================================================*/
+
+/*==================================
+            ROOT VARIABLES
+==================================*/
+
+:root{
+
+    /* Brand Colors */
+
+    --primary:#1F4ED8;
+
+    --primary-dark:#163AA7;
+
+    --secondary:#FFD54A;
+
+    --secondary-dark:#F4C400;
+
+    --success:#42C76B;
+
+    --danger:#EF4444;
+
+    /* Text */
+
+    --heading:#1E293B;
+
+    --text:#64748B;
+
+    --white:#FFFFFF;
+
+    --border:#E5E7EB;
+
+    /* Background */
+
+    --light:#F8FAFC;
+
+    --topbar-bg:#17306E;
+
+    /* Shadow */
+
+    --shadow-sm:0 8px 20px rgba(0,0,0,.05);
+
+    --shadow-md:0 15px 40px rgba(0,0,0,.08);
+
+    --shadow-lg:0 25px 60px rgba(0,0,0,.12);
+
+    /* Radius */
+
+    --radius-sm:8px;
+
+    --radius-md:14px;
+
+    --radius-lg:20px;
+
+    --radius-round:999px;
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+}
+
+/*==================================
+            RESET
+==================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    color:var(--text);
+
+    background:var(--white);
+
+    overflow-x:hidden;
+
+    line-height:1.6;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    background:none;
+
+    font-family:inherit;
+
+}
+
+input{
+
+    font-family:inherit;
+
+}
+
+/*==================================
+            CONTAINER
+==================================*/
+
+.container{
+
+    width:100%;
+
+    max-width:1320px;
+
+    margin:auto;
+
+    padding:0 20px;
+
+}
+
+/*==================================
+            TOP BAR
+==================================*/
+
+.top-bar{
+
+    background:var(--topbar-bg);
+
+    color:var(--white);
+
+    font-size:14px;
+
+}
+
+.top-bar-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:44px;
+
+    gap:20px;
+
+}
+
+.top-bar-left,
+
+.top-bar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.top-icon{
+
+    color:var(--secondary);
+
+}
+
+.top-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:var(--transition);
+
+}
+
+.top-link:hover{
+
+    color:var(--secondary);
+
+}
+
+/*==================================
+        MAIN HEADER
+==================================*/
+
+.main-header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(255,255,255,.98);
+
+}
+
+.header-wrapper{
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.navbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    min-height:82px;
+
+    gap:30px;
+
+}
+
+/*==================================
+            LOGO
+==================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.logo img{
+
+    height:62px;
+
+    width:auto;
+
+}
+
+/*==================================
+        NAVIGATION LAYOUT
+==================================*/
+
+.nav-menu{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.nav-list{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+}
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+/*==================================
+        BUTTON BASE
+==================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 30px;
+
+    border-radius:var(--radius-round);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:var(--secondary);
+
+    color:var(--heading);
+
+}
+
+/*==================================
+        MOBILE TOGGLE
+==================================*/
+
+.menu-toggle{
+
+    width:46px;
+
+    height:46px;
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+    border-radius:10px;
+
+}
+
+.menu-toggle span{
+
+    width:26px;
+
+    height:3px;
+
+    background:var(--heading);
+
+    border-radius:20px;
+
+    transition:var(--transition);
+
+}
+
+/*==================================
+        COMMON SPACING
+==================================*/
+
+section{
+
+    padding:100px 0;
+
+}
+
+/*==================================
+        SELECTION
+==================================*/
+
+::selection{
+
+    background:var(--secondary);
+
+    color:var(--heading);
+
+}
+
+/*==================================================
+        PHASE 1.3 – NAVIGATION CSS
+==================================================*/
+
+/*==================================
+            NAVIGATION
+==================================*/
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex:1;
+
+}
+
+.nav-list{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+}
+
+/*==================================
+            NAV ITEMS
+==================================*/
+
+.nav-item{
+
+    position:relative;
+
+}
+
+.nav-link{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:var(--heading);
+
+    padding:28px 0;
+
+    transition:var(--transition);
+
+}
+
+/*==================================
+        UNDERLINE ANIMATION
+==================================*/
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:18px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        var(--secondary),
+
+        #FFC107
+
+    );
+
+    transform:translateX(-50%);
+
+    transition:width .35s ease;
+
+}
+
+/*==================================
+            HOVER
+==================================*/
+
+.nav-link:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+/*==================================
+        ACTIVE MENU
+==================================*/
+
+.nav-link.active{
+
+    color:var(--primary);
+
+}
+
+.nav-link.active::after{
+
+    width:100%;
+
+}
+
+/*==================================
+        NAV ICON
+==================================*/
+
+.nav-link i{
+
+    font-size:12px;
+
+    transition:var(--transition);
+
+}
+
+.nav-item:hover .nav-link i{
+
+    transform:rotate(180deg);
+
+}
+
+/*==================================
+        DROPDOWN
+==================================*/
+
+.nav-item.has-dropdown{
+
+    position:relative;
+
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    min-width:250px;
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow-lg);
+
+    padding:14px 0;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:all .35s ease;
+
+    z-index:999;
+
+}
+
+.nav-item.has-dropdown:hover .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.dropdown-menu li{
+
+    width:100%;
+
+}
+
+.dropdown-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:14px 24px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    color:var(--heading);
+
+    transition:var(--transition);
+
+}
+
+.dropdown-menu a:hover{
+
+    background:#F8FAFC;
+
+    color:var(--primary);
+
+    padding-left:30px;
+
+}
+
+/*==================================
+        MEGA MENU PLACEHOLDER
+==================================*/
+
+.mega-menu{
+
+    position:absolute;
+
+    left:50%;
+
+    top:100%;
+
+    transform:translateX(-50%) translateY(15px);
+
+    width:900px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow-lg);
+
+    padding:40px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:all .35s ease;
+
+}
+
+.nav-item.has-mega:hover .mega-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+/*==================================
+        LINK HOVER EFFECT
+==================================*/
+
+.nav-link{
+
+    overflow:hidden;
+
+}
+
+.nav-link::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,213,74,.15),
+
+        transparent
+
+    );
+
+    transition:.55s;
+
+}
+
+.nav-link:hover::before{
+
+    left:120%;
+
+}
+
+/*==================================
+        APPLY BUTTON SPACING
+==================================*/
+
+.header-actions{
+
+    margin-left:20px;
+
+}
+
+/*==================================
+        STICKY ACTIVE
+==================================*/
+
+.main-header.scrolled .nav-link{
+
+    padding:24px 0;
+
+}
+
+/*==================================
+        KEYBOARD FOCUS
+==================================*/
+
+.nav-link:focus-visible{
+
+    outline:2px solid var(--primary);
+
+    outline-offset:6px;
+
+    border-radius:6px;
+
+}
+
+/*==================================
+        SMOOTH PERFORMANCE
+==================================*/
+
+.nav-link,
+
+.dropdown-menu,
+
+.mega-menu{
+
+    will-change:transform,opacity;
+
+}
+
+/*==================================================
+        PHASE 1.4 – HEADER BUTTONS
+==================================================*/
+
+/*==================================
+        HEADER ACTION AREA
+==================================*/
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    flex-shrink:0;
+
+}
+
+/*==================================
+        BUTTON BASE
+==================================*/
+
+.btn{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:170px;
+
+    height:54px;
+
+    padding:0 32px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    font-family:inherit;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:all .35s ease;
+
+    user-select:none;
+
+    white-space:nowrap;
+
+}
+
+/*==================================
+        PRIMARY BUTTON
+==================================*/
+
+.btn-primary{
+
+    background:linear-gradient(
+        135deg,
+        #FFD54A,
+        #FFC107
+    );
+
+    color:#17306E;
+
+    box-shadow:
+        0 12px 30px rgba(255,193,7,.28);
+
+}
+
+/*==================================
+        PRIMARY HOVER
+==================================*/
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 40px rgba(255,193,7,.35);
+
+}
+
+/*==================================
+        BUTTON ACTIVE
+==================================*/
+
+.btn-primary:active{
+
+    transform:translateY(-1px) scale(.97);
+
+}
+
+/*==================================
+        BUTTON ICON
+==================================*/
+
+.btn i{
+
+    font-size:15px;
+
+    transition:.35s ease;
+
+}
+
+.btn:hover i{
+
+    transform:translateX(4px);
+
+}
+
+/*==================================
+        RIPPLE LAYER
+==================================*/
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.28);
+
+    transform:translate(-50%,-50%);
+
+    transition:
+        width .6s ease,
+        height .6s ease;
+
+    z-index:0;
+
+}
+
+.btn:hover::before{
+
+    width:340px;
+
+    height:340px;
+
+}
+
+.btn span,
+.btn i{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==================================
+        GLOSS EFFECT
+==================================*/
+
+.btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-130%;
+
+    left:-40%;
+
+    width:35%;
+
+    height:320%;
+
+    background:
+
+        linear-gradient(
+
+            rgba(255,255,255,0),
+
+            rgba(255,255,255,.45),
+
+            rgba(255,255,255,0)
+
+        );
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+}
+
+.btn:hover::after{
+
+    left:130%;
+
+}
+
+/*==================================
+        FOCUS
+==================================*/
+
+.btn:focus-visible{
+
+    outline:3px solid rgba(31,78,216,.25);
+
+    outline-offset:4px;
+
+}
+
+/*==================================
+        DISABLED
+==================================*/
+
+.btn:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.65;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+/*==================================
+        LOADING STATE
+==================================*/
+
+.btn.loading{
+
+    pointer-events:none;
+
+}
+
+.btn.loading i{
+
+    animation:buttonSpin .8s linear infinite;
+
+}
+
+@keyframes buttonSpin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*==================================
+        SUCCESS STATE
+==================================*/
+
+.btn.success{
+
+    background:linear-gradient(
+        135deg,
+        #42C76B,
+        #2FB85A
+    );
+
+    color:#ffffff;
+
+}
+
+/*==================================
+        RESPONSIVE
+==================================*/
+
+@media (max-width:991px){
+
+    .header-actions{
+
+        display:none;
+
+    }
+
+}
+
+/*==================================================
+        PHASE 1.5 – STICKY HEADER
+==================================================*/
+
+/*==================================
+        MAIN HEADER
+==================================*/
+
+.main-header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    transition:
+        background .35s ease,
+        box-shadow .35s ease,
+        padding .35s ease,
+        transform .35s ease;
+
+}
+
+/*==================================
+        HEADER WRAPPER
+==================================*/
+
+.header-wrapper{
+
+    background:rgba(255,255,255,.98);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+    transition:all .35s ease;
+
+}
+
+/*==================================
+        STICKY STATE
+==================================*/
+
+.main-header.scrolled .header-wrapper{
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+
+        0 15px 45px rgba(0,0,0,.08);
+
+}
+
+/*==================================
+        NAVBAR HEIGHT
+==================================*/
+
+.navbar{
+
+    min-height:82px;
+
+    transition:min-height .35s ease;
+
+}
+
+.main-header.scrolled .navbar{
+
+    min-height:72px;
+
+}
+
+/*==================================
+            LOGO
+==================================*/
+
+.logo img{
+
+    height:62px;
+
+    transition:height .35s ease;
+
+}
+
+.main-header.scrolled .logo img{
+
+    height:54px;
+
+}
+
+/*==================================
+        NAVIGATION LINKS
+==================================*/
+
+.nav-link{
+
+    transition:
+
+        color .35s ease,
+
+        padding .35s ease;
+
+}
+
+.main-header.scrolled .nav-link{
+
+    padding:22px 0;
+
+}
+
+/*==================================
+        APPLY BUTTON
+==================================*/
+
+.main-header.scrolled .btn{
+
+    height:50px;
+
+    min-width:165px;
+
+    font-size:14px;
+
+}
+
+/*==================================
+        GLASS EFFECT
+==================================*/
+
+.main-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.18),
+
+            rgba(255,255,255,0)
+
+        );
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    pointer-events:none;
+
+}
+
+.main-header.scrolled::before{
+
+    opacity:1;
+
+}
+
+/*==================================
+        HEADER SHINE
+==================================*/
+
+.main-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.35),
+
+            transparent
+
+        );
+
+    pointer-events:none;
+
+}
+
+.main-header.scrolled:hover::after{
+
+    animation:headerShine 1.2s linear;
+
+}
+
+@keyframes headerShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:140%;
+
+    }
+
+}
+
+/*==================================
+        HIDE / SHOW EFFECT
+==================================*/
+
+.main-header.header-hidden{
+
+    transform:translateY(-100%);
+
+}
+
+.main-header.header-visible{
+
+    transform:translateY(0);
+
+}
+
+/*==================================
+        HEADER LOADING
+==================================*/
+
+.main-header.loading{
+
+    pointer-events:none;
+
+    opacity:.95;
+
+}
+
+/*==================================
+        BODY OFFSET
+==================================*/
+
+body{
+
+    padding-top:126px;
+
+}
+
+/*==================================
+        SCROLLED BODY
+==================================*/
+
+body.scrolled{
+
+    overflow-x:hidden;
+
+}
+
+/*==================================
+        PERFORMANCE
+==================================*/
+
+.main-header,
+
+.header-wrapper,
+
+.navbar{
+
+    will-change:
+
+        transform,
+
+        backdrop-filter,
+
+        background;
+
+}
+
+/*==================================
+        MOBILE
+==================================*/
+
+@media (max-width:991px){
+
+    body{
+
+        padding-top:118px;
+
+    }
+
+    .main-header.scrolled .navbar{
+
+        min-height:68px;
+
+    }
+
+    .main-header.scrolled .logo img{
+
+        height:50px;
+
+    }
+
+}
+
+/*==================================
+        SMALL MOBILE
+==================================*/
+
+@media (max-width:576px){
+
+    body{
+
+        padding-top:110px;
+
+    }
+
+    .navbar{
+
+        min-height:72px;
+
+    }
+
+}
+
+/*==================================================
+        PHASE 1.6 – MOBILE NAVIGATION CSS
+==================================================*/
+
+/*==================================
+        MOBILE MENU BUTTON
+==================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    background:var(--white);
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:all .35s ease;
+
+    z-index:1002;
+
+}
+
+.menu-toggle:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-2px);
+
+}
+
+.menu-toggle span{
+
+    width:26px;
+
+    height:3px;
+
+    background:var(--heading);
+
+    border-radius:20px;
+
+    transition:all .35s ease;
+
+}
+
+/*==================================
+        HAMBURGER ANIMATION
+==================================*/
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:
+        translateY(9px)
+        rotate(45deg);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+    transform:scale(0);
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:
+        translateY(-9px)
+        rotate(-45deg);
+
+}
+
+/*==================================
+        MOBILE MENU
+==================================*/
+
+@media (max-width:991px){
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+    .nav-menu{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:320px;
+
+        max-width:90%;
+
+        height:100vh;
+
+        background:#ffffff;
+
+        padding:110px 35px 40px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        transition:right .4s ease;
+
+        box-shadow:
+            -10px 0 35px rgba(0,0,0,.12);
+
+        overflow-y:auto;
+
+        z-index:1001;
+
+    }
+
+    .nav-menu.active{
+
+        right:0;
+
+    }
+
+    .nav-list{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:0;
+
+    }
+
+    .nav-item{
+
+        width:100%;
+
+        border-bottom:1px solid #F1F5F9;
+
+    }
+
+    .nav-link{
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        padding:18px 0;
+
+        font-size:16px;
+
+    }
+
+    .nav-link::after{
+
+        display:none;
+
+    }
+
+    .header-actions{
+
+        display:none;
+
+    }
+
+}
+
+/*==================================
+        MOBILE OVERLAY
+==================================*/
+
+.mobile-overlay{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(4px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:all .35s ease;
+
+    z-index:1000;
+
+}
+
+.mobile-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*==================================
+        BODY LOCK
+==================================*/
+
+body.menu-open{
+
+    overflow:hidden;
+
+}
+
+/*==================================
+        DROPDOWN MOBILE
+==================================*/
+
+@media (max-width:991px){
+
+    .dropdown-menu{
+
+        position:static;
+
+        opacity:1;
+
+        visibility:visible;
+
+        transform:none;
+
+        width:100%;
+
+        display:none;
+
+        background:#F8FAFC;
+
+        box-shadow:none;
+
+        border-radius:12px;
+
+        margin:10px 0;
+
+        padding:10px 0;
+
+    }
+
+    .nav-item.open>.dropdown-menu{
+
+        display:block;
+
+    }
+
+    .dropdown-menu a{
+
+        padding:12px 18px;
+
+        font-size:14px;
+
+    }
+
+}
+
+/*==================================
+        SCROLLBAR
+==================================*/
+
+.nav-menu::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.nav-menu::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}
+
+/*==================================
+        MOBILE LOGO
+==================================*/
+
+@media (max-width:991px){
+
+    .logo img{
+
+        height:54px;
+
+    }
+
+}
+
+/*==================================
+        SMALL MOBILE
+==================================*/
+
+@media (max-width:576px){
+
+    .nav-menu{
+
+        width:100%;
+
+        max-width:100%;
+
+        padding:95px 25px 30px;
+
+    }
+
+    .menu-toggle{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .menu-toggle span{
+
+        width:24px;
+
+    }
+
+}
+
+/*==================================
+        PERFORMANCE
+==================================*/
+
+.nav-menu,
+
+.mobile-overlay,
+
+.menu-toggle{
+
+    will-change:
+
+        transform,
+
+        opacity;
+
+}
+
+/*==================================================
+        PHASE 1.7 – HEADER RESPONSIVE CSS
+====================================================*/
+
+/*==================================================
+                LARGE LAPTOP
+        1400px and below
+====================================================*/
+
+@media (max-width:1400px){
+
+    .container{
+
+        max-width:1200px;
+
+    }
+
+    .nav-list{
+
+        gap:28px;
+
+    }
+
+    .nav-link{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==================================================
+                LAPTOP
+        1200px and below
+====================================================*/
+
+@media (max-width:1200px){
+
+    .container{
+
+        max-width:100%;
+
+        padding:0 24px;
+
+    }
+
+    .navbar{
+
+        gap:20px;
+
+    }
+
+    .logo img{
+
+        height:56px;
+
+    }
+
+    .nav-list{
+
+        gap:22px;
+
+    }
+
+    .nav-link{
+
+        font-size:15px;
+
+    }
+
+    .btn{
+
+        min-width:155px;
+
+        height:50px;
+
+        padding:0 26px;
+
+        font-size:14px;
+
+    }
+
+    .top-bar-left p{
+
+        font-size:13px;
+
+    }
+
+}
+
+/*==================================================
+                TABLET
+        991px and below
+====================================================*/
+
+@media (max-width:991px){
+
+    .container{
+
+        padding:0 20px;
+
+    }
+
+    .top-bar{
+
+        display:none;
+
+    }
+
+    .header-wrapper{
+
+        border-bottom:none;
+
+    }
+
+    .navbar{
+
+        min-height:76px;
+
+    }
+
+    .logo{
+
+        z-index:1003;
+
+    }
+
+    .logo img{
+
+        height:52px;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+        margin-left:auto;
+
+    }
+
+    .nav-menu{
+
+        justify-content:flex-start;
+
+    }
+
+}
+
+/*==================================================
+            LARGE MOBILE
+        768px and below
+====================================================*/
+
+@media (max-width:768px){
+
+    .container{
+
+        padding:0 18px;
+
+    }
+
+    .navbar{
+
+        min-height:72px;
+
+    }
+
+    .logo img{
+
+        height:48px;
+
+    }
+
+    .nav-menu{
+
+        width:300px;
+
+        padding:90px 28px 30px;
+
+    }
+
+    .nav-link{
+
+        font-size:15px;
+
+        padding:16px 0;
+
+    }
+
+}
+
+/*==================================================
+            MOBILE
+        576px and below
+====================================================*/
+
+@media (max-width:576px){
+
+    .container{
+
+        padding:0 15px;
+
+    }
+
+    .navbar{
+
+        min-height:68px;
+
+    }
+
+    .logo img{
+
+        height:44px;
+
+    }
+
+    .menu-toggle{
+
+        width:44px;
+
+        height:44px;
+
+    }
+
+    .menu-toggle span{
+
+        width:22px;
+
+        height:2.5px;
+
+    }
+
+    .nav-menu{
+
+        width:100%;
+
+        max-width:100%;
+
+        padding:85px 24px 30px;
+
+    }
+
+    .nav-link{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==================================================
+            SMALL MOBILE
+        420px and below
+====================================================*/
+
+@media (max-width:420px){
+
+    .container{
+
+        padding:0 12px;
+
+    }
+
+    .navbar{
+
+        min-height:65px;
+
+    }
+
+    .logo img{
+
+        height:40px;
+
+    }
+
+    .menu-toggle{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .nav-menu{
+
+        padding:80px 20px 25px;
+
+    }
+
+    .nav-link{
+
+        font-size:14px;
+
+        padding:15px 0;
+
+    }
+
+}
+
+/*==================================================
+            LANDSCAPE MOBILE
+====================================================*/
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .nav-menu{
+
+        padding-top:70px;
+
+        overflow-y:auto;
+
+    }
+
+    .navbar{
+
+        min-height:65px;
+
+    }
+
+}
+
+/*==================================================
+            HIGH RESOLUTION
+====================================================*/
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi){
+
+    .logo img{
+
+        image-rendering:auto;
+
+    }
+
+}
+
+/*==================================================
+            REDUCED MOTION
+====================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .main-header,
+    .navbar,
+    .nav-menu,
+    .menu-toggle,
+    .btn,
+    .nav-link{
+
+        transition:none !important;
+
+        animation:none !important;
+
+    }
+
+}
+
+/*==================================================
+            PRINT
+====================================================*/
+
+@media print{
+
+    .top-bar,
+    .menu-toggle,
+    .header-actions{
+
+        display:none !important;
+
+    }
+
+    .main-header{
+
+        position:static;
+
+        box-shadow:none;
+
+        background:#fff;
+
+    }
+
+}
+
+/*==================================================
+        PHASE 1.10 – HEADER PRODUCTION POLISH
+====================================================*/
+
+/*==================================
+        SMOOTH RENDERING
+==================================*/
+
+.main-header,
+.header-wrapper,
+.navbar,
+.logo,
+.nav-menu,
+.nav-link,
+.btn,
+.menu-toggle{
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+}
+
+/*==================================
+        GPU ACCELERATION
+==================================*/
+
+.logo img,
+.btn,
+.nav-link,
+.menu-toggle span{
+
+    transform:translateZ(0);
+    will-change:transform;
+
+}
+
+/*==================================
+        IMAGE QUALITY
+==================================*/
+
+.logo img{
+
+    user-select:none;
+    pointer-events:none;
+    object-fit:contain;
+
+}
+
+/*==================================
+        SELECTION
+==================================*/
+
+.nav-link::selection,
+.btn::selection{
+
+    background:transparent;
+
+}
+
+/*==================================
+        BUTTON TAP
+==================================*/
+
+.btn,
+.menu-toggle{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+/*==================================
+        FOCUS
+==================================*/
+
+.nav-link:focus-visible,
+.btn:focus-visible,
+.menu-toggle:focus-visible{
+
+    outline:3px solid rgba(31,78,216,.25);
+    outline-offset:4px;
+
+}
+
+/*==================================
+        DISABLE DRAG
+==================================*/
+
+.logo,
+.logo img{
+
+    -webkit-user-drag:none;
+
+}
+
+/*==================================
+        HEADER LOADING
+==================================*/
+
+.main-header.loaded{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*==================================
+        PRINT
+==================================*/
+
+@media print{
+
+    .main-header{
+
+        display:none;
+
+    }
+
+}
+
+/*==================================
+        REDUCED MOTION
+==================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .main-header,
+    .nav-link,
+    .btn,
+    .menu-toggle span{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+/*==================================
+        HIGH DPI
+==================================*/
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi){
+
+    .logo img{
+
+        image-rendering:auto;
+
+    }
+
+}
+
+/*==================================
+        SAFE AREA
+==================================*/
+
+@supports(padding:max(0px)){
+
+    .main-header{
+
+        padding-left:max(0px,env(safe-area-inset-left));
+
+        padding-right:max(0px,env(safe-area-inset-right));
+
+    }
+
+}
+
+</style>
+
+<script>
+    
+    /*==================================================
+        PHASE 1.8 – HEADER JAVASCRIPT
+==================================================*/
+
+"use strict";
+
+/*==================================================
+        DOM ELEMENTS
+==================================================*/
+
+const header = document.querySelector(".main-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+const overlay = document.querySelector(".mobile-overlay");
+const navLinks = document.querySelectorAll(".nav-link");
+
+/*==================================================
+        STICKY HEADER
+==================================================*/
+
+function updateHeader(){
+
+    if(window.scrollY > 40){
+
+        header.classList.add("scrolled");
+
+    }else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+}
+
+window.addEventListener("scroll", updateHeader, {
+
+    passive:true
+
+});
+
+/*==================================================
+        MOBILE MENU
+==================================================*/
+
+function openMenu(){
+
+    menuToggle.classList.add("active");
+
+    navMenu.classList.add("active");
+
+    overlay.classList.add("active");
+
+    document.body.classList.add("menu-open");
+
+    menuToggle.setAttribute("aria-expanded","true");
+
+}
+
+function closeMenu(){
+
+    menuToggle.classList.remove("active");
+
+    navMenu.classList.remove("active");
+
+    overlay.classList.remove("active");
+
+    document.body.classList.remove("menu-open");
+
+    menuToggle.setAttribute("aria-expanded","false");
+
+}
+
+function toggleMenu(){
+
+    if(navMenu.classList.contains("active")){
+
+        closeMenu();
+
+    }else{
+
+        openMenu();
+
+    }
+
+}
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click",toggleMenu);
+
+}
+
+/*==================================================
+        CLOSE EVENTS
+==================================================*/
+
+if(overlay){
+
+    overlay.addEventListener("click",closeMenu);
+
+}
+
+navLinks.forEach(link=>{
+
+    link.addEventListener("click",closeMenu);
+
+});
+
+/*==================================================
+        ESC KEY
+==================================================*/
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        closeMenu();
+
+    }
+
+});
+
+/*==================================================
+        ACTIVE NAVIGATION
+==================================================*/
+
+const sections = document.querySelectorAll("section[id]");
+
+function updateActiveLink(){
+
+    const scrollPosition =
+
+        window.scrollY + 120;
+
+    sections.forEach(section=>{
+
+        const top = section.offsetTop;
+
+        const height = section.offsetHeight;
+
+        const id = section.getAttribute("id");
+
+        if(
+
+            scrollPosition >= top &&
+
+            scrollPosition < top + height
+
+        ){
+
+            navLinks.forEach(link=>{
+
+                link.classList.remove("active");
+
+            });
+
+            const active = document.querySelector(
+
+                `.nav-link[href="#${id}"]`
+
+            );
+
+            if(active){
+
+                active.classList.add("active");
+
+            }
+
+        }
+
+    });
+
+}
+
+window.addEventListener(
+
+    "scroll",
+
+    updateActiveLink,
+
+    {passive:true}
+
+);
+
+/*==================================================
+        SMOOTH SCROLL
+==================================================*/
+
+navLinks.forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        const target =
+
+            document.querySelector(
+
+                this.getAttribute("href")
+
+            );
+
+        if(!target) return;
+
+        e.preventDefault();
+
+        const offset =
+
+            header.offsetHeight;
+
+        window.scrollTo({
+
+            top:
+
+                target.offsetTop - offset,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+});
+
+/*==================================================
+        CLOSE MENU ON RESIZE
+==================================================*/
+
+window.addEventListener(
+
+    "resize",
+
+    function(){
+
+        if(window.innerWidth > 991){
+
+            closeMenu();
+
+        }
+
+    }
+
+);
+
+/*==================================================
+        INITIALIZE
+==================================================*/
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    function(){
+
+        updateHeader();
+
+        updateActiveLink();
+
+    }
+
+);
+
+/*==================================================
+        PHASE 1.9 – HEADER ANIMATIONS
+==================================================*/
+
+"use strict";
+
+/*==================================================
+        DOM ELEMENTS
+==================================================*/
+
+const animatedHeader = document.querySelector(".main-header");
+const logo = document.querySelector(".logo");
+const navigationLinks = document.querySelectorAll(".nav-link");
+const applyButton = document.querySelector(".btn-primary");
+
+/*==================================================
+        HEADER ENTRANCE
+==================================================*/
+
+window.addEventListener("load",()=>{
+
+    animatedHeader.style.opacity="0";
+    animatedHeader.style.transform="translateY(-50px)";
+
+    requestAnimationFrame(()=>{
+
+        animatedHeader.style.transition=
+            "opacity .8s ease, transform .8s ease";
+
+        animatedHeader.style.opacity="1";
+        animatedHeader.style.transform="translateY(0)";
+
+    });
+
+});
+
+/*==================================================
+        LOGO HOVER
+==================================================*/
+
+if(logo){
+
+    logo.addEventListener("mouseenter",()=>{
+
+        logo.animate(
+
+            [
+
+                {
+                    transform:"scale(1)"
+                },
+
+                {
+                    transform:"scale(1.08)"
+                },
+
+                {
+                    transform:"scale(1)"
+                }
+
+            ],
+
+            {
+
+                duration:500,
+
+                easing:"ease"
+
+            }
+
+        );
+
+    });
+
+}
+
+/*==================================================
+        NAVIGATION HOVER
+==================================================*/
+
+navigationLinks.forEach(link=>{
+
+    link.addEventListener("mouseenter",()=>{
+
+        link.animate(
+
+            [
+
+                {
+
+                    transform:"translateY(0)"
+
+                },
+
+                {
+
+                    transform:"translateY(-3px)"
+
+                },
+
+                {
+
+                    transform:"translateY(0)"
+
+                }
+
+            ],
+
+            {
+
+                duration:250,
+
+                easing:"ease-out"
+
+            }
+
+        );
+
+    });
+
+});
+
+/*==================================================
+        BUTTON PULSE
+==================================================*/
+
+if(applyButton){
+
+    setInterval(()=>{
+
+        if(window.innerWidth>991){
+
+            applyButton.animate(
+
+                [
+
+                    {
+
+                        transform:"scale(1)"
+
+                    },
+
+                    {
+
+                        transform:"scale(1.05)"
+
+                    },
+
+                    {
+
+                        transform:"scale(1)"
+
+                    }
+
+                ],
+
+                {
+
+                    duration:900,
+
+                    easing:"ease"
+
+                }
+
+            );
+
+        }
+
+    },7000);
+
+}
+
+/*==================================================
+        SCROLL SHADOW ANIMATION
+==================================================*/
+
+let previousScroll=0;
+
+window.addEventListener("scroll",()=>{
+
+    const current=window.scrollY;
+
+    if(current>previousScroll && current>120){
+
+        animatedHeader.style.boxShadow=
+
+            "0 18px 45px rgba(0,0,0,.10)";
+
+    }
+
+    else{
+
+        animatedHeader.style.boxShadow=
+
+            "0 10px 30px rgba(0,0,0,.06)";
+
+    }
+
+    previousScroll=current;
+
+},{passive:true});
+
+/*==================================================
+        BUTTON ENTRANCE
+==================================================*/
+
+if(applyButton){
+
+    applyButton.style.opacity="0";
+    applyButton.style.transform="translateX(20px)";
+
+    window.addEventListener("load",()=>{
+
+        setTimeout(()=>{
+
+            applyButton.style.transition=
+
+                "all .6s ease";
+
+            applyButton.style.opacity="1";
+            applyButton.style.transform="translateX(0)";
+
+        },400);
+
+    });
+
+}
+
+/*==================================================
+        NAV STAGGER
+==================================================*/
+
+window.addEventListener("load",()=>{
+
+    navigationLinks.forEach((link,index)=>{
+
+        link.style.opacity="0";
+        link.style.transform="translateY(-20px)";
+
+        setTimeout(()=>{
+
+            link.style.transition=
+
+                "all .45s ease";
+
+            link.style.opacity="1";
+            link.style.transform="translateY(0)";
+
+        },150+(index*70));
+
+    });
+
+});
+
+/*==================================================
+        REDUCED MOTION
+==================================================*/
+
+if(
+
+window.matchMedia(
+
+"(prefers-reduced-motion: reduce)"
+
+).matches){
+
+    document
+
+    .querySelectorAll("*")
+
+    .forEach(el=>{
+
+        el.style.animation="none";
+        el.style.transition="none";
+
+    });
+
+}
+
+/*==================================================
+        HEADER FINAL POLISH
+==================================================*/
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    /* Header Ready */
+
+    document
+        .querySelector(".main-header")
+        ?.classList.add("loaded");
+
+    /* Disable image dragging */
+
+    document
+        .querySelectorAll(".logo img")
+        .forEach(img=>{
+
+            img.draggable=false;
+
+        });
+
+    /* Secure external links */
+
+    document
+        .querySelectorAll('a[target="_blank"]')
+        .forEach(link=>{
+
+            link.rel="noopener noreferrer";
+
+        });
+
+});
+
+/*==================================================
+        ERROR PROTECTION
+==================================================*/
+
+window.addEventListener("error",(event)=>{
+
+    console.error(
+
+        "Header Error:",
+
+        event.message
+
+    );
+
+});
+
+
+
+</script>
 <html lang="en">
 
 <head>
