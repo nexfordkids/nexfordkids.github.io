@@ -1,0 +1,3251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | KN Kids Preschool</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <style>
+
+        /*=========================================
+GLOBAL SETTINGS
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    color:#1d2948;
+    background:#ffffff;
+    overflow-x:hidden;
+
+}
+
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+
+ul{
+
+    list-style:none;
+
+}
+
+
+
+/*=========================================
+HEADER
+=========================================*/
+
+
+.header{
+
+    width:100%;
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+
+}
+
+
+.header .container{
+
+    height:85px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+
+
+/* LOGO */
+
+.logo img{
+
+    width:145px;
+
+}
+
+
+
+
+/* NAVIGATION */
+
+
+.navbar ul{
+
+    display:flex;
+    align-items:center;
+    gap:32px;
+
+}
+
+
+.navbar ul li a{
+
+    font-size:14px;
+    font-weight:500;
+    color:#152348;
+    position:relative;
+    transition:.3s;
+
+}
+
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+
+    color:#2d7045;
+
+}
+
+
+
+.navbar ul li a.active::after{
+
+    content:"";
+    position:absolute;
+
+    width:35px;
+    height:3px;
+
+    background:#2d7045;
+
+    bottom:-12px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border-radius:10px;
+
+}
+
+
+
+
+
+/* FRANCHISE BUTTON */
+
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:13px 28px;
+
+    border-radius:35px;
+
+    background:#f97316;
+
+    color:white;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(249,115,22,.3);
+
+}
+
+
+
+.franchise-btn{
+
+    gap:8px;
+
+}
+
+
+
+.franchise-btn::before{
+
+    content:"☎";
+
+    font-size:16px;
+
+}
+
+
+
+/* MOBILE MENU */
+
+
+.menu-btn{
+
+    display:none;
+
+    font-size:25px;
+
+    color:#18315d;
+
+    cursor:pointer;
+
+}
+
+
+
+
+/*=========================================
+ABOUT HERO SECTION
+=========================================*/
+
+
+.about-hero{
+
+    padding:70px 0 40px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.about-hero .container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+}
+
+
+
+/* LEFT CONTENT */
+
+
+.hero-left{
+
+    width:45%;
+
+}
+
+
+
+.small-title{
+
+    display:inline-block;
+
+    color:#39764b;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.small-title::after{
+
+    content:"•";
+
+    color:#f7b731;
+
+    margin-left:8px;
+
+}
+
+
+
+.hero-left h1{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
+    color:#122653;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.hero-left h2{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#ef8b18;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero-left p{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:#444;
+
+    margin-bottom:18px;
+
+    max-width:480px;
+
+}
+
+
+
+
+/* QUOTE BOX */
+
+
+.quote-box{
+
+    margin-top:35px;
+
+    width:390px;
+
+    min-height:80px;
+
+    background:#f4faf3;
+
+    border-radius:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:15px;
+
+    position:relative;
+
+}
+
+
+
+.quote-img{
+
+    width:90px;
+
+    margin-right:15px;
+
+}
+
+
+.quote-text{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#3e5747;
+
+    line-height:1.6;
+
+}
+
+
+
+/*=========================================
+HERO IMAGE
+=========================================*/
+
+
+.hero-right{
+
+    width:55%;
+
+}
+
+
+
+.hero-image{
+
+    position:relative;
+
+    padding:20px;
+
+}
+
+
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:85%;
+
+    background:#f7e66b;
+
+    border-radius:120px 0 120px 0;
+
+    right:0;
+
+    top:40px;
+
+    z-index:-1;
+
+}
+
+
+
+.hero-image img{
+
+    width:100%;
+
+    border-radius:100px 0 100px 0;
+
+    object-fit:cover;
+
+}
+
+
+
+
+/* DECORATIVE ELEMENTS */
+
+
+.about-hero::before{
+
+    content:"✦";
+
+    position:absolute;
+
+    top:100px;
+
+    left:42%;
+
+    font-size:35px;
+
+    color:#f5c542;
+
+}
+
+
+
+.about-hero::after{
+
+    content:"☀";
+
+    position:absolute;
+
+    top:80px;
+
+    right:45%;
+
+    font-size:50px;
+
+    color:#f5c542;
+
+}
+
+
+
+
+/*=========================================
+HERO RESPONSIVE
+=========================================*/
+
+
+@media(max-width:992px){
+
+
+.header .container{
+
+    height:75px;
+
+}
+
+
+.navbar{
+
+    display:none;
+
+}
+
+
+.menu-btn{
+
+    display:block;
+
+}
+
+
+
+.franchise-btn{
+
+    display:none;
+
+}
+
+
+
+.about-hero .container{
+
+    flex-direction:column;
+
+}
+
+
+
+.hero-left,
+.hero-right{
+
+    width:100%;
+
+}
+
+
+
+.hero-left{
+
+    text-align:center;
+
+}
+
+
+
+.hero-left p{
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+
+.quote-box{
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+.hero-image{
+
+    margin-top:30px;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.hero-left h1{
+
+    font-size:34px;
+
+}
+
+
+
+.hero-left h2{
+
+    font-size:17px;
+
+}
+
+
+
+.quote-box{
+
+    width:100%;
+
+}
+
+
+
+.about-hero{
+
+    padding-top:40px;
+
+}
+
+
+
+}
+
+/*=========================================
+VISION & MISSION SECTION
+=========================================*/
+
+
+.vision-mission{
+
+    padding:40px 0 60px;
+
+}
+
+
+
+.vision-mission .container{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+
+/* COMMON CARD */
+
+
+.card{
+
+    min-height:240px;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+
+
+/* VISION */
+
+
+.vision{
+
+    background:#f3f8ff;
+
+    border:1px solid #e1ecff;
+
+}
+
+
+
+/* MISSION */
+
+
+.mission{
+
+    background:#f5fff3;
+
+    border:1px solid #e2f4dc;
+
+}
+
+
+
+
+.card .icon{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.vision .icon{
+
+    background:#2463b5;
+
+}
+
+
+
+.mission .icon{
+
+    background:#55a63a;
+
+}
+
+
+
+
+
+.card h2{
+
+    font-size:24px;
+
+    color:#153b72;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+
+
+.mission h2{
+
+    color:#27773c;
+
+}
+
+
+
+
+.card p{
+
+    width:65%;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:#444;
+
+}
+
+
+
+
+.card img{
+
+    position:absolute;
+
+    width:150px;
+
+    right:25px;
+
+    bottom:20px;
+
+}
+
+
+
+
+/*=========================================
+FEATURE SECTION
+=========================================*/
+
+
+.features{
+
+    padding:20px 0 70px;
+
+}
+
+
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.section-title h2{
+
+    font-size:32px;
+
+    color:#142653;
+
+    font-weight:800;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+
+
+.section-title h2::before{
+
+    content:"•";
+
+    color:#f7b731;
+
+    margin-right:12px;
+
+}
+
+
+
+.section-title h2::after{
+
+    content:"•";
+
+    color:#f7b731;
+
+    margin-left:12px;
+
+}
+
+
+
+
+
+/* FEATURE GRID */
+
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+
+
+
+.feature-card{
+
+    min-height:170px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:22px 18px;
+
+    border:1px solid #eeeeee;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+}
+
+
+
+
+
+.feature-icon{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+/* ICON COLORS */
+
+
+.feature-card:nth-child(1) .feature-icon{
+
+    background:#e9f7ea;
+
+    color:#3c874c;
+
+}
+
+
+
+.feature-card:nth-child(2) .feature-icon{
+
+    background:#fff0e8;
+
+    color:#ef7620;
+
+}
+
+
+
+.feature-card:nth-child(3) .feature-icon{
+
+    background:#eee7ff;
+
+    color:#7654d9;
+
+}
+
+
+
+.feature-card:nth-child(4) .feature-icon{
+
+    background:#ffe8f0;
+
+    color:#df4b8a;
+
+}
+
+
+
+.feature-card:nth-child(5) .feature-icon{
+
+    background:#fff3dc;
+
+    color:#db8b18;
+
+}
+
+
+
+.feature-card:nth-child(6) .feature-icon{
+
+    background:#e6f3ff;
+
+    color:#2876bd;
+
+}
+
+
+
+.feature-card:nth-child(7) .feature-icon{
+
+    background:#e7f7ff;
+
+    color:#1493c7;
+
+}
+
+
+
+.feature-card:nth-child(8) .feature-icon{
+
+    background:#e5f8ed;
+
+    color:#29935b;
+
+}
+
+
+
+
+
+.feature-card h3{
+
+    font-size:16px;
+
+    line-height:1.4;
+
+    color:#16345f;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+
+
+.feature-card p{
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    color:#555;
+
+}
+
+
+
+
+
+
+/*=========================================
+VISION MISSION RESPONSIVE
+=========================================*/
+
+
+@media(max-width:992px){
+
+
+.vision-mission .container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.feature-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.card img{
+
+    width:120px;
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.vision-mission{
+
+    padding-top:20px;
+
+}
+
+
+
+.card{
+
+    padding:25px;
+
+}
+
+
+
+.card p{
+
+    width:100%;
+
+}
+
+
+
+.card img{
+
+    opacity:.25;
+
+    width:130px;
+
+}
+
+
+
+.section-title h2{
+
+    font-size:25px;
+
+}
+
+
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.feature-card{
+
+    min-height:auto;
+
+}
+
+
+
+}
+
+/*=========================================
+STATISTICS SECTION
+=========================================*/
+
+
+.stats{
+
+    padding:70px 0;
+
+    background:#f8fbf7;
+
+    position:relative;
+
+}
+
+
+
+.stats h2{
+
+    text-align:center;
+
+    font-size:32px;
+
+    color:#142653;
+
+    font-weight:800;
+
+    margin-bottom:45px;
+
+}
+
+
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.stat{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px 15px;
+
+    text-align:center;
+
+    border:1px solid #edf2eb;
+
+    transition:.35s;
+
+}
+
+
+
+.stat:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+.stat h3{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    color:#2d7045;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.stat p{
+
+    font-size:13px;
+
+    color:#555;
+
+    font-weight:500;
+
+}
+
+
+
+
+
+/*=========================================
+CTA SECTION
+=========================================*/
+
+
+.cta{
+
+    padding:70px 0;
+
+}
+
+
+
+.cta .container{
+
+    background:#fff7df;
+
+    border-radius:35px;
+
+    padding:45px;
+
+    display:grid;
+
+    grid-template-columns:1fr 220px 1fr;
+
+    align-items:center;
+
+    gap:30px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.cta .container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:#ffe99a;
+
+    border-radius:50%;
+
+    left:-50px;
+
+    top:-50px;
+
+}
+
+
+
+
+.cta-left h2{
+
+    font-size:30px;
+
+    line-height:1.4;
+
+    color:#142653;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.cta-center{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.cta-center img{
+
+    width:180px;
+
+    animation:float 3s infinite ease-in-out;
+
+}
+
+
+
+
+.cta-right h2{
+
+    font-size:25px;
+
+    color:#142653;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+.cta-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+
+.secondary{
+
+    background:#2d7045;
+
+}
+
+
+
+
+
+/* FLOATING IMAGE ANIMATION */
+
+
+@keyframes float{
+
+
+0%{
+
+    transform:translateY(0);
+
+}
+
+
+50%{
+
+    transform:translateY(-12px);
+
+}
+
+
+100%{
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+/*=========================================
+FOOTER
+=========================================*/
+
+
+footer{
+
+    background:#142653;
+
+    padding:25px 0;
+
+    text-align:center;
+
+}
+
+
+
+footer p{
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/*=========================================
+SCROLL ANIMATION CLASSES
+=========================================*/
+
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s;
+
+}
+
+
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+/*=========================================
+FINAL RESPONSIVE DESIGN
+=========================================*/
+
+
+@media(max-width:1100px){
+
+
+.stats-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+
+.cta .container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+
+
+.cta-buttons{
+
+    justify-content:center;
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+
+.stats{
+
+    padding:50px 0;
+
+}
+
+
+
+.stats h2{
+
+    font-size:25px;
+
+}
+
+
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.cta{
+
+    padding:40px 0;
+
+}
+
+
+
+.cta .container{
+
+    padding:30px 20px;
+
+}
+
+
+
+.cta-left h2{
+
+    font-size:24px;
+
+}
+
+
+
+.cta-right h2{
+
+    font-size:22px;
+
+}
+
+
+
+.cta-buttons{
+
+    flex-direction:column;
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:450px){
+
+
+.stats-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.stat h3{
+
+    font-size:26px;
+
+}
+
+
+
+}
+
+
+
+
+
+/*=========================================
+EXTRA DECORATIONS
+=========================================*/
+
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    right:-35px;
+
+    top:-35px;
+
+    opacity:.15;
+
+}
+
+
+
+.vision::after{
+
+    background:#2463b5;
+
+}
+
+
+
+.mission::after{
+
+    background:#55a63a;
+
+}
+
+
+
+
+
+.feature-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:#fff2c2;
+
+    right:-20px;
+
+    bottom:-20px;
+
+    opacity:.5;
+
+}
+
+
+
+
+
+/*=========================================
+BUTTON ACTIVE EFFECT
+=========================================*/
+
+
+.btn:active{
+
+    transform:scale(.95);
+
+}
+
+
+
+
+/*=========================================
+SMOOTH PAGE REVEAL
+=========================================*/
+
+
+section{
+
+    animation:pageFade .7s ease;
+
+}
+
+
+
+@keyframes pageFade{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+/* MOBILE NAVIGATION */
+
+
+@media(max-width:992px){
+
+.navbar.show{
+
+    display:block;
+
+    position:absolute;
+
+    top:75px;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    padding:25px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.1);
+
+}
+
+
+.navbar.show ul{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+}
+
+
+
+
+/* BUTTON RIPPLE */
+
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.ripple{
+
+    position:absolute;
+
+    width:20px;
+
+    height:20px;
+
+    background:rgba(255,255,255,.5);
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    animation:rippleEffect .6s linear;
+
+}
+
+
+
+@keyframes rippleEffect{
+
+
+to{
+
+transform:scale(8);
+
+opacity:0;
+
+}
+
+
+}
+
+/*=========================================
+FINAL PREMIUM POLISH
+=========================================*/
+
+
+/* Floating Background Shapes */
+
+
+.about-hero .container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    background:#fff3c4;
+
+    border-radius:50%;
+
+    left:-50px;
+
+    top:150px;
+
+    z-index:-1;
+
+}
+
+
+
+.about-hero .container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+
+    height:80px;
+
+    background:#dff4df;
+
+    border-radius:50%;
+
+    right:20px;
+
+    bottom:20px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* Feature Card Top Line */
+
+
+.feature-card{
+
+    border-top:4px solid transparent;
+
+}
+
+
+
+.feature-card:nth-child(1){
+
+    border-top-color:#4caf50;
+
+}
+
+
+.feature-card:nth-child(2){
+
+    border-top-color:#ff9800;
+
+}
+
+
+.feature-card:nth-child(3){
+
+    border-top-color:#673ab7;
+
+}
+
+
+.feature-card:nth-child(4){
+
+    border-top-color:#e91e63;
+
+}
+
+
+.feature-card:nth-child(5){
+
+    border-top-color:#ffc107;
+
+}
+
+
+.feature-card:nth-child(6){
+
+    border-top-color:#2196f3;
+
+}
+
+
+.feature-card:nth-child(7){
+
+    border-top-color:#00acc1;
+
+}
+
+
+.feature-card:nth-child(8){
+
+    border-top-color:#43a047;
+
+}
+
+
+
+
+
+
+/* Better Image Hover */
+
+
+.hero-image img{
+
+    transition:.5s;
+
+}
+
+
+
+.hero-image:hover img{
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+
+
+/* CTA Glow */
+
+
+.cta .btn{
+
+    box-shadow:0 10px 25px rgba(249,115,22,.25);
+
+}
+
+
+
+
+
+/* Better Typography */
+
+
+.hero-left h1,
+.stats h2,
+.section-title h2,
+.cta h2{
+
+    letter-spacing:-.5px;
+
+}
+
+
+
+
+
+
+/* Smooth Card Animation */
+
+
+.card,
+.feature-card,
+.stat{
+
+    will-change:transform;
+
+}
+
+
+
+
+
+
+/* Custom Scroll Bar */
+
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#f5f5f5;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#2d7045;
+
+    border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#f97316;
+
+}
+
+
+
+
+
+/* Mobile Image Fix */
+
+
+@media(max-width:600px){
+
+
+.hero-image::before{
+
+    border-radius:60px 0 60px 0;
+
+}
+
+
+
+.hero-image img{
+
+    border-radius:60px 0 60px 0;
+
+}
+
+
+
+}
+
+#topBtn{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:#f97316;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+
+#topBtn.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+
+#topBtn:hover{
+
+transform:translateY(-5px);
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!--=========================
+HEADER
+==========================-->
+
+<header class="header">
+
+    <div class="container">
+
+        <div class="logo">
+
+            <img src="logo1.jpeg" alt="Logo">
+
+        </div>
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a class="active" href="#">About Us</a></li>
+
+                <li><a href="curriculum.html">Curriculum</a></li>
+
+                <li><a href="Franchise.html">Franchise</a></li>
+
+                <li><a href="gallery.html">Gallery</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+        <a href="#" class="btn franchise-btn">
+
+            Apply for Franchise
+
+        </a>
+
+        <div class="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!--=========================
+ABOUT HERO
+==========================-->
+
+<section class="about-hero">
+
+<div class="container">
+
+<div class="hero-left">
+
+<span class="small-title">
+
+ABOUT US
+
+</span>
+
+<h1>
+
+About nexfordkids
+
+</h1>
+
+<h2>
+
+Building Bright Futures,
+One Preschool at a Time.
+
+</h2>
+
+<p>
+
+About Nexford Kids
+Building Bright Futures, One Preschool at a Time.
+
+Nexford Kids is a modern international preschool brand dedicated to providing joyful, child-centered early education inspired by global best practices. Our exclusive Limited Curriculum combines experiential learning, creativity, life skills, and strong academic foundations to help every child learn with confidence and curiosity.
+
+</p>
+
+<p>
+
+We believe that every child deserves a safe, nurturing, and inspiring environment where learning happens through exploration, imagination, and meaningful experiences.
+
+Quote:
+
+"Together, we nurture young minds and build a stronger tomorrow."
+</p>
+
+<div class="quote-box">
+
+<div class="quote-img">
+
+<img src="fox.png" alt="Fox">
+
+</div>
+
+<div class="quote-text">
+
+Together, we nurture young minds
+and build a stronger tomorrow.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-right">
+
+<div class="hero-image">
+
+<img src="main.PNG" alt="About">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!--=========================
+VISION MISSION
+==========================-->
+
+<section class="vision-mission">
+
+<div class="container">
+
+<div class="vision card">
+
+<div class="icon">
+
+<i class="fa-solid fa-eye"></i>
+
+</div>
+
+<h2>
+
+Our Vision
+
+</h2>
+
+<p>
+
+To become one of India's most trusted international preschool brands by nurturing confident, creative, and future-ready learners while empowering passionate entrepreneurs to build successful preschool businesses across the country.
+
+</p>
+
+<img src="vision.png" alt="Vision">
+
+</div>
+
+
+
+<div class="mission card">
+
+<div class="icon">
+
+<i class="fa-solid fa-bullseye"></i>
+
+</div>
+
+<h2>
+
+Our Mission
+
+</h2>
+
+<p>
+
+To deliver high-quality early childhood education through innovative teaching methods, world-class curriculum, continuous teacher development, and comprehensive franchise support that creates lasting value for children, parents, and franchise partners.
+
+</p>
+
+<img src="mission.png" alt="Mission">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!--=========================
+FEATURES
+==========================-->
+
+<section class="features">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+What Makes Us Different?
+
+</h2>
+
+</div>
+
+<div class="feature-grid">
+
+<!-- Card 1 -->
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-book-open"></i>
+
+</div>
+
+<h3>
+
+US Inspired Curriculum
+
+</h3>
+
+<p>
+
+Research-based learning for
+holistic child development.
+
+</p>
+
+</div>
+
+
+
+<!-- Card 2 -->
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-school"></i>
+
+</div>
+
+<h3>
+
+Business Model
+
+</h3>
+
+<p>
+
+Complete preschool setup and
+business guidance.
+
+</p>
+
+</div>
+
+
+
+<!-- Card 3 -->
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-person-chalkboard"></i>
+
+</div>
+
+<h3>
+
+Teacher Training
+
+</h3>
+
+<p>
+
+Continuous professional
+development.
+
+</p>
+
+</div>
+
+
+
+<!-- Card 4 -->
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-child-reaching"></i>
+
+</div>
+
+<h3>
+
+Child Centric
+
+</h3>
+
+<p>
+
+Creative and experiential
+learning.
+
+</p>
+
+</div>
+
+
+
+<!-- Card 5 -->
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-palette"></i>
+
+</div>
+
+<h3>
+
+70+ Activities
+
+</h3>
+
+<p>
+
+Learning through games,
+music and creativity.
+
+</p>
+
+</div>
+
+
+
+<!-- Card 6 -->
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+</div>
+
+<h3>
+
+Safe Campus
+
+</h3>
+
+<p>
+
+Clean, hygienic and
+secure environment.
+
+</p>
+
+</div>
+
+
+
+<!-- Card 7 -->
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-laptop"></i>
+
+</div>
+
+<h3>
+
+Parent App
+
+</h3>
+
+<p>
+
+ERP and Parent
+communication system.
+
+</p>
+
+</div>
+
+
+
+<!-- Card 8 -->
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-handshake"></i>
+
+</div>
+
+<h3>
+
+Franchise Support
+
+</h3>
+
+<p>
+
+Complete academic,
+marketing and operational support.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!--=========================
+STATISTICS
+==========================-->
+
+<section class="stats">
+
+<div class="container">
+
+<h2>
+
+Why Families Trust nexfordkids
+
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat">
+
+<h3>30+</h3>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat">
+
+<h3>70+</h3>
+
+<p>Activities</p>
+
+</div>
+
+<div class="stat">
+
+<h3>1:15</h3>
+
+<p>Teacher Ratio</p>
+
+</div>
+
+<div class="stat">
+
+<h3>100%</h3>
+
+<p>Safe Campus</p>
+
+</div>
+
+<div class="stat">
+
+<h3>ISO</h3>
+
+<p>Certified</p>
+
+</div>
+
+<div class="stat">
+
+<h3>Pan India</h3>
+
+<p>Centers</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!--=========================
+CALL TO ACTION
+==========================-->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-left">
+
+<h2>
+
+Where Children Learn,
+Families Trust,
+Entrepreneurs Grow.
+
+</h2>
+
+<a href="#" class="btn">
+
+Know More
+
+</a>
+
+</div>
+
+<div class="cta-center">
+
+<img src="fox.png" alt="Fox">
+
+</div>
+
+<div class="cta-right">
+
+<h2>
+
+Ready To Start
+Your Preschool?
+
+</h2>
+
+<div class="cta-buttons">
+
+<a href="#" class="btn">
+
+Apply Now
+
+</a>
+
+<a href="#" class="btn secondary">
+
+Book Consultation
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!--=========================
+FOOTER
+==========================-->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© 2026 KN Kids Preschool.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<button id="topBtn">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+
+<script>
+
+    /*=========================================
+MOBILE MENU TOGGLE
+=========================================*/
+
+
+const menuBtn = document.querySelector(".menu-btn");
+
+const navbar = document.querySelector(".navbar");
+
+
+if(menuBtn){
+
+    menuBtn.addEventListener("click",()=>{
+
+        navbar.classList.toggle("show");
+
+        menuBtn.classList.toggle("active");
+
+    });
+
+}
+
+
+
+
+/*=========================================
+CLOSE MOBILE MENU ON CLICK
+=========================================*/
+
+
+const navLinks = document.querySelectorAll(".navbar a");
+
+
+navLinks.forEach(link=>{
+
+
+    link.addEventListener("click",()=>{
+
+
+        navbar.classList.remove("show");
+
+
+    });
+
+
+});
+
+
+
+
+
+/*=========================================
+STICKY HEADER EFFECT
+=========================================*/
+
+
+const header = document.querySelector(".header");
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(window.scrollY > 50){
+
+
+        header.style.boxShadow =
+        "0 8px 25px rgba(0,0,0,.12)";
+
+
+    }
+
+    else{
+
+
+        header.style.boxShadow =
+        "0 5px 20px rgba(0,0,0,.05)";
+
+
+    }
+
+
+});
+
+
+
+
+
+/*=========================================
+STAT COUNTER ANIMATION
+=========================================*/
+
+
+const counters =
+document.querySelectorAll(".stat h3");
+
+
+let started = false;
+
+
+
+function startCounter(){
+
+
+    if(started) return;
+
+
+    const statsSection =
+    document.querySelector(".stats");
+
+
+    const sectionTop =
+    statsSection.getBoundingClientRect().top;
+
+
+
+    if(sectionTop < window.innerHeight - 100){
+
+
+        started=true;
+
+
+
+        counters.forEach(counter=>{
+
+
+            let target =
+            counter.innerText;
+
+
+            let number =
+            parseInt(target);
+
+
+
+            if(isNaN(number))
+            return;
+
+
+
+            let count=0;
+
+
+            let speed =
+            Math.ceil(number/80);
+
+
+
+            let timer =
+            setInterval(()=>{
+
+
+                count += speed;
+
+
+
+                if(count >= number){
+
+
+                    counter.innerText =
+                    target;
+
+
+                    clearInterval(timer);
+
+
+                }
+
+
+                else{
+
+
+                    counter.innerText =
+                    count+"+";
+
+
+                }
+
+
+
+            },30);
+
+
+
+        });
+
+
+    }
+
+
+}
+
+
+
+window.addEventListener(
+"scroll",
+startCounter
+);
+
+
+
+
+
+
+
+/*=========================================
+SCROLL REVEAL ANIMATION
+=========================================*/
+
+
+const revealElements =
+document.querySelectorAll(
+
+".card, .feature-card, .stat, .cta"
+
+);
+
+
+
+revealElements.forEach(element=>{
+
+
+    element.classList.add("fade-up");
+
+
+});
+
+
+
+
+
+function revealOnScroll(){
+
+
+    revealElements.forEach(element=>{
+
+
+        let position =
+        element.getBoundingClientRect().top;
+
+
+
+        if(position <
+        window.innerHeight - 80){
+
+
+            element.classList.add("show");
+
+
+        }
+
+
+    });
+
+
+}
+
+
+
+window.addEventListener(
+"scroll",
+revealOnScroll
+);
+
+
+revealOnScroll();
+
+
+
+
+
+
+
+/*=========================================
+ACTIVE NAVIGATION ON SCROLL
+=========================================*/
+
+
+const sections =
+document.querySelectorAll("section");
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+    let current="";
+
+
+    sections.forEach(section=>{
+
+
+        const sectionTop =
+        section.offsetTop - 150;
+
+
+        if(scrollY >= sectionTop){
+
+
+            current =
+            section.getAttribute("class");
+
+
+        }
+
+
+
+    });
+
+
+
+    navLinks.forEach(link=>{
+
+
+        link.classList.remove("active");
+
+
+
+        if(
+        link.getAttribute("href")
+        === "#"+current
+        ){
+
+
+            link.classList.add("active");
+
+
+        }
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+
+/*=========================================
+IMAGE LAZY LOAD EFFECT
+=========================================*/
+
+
+const images =
+document.querySelectorAll("img");
+
+
+
+images.forEach(img=>{
+
+
+    img.loading="lazy";
+
+
+});
+
+
+
+
+
+
+/*=========================================
+BUTTON RIPPLE EFFECT
+=========================================*/
+
+
+const buttons =
+document.querySelectorAll(".btn");
+
+
+
+buttons.forEach(button=>{
+
+
+    button.addEventListener(
+    "click",
+    function(e){
+
+
+        let ripple =
+        document.createElement("span");
+
+
+        ripple.className="ripple";
+
+
+        this.appendChild(ripple);
+
+
+
+        setTimeout(()=>{
+
+
+            ripple.remove();
+
+
+        },600);
+
+
+
+    });
+
+
+});
+
+/*=========================================
+BACK TO TOP BUTTON
+=========================================*/
+
+
+const topBtn =
+document.getElementById("topBtn");
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+if(window.scrollY > 500){
+
+
+topBtn.classList.add("show");
+
+
+}
+
+else{
+
+
+topBtn.classList.remove("show");
+
+
+}
+
+
+});
+
+
+
+topBtn.onclick=()=>{
+
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+
+};
+
+
+
+
+
+
+/*=========================================
+PAGE LOAD ANIMATION
+=========================================*/
+
+
+window.addEventListener(
+"load",
+()=>{
+
+
+document.body.classList.add("loaded");
+
+
+});
+
+
+</script>
+
+</body>
+</html>
