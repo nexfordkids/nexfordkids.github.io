@@ -1871,29 +1871,15 @@ FINAL PREMIUM POLISH
 
 
 
-.about-hero .container::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:80px;
-
-    height:80px;
-
-    background:#dff4df;
-
-    border-radius:50%;
-
-    right:20px;
-
-    bottom:20px;
-
-    z-index:-1;
-
+.hero-section::before {
+    display: none !important;
 }
 
-
+/* Remove left curved decorative shape */
+.hero-section::before,
+.hero-section::after {
+    display: none !important;
+}
 
 
 
