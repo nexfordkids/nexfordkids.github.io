@@ -9862,267 +9862,958 @@ PHASE 6
 TESTIMONIALS & SUCCESS STORIES
 ==========================================-->
 
-<section class="testimonials-section" id="testimonials">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="container">
+<title>Infinite Testimonials</title>
 
-        <!--==============================
-        SECTION HEADER
-        ==============================-->
+<style>
 
-        <div class="section-heading">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            <span class="section-tag">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
+}
 
-                Parent Testimonials
+/* =========================================
+   TESTIMONIAL SECTION
+========================================= */
 
-            </span>
+.testimonial-section {
+    width: 100%;
+    padding: 60px 0;
+    overflow: hidden;
+}
 
-            <h2>
+/* =========================================
+   CAROUSEL WRAPPER
+========================================= */
 
-                Loved by Parents,
-                Trusted by Families
+.testimonial-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
-            </h2>
+/* =========================================
+   FADE EDGES
+========================================= */
 
-            <p>
+.testimonial-wrapper::before,
+.testimonial-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
 
-                Hear from parents and franchise partners who have
-                experienced the Nexford Kids difference through our
-                learning methodology, caring teachers and strong
-                academic foundation.
+.testimonial-wrapper::before {
+    left: 0;
+    background: linear-gradient(
+        to right,
+        #f5f8fc,
+        transparent
+    );
+}
 
-            </p>
+.testimonial-wrapper::after {
+    right: 0;
+    background: linear-gradient(
+        to left,
+        #f5f8fc,
+        transparent
+    );
+}
 
-        </div>
+/* =========================================
+   TRACK
+========================================= */
 
-        <!--==============================
-        TESTIMONIAL SLIDER
-        ==============================-->
+.testimonial-track {
+    display: flex;
+    gap: 18px;
+    width: max-content;
+    will-change: transform;
+}
 
-        <div class="testimonial-slider">
+/* =========================================
+   CARD
+========================================= */
 
-            <button class="slider-btn prev-btn">
+.testimonial-card {
+    flex: 0 0 202px;
+    min-height: 245px;
 
-                <i class="fa-solid fa-chevron-left"></i>
+    background: #ffffff;
 
-            </button>
+    border-radius: 15px;
 
-            <div class="testimonial-track">
+    padding: 18px;
 
-                <!-- Card 1 -->
+    box-shadow:
+        0 12px 30px rgba(31, 48, 72, 0.10);
 
-                <article class="testimonial-card active">
+    border: 1px solid #edf0f5;
 
-                    <div class="quote-icon">
+    position: relative;
 
-                        <i class="fa-solid fa-quote-left"></i>
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* First card highlighted */
+
+.testimonial-card.highlight {
+    border-color: #ffbd52;
+}
+
+/* Hover */
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(31, 48, 72, 0.15);
+}
+
+/* =========================================
+   QUOTE ICON
+========================================= */
+
+.quote-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #174b9c,
+        #2775df
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    box-shadow:
+        0 6px 15px rgba(23, 75, 156, 0.20);
+}
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+    color: #ffb400;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   REVIEW TEXT
+========================================= */
+
+.review-text {
+    color: #596575;
+
+    font-size: 10px;
+
+    line-height: 1.75;
+
+    min-height: 85px;
+
+    margin-bottom: 14px;
+}
+
+/* =========================================
+   USER
+========================================= */
+
+.reviewer {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: auto;
+}
+
+.reviewer-image {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid white;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.12);
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.reviewer-name {
+    color: #174b9c;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.reviewer-role {
+    color: #7c8795;
+
+    font-size: 8px;
+}
+
+/* =========================================
+   NAVIGATION BUTTONS
+========================================= */
+
+.carousel-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #1755ad;
+
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow:
+        0 8px 22px rgba(30, 50, 80, 0.15);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #1755ad;
+
+    color: #ffffff;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+.carousel-prev {
+    left: 50px;
+}
+
+.carousel-next {
+    right: 50px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .testimonial-section {
+        padding: 40px 0;
+    }
+
+    .testimonial-card {
+        flex-basis: 210px;
+    }
+
+    .carousel-prev {
+        left: 12px;
+    }
+
+    .carousel-next {
+        right: 12px;
+    }
+
+    .testimonial-wrapper::before,
+    .testimonial-wrapper::after {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .testimonial-card {
+        flex-basis: 230px;
+    }
+
+    .carousel-prev {
+        left: 8px;
+    }
+
+    .carousel-next {
+        right: 8px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<section class="testimonial-section">
+
+    <div class="testimonial-wrapper">
+
+        <!-- LEFT BUTTON -->
+        <button
+            class="carousel-btn carousel-prev"
+            id="prevBtn">
+            ‹
+        </button>
+
+
+        <!-- =====================================
+             TRACK
+        ====================================== -->
+
+        <div class="testimonial-track" id="testimonialTrack">
+
+
+            <!-- ================================
+                 CARD 1
+            ================================= -->
+
+            <div class="testimonial-card highlight">
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    Our experience has been wonderful.
+                    Caring teachers, quality education,
+                    and strong values have helped our child
+                    grow in confidence, creativity, and
+                    curiosity. We are proud to be part of
+                    this school family.
+                </p>
+
+                <div class="reviewer">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=47"
+                        class="reviewer-image"
+                        alt="Jasthi Hari Sree">
+
+                    <div class="reviewer-info">
+
+                        <span class="reviewer-name">
+                            Jasthi Hari Sree
+                        </span>
+
+                        <span class="reviewer-role">
+                            Parent
+                        </span>
 
                     </div>
 
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <p>
-
-                        Our experience has been wonderful. Caring teachers, quality education, and strong values have helped our child grow in confidence, creativity, and curiosity. We are proud to be part of this school family.
-
-                    </p>
-
-                    <div class="testimonial-user">
-
-                        <img src="p1.jpeg"
-                             alt="Parent">
-
-                        <div>
-
-                            <h4>
-
-                                Jasthi Hari Sree
-
-                            </h4>
-
-                            <span>
-
-                                Parent
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- Card 2 -->
-
-                <article class="testimonial-card">
-
-                    <div class="quote-icon">
-
-                        <i class="fa-solid fa-quote-left"></i>
-
-                    </div>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <p>
-
-                        Choosing this School was our best decision. Caring teachers, play-based learning, and a child-focused environment helped our child gain confidence, social skills, and a joyful love for learning.
-
-                    </p>
-
-                    <div class="testimonial-user">
-
-                        <img src="p2.jpeg"
-                             alt="Parent">
-
-                        <div>
-
-                            <h4>
-
-                                Anupama Shukla
-
-                            </h4>
-
-                            <span>
-
-                                Parent
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- Card 3 -->
-
-                <article class="testimonial-card">
-
-                    <div class="quote-icon">
-
-                        <i class="fa-solid fa-quote-left"></i>
-
-                    </div>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <p>
-
-                        We had a wonderful experience. Caring teachers, a nurturing environment, and a balanced focus on academics and overall development helped our child grow in confidence, knowledge, and strong values.
-
-                    </p>
-
-                    <div class="testimonial-user">
-
-                        <img src="p3.jpeg"
-                             alt="Franchise Partner">
-
-                        <div>
-
-                            <h4>
-
-                                Jemsu K. Joy
-
-                            </h4>
-
-                            <span>
-
-                                Franchise Partner
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- Card 4 -->
-
-                <article class="testimonial-card">
-
-                    <div class="quote-icon">
-
-                        <i class="fa-solid fa-quote-left"></i>
-
-                    </div>
-
-                    <div class="stars">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <p>
-
-                        We are highly satisfied with the school’s caring teachers, unique teaching methods, and strong focus on values, discipline, and character development, helping every child achieve their full potential.
-
-                    </p>
-
-                    <div class="testimonial-user">
-
-                        <img src="p4.jpeg"
-                             alt="Franchise Partner">
-
-                        <div>
-
-                            <h4>
-
-                                Muliniy Hemalatha
-
-                            </h4>
-
-                            <span>
-
-                                Franchise Partner
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
+                </div>
 
             </div>
 
-            <button class="slider-btn next-btn">
 
-                <i class="fa-solid fa-chevron-right"></i>
+            <!-- ================================
+                 CARD 2
+            ================================= -->
 
-            </button>
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    Choosing this School was our best
+                    decision. Caring teachers, play-based
+                    learning, and a child-focused
+                    environment helped our child gain
+                    confidence, social skills, and a joyful
+                    love for learning.
+                </p>
+
+                <div class="reviewer">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=32"
+                        class="reviewer-image"
+                        alt="Anupama Shukla">
+
+                    <div class="reviewer-info">
+
+                        <span class="reviewer-name">
+                            Anupama Shukla
+                        </span>
+
+                        <span class="reviewer-role">
+                            Parent
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 CARD 3
+            ================================= -->
+
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    We had a wonderful experience. Caring
+                    teachers, a nurturing environment, and a
+                    balanced focus on academics and overall
+                    development helped our child grow in
+                    confidence, knowledge, and strong values.
+                </p>
+
+                <div class="reviewer">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=12"
+                        class="reviewer-image"
+                        alt="Jemsu K. Joy">
+
+                    <div class="reviewer-info">
+
+                        <span class="reviewer-name">
+                            Jemsu K. Joy
+                        </span>
+
+                        <span class="reviewer-role">
+                            Franchise Partner
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 CARD 4
+            ================================= -->
+
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    We are highly satisfied with the school's
+                    caring teachers, unique teaching methods,
+                    and strong focus on values, discipline,
+                    and character development, helping every
+                    child achieve their full potential.
+                </p>
+
+                <div class="reviewer">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=44"
+                        class="reviewer-image"
+                        alt="Mulinly Hemalatha">
+
+                    <div class="reviewer-info">
+
+                        <span class="reviewer-name">
+                            Mulinly Hemalatha
+                        </span>
+
+                        <span class="reviewer-role">
+                            Franchise Partner
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--
+            =========================================
+            DUPLICATE SET
+            =========================================
+
+            These four cards create the seamless
+            infinite loop.
+            -->
+
+
+            <!-- CARD 1 DUPLICATE -->
+
+            <div class="testimonial-card highlight">
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    Our experience has been wonderful.
+                    Caring teachers, quality education,
+                    and strong values have helped our child
+                    grow in confidence, creativity, and
+                    curiosity. We are proud to be part of
+                    this school family.
+                </p>
+
+                <div class="reviewer">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=47"
+                        class="reviewer-image"
+                        alt="Jasthi Hari Sree">
+
+                    <div class="reviewer-info">
+
+                        <span class="reviewer-name">
+                            Jasthi Hari Sree
+                        </span>
+
+                        <span class="reviewer-role">
+                            Parent
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 DUPLICATE -->
+
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    Choosing this School was our best
+                    decision. Caring teachers, play-based
+                    learning, and a child-focused
+                    environment helped our child gain
+                    confidence, social skills, and a joyful
+                    love for learning.
+                </p>
+
+                <div class="reviewer">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=32"
+                        class="reviewer-image"
+                        alt="Anupama Shukla">
+
+                    <div class="reviewer-info">
+
+                        <span class="reviewer-name">
+                            Anupama Shukla
+                        </span>
+
+                        <span class="reviewer-role">
+                            Parent
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 DUPLICATE -->
+
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    We had a wonderful experience. Caring
+                    teachers, a nurturing environment, and a
+                    balanced focus on academics and overall
+                    development helped our child grow in
+                    confidence, knowledge, and strong values.
+                </p>
+
+                <div class="reviewer">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=12"
+                        class="reviewer-image"
+                        alt="Jemsu K. Joy">
+
+                    <div class="reviewer-info">
+
+                        <span class="reviewer-name">
+                            Jemsu K. Joy
+                        </span>
+
+                        <span class="reviewer-role">
+                            Franchise Partner
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 DUPLICATE -->
+
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    We are highly satisfied with the school's
+                    caring teachers, unique teaching methods,
+                    and strong focus on values, discipline,
+                    and character development, helping every
+                    child achieve their full potential.
+                </p>
+
+                <div class="reviewer">
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=44"
+                        class="reviewer-image"
+                        alt="Mulinly Hemalatha">
+
+                    <div class="reviewer-info">
+
+                        <span class="reviewer-name">
+                            Mulinly Hemalatha
+                        </span>
+
+                        <span class="reviewer-role">
+                            Franchise Partner
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
+
+
+        <!-- RIGHT BUTTON -->
+
+        <button
+            class="carousel-btn carousel-next"
+            id="nextBtn">
+            ›
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* =========================================
+   INFINITE TESTIMONIAL CAROUSEL
+========================================= */
+
+const track = document.getElementById("testimonialTrack");
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+
+let position = 0;
+
+let speed = 0.45;
+
+let animationFrame;
+
+let isPaused = false;
+
+
+/* =========================================
+   GET ORIGINAL SET WIDTH
+========================================= */
+
+function getSetWidth() {
+
+    return track.scrollWidth / 2;
+
+}
+
+
+/* =========================================
+   START POSITION
+========================================= */
+
+/*
+   We start one complete set to the LEFT.
+
+   Then cards move toward the RIGHT.
+
+   Example:
+
+   [1][2][3][4][1][2][3][4]
+          ↑
+       visible
+
+   Movement →→→
+*/
+
+function initializeCarousel() {
+
+    position = -getSetWidth();
+
+    updatePosition();
+
+}
+
+
+/* =========================================
+   UPDATE TRANSFORM
+========================================= */
+
+function updatePosition() {
+
+    track.style.transform =
+        `translate3d(${position}px, 0, 0)`;
+
+}
+
+
+/* =========================================
+   INFINITE ANIMATION
+========================================= */
+
+function animate() {
+
+    if (!isPaused) {
+
+        /*
+           LEFT → RIGHT
+        */
+
+        position += speed;
+
+
+        const setWidth = getSetWidth();
+
+
+        /*
+           Once we reach the duplicated
+           set, jump back by one complete
+           set.
+
+           Because the cards are identical,
+           the user sees NO jump.
+        */
+
+        if (position >= 0) {
+
+            position -= setWidth;
+
+        }
+
+
+        updatePosition();
+
+    }
+
+
+    animationFrame =
+        requestAnimationFrame(animate);
+
+}
+
+
+/* =========================================
+   PAUSE ON HOVER
+========================================= */
+
+track.addEventListener("mouseenter", () => {
+
+    isPaused = true;
+
+});
+
+
+track.addEventListener("mouseleave", () => {
+
+    isPaused = false;
+
+});
+
+
+/* =========================================
+   PREVIOUS BUTTON
+========================================= */
+
+prevBtn.addEventListener("click", () => {
+
+    position -= 220;
+
+    const setWidth = getSetWidth();
+
+    if (position < -setWidth) {
+
+        position += setWidth;
+
+    }
+
+    updatePosition();
+
+});
+
+
+/* =========================================
+   NEXT BUTTON
+========================================= */
+
+nextBtn.addEventListener("click", () => {
+
+    position += 220;
+
+    const setWidth = getSetWidth();
+
+    if (position >= 0) {
+
+        position -= setWidth;
+
+    }
+
+    updatePosition();
+
+});
+
+
+/* =========================================
+   RESIZE
+========================================= */
+
+window.addEventListener("resize", () => {
+
+    initializeCarousel();
+
+});
+
+
+/* =========================================
+   START
+========================================= */
+
+initializeCarousel();
+
+animate();
+
+</script>
+
+</body>
+</html>
 
         <!--==============================
         REVIEW SUMMARY
