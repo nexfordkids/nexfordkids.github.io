@@ -351,7 +351,7 @@ ABOUT HERO SECTION
 
     color:#444;
 
-    margin-bottom:18px;
+    margin-bottom:3px;
 
     max-width:480px;
 
@@ -557,8 +557,12 @@ HERO RESPONSIVE
 
     /* Allow the contents of hero-left
        to be reordered on mobile */
-    .hero-left{
-        display:contents;
+     .hero-left{
+    display:contents;
+}
+    .hero-left p{
+    margin-bottom:0px !important;
+}
     }
 
     /* 1. ABOUT US */
@@ -579,33 +583,52 @@ HERO RESPONSIVE
     margin-bottom:5px;
 }
 
-    /* 4. LOGO IMAGE */
+    /* 4. MAIN IMAGE */
 .hero-right{
-    order:4;
+    order:4 !important;
     width:100%;
-    margin-top:0;
+    margin:0 !important;
+    padding:0 !important;
 }
+
 .hero-image{
-    margin-top:0 !important;
-    padding-top:0 !important;
-    padding-bottom:0 !important;
+    order:4;
+    margin:0 !important;
+    padding:0 !important;
 }
-    
-    /* 5. DESCRIPTION TEXT */
-    .hero-left p{
-        order:5;
-    }
 
-    /* 6. QUOTE BOX */
-    .hero-left .quote-box{
-        order:6;
-        width:100%;
-    }
+.hero-image img{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0 auto !important;
+}
 
-    .about-hero{
-        padding-top:40px;
-    }
+/* 5. FIRST DESCRIPTION */
+.hero-left p:nth-of-type(1){
+    order:5;
+    margin-top:0 !important;
+    margin-bottom:3px !important;
+}
 
+/* 6. SECOND DESCRIPTION */
+.hero-left p:nth-of-type(2){
+    order:6;
+    margin-top:0 !important;
+    margin-bottom:3px !important;
+}
+
+/* 7. THIRD DESCRIPTION */
+.hero-left p:nth-of-type(3){
+    order:7;
+    margin-top:0 !important;
+    margin-bottom:3px !important;
+}
+
+/* 8. QUOTE */
+.hero-left .quote-box{
+    order:8;
+    width:100%;
 }
 
 /*=========================================
@@ -2720,25 +2743,16 @@ About Nexford Kids
 Because ordinary was never the plan !!
 
 </h2>
-
 <p>
-
-About Nexford Kids
-Building Bright Futures, One Preschool at a Time.
-
-<p>
-Nexford Kids is a modern international preschool brand dedicated to providing joyful, child-centered early education inspired by global best practices. Our exclusive Limited Curriculum combines experiential learning, creativity, life skills, and strong academic foundations to help every child learn with confidence and curiosity.
-</p>
-
+    About Nexford Kids Building Bright Futures, One Preschool at a Time.
 </p>
 
 <p>
+    Nexford Kids is a modern international preschool brand dedicated to providing joyful, child-centered early education inspired by global best practices. Our exclusive Limited Curriculum combines experiential learning, creativity, life skills, and strong academic foundations to help every child learn with confidence and curiosity.
+</p>
 
-We believe that every child deserves a safe, nurturing, and inspiring environment where learning happens through exploration, imagination, and meaningful experiences.
-
-Quote:
-
-"Together, we nurture young minds and build a stronger tomorrow."
+<p>
+    We believe that every child deserves a safe, nurturing, and inspiring environment where learning happens through exploration, imagination, and meaningful experiences.
 </p>
 
 <div class="quote-box">
