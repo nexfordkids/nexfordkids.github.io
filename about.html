@@ -1323,125 +1323,329 @@ STATISTICS SECTION
 }
 
 
-/* =========================================
-   1. LUMINED CURRICULUM
-   GREEN
-========================================= */
+/* =====================================================
+   LAST 8 CARDS
+   MAKE THEM LOOK LIKE THE FIRST 8
+===================================================== */
 
-.feature-card:nth-child(9) {
-    border-top: 3px solid #22a447;
-}
+.last-eight-card {
+    position: relative;
 
-.feature-card:nth-child(9) .feature-icon {
-    background: #e5f7ea;
-    color: #22a447;
-}
+    width: 100%;
 
+    background: #ffffff;
 
-/* =========================================
-   2. CHILD DEVELOPMENT
-   ORANGE
-========================================= */
+    border: 1px solid #e3e3e3;
 
-.feature-card:nth-child(10) {
-    border-top: 3px solid #f97316;
-}
+    border-radius: 12px;
 
-.feature-card:nth-child(10) .feature-icon {
-    background: #fff0e6;
-    color: #f97316;
-}
+    padding: 14px 10px 12px;
 
+    min-height: 190px;
 
-/* =========================================
-   3. GROWTH PLAN
-   PURPLE
-========================================= */
+    overflow: hidden;
 
-.feature-card:nth-child(11) {
-    border-top: 3px solid #7c3aed;
-}
+    display: flex;
+    flex-direction: column;
 
-.feature-card:nth-child(11) .feature-icon {
-    background: #eee7ff;
-    color: #7c3aed;
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
-/* =========================================
-   4. OBSERVATION
-   PINK
-========================================= */
+/* =====================================================
+   HOVER
+===================================================== */
 
-.feature-card:nth-child(12) {
-    border-top: 3px solid #ec4899;
-}
+.last-eight-card:hover {
+    transform: translateY(-3px);
 
-.feature-card:nth-child(12) .feature-icon {
-    background: #fde8f3;
-    color: #ec4899;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 
-/* =========================================
-   5. LIFE SKILLS
-   YELLOW
-========================================= */
+/* =====================================================
+   IMAGE CONTAINER
+   SAME SIZE AS FIRST 8
+===================================================== */
 
-.feature-card:nth-child(13) {
-    border-top: 3px solid #eab308;
-}
+.last-eight-card .feature-image {
+    width: 38px;
+    height: 38px;
 
-.feature-card:nth-child(13) .feature-icon {
-    background: #fff7d6;
-    color: #d89b00;
-}
+    min-width: 38px;
+    min-height: 38px;
 
+    border-radius: 10px;
 
-/* =========================================
-   6. REAL WORLD
-   BLUE
-========================================= */
+    display: flex;
 
-.feature-card:nth-child(14) {
-    border-top: 3px solid #0ea5e9;
-}
+    align-items: center;
+    justify-content: center;
 
-.feature-card:nth-child(14) .feature-icon {
-    background: #e5f5ff;
-    color: #0ea5e9;
+    margin-bottom: 8px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
 }
 
 
-/* =========================================
-   7. SCHOOL READINESS
-   TEAL
-========================================= */
+/* =====================================================
+   ACTUAL IMAGE
+===================================================== */
 
-.feature-card:nth-child(15) {
-    border-top: 3px solid #14b8a6;
+.last-eight-card .feature-image img {
+    width: 27px;
+    height: 27px;
+
+    max-width: 27px;
+    max-height: 27px;
+
+    object-fit: contain;
+
+    display: block;
 }
 
-.feature-card:nth-child(15) .feature-icon {
-    background: #e2f8f5;
-    color: #0f9f91;
+
+/* =====================================================
+   DIFFERENT IMAGE BACKGROUND COLORS
+===================================================== */
+
+
+/* LUMINED */
+
+.curriculum-image {
+    background: #e8f7ec;
 }
 
 
-/* =========================================
-   8. INDEPENDENCE
-   DARK GREEN
-========================================= */
+/* CHILD DEVELOPMENT */
 
-.feature-card:nth-child(16) {
-    border-top: 3px solid #16a34a;
+.development-image {
+    background: #fff0e5;
 }
 
-.feature-card:nth-child(16) .feature-icon {
-    background: #e5f6ea;
-    color: #16a34a;
+
+/* GROWTH PLAN */
+
+.growth-image {
+    background: #d9f8df;
 }
 
+
+/* OBSERVATION */
+
+.observation-image {
+    background: #d9f3ff;
+}
+
+
+/* LIFE SKILLS */
+
+.life-skills-image {
+    background: #ffe2ee;
+}
+
+
+/* REAL WORLD */
+
+.real-world-image {
+    background: #fff1c9;
+}
+
+
+/* SCHOOL READINESS */
+
+.readiness-image {
+    background: #eee5ff;
+}
+
+
+/* INDEPENDENCE */
+
+.independence-image {
+    background: #d9f7f4;
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.last-eight-card h3 {
+    margin: 0 0 6px;
+
+    color: #17396b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.last-eight-card p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 8px;
+
+    line-height: 1.45;
+}
+
+
+/* =====================================================
+   REMOVE LARGE DECORATIVE SHAPE
+===================================================== */
+
+.last-eight-card::after {
+    display: none;
+}
+
+
+/* =====================================================
+   COLORED TOP BORDERS
+===================================================== */
+
+.last-eight-card:nth-child(1) {
+    border-top: 2px solid #35a853;
+}
+
+.last-eight-card:nth-child(2) {
+    border-top: 2px solid #ff8a00;
+}
+
+.last-eight-card:nth-child(3) {
+    border-top: 2px solid #7139d6;
+}
+
+.last-eight-card:nth-child(4) {
+    border-top: 2px solid #ed3d83;
+}
+
+.last-eight-card:nth-child(5) {
+    border-top: 2px solid #f2a900;
+}
+
+.last-eight-card:nth-child(6) {
+    border-top: 2px solid #2196e8;
+}
+
+.last-eight-card:nth-child(7) {
+    border-top: 2px solid #7445d8;
+}
+
+.last-eight-card:nth-child(8) {
+    border-top: 2px solid #20a59f;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .last-eight-card {
+        padding: 13px 10px;
+
+        min-height: 185px;
+    }
+
+    .last-eight-card .feature-image {
+        width: 36px;
+        height: 36px;
+    }
+
+    .last-eight-card .feature-image img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .last-eight-card h3 {
+        font-size: 10px;
+    }
+
+    .last-eight-card p {
+        font-size: 8px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .last-eight-card {
+        min-height: 175px;
+
+        padding: 14px 11px;
+    }
+
+    .last-eight-card .feature-image {
+        width: 38px;
+        height: 38px;
+    }
+
+    .last-eight-card .feature-image img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .last-eight-card h3 {
+        font-size: 11px;
+    }
+
+    .last-eight-card p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .last-eight-card {
+        min-height: auto;
+
+        padding: 14px 12px;
+    }
+
+    .last-eight-card .feature-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .last-eight-card .feature-image img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .last-eight-card h3 {
+        font-size: 11px;
+    }
+
+    .last-eight-card p {
+        font-size: 9px;
+    }
+}
 
 
 /*=========================================
@@ -2891,7 +3095,7 @@ Why Families Trust nexfordkids
 
 <h3>30+</h3>
 
-<p>Years Experience</p>
+<p>Years of combined expertise</p>
 
 </div>
 
@@ -2899,7 +3103,7 @@ Why Families Trust nexfordkids
 
 <h3>70+</h3>
 
-<p>Activities</p>
+<p>Brain boosting activities</p>
 
 </div>
 
@@ -2907,7 +3111,7 @@ Why Families Trust nexfordkids
 
 <h3>1:15</h3>
 
-<p>Teacher Ratio</p>
+<p>Teacher child ratio</p>
 
 </div>
 
@@ -2923,7 +3127,7 @@ Why Families Trust nexfordkids
 
 <h3>ISO</h3>
 
-<p>Certified</p>
+<p>9001 & 27,001 certified</p>
 
 </div>
 
