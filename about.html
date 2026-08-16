@@ -1232,7 +1232,215 @@ STATISTICS SECTION
 
 }
 
+/* =========================================
+   LAST 8 CARDS - DIFFERENT COLOR THEMES
+========================================= */
 
+.feature-card:nth-child(n + 9) {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 17px 14px 20px;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* HOVER */
+
+.feature-card:nth-child(n + 9):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================
+   COMMON ICON
+========================================= */
+
+.feature-card:nth-child(n + 9) .feature-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   COMMON TITLE
+========================================= */
+
+.feature-card:nth-child(n + 9) h3 {
+    color: #17396b;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 8px;
+}
+
+
+/* =========================================
+   COMMON DESCRIPTION
+========================================= */
+
+.feature-card:nth-child(n + 9) p {
+    color: #666b73;
+    font-size: 10.5px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+
+/* =========================================
+   YELLOW CORNER
+========================================= */
+
+.feature-card:nth-child(n + 9)::after {
+    content: "";
+
+    position: absolute;
+
+    width: 28px;
+    height: 28px;
+
+    right: -1px;
+    bottom: -1px;
+
+    background: #fff6d8;
+
+    border-radius: 28px 0 0 0;
+}
+
+
+/* =========================================
+   1. LUMINED CURRICULUM
+   GREEN
+========================================= */
+
+.feature-card:nth-child(9) {
+    border-top: 3px solid #22a447;
+}
+
+.feature-card:nth-child(9) .feature-icon {
+    background: #e5f7ea;
+    color: #22a447;
+}
+
+
+/* =========================================
+   2. CHILD DEVELOPMENT
+   ORANGE
+========================================= */
+
+.feature-card:nth-child(10) {
+    border-top: 3px solid #f97316;
+}
+
+.feature-card:nth-child(10) .feature-icon {
+    background: #fff0e6;
+    color: #f97316;
+}
+
+
+/* =========================================
+   3. GROWTH PLAN
+   PURPLE
+========================================= */
+
+.feature-card:nth-child(11) {
+    border-top: 3px solid #7c3aed;
+}
+
+.feature-card:nth-child(11) .feature-icon {
+    background: #eee7ff;
+    color: #7c3aed;
+}
+
+
+/* =========================================
+   4. OBSERVATION
+   PINK
+========================================= */
+
+.feature-card:nth-child(12) {
+    border-top: 3px solid #ec4899;
+}
+
+.feature-card:nth-child(12) .feature-icon {
+    background: #fde8f3;
+    color: #ec4899;
+}
+
+
+/* =========================================
+   5. LIFE SKILLS
+   YELLOW
+========================================= */
+
+.feature-card:nth-child(13) {
+    border-top: 3px solid #eab308;
+}
+
+.feature-card:nth-child(13) .feature-icon {
+    background: #fff7d6;
+    color: #d89b00;
+}
+
+
+/* =========================================
+   6. REAL WORLD
+   BLUE
+========================================= */
+
+.feature-card:nth-child(14) {
+    border-top: 3px solid #0ea5e9;
+}
+
+.feature-card:nth-child(14) .feature-icon {
+    background: #e5f5ff;
+    color: #0ea5e9;
+}
+
+
+/* =========================================
+   7. SCHOOL READINESS
+   TEAL
+========================================= */
+
+.feature-card:nth-child(15) {
+    border-top: 3px solid #14b8a6;
+}
+
+.feature-card:nth-child(15) .feature-icon {
+    background: #e2f8f5;
+    color: #0f9f91;
+}
+
+
+/* =========================================
+   8. INDEPENDENCE
+   DARK GREEN
+========================================= */
+
+.feature-card:nth-child(16) {
+    border-top: 3px solid #16a34a;
+}
+
+.feature-card:nth-child(16) .feature-icon {
+    background: #e5f6ea;
+    color: #16a34a;
+}
 
 
 
@@ -2530,197 +2738,120 @@ marketing and operational support.
 </div>
 
 
-<!-- Card 9 -->
+<!-- LAST 8 CARDS -->
 
 <div class="feature-card">
+    <div class="feature-icon curriculum-icon">
+        <i class="fas fa-book-open"></i>
+    </div>
 
-<div class="feature-icon">
+    <h3>LUMINED Curriculum</h3>
 
-<i class="fa-solid fa-handshake"></i>
-
+    <p>
+        An expert-developed curriculum where every book, activity and learning page
+        is thoughtfully designed by the NEXFORD academic team—not white-labelled
+        from third-party publishers.
+    </p>
 </div>
 
-<h3>
-
-LUMINED Curriculum
-
-</h3>
-
-<p>
-
-An expert-developed curriculum where every book, activity and learning page is thoughtfully designed by the NEXFORD academic team—not white-labelled from third-party publishers.
-
-</p>
-
-</div>
-
-<!-- Card 10 -->
 
 <div class="feature-card">
+    <div class="feature-icon development-icon">
+        <i class="fas fa-child"></i>
+    </div>
 
-<div class="feature-icon">
+    <h3>NEXFORD Child Development Passport</h3>
 
-<i class="fa-solid fa-handshake"></i>
-
+    <p>
+        Every child’s growth is documented across key developmental domains from
+        admission to UKG.
+    </p>
 </div>
 
-<h3>
-
- NEXFORD Child Development Passport
-
-</h3>
-
-<p>
-
-Every child’s growth is documented across key developmental domains from admission to UKG.
-
-</p>
-
-</div>
-
-<!-- Card 11 -->
 
 <div class="feature-card">
+    <div class="feature-icon growth-icon">
+        <i class="fas fa-seedling"></i>
+    </div>
 
-<div class="feature-icon">
+    <h3>One Child. One Growth Plan</h3>
 
-<i class="fa-solid fa-handshake"></i>
-
+    <p>
+        Individual learning goals based on each child’s strengths, needs and
+        progress.
+    </p>
 </div>
 
-<h3>
-
-One Child. One Growth Plan
-
-</h3>
-
-<p>
-
-Individual learning goals based on each child’s strengths, needs and progress.
-
-</p>
-
-</div>
-
-<!-- Card 12 -->
 
 <div class="feature-card">
+    <div class="feature-icon observation-icon">
+        <i class="fas fa-eye"></i>
+    </div>
 
-<div class="feature-icon">
+    <h3>NEXFORD Observation-to-Action System™</h3>
 
-<i class="fa-solid fa-handshake"></i>
-
+    <p>
+        Teachers don’t just observe children—they document meaningful observations,
+        identify developmental needs, and turn them into specific classroom
+        strategies and learning interventions.
+    </p>
 </div>
 
-<h3>
-
-NEXFORD Observation-to-Action System™
-
-</h3>
-
-<p>
-
-Teachers don’t just observe children—they document meaningful observations, identify developmental needs, and turn them into specific classroom strategies and learning interventions.
-
-</p>
-
-</div>
-
-<!-- Card 13 -->
 
 <div class="feature-card">
+    <div class="feature-icon life-icon">
+        <i class="fas fa-lightbulb"></i>
+    </div>
 
-<div class="feature-icon">
+    <h3>Life Skills Lab</h3>
 
-<i class="fa-solid fa-handshake"></i>
-
+    <p>
+        Children don’t just learn concepts—they learn how to handle real-life
+        situations independently.
+    </p>
 </div>
 
-<h3>
-
-Life Skills Lab
-
-</h3>
-
-<p>
-
-Children don’t just learn concepts—they learn how to handle real-life situations independently.
-
-</p>
-
-</div>
-
-<!-- Card 14 -->
 
 <div class="feature-card">
+    <div class="feature-icon realworld-icon">
+        <i class="fas fa-globe"></i>
+    </div>
 
-<div class="feature-icon">
+    <h3>Real-World Learning Programme</h3>
 
-<i class="fa-solid fa-handshake"></i>
-
+    <p>
+        Regular experiences that take learning beyond worksheets and into the
+        world around children.
+    </p>
 </div>
 
-<h3>
-
-Real-World Learning Programme
-
-</h3>
-
-<p>
-
-Regular experiences that take learning beyond worksheets and into the world around children.
-
-</p>
-
-</div>
-
-<!-- Card 15 -->
 
 <div class="feature-card">
+    <div class="feature-icon readiness-icon">
+        <i class="fas fa-graduation-cap"></i>
+    </div>
 
-<div class="feature-icon">
+    <h3>NEXFORD School Readiness Profile™</h3>
 
-<i class="fa-solid fa-handshake"></i>
-
+    <p>
+        A comprehensive developmental profile designed to show parents how prepared
+        their child is for the next stage of education.
+    </p>
 </div>
 
-<h3>
-
-NEXFORD School Readiness Profile™
-
-</h3>
-
-<p>
-
-A comprehensive developmental profile designed to show parents how prepared their child is for the next stage of education.
-In about page, there is a section for what makes us different in that add more six boxes and add these six points
-
-</p>
-
-</div>
-
-<!-- Card 16 -->
 
 <div class="feature-card">
+    <div class="feature-icon independence-icon">
+        <i class="fas fa-person-walking"></i>
+    </div>
 
-<div class="feature-icon">
+    <h3>NEXFORD Independence Framework™</h3>
 
-<i class="fa-solid fa-handshake"></i>
-
-</div>
-
-<h3>
-
-NEXFORD Independence Framework™
-
-</h3>
-
-<p>
-
-A structured progression that intentionally builds age-appropriate independence—from self-care and decision-making to communication, responsibility and problem-solving—so children gradually learn to do more things on their own.
-
-</p>
-
+    <p>
+        A structured progression that intentionally builds age-appropriate
+        independence—from self-care and decision-making to communication,
+        responsibility and problem-solving.
+    </p>
 </div>
 
 </div>
@@ -2823,7 +2954,7 @@ Entrepreneurs Grow.
 
 </h2>
 
-<a href="apply-franchise.html" class="btn">
+<a href="#" class="btn">
 
 Know More
 
