@@ -434,25 +434,7 @@ HERO IMAGE
 
 
 .hero-image::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:100%;
-
-    height:85%;
-
-    background:#f7e66b;
-
-    border-radius:120px 0 120px 0;
-
-    right:0;
-
-    top:40px;
-
-    z-index:-1;
-
+    display:none;
 }
 
 
@@ -564,38 +546,58 @@ HERO RESPONSIVE
 
 @media(max-width:600px){
 
+    /* =========================================
+       MOBILE ABOUT HERO ORDER
+    ========================================= */
 
-.hero-left h1{
+    .about-hero .container{
+        display:flex;
+        flex-direction:column;
+    }
 
-    font-size:34px;
+    /* Allow the contents of hero-left
+       to be reordered on mobile */
+    .hero-left{
+        display:contents;
+    }
 
-}
+    /* 1. ABOUT US */
+    .small-title{
+        order:1;
+    }
 
+    /* 2. ABOUT NEXFORD KIDS */
+    .hero-left h1{
+        order:2;
+        font-size:34px;
+    }
 
+    /* 3. BECAUSE ORDINARY... */
+    .hero-left h2{
+        order:3;
+        font-size:17px;
+    }
 
-.hero-left h2{
+    /* 4. LOGO IMAGE */
+    .hero-right{
+        order:4;
+        width:100%;
+    }
 
-    font-size:17px;
+    /* 5. DESCRIPTION TEXT */
+    .hero-left p{
+        order:5;
+    }
 
-}
+    /* 6. QUOTE BOX */
+    .hero-left .quote-box{
+        order:6;
+        width:100%;
+    }
 
-
-
-.quote-box{
-
-    width:100%;
-
-}
-
-
-
-.about-hero{
-
-    padding-top:40px;
-
-}
-
-
+    .about-hero{
+        padding-top:40px;
+    }
 
 }
 
@@ -2569,12 +2571,9 @@ FINAL PREMIUM POLISH
 
 
 
-.hero-image img{
-
-    border-radius:60px 0 60px 0;
-
+.hero-image::before{
+    display:none;
 }
-
 
 
 }
@@ -2717,7 +2716,7 @@ Because ordinary was never the plan !!
 
 <p>
 
-Nexford Kids
+About Nexford Kids
 Building Bright Futures, One Preschool at a Time.
 
 <p>
@@ -3079,7 +3078,7 @@ marketing and operational support.
         <img src="c1.jpeg" alt="Child Development">
     </div>
 
-    <h3>NEXFORD KIDS Child Development Passport</h3>
+    <h3>NEXFORD Child Development Passport</h3>
 
     <p>Every child’s growth is documented across key developmental domains.</p>
 </div>
@@ -3091,7 +3090,7 @@ marketing and operational support.
         <img src="c2.jpeg" alt="Child Development">
     </div>
 
-    <h3>NEXFORD KIDS Child Development Passport</h3>
+    <h3>NEXFORD Child Development Passport</h3>
 
     <p>
         Every child’s growth is documented across key developmental domains from
@@ -3120,7 +3119,7 @@ marketing and operational support.
         <img src="c4.jpeg" alt="Observation">
     </div>
 
-    <h3>NEXFORD KIDS Observation-to-Action System</h3>
+    <h3>NEXFORD Observation-to-Action System</h3>
 
     <p>
         Teachers don’t just observe children—they document meaningful observations,
@@ -3166,7 +3165,7 @@ marketing and operational support.
         <img src="c7.jpeg" alt="School Readiness">
     </div>
 
-    <h3>NEXFORD KIDS School Readiness Profile</h3>
+    <h3>NEXFORD School Readiness Profile</h3>
 
     <p>
         A comprehensive developmental profile designed to show parents how prepared
@@ -3181,7 +3180,7 @@ marketing and operational support.
         <img src="c8.jpeg" alt="Independence">
     </div>
 
-    <h3>NEXFORD KIDS Independence Framewor</h3>
+    <h3>NEXFORD Independence Framewor</h3>
 
     <p>
         A structured progression that intentionally builds age-appropriate
