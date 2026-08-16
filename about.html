@@ -2935,67 +2935,508 @@ Why Families Trust nexfordkids
 
 
 
+<section class="cta-section">
+    <style>
+        
+        /* =========================================
+   CTA / FINAL BANNER
+========================================= */
 
-<!--=========================
-CALL TO ACTION
-==========================-->
+.cta-section {
+    position: relative;
 
-<section class="cta">
+    width: calc(100% - 68px);
+    max-width: 1715px;
 
-<div class="container">
+    min-height: 430px;
 
-<div class="cta-left">
+    margin: 30px auto;
 
-<h2>
+    padding: 55px 65px;
 
-Where Children Learn,
-Families Trust,
-Entrepreneurs Grow.
+    background: #fff8e6;
 
-</h2>
+    border-radius: 48px;
 
-<a href="#" class="btn">
+    display: grid;
+    grid-template-columns: 1fr 0.75fr 1.25fr;
 
-Know More
+    align-items: center;
 
-</a>
+    overflow: hidden;
+}
 
-</div>
 
-<div class="cta-center">
+/* =========================================
+   YELLOW CORNER SHAPE
+   ALWAYS BEHIND CONTENT
+========================================= */
 
-<img src="fox.PNG" alt="Fox">
+.cta-corner-shape {
+    position: absolute;
 
-</div>
+    width: 250px;
+    height: 250px;
 
-<div class="cta-right">
+    top: -35px;
+    left: -20px;
 
-<h2>
+    background: #ffe89a;
 
-Ready To Start
-Your Preschool?
+    border-radius: 50%;
 
-</h2>
+    z-index: 0;
 
-<div class="cta-buttons">
+    pointer-events: none;
+}
 
-<a href="apply-franchise.html" class="btn">
 
-Apply Now
+/* =========================================
+   LEFT CONTENT
+========================================= */
 
-</a>
+.cta-left {
+    position: relative;
 
-<a href="contact.html" class="btn secondary">
+    z-index: 5;
 
-Book Consultation
+    padding-left: 5px;
+}
 
-</a>
 
-</div>
+.cta-left h2 {
+    margin: 0;
 
-</div>
+    color: #073b78;
 
-</div>
+    font-size: clamp(32px, 3vw, 48px);
+
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================================
+   KNOW MORE BUTTON
+========================================= */
+
+.know-more-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 40px;
+
+    min-width: 200px;
+
+    padding: 17px 35px;
+
+    background: #ff7418;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    border-radius: 50px;
+
+    box-shadow: 0 12px 25px rgba(255, 116, 24, 0.20);
+
+    transition: all 0.3s ease;
+}
+
+
+.know-more-btn:hover {
+    transform: translateY(-3px);
+
+    background: #f5650b;
+
+    box-shadow: 0 16px 30px rgba(255, 116, 24, 0.30);
+}
+
+
+/* =========================================
+   FOX
+========================================= */
+
+.cta-fox {
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.cta-fox img {
+    width: min(210px, 90%);
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 12px 10px rgba(0, 0, 0, 0.12));
+
+    transition: transform 0.3s ease;
+}
+
+
+.cta-fox img:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.cta-right {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+.cta-right h2 {
+    margin: 0 0 42px;
+
+    color: #073b78;
+
+    font-size: clamp(28px, 2.5vw, 40px);
+
+    font-weight: 800;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.cta-buttons {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 23px;
+
+    flex-wrap: wrap;
+}
+
+
+.apply-btn,
+.consultation-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 70px;
+
+    padding: 0 40px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Orange */
+
+.apply-btn {
+    background: #ff7418;
+
+    min-width: 195px;
+
+    box-shadow: 0 12px 25px rgba(255, 116, 24, 0.20);
+}
+
+
+.apply-btn:hover {
+    background: #f5650b;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 16px 30px rgba(255, 116, 24, 0.30);
+}
+
+
+/* Green */
+
+.consultation-btn {
+    background: #287c4c;
+
+    min-width: 280px;
+
+    box-shadow: 0 12px 25px rgba(40, 124, 76, 0.18);
+}
+
+
+.consultation-btn:hover {
+    background: #216b40;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 16px 30px rgba(40, 124, 76, 0.28);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .cta-section {
+        grid-template-columns: 1fr 0.6fr 1fr;
+
+        padding: 45px 40px;
+
+        width: calc(100% - 40px);
+    }
+
+
+    .cta-left h2 {
+        font-size: 34px;
+    }
+
+
+    .cta-right h2 {
+        font-size: 30px;
+    }
+
+
+    .cta-fox img {
+        width: 170px;
+    }
+
+
+    .apply-btn,
+    .consultation-btn {
+        min-height: 60px;
+
+        padding: 0 28px;
+
+        font-size: 16px;
+    }
+
+
+    .consultation-btn {
+        min-width: 230px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .cta-section {
+        width: calc(100% - 24px);
+
+        margin: 20px auto;
+
+        padding: 55px 25px;
+
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        border-radius: 30px;
+
+        text-align: center;
+    }
+
+
+    /* Smaller corner */
+
+    .cta-corner-shape {
+        width: 180px;
+        height: 180px;
+
+        top: -65px;
+        left: -50px;
+    }
+
+
+    /* Left */
+
+    .cta-left {
+        padding: 0;
+    }
+
+
+    .cta-left h2 {
+        font-size: clamp(27px, 7vw, 36px);
+
+        line-height: 1.25;
+    }
+
+
+    .know-more-btn {
+        margin-top: 25px;
+
+        min-width: 180px;
+
+        padding: 15px 28px;
+
+        font-size: 16px;
+    }
+
+
+    /* Fox */
+
+    .cta-fox {
+        order: 2;
+    }
+
+
+    .cta-fox img {
+        width: 160px;
+    }
+
+
+    /* Right */
+
+    .cta-right {
+        order: 3;
+    }
+
+
+    .cta-right h2 {
+        margin-bottom: 25px;
+
+        font-size: 27px;
+    }
+
+
+    .cta-buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 15px;
+    }
+
+
+    .apply-btn,
+    .consultation-btn {
+        width: 100%;
+
+        min-width: 0;
+
+        min-height: 58px;
+
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .cta-section {
+        padding: 45px 18px;
+
+        border-radius: 24px;
+    }
+
+
+    .cta-left h2 {
+        font-size: 25px;
+    }
+
+
+    .cta-fox img {
+        width: 135px;
+    }
+
+
+    .cta-right h2 {
+        font-size: 24px;
+    }
+
+
+    .cta-corner-shape {
+        width: 150px;
+        height: 150px;
+    }
+}
+    </style>
+
+    <!-- Background corner shape -->
+    <div class="cta-corner-shape"></div>
+
+    <!-- Left Content -->
+    <div class="cta-left">
+        <h2>
+            Where Children Learn,<br>
+            Families Trust,<br>
+            Entrepreneurs Grow.
+        </h2>
+
+        <a href="#about" class="know-more-btn">
+            Know More
+        </a>
+    </div>
+
+    <!-- Center Fox -->
+    <div class="cta-fox">
+        <img src="fox.png" alt="Fox Mascot">
+    </div>
+
+    <!-- Right Content -->
+    <div class="cta-right">
+
+        <h2>Ready To Start Your Preschool?</h2>
+
+        <div class="cta-buttons">
+
+            <a href="#apply" class="apply-btn">
+                Apply Now
+            </a>
+
+            <a href="#consultation" class="consultation-btn">
+                Book Consultation
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
