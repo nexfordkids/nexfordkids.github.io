@@ -1323,42 +1323,153 @@ STATISTICS SECTION
 }
 
 
-/* =====================================================
+/* =========================================
    LAST 8 CARDS
-   MAKE THEM LOOK LIKE THE FIRST 8
-===================================================== */
+========================================= */
 
 .last-eight-card {
     position: relative;
-
-    width: 100%;
-
     background: #ffffff;
-
-    border: 1px solid #e3e3e3;
-
+    border: 1px solid #e1e5ea;
     border-radius: 12px;
 
-    padding: 14px 10px 12px;
-
-    min-height: 190px;
+    padding: 14px 12px;
+    min-height: 150px;
 
     overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-
     box-sizing: border-box;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: 0.25s ease;
 }
 
 
-/* =====================================================
+/* =========================================
+   TOP BORDER COLORS
+========================================= */
+
+.last-eight-card:nth-child(1) {
+    border-top: 2px solid #39a852;
+}
+
+.last-eight-card:nth-child(2) {
+    border-top: 2px solid #ff8a00;
+}
+
+.last-eight-card:nth-child(3) {
+    border-top: 2px solid #20a447;
+}
+
+.last-eight-card:nth-child(4) {
+    border-top: 2px solid #159fe5;
+}
+
+.last-eight-card:nth-child(5) {
+    border-top: 2px solid #ed3b83;
+}
+
+.last-eight-card:nth-child(6) {
+    border-top: 2px solid #f2a900;
+}
+
+.last-eight-card:nth-child(7) {
+    border-top: 2px solid #7545d4;
+}
+
+.last-eight-card:nth-child(8) {
+    border-top: 2px solid #12a5a0;
+}
+
+
+/* =========================================
+   IMAGE
+   NO BACKGROUND
+========================================= */
+
+.last-eight-card .feature-image {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 8px;
+
+    padding: 0;
+
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow: visible;
+}
+
+
+/* =========================================
+   YOUR ACTUAL IMAGE
+========================================= */
+
+.last-eight-card .feature-image img {
+    width: 32px;
+    height: 32px;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: none !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.last-eight-card h3 {
+    margin: 0 0 6px;
+
+    color: #17396b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.last-eight-card p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 8.5px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   REMOVE YELLOW CORNER
+========================================= */
+
+.last-eight-card::after {
+    display: none !important;
+}
+
+
+/* =========================================
    HOVER
-===================================================== */
+========================================= */
 
 .last-eight-card:hover {
     transform: translateY(-3px);
@@ -1367,128 +1478,121 @@ STATISTICS SECTION
         0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-
-/* =====================================================
-   IMAGE CONTAINER
-   SAME SIZE AS FIRST 8
-===================================================== */
+/* =========================================
+   LAST 8 - IMAGE ONLY
+========================================= */
 
 .last-eight-card .feature-image {
     width: 38px;
     height: 38px;
 
-    min-width: 38px;
-    min-height: 38px;
-
-    border-radius: 10px;
-
     display: flex;
-
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     margin-bottom: 8px;
+    padding: 0;
 
-    overflow: hidden;
+    background: transparent !important;
 
-    flex-shrink: 0;
+    border: none !important;
+    border-radius: 0 !important;
+
+    overflow: visible;
 }
 
 
-/* =====================================================
-   ACTUAL IMAGE
-===================================================== */
+/* ACTUAL IMAGE ONLY */
 
 .last-eight-card .feature-image img {
-    width: 27px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
 
-    max-width: 27px;
-    max-height: 27px;
+    display: block;
 
     object-fit: contain;
 
-    display: block;
+    background: transparent !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    padding: 0;
+    margin: 0;
 }
 
-
-/* =====================================================
-   DIFFERENT IMAGE BACKGROUND COLORS
-===================================================== */
-
-
-/* LUMINED */
-
-.curriculum-image {
-    background: #e8f7ec;
-}
-
-
-/* CHILD DEVELOPMENT */
-
-.development-image {
-    background: #fff0e5;
-}
-
-
-/* GROWTH PLAN */
-
-.growth-image {
-    background: #d9f8df;
-}
-
-
-/* OBSERVATION */
-
-.observation-image {
-    background: #d9f3ff;
-}
-
-
-/* LIFE SKILLS */
-
-.life-skills-image {
-    background: #ffe2ee;
-}
-
-
-/* REAL WORLD */
-
-.real-world-image {
-    background: #fff1c9;
-}
-
-
-/* SCHOOL READINESS */
-
-.readiness-image {
-    background: #eee5ff;
-}
-
-
-/* INDEPENDENCE */
-
-.independence-image {
-    background: #d9f7f4;
-}
-
-
-/* =====================================================
-   CARD TITLE
-===================================================== */
+/* =========================================
+   TITLE
+========================================= */
 
 .last-eight-card h3 {
-    margin: 0 0 6px;
+    margin: 0 0 8px;
 
     color: #17396b;
 
-    font-size: 10px;
+    font-size: 13px;
 
     font-weight: 700;
 
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.last-eight-card p {
+    margin: 0;
+
+    color: #666b73;
+
+    font-size: 10.5px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   DIFFERENT TOP BORDER COLORS
+========================================= */
+
+
+/* =========================================
+   LAST 8 TOP BORDER COLORS
+========================================= */
+
+.feature-card:nth-child(9) {
+    border-top: 3px solid #35a853;
+}
+
+.feature-card:nth-child(10) {
+    border-top: 3px solid #ff8a00;
+}
+
+.feature-card:nth-child(11) {
+    border-top: 3px solid #7139d6;
+}
+
+.feature-card:nth-child(12) {
+    border-top: 3px solid #ed3d83;
+}
+
+.feature-card:nth-child(13) {
+    border-top: 3px solid #f2a900;
+}
+
+.feature-card:nth-child(14) {
+    border-top: 3px solid #2196e8;
+}
+
+.feature-card:nth-child(15) {
+    border-top: 3px solid #7445d8;
+}
+
+.feature-card:nth-child(16) {
+    border-top: 3px solid #20a59f;
+}
 
 /* =====================================================
    DESCRIPTION
@@ -2581,8 +2685,7 @@ About Nexford Kids
 
 <h2>
 
-Building Bright Futures,
-One Preschool at a Time.
+Because ordinary was never the plan !!
 
 </h2>
 
@@ -2946,17 +3049,13 @@ marketing and operational support.
 
 <!-- 1. LUMINED CURRICULUM -->
 <div class="feature-card last-eight-card">
-    <div class="feature-image curriculum-image">
-        <img src="c1.jpeg" alt="Curriculum">
+    <div class="feature-image">
+        <img src="c1.jpeg" alt="Child Development">
     </div>
 
-    <h3>LUMINED Curriculum</h3>
+    <h3>NEXFORD Child Development Passport</h3>
 
-    <p>
-        An expert-developed curriculum where every book, activity and learning page
-        is thoughtfully designed by the NEXFORD academic team—not white-labelled
-        from third-party publishers.
-    </p>
+    <p>Every child’s growth is documented across key developmental domains.</p>
 </div>
 
 
@@ -3638,7 +3737,7 @@ Why Families Trust nexfordkids
 
         <div class="cta-buttons">
 
-            <a href="#apply" class="apply-btn">
+            <a href="apply-franchise.html" class="apply-btn">
                 Apply Now
             </a>
 
@@ -3665,8 +3764,7 @@ FOOTER
 
 <p>
 
-© 2026 KN Kids Preschool.
-All Rights Reserved.
+© 2026 Nexford Kids International preschool. All rights reserved.
 
 </p>
 
