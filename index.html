@@ -1614,9 +1614,30 @@ margin-top:0;
 }
 
 .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
 
-grid-template-columns:1fr;
+.stat-box{
+    padding:18px 8px;
+    border-radius:14px;
+}
 
+.stat-box h2{
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.stat-box p{
+    font-size:9px;
+    line-height:1.4;
+}
+
+.stat-icon{
+    width:48px;
+    height:48px;
+    font-size:20px;
+    margin-bottom:10px;
 }
 
 .launch-banner{
@@ -4805,12 +4826,32 @@ MOBILE
 
 @media (max-width:768px){
 
-.journey-wrapper{
+    .benefits-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
 
-grid-template-columns:1fr;
+    .benefit-card{
+        padding:18px 10px;
+        border-radius:16px;
+    }
 
-gap:22px;
+    .benefit-card i{
+        width:48px;
+        height:48px;
+        font-size:18px;
+        margin-bottom:10px;
+    }
 
+    .benefit-card h4{
+        font-size:13px;
+        margin-bottom:6px;
+    }
+
+    .benefit-card p{
+        font-size:9px;
+        line-height:1.4;
+    }
 }
 
 .journey-step{
@@ -4822,9 +4863,8 @@ margin:auto;
 }
 
 .benefits-grid{
-
-grid-template-columns:1fr;
-
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
 
 .step-icon{
@@ -4914,18 +4954,16 @@ font-size:16px;
 }
 
 .benefit-card{
-
-padding:24px 20px;
-
-border-radius:20px;
-
+    padding:16px 10px;
+    border-radius:16px;
 }
 
 .benefit-card i{
-
-width:65px;
-
-height:65px;
+    width:45px;
+    height:45px;
+    font-size:17px;
+    margin-bottom:8px;
+}
 
 font-size:26px;
 
@@ -7017,13 +7055,35 @@ MOBILE
 
 @media (max-width:768px){
 
-.awards-grid{
+    .awards-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
 
-grid-template-columns:1fr;
+    .award-card{
+        padding:18px 10px;
+        border-radius:16px;
+    }
 
-gap:22px;
+    .award-icon{
+        width:48px;
+        height:48px;
+        font-size:18px;
+        margin-bottom:10px;
+    }
+
+    .award-card h3{
+        font-size:13px;
+        margin-bottom:6px;
+    }
+
+    .award-card p{
+        font-size:9px;
+        line-height:1.4;
+    }
 
 }
+
 
 .achievement-row{
 
@@ -8375,10 +8435,31 @@ MOBILE
 
 @media (max-width:768px){
 
-.contact-grid{
+    .contact-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+    
+.contact-card{
+    padding:18px 8px;
+    border-radius:16px;
+}
 
-grid-template-columns:1fr;
+.contact-card i{
+    width:48px;
+    height:48px;
+    font-size:18px;
+    margin:auto auto 10px;
+}
 
+.contact-card h4{
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.contact-card p{
+    font-size:9px;
+    line-height:1.4;
 }
 
 .footer-grid{
