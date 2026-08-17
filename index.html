@@ -2830,31 +2830,34 @@ position:relative;
 }
 
 .center-circle::before{
+    content:"";
+    position:absolute;
+    inset:-14px;
+    
+    border-radius:50%;
+    border:3px dashed rgba(255,152,0,.45);
+    animation:rotateRing 30s linear infinite;
 
-content:"";
-
-position:absolute;
-
-inset:-14px;
-
-border-radius:50%;
-
-border:3px dashed rgba(255,152,0,.45);
-
-animation:rotateRing 30s linear infinite;
-
+    z-index:3;
+    pointer-events:none;
 }
 
 .center-circle img{
+    position:absolute;
+    inset:0;
 
-width:90px;
+    width:100%;
+    height:100%;
 
-height:90px;
+    object-fit:cover;
+    object-position:center;
 
-object-fit:contain;
+    margin:0;
+    padding:0;
 
-margin-bottom:18px;
+    border-radius:50%;
 
+    z-index:1;
 }
 
 .center-circle h3{
@@ -2992,11 +2995,11 @@ color:var(--text);
 }
 
 /*=========================================
-PERFECT CIRCULAR POSITIONING
+CURRICULUM CARD POSITIONING
 =========================================*/
 
 .item1{
-    top:20px;
+    top:0;
     left:50%;
     transform:translateX(-50%);
 }
@@ -3018,7 +3021,7 @@ PERFECT CIRCULAR POSITIONING
 }
 
 .item5{
-    bottom:20px;
+    bottom:0;
     left:50%;
     transform:translateX(-50%);
 }
