@@ -818,37 +818,85 @@ MOBILE RESPONSIVE
 
 @media(max-width:600px){
 
+    /* MOBILE HERO LAYOUT */
 
+    .curriculum-hero .container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:0;
+    }
 
-.curriculum-content h1{
+    /* Make LEFT CONTENT children participate in the grid */
+    .curriculum-content{
+        display:contents;
+    }
 
-font-size:34px;
+    /* 1. Heading */
+    .curriculum-content h1{
+        grid-row:1;
+        font-size:34px;
+    }
 
-}
+    /* 2. Red text */
+    .curriculum-content h3{
+        grid-row:2;
+        font-size:15px;
+        margin-bottom:0;
+    }
 
+    /* 3. MAIN IMAGE */
+    .curriculum-image{
+        grid-row:3;
+        width:100%;
+        margin-top:25px;
+        margin-bottom:25px;
+    }
 
+    /* 4. Description */
+    .curriculum-content p{
+        grid-row:4;
+        font-size:13px;
+    }
 
-.curriculum-content h3{
+    /* 5. Highlights */
+    .curriculum-highlights{
+        grid-row:5;
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
 
-font-size:15px;
+    .highlight-item{
+        border:none;
+    }
 
-}
+    /* Main image */
+    .curriculum-image>img:first-child{
+        height:260px;
+        border-radius:80px 0 0 80px;
+    }
 
+    /* Fox */
+    .curriculum-image .fox{
+        width:95px;
+        top:-10px;
+        right:0;
+        bottom:auto;
+    }
 
+    .curriculum-badge{
+        width:90px;
+        height:90px;
+        top:15px;
+        right:15px;
+    }
 
-.curriculum-content p{
+    .curriculum-badge strong{
+        font-size:18px;
+    }
 
-font-size:13px;
-
-}
-
-
-
-.curriculum-highlights{
-
-grid-template-columns:repeat(2,1fr);
-
-gap:20px;
+    .curriculum-badge p{
+        font-size:8px;
+    }
 
 }
 
