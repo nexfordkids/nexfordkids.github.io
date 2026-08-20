@@ -2809,8 +2809,7 @@ Send Us a Message
 
 
 
-<form>
-
+<form id="whatsappForm">
 
 
 <label>
@@ -2823,7 +2822,9 @@ Full Name
 <i class="fa-regular fa-user"></i>
 
 <input type="text"
-placeholder="Enter your name">
+id="name"
+placeholder="Enter your name"
+required>
 
 </div>
 
@@ -2842,7 +2843,9 @@ Phone Number
 <i class="fa-solid fa-phone"></i>
 
 <input type="text"
-placeholder="Enter your phone number">
+id="phone"
+placeholder="Enter your phone number"
+required>
 
 </div>
 
@@ -2861,7 +2864,9 @@ Email Address
 <i class="fa-regular fa-envelope"></i>
 
 <input type="email"
-placeholder="Enter your email address">
+id="email"
+placeholder="Enter your email address"
+required>
 
 </div>
 
@@ -2907,8 +2912,9 @@ Message
 
 
 <textarea
-placeholder="Type your message here...">
-</textarea>
+id="message"
+placeholder="Type your message here..."
+required></textarea>
 
 
 
@@ -3597,6 +3603,41 @@ const navbar = document.querySelector(".navbar");
 menuBtn.addEventListener("click", function(){
 
     navbar.classList.toggle("show");
+
+});
+
+</script>
+
+<script>
+
+document.getElementById("whatsappForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const interest = document.getElementById("interest").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappMessage =
+`New Contact Enquiry
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Interested In: ${interest}
+
+Message:
+${message}`;
+
+    const whatsappNumber = "918885733772";
+
+    const whatsappURL =
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, "_blank");
 
 });
 
