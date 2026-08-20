@@ -2242,6 +2242,46 @@ gap:20px;
     margin: 0 auto 20px;
 }
 
+/* =========================================
+   MOBILE HERO IMAGE POSITION
+   Image comes below banner only on mobile
+   ========================================= */
+
+@media(max-width:700px){
+
+    .franchise-hero .container{
+        gap:0;
+    }
+
+    .hero-content{
+        display:contents;
+    }
+
+    .hero-content h1{
+        order:1;
+        width:100%;
+        margin-bottom:15px;
+    }
+
+    .hero-banner{
+        order:2;
+        margin-bottom:15px;
+    }
+
+    .hero-image{
+        order:3;
+        width:100%;
+        margin-top:0;
+        margin-bottom:20px;
+    }
+
+    .hero-points{
+        order:4;
+        width:100%;
+    }
+
+}
+
 </style>
 
 
