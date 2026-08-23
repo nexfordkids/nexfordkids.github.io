@@ -2289,40 +2289,103 @@ transform:translateY(0);
 
 }
 
-/* MOBILE NAVIGATION */
-
+/* =========================================
+   MOBILE RIGHT SIDE DRAWER MENU
+========================================= */
 
 @media(max-width:992px){
 
-.navbar.show{
+    .navbar.show{
 
-    display:block;
+        display:block;
 
-    position:absolute;
+        position:fixed;
 
-    top:75px;
+        top:75px;
 
-    left:0;
+        right:0;
 
-    width:100%;
+        left:auto;
 
-    background:white;
+        /* 60% OF SCREEN */
+        width:60vw;
 
-    padding:25px;
+        /* FULL AVAILABLE HEIGHT */
+        height:calc(100vh - 75px);
 
-    box-shadow:0 15px 30px rgba(0,0,0,.1);
+        background:white;
+
+        padding:35px 20px;
+
+        box-shadow:-10px 0 30px rgba(0,0,0,.12);
+
+        z-index:998;
+
+        overflow-y:auto;
+
+        animation:menuSlideIn .3s ease forwards;
+    }
+
+
+    .navbar.show ul{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:flex-start;
+
+        gap:30px;
+
+        width:100%;
+    }
+
+
+    .navbar.show ul li{
+
+        width:100%;
+
+        text-align:center;
+    }
+
+
+    .navbar.show ul li a{
+
+        display:inline-block;
+
+        font-size:17px;
+
+        font-weight:500;
+
+        color:#152348;
+
+        padding:5px 10px;
+    }
+
+
+    .navbar.show ul li a:hover{
+
+        color:#2d7045;
+    }
 
 }
 
 
-.navbar.show ul{
+/* =========================================
+   MENU SLIDE IN
+========================================= */
 
-    flex-direction:column;
+@keyframes menuSlideIn{
 
-    gap:20px;
+    from{
+        transform:translateX(100%);
+    }
 
-}
-
+    to{
+        transform:translateX(0);
+    }
 
 }
 
@@ -3832,10 +3895,10 @@ FOOTER
 
 <script>
 
-    /*=========================================
+   
+/*=========================================
 MOBILE MENU TOGGLE
 =========================================*/
-
 
 const menuBtn = document.querySelector(".menu-btn");
 
@@ -3844,7 +3907,9 @@ const navbar = document.querySelector(".navbar");
 
 if(menuBtn){
 
-    menuBtn.addEventListener("click",()=>{
+    menuBtn.addEventListener("click",(e)=>{
+
+        e.stopPropagation();
 
         navbar.classList.toggle("show");
 
@@ -3855,29 +3920,56 @@ if(menuBtn){
 }
 
 
-
-
 /*=========================================
-CLOSE MOBILE MENU ON CLICK
+CLOSE MENU WHEN NAVIGATION LINK IS CLICKED
 =========================================*/
-
 
 const navLinks = document.querySelectorAll(".navbar a");
 
-
 navLinks.forEach(link=>{
-
 
     link.addEventListener("click",()=>{
 
-
         navbar.classList.remove("show");
 
+        menuBtn.classList.remove("active");
 
     });
 
+});
+
+
+/*=========================================
+CLOSE MENU WHEN WEBSITE AREA IS CLICKED
+=========================================*/
+
+document.addEventListener("click",(e)=>{
+
+    if(!navbar.classList.contains("show")){
+
+        return;
+
+    }
+
+
+    if(
+
+        !navbar.contains(e.target) &&
+
+        !menuBtn.contains(e.target)
+
+    ){
+
+        navbar.classList.remove("show");
+
+        menuBtn.classList.remove("active");
+
+    }
 
 });
+
+
+
 
 
 
