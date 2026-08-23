@@ -544,7 +544,7 @@ position:relative;
 
 height:390px;
 
-object-fit:cover;
+object-fit:contain;
 
 border-radius:160px 0 0 160px;
 
@@ -871,10 +871,10 @@ MOBILE RESPONSIVE
 
     /* Main image */
     .curriculum-image>img:first-child{
-    height:210px;
+    height:260px;
     width:88%;
     margin-left:auto;
-    object-fit:cover;
+    object-fit:contain;
     border-radius:65px 0 0 65px;
 }
 
@@ -2516,9 +2516,11 @@ position:absolute;
 
 top:85px;
 
-left:0;
+right:0;
 
-width:100%;
+left:auto;
+
+width:60vw;
 
 background:white;
 
@@ -4261,7 +4263,31 @@ navbar.classList.remove("show");
 });
 
 
+/*=========================================
+CLOSE MENU WHEN WEBSITE AREA IS CLICKED
+=========================================*/
 
+document.addEventListener("click",(e)=>{
+
+    if(!navbar.classList.contains("show")){
+
+        return;
+
+    }
+
+
+    if(
+        !navbar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ){
+
+        navbar.classList.remove("show");
+
+        menuBtn.classList.remove("active");
+
+    }
+
+});
 
 
 
