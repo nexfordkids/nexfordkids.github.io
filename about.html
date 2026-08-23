@@ -3284,7 +3284,420 @@ marketing and operational support.
 </section>
 
 
+<!-- =========================================
+     READ MORE BOX
+========================================= -->
 
+<div class="read-more-box">
+
+    <button id="readMoreBtn">
+        Read More
+    </button>
+
+</div>
+
+<style>
+    
+    /* =========================================
+   READ MORE BOX
+========================================= */
+
+.read-more-box{
+
+    width:55%;
+
+    height:48px;
+
+    margin:16px auto 20px;
+
+    border:2px solid #000;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#ffffff;
+
+    box-sizing:border-box;
+}
+
+
+#readMoreBtn{
+
+    border:none;
+
+    background:transparent;
+
+    color:#17396b;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    padding:8px 25px;
+
+    transition:.3s ease;
+}
+
+
+#readMoreBtn:hover{
+
+    color:#f97316;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =========================================
+   READ MORE MODAL
+========================================= */
+
+.read-more-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    z-index:9999;
+}
+
+
+.read-more-modal.show{
+
+    display:flex;
+}
+
+
+/* =========================================
+   MODAL CONTENT
+========================================= */
+
+.read-more-content{
+
+    position:relative;
+
+    width:90%;
+
+    max-width:750px;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:35px 40px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+    animation:readMorePopup .3s ease;
+}
+
+
+.read-more-content h2{
+
+    color:#17396b;
+
+    text-align:center;
+
+    font-size:28px;
+
+    margin:0 0 25px;
+}
+
+
+.read-more-text h3{
+
+    color:#17396b;
+
+    font-size:18px;
+
+    margin:22px 0 7px;
+}
+
+
+.read-more-text p{
+
+    color:#666b73;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin:0;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.close-read-more{
+
+    position:absolute;
+
+    top:12px;
+
+    right:15px;
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f97316;
+
+    color:white;
+
+    font-size:27px;
+
+    line-height:38px;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+
+.close-read-more:hover{
+
+    background:#17396b;
+
+    transform:rotate(90deg);
+}
+
+
+/* =========================================
+   POPUP ANIMATION
+========================================= */
+
+@keyframes readMorePopup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9) translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1) translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+    .read-more-box{
+
+        width:80%;
+
+        height:45px;
+
+    }
+
+
+    #readMoreBtn{
+
+        font-size:15px;
+
+    }
+
+
+    .read-more-content{
+
+        width:92%;
+
+        max-height:85vh;
+
+        padding:30px 22px;
+
+        border-radius:15px;
+
+    }
+
+
+    .read-more-content h2{
+
+        font-size:22px;
+
+        padding-right:30px;
+
+    }
+
+
+    .read-more-text h3{
+
+        font-size:16px;
+
+    }
+
+
+    .read-more-text p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+}
+</style>
+
+
+<!-- =========================================
+     READ MORE POPUP
+========================================= -->
+
+<div id="readMoreModal" class="read-more-modal">
+
+    <div class="read-more-content">
+
+        <button id="closeReadMore" class="close-read-more">
+            &times;
+        </button>
+
+        <h2>What Makes Us Different?</h2>
+
+        <div class="read-more-text">
+
+            <h3>NEXFORD Child Development Passport</h3>
+            <p>
+                Every child’s growth is documented across key developmental
+                domains from admission to UKG.
+            </p>
+
+            <h3>One Child. One Growth Plan</h3>
+            <p>
+                Individual learning goals based on each child’s strengths,
+                needs and progress.
+            </p>
+
+            <h3>NEXFORD Observation-to-Action System</h3>
+            <p>
+                Teachers don’t just observe children—they document meaningful
+                observations, identify developmental needs, and turn them into
+                specific classroom strategies and learning interventions.
+            </p>
+
+            <h3>Life Skills Lab</h3>
+            <p>
+                Children don’t just learn concepts—they learn how to handle
+                real-life situations independently.
+            </p>
+
+            <h3>Real-World Learning Programme</h3>
+            <p>
+                Regular experiences that take learning beyond worksheets and
+                into the world around children.
+            </p>
+
+            <h3>NEXFORD School Readiness Profile</h3>
+            <p>
+                A comprehensive developmental profile designed to show parents
+                how prepared their child is for the next stage of education.
+            </p>
+
+            <h3>NEXFORD Independence Framework</h3>
+            <p>
+                A structured progression that intentionally builds
+                age-appropriate independence—from self-care and decision-making
+                to communication, responsibility and problem-solving.
+            </p>
+
+        </div>
+
+    </div>
+<script>
+    
+    /* =========================================
+   READ MORE POPUP
+========================================= */
+
+const readMoreBtn =
+    document.getElementById("readMoreBtn");
+
+const readMoreModal =
+    document.getElementById("readMoreModal");
+
+const closeReadMore =
+    document.getElementById("closeReadMore");
+
+
+/* OPEN POPUP */
+
+readMoreBtn.addEventListener("click",()=>{
+
+    readMoreModal.classList.add("show");
+
+});
+
+
+/* CLOSE POPUP */
+
+closeReadMore.addEventListener("click",()=>{
+
+    readMoreModal.classList.remove("show");
+
+});
+
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+readMoreModal.addEventListener("click",(e)=>{
+
+    if(e.target === readMoreModal){
+
+        readMoreModal.classList.remove("show");
+
+    }
+
+});
+
+
+/* CLOSE WITH ESC KEY */
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key === "Escape"){
+
+        readMoreModal.classList.remove("show");
+
+    }
+
+});
+</script>
+</div>
 
 <!--=========================
 STATISTICS
