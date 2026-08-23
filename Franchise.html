@@ -1605,7 +1605,7 @@ YOU GET BENEFITS CARD
 
     width:120px;
 
-    margin:-70px auto 10px;
+    margin:20px auto 10px;
 
 }
 
@@ -1730,7 +1730,7 @@ JOURNEY SECTION
 
     top:-10px;
 
-    right:35px;
+    left:calc(50% - 65px);
 
     background:#198344;
 
@@ -2206,13 +2206,13 @@ footer{
 
 display:block;
 
-position:absolute;
+position:fixed;
 
 top:75px;
 
-left:0;
+right:0;
 
-width:100%;
+width:60vw;
 
 background:white;
 
@@ -3474,53 +3474,72 @@ const navbar =
 document.querySelector(".navbar");
 
 
+/*=========================================
+OPEN / CLOSE MENU
+=========================================*/
 
 if(menuBtn){
 
+    menuBtn.addEventListener("click",(e)=>{
 
-menuBtn.addEventListener("click",()=>{
+        e.stopPropagation();
 
+        navbar.classList.toggle("show");
 
-navbar.classList.toggle("show");
+        menuBtn.classList.toggle("active");
 
-
-menuBtn.classList.toggle("active");
-
-
-});
-
+    });
 
 }
 
 
-
-
-
-
-/* CLOSE MENU ON CLICK */
-
+/*=========================================
+CLOSE MENU WHEN LINK IS CLICKED
+=========================================*/
 
 document
 .querySelectorAll(".navbar a")
 .forEach(link=>{
 
+    link.addEventListener("click",()=>{
 
-link.addEventListener("click",()=>{
+        navbar.classList.remove("show");
 
+        menuBtn.classList.remove("active");
 
-navbar.classList.remove("show");
-
-
-});
-
+    });
 
 });
 
 
+/*=========================================
+CLOSE MENU WHEN WEBSITE IS CLICKED
+=========================================*/
+
+document.addEventListener("click",(e)=>{
+
+    /* Menu is closed */
+    if(!navbar.classList.contains("show")){
+
+        return;
+
+    }
 
 
+    /* Click outside menu */
 
+    if(
+        !navbar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ){
 
+        navbar.classList.remove("show");
+
+        menuBtn.classList.remove("active");
+
+    }
+
+});
 
 /*=========================================
 STICKY HEADER EFFECT
