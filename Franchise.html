@@ -2514,6 +2514,107 @@ body {
     }
 }
 
+/* =========================================
+   FINAL MOBILE FULL-WIDTH FIX
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        position: relative;
+    }
+
+    /* Make every main section full mobile width */
+    header,
+    section,
+    footer,
+    main {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hero */
+    .franchise-hero {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hero inner container */
+    .franchise-hero > .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Header */
+    .header {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .header > .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hero content */
+    .hero-content,
+    .hero-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Banner */
+    .hero-banner {
+        max-width: calc(100% - 10px) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Images */
+    .hero-image img {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Decorative circles stay inside viewport */
+    .franchise-hero::before {
+        left: -100px !important;
+    }
+
+    .franchise-hero::after {
+        right: -60px !important;
+    }
+
+    /* Prevent any child from creating horizontal width */
+    .franchise-hero * {
+        max-width: 100%;
+    }
+}
+
 </style>
 
 
