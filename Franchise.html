@@ -2737,6 +2737,49 @@ body {
     }
 }
 
+/* ===== SMALL FOX AT BOTTOM LEFT ===== */
+
+.hero-image {
+    position: relative !important;
+}
+
+.hero-image .fox,
+.hero-image img.fox,
+.hero-fox {
+    position: absolute !important;
+    left: 3% !important;
+    bottom: 2% !important;
+    width: 55px !important;
+    height: auto !important;
+    max-width: 55px !important;
+    z-index: 10 !important;
+    object-fit: contain !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-image .fox,
+    .hero-image img.fox,
+    .hero-fox {
+        width: 45px !important;
+        max-width: 45px !important;
+        left: 3% !important;
+        bottom: 2% !important;
+    }
+}
+
+/* Very small mobile */
+@media (max-width: 480px) {
+    .hero-image .fox,
+    .hero-image img.fox,
+    .hero-fox {
+        width: 38px !important;
+        max-width: 38px !important;
+        left: 2% !important;
+        bottom: 2% !important;
+    }
+}
+
 </style>
 
 
