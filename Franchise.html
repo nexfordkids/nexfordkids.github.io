@@ -2453,6 +2453,67 @@ gap:20px;
 
 }
 
+/* =========================================
+   MOBILE RIGHT SIDE EXTRA SPACE FIX
+   ========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    .franchise-hero {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden !important;
+    }
+
+    .franchise-hero .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-banner {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-image {
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    /* Prevent decorative elements from creating page width */
+    .franchise-hero::before,
+    .franchise-hero::after {
+        max-width: 100%;
+    }
+}
+
 </style>
 
 
