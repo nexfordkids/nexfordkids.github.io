@@ -3166,10 +3166,15 @@ Apply for Franchise
 </header>
 
 
+<div id="floating-buttons"></div>
 
-
-
-
+<script>
+fetch("floating-buttons.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("floating-buttons").innerHTML = data;
+    });
+</script>
 
 
 
