@@ -2780,6 +2780,44 @@ body {
     }
 }
 
+/* ===== IMAGE INSIDE STEP CIRCLE ===== */
+
+.step-icon {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.step-icon img {
+    width: 65% !important;
+    height: 65% !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .step-icon img {
+        width: 60% !important;
+        height: 60% !important;
+    }
+}
+
+.icon-circle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.icon-circle img {
+    width: 65% !important;
+    height: 65% !important;
+    object-fit: contain !important;
+}
+
 </style>
 
 
@@ -3862,7 +3900,9 @@ Complete setup and branding
 06
 </span>
 
-<i class="fa-solid fa-party-horn"></i>
+<div class="icon-circle">
+    <img src="grandopening.jpeg" alt="Grand Opening">
+</div>
 
 <h3>
 Grand Opening
