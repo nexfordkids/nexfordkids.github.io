@@ -2895,6 +2895,72 @@ body {
         max-height: 42px !important;
     }
 }
+
+/* =========================================
+   MOBILE - IMAGE DIRECTLY UNDER RED BANNER
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    /* Make hero content children behave as
+       separate items inside the main container */
+    .franchise-hero .hero-content {
+        display: contents !important;
+    }
+
+    /* Heading first */
+    .franchise-hero .hero-content h1 {
+        order: 1 !important;
+    }
+
+    /* Red banner */
+    .franchise-hero .hero-banner {
+        order: 2 !important;
+        width: calc(100% - 20px) !important;
+        margin: 0 auto 15px !important;
+    }
+
+    /* MAIN IMAGE - directly below red banner */
+    .franchise-hero .hero-image {
+        order: 3 !important;
+        width: 100% !important;
+        margin: 0 auto 20px !important;
+        position: relative !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .franchise-hero .hero-image img:first-child {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+        border-radius: 0 !important;
+        display: block !important;
+    }
+
+    /* Keep fox small */
+    .franchise-hero .hero-image .fox {
+        width: 45px !important;
+        max-width: 45px !important;
+        height: auto !important;
+        left: 2% !important;
+        bottom: 1% !important;
+    }
+
+    /* 30+ badge */
+    .franchise-hero .experience-badge {
+        transform: scale(.75) !important;
+        transform-origin: top right !important;
+    }
+
+    /* Bullet points AFTER image */
+    .franchise-hero .hero-points {
+        order: 4 !important;
+        width: 100% !important;
+        margin-top: 5px !important;
+    }
+}
     
 </style>
 
