@@ -1294,207 +1294,137 @@ justify-content:center;
 
 
 
+/*=========================================
+PERFECT 6 DOMAIN CURRICULUM CIRCLE
+=========================================*/
+
+.domain-wheel{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    margin:auto;
+    position:relative;
+
+    background:
+    conic-gradient(
+        #f39c12 0deg 60deg,
+        #e84383 60deg 120deg,
+        #286bc7 120deg 180deg,
+        #18a7a0 180deg 240deg,
+        #5ca94d 240deg 300deg,
+        #9b55c8 300deg 360deg
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+
+/* INNER WHITE CIRCLE */
+
 .domain-wheel::before{
+    content:"";
+    position:absolute;
 
-content:"";
+    width:220px;
+    height:220px;
 
-position:absolute;
+    background:#ffffff;
 
-width:180px;
+    border-radius:50%;
 
-height:180px;
-
-background:white;
-
-border-radius:50%;
-
+    z-index:1;
 }
 
 
-
-
-
-
-
-
-.wheel-center{
-
-width:150px;
-
-height:150px;
-
-border-radius:50%;
-
-background:white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-z-index:2;
-
-}
-
-
-
-.wheel-center h3{
-
-font-size:20px;
-
-color:#142653;
-
-line-height:1.4;
-
-}
-
-
-
-
-
-
-
-
-/* DOMAIN ITEMS */
-
+/*=========================================
+DOMAIN TEXT CIRCLES
+=========================================*/
 
 .domain{
+    position:absolute;
 
-position:absolute;
+    width:100px;
+    height:100px;
 
-width:90px;
+    border-radius:50%;
 
-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-border-radius:50%;
+    text-align:center;
 
-background:white;
+    padding:10px;
 
-display:flex;
+    color:#ffffff;
 
-align-items:center;
+    font-size:11px;
+    line-height:1.3;
 
-justify-content:center;
+    font-weight:700;
 
-text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
 
-font-size:10px;
-
-font-weight:600;
-
-padding:10px;
-
-color:white;
-
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-
+    z-index:5;
 }
 
 
-
-
+/* 01 */
 
 .domain1{
-
-top:5px;
-
-left:145px;
-
-background:#f39c12;
-
+    top:-5px;
+    left:140px;
+    background:#f39c12;
 }
 
 
+/* 02 */
 
 .domain2{
-
-top:60px;
-
-right:20px;
-
-background:#e84383;
-
+    top:70px;
+    right:-15px;
+    background:#e84383;
 }
 
 
+/* 03 */
 
 .domain3{
-
-right:-5px;
-
-top:150px;
-
-background:#9b55c8;
-
+    bottom:70px;
+    right:-15px;
+    background:#286bc7;
 }
 
 
+/* 04 */
 
 .domain4{
-
-right:30px;
-
-bottom:45px;
-
-background:#286bc7;
-
+    bottom:-5px;
+    left:140px;
+    background:#18a7a0;
 }
 
 
+/* 05 */
 
 .domain5{
-
-bottom:5px;
-
-left:145px;
-
-background:#18a7a0;
-
+    bottom:70px;
+    left:-15px;
+    background:#5ca94d;
 }
 
 
+/* 06 */
 
 .domain6{
-
-left:30px;
-
-bottom:45px;
-
-background:#5ca94d;
-
+    top:70px;
+    left:-15px;
+    background:#9b55c8;
 }
-
-
-
-.domain7{
-
-left:-5px;
-
-top:150px;
-
-background:#79c943;
-
-}
-
-
-
-.domain8{
-
-left:20px;
-
-top:60px;
-
-background:#ffd23f;
-
-color:#333;
-
-}
-
-
-
 
 
 
@@ -1519,7 +1449,20 @@ font-weight:800;
 
 }
 
+.domain-content{
+    text-align:left;
+}
 
+.domain-point{
+    justify-content:flex-start;
+    text-align:left;
+    width:100%;
+    padding-left:0;
+}
+
+.domain-point > div{
+    flex:1;
+}
 
 .domain-content>p{
 
@@ -3090,6 +3033,625 @@ font-size:24px;
 
 }
 
+/* =========================================================
+   NEW CURRICULUM WHEEL
+   OVERRIDES / DISABLES OLD WHEEL CSS
+   ========================================================= */
+
+/* Main wheel */
+.domain-wheel {
+    width: 420px !important;
+    height: 420px !important;
+
+    position: relative !important;
+
+    margin: 0 auto !important;
+
+    border-radius: 50% !important;
+
+    background:
+        conic-gradient(
+            #f39c12 0deg 60deg,
+            #e84383 60deg 120deg,
+            #286bc7 120deg 180deg,
+            #18a7a0 180deg 240deg,
+            #5ca94d 240deg 300deg,
+            #9b55c8 300deg 360deg
+        ) !important;
+
+    display: block !important;
+
+    animation: none !important;
+
+    transform: none !important;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.12) !important;
+}
+
+
+/* Remove old white inner circle */
+.domain-wheel::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 190px !important;
+    height: 190px !important;
+
+    background: #ffffff !important;
+
+    border-radius: 50% !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    z-index: 1 !important;
+}
+
+
+/* Hide old image/icon area */
+.domain-wheel .hero-image {
+    display: none !important;
+}
+
+
+/* Hide anything unwanted inside the wheel */
+.domain-wheel img {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ALL SIX TEXT CIRCLES
+   ========================================================= */
+
+.domain {
+    position: absolute !important;
+
+    width: 100px !important;
+    height: 100px !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-align: center !important;
+
+    padding: 10px !important;
+
+    color: #ffffff !important;
+
+    font-family: 'Poppins', sans-serif !important;
+
+    font-size: 12px !important;
+
+    font-weight: 700 !important;
+
+    line-height: 1.3 !important;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.18) !important;
+
+    z-index: 5 !important;
+
+    transform: none !important;
+
+    transition: .3s ease !important;
+}
+
+
+/* =========================================================
+   1. COMMUNICATION
+   ========================================================= */
+
+.domain1 {
+    top: -5px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    background: #f39c12 !important;
+}
+
+
+/* =========================================================
+   2. MATHEMATICS
+   ========================================================= */
+
+.domain3 {
+    top: 75px !important;
+    right: -25px !important;
+
+    background: #e84383 !important;
+}
+
+
+/* =========================================================
+   3. PHYSICAL DEVELOPMENT
+   ========================================================= */
+
+.domain4 {
+    bottom: 55px !important;
+    right: -10px !important;
+
+    background: #286bc7 !important;
+}
+
+
+/* =========================================================
+   4. SOCIAL & EMOTIONAL
+   ========================================================= */
+
+.domain5 {
+    bottom: -5px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    background: #18a7a0 !important;
+}
+
+
+/* =========================================================
+   5. CREATIVE ARTS & DESIGN
+   ========================================================= */
+
+.domain6 {
+    bottom: 55px !important;
+    left: -10px !important;
+
+    background: #5ca94d !important;
+}
+
+
+/* =========================================================
+   6. UNDERSTANDING THE WORLD
+   ========================================================= */
+
+.domain7 {
+    top: 75px !important;
+    left: -25px !important;
+
+    background: #9b55c8 !important;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.domain:hover {
+    transform: scale(1.08) !important;
+
+    z-index: 20 !important;
+}
+
+
+/* Keep centered labels centered when hovering */
+.domain1:hover,
+.domain5:hover {
+    transform: translateX(-50%) scale(1.08) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .domain-wheel {
+        width: 300px !important;
+        height: 300px !important;
+
+        margin: 30px auto !important;
+    }
+
+
+    .domain-wheel::before {
+        width: 135px !important;
+        height: 135px !important;
+    }
+
+
+    .domain {
+        width: 72px !important;
+        height: 72px !important;
+
+        font-size: 9px !important;
+
+        line-height: 1.25 !important;
+
+        padding: 7px !important;
+    }
+
+
+    /* Communication */
+    .domain1 {
+        top: -8px !important;
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* Mathematics */
+    .domain3 {
+        top: 55px !important;
+        right: -18px !important;
+    }
+
+
+    /* Physical */
+    .domain4 {
+        bottom: 35px !important;
+        right: -18px !important;
+    }
+
+
+    /* Social */
+    .domain5 {
+        bottom: -8px !important;
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* Creative */
+    .domain6 {
+        bottom: 35px !important;
+        left: -18px !important;
+    }
+
+
+    /* Understanding */
+    .domain7 {
+        top: 55px !important;
+        left: -18px !important;
+    }
+
+
+    .domain1:hover,
+    .domain5:hover {
+        transform: translateX(-50%) scale(1.08) !important;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .domain-wheel {
+        width: 270px !important;
+        height: 270px !important;
+    }
+
+
+    .domain-wheel::before {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+
+    .domain {
+        width: 65px !important;
+        height: 65px !important;
+
+        font-size: 8px !important;
+    }
+
+
+    .domain3 {
+        right: -15px !important;
+    }
+
+
+    .domain4 {
+        right: -15px !important;
+    }
+
+
+    .domain6 {
+        left: -15px !important;
+    }
+
+
+    .domain7 {
+        left: -15px !important;
+    }
+
+}
+
+/* =====================================================
+   FINAL PERFECT 6-DOMAIN DONUT
+   ===================================================== */
+
+.domain-wheel {
+    width: 420px;
+    height: 420px;
+
+    position: relative;
+    margin: 30px auto;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        #f39c12 0deg 60deg,
+        #e84383 60deg 120deg,
+        #286bc7 120deg 180deg,
+        #18a7a0 180deg 240deg,
+        #5ca94d 240deg 300deg,
+        #9b55c8 300deg 360deg
+    );
+
+    display: block;
+
+    animation: none !important;
+    transform: none !important;
+}
+
+
+/* =====================================================
+   DONUT CENTER
+   ===================================================== */
+
+.domain-wheel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   REMOVE OLD CONTENT / ICONS
+   ===================================================== */
+
+.domain-wheel .hero-image,
+.domain-wheel img,
+.domain-wheel i,
+.domain-wheel .wheel-center {
+    display: none !important;
+}
+
+
+/* =====================================================
+   COMMON DOMAIN CIRCLES
+   ===================================================== */
+
+.domain-wheel .domain {
+
+    position: absolute;
+
+    width: 96px;
+    height: 96px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 8px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    z-index: 5;
+
+    transform: translate(-50%, -50%);
+
+    transition: none !important;
+}
+
+
+/* =====================================================
+   1. COMMUNICATION & LANGUAGE
+   ===================================================== */
+
+.domain-wheel .domain1 {
+
+    left: 50%;
+    top: 15%;
+
+    background: #f39c12;
+}
+
+
+/* =====================================================
+   2. MATHEMATICS
+   ===================================================== */
+
+.domain-wheel .domain3 {
+
+    left: 83%;
+    top: 30%;
+
+    background: #e84383;
+}
+
+
+/* =====================================================
+   3. PHYSICAL DEVELOPMENT
+   ===================================================== */
+
+.domain-wheel .domain4 {
+
+    left: 83%;
+    top: 70%;
+
+    background: #286bc7;
+}
+
+
+/* =====================================================
+   4. SOCIAL & EMOTIONAL DEVELOPMENT
+   ===================================================== */
+
+.domain-wheel .domain5 {
+
+    left: 50%;
+    top: 85%;
+
+    background: #18a7a0;
+}
+
+
+/* =====================================================
+   5. CREATIVE ARTS & DESIGN
+   ===================================================== */
+
+.domain-wheel .domain6 {
+
+    left: 17%;
+    top: 70%;
+
+    background: #5ca94d;
+}
+
+
+/* =====================================================
+   6. UNDERSTANDING THE WORLD
+   ===================================================== */
+
+.domain-wheel .domain7 {
+
+    left: 17%;
+    top: 30%;
+
+    background: #9b55c8;
+}
+
+
+/* =====================================================
+   HIDE UNUSED DOMAINS
+   ===================================================== */
+
+.domain-wheel .domain2,
+.domain-wheel .domain8 {
+    display: none !important;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .domain-wheel {
+
+        width: 320px;
+        height: 320px;
+
+        margin: 30px auto 50px;
+    }
+
+
+    .domain-wheel::before {
+
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .domain-wheel .domain {
+
+        width: 72px;
+        height: 72px;
+
+        font-size: 9px;
+
+        line-height: 1.2;
+
+        padding: 6px;
+    }
+
+
+    /* Communication */
+
+    .domain-wheel .domain1 {
+
+        left: 50%;
+        top: 75%;
+    }
+
+
+    /* Mathematics */
+
+    .domain-wheel .domain3 {
+
+        left: 73%;
+        top: 30%;
+    }
+
+
+    /* Physical */
+
+    .domain-wheel .domain4 {
+
+        left: 73%;
+        top: 70%;
+    }
+
+
+    /* Social */
+
+    .domain-wheel .domain5 {
+
+        left: 50%;
+        top: 85%;
+    }
+
+
+    /* Creative */
+
+    .domain-wheel .domain6 {
+
+        left: 27%;
+        top: 60%;
+    }
+
+
+    /* Understanding */
+
+    .domain-wheel .domain7 {
+
+        left: 27%;
+        top: 30%;
+    }
+
+}
 </style>
 
 
@@ -3657,66 +4219,40 @@ through communication.
 
 <div class="container">
 
-
-
-
-
-
 <div class="domain-wheel">
 
-<div class="hero-image">
+    <div class="domain domain1">
+        Communication<br>
+        &amp; Language
+    </div>
 
+    <div class="domain domain3">
+        Mathematics
+    </div>
 
+    <div class="domain domain4">
+        Physical<br>
+        Development
+    </div>
 
-            <!-- Main Image -->
+    <div class="domain domain5">
+        Social &amp;<br>
+        Emotional<br>
+        Development
+    </div>
 
-            <img src="cirriculum.jpeg" alt="Kids">
+    <div class="domain domain6">
+        Creative<br>
+        Arts &amp;<br>
+        Design
+    </div>
 
-
-
-            </div>
-
-
-
-
-
-<div class="domain domain1">
-Communication & Language
-</div>
-
-
-
-<div class="domain domain3">
-Mathematics
-</div>
-
-
-<div class="domain domain4">
-Physical Development
-</div>
-
-
-<div class="domain domain5">
-Social & Emotional Development
-</div>
-
-
-<div class="domain domain6">
-Creative Arts & Design
-</div>
-
-
-<div class="domain domain7">
-Understanding The World
-</div>
-
-
-
-
-
+    <div class="domain domain7">
+        Understanding<br>
+        The World
+    </div>
 
 </div>
-
 
 
 
