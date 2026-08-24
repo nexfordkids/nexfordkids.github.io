@@ -2843,35 +2843,45 @@ body {
     }
 }
 
-/* ===== FIX 6th GRAND OPENING ICON SIZE ===== */
+/* ===== MAKE 06 EXACTLY SAME SIZE AS 01-05 ===== */
 
-.step-item:last-child .step-icon {
+.journey-step:nth-child(6) .step-icon,
+.journey-steps > *:nth-child(6) .step-icon,
+.steps-container > *:nth-child(6) .step-icon,
+.process-step:nth-child(6) .step-icon {
     width: 110px !important;
     height: 110px !important;
     min-width: 110px !important;
     min-height: 110px !important;
     max-width: 110px !important;
     max-height: 110px !important;
+    box-sizing: border-box !important;
     border-radius: 50% !important;
+    padding: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
 }
 
-.step-item:last-child .step-icon img {
+/* Make scissors/image small inside the circle */
+.journey-step:nth-child(6) .step-icon img,
+.journey-steps > *:nth-child(6) .step-icon img,
+.steps-container > *:nth-child(6) .step-icon img,
+.process-step:nth-child(6) .step-icon img {
     width: 55px !important;
     height: 55px !important;
     max-width: 55px !important;
     max-height: 55px !important;
     object-fit: contain !important;
-    display: block !important;
+    margin: 0 !important;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .step-item:last-child .step-icon {
+    .journey-step:nth-child(6) .step-icon,
+    .journey-steps > *:nth-child(6) .step-icon,
+    .steps-container > *:nth-child(6) .step-icon,
+    .process-step:nth-child(6) .step-icon {
         width: 110px !important;
         height: 110px !important;
         min-width: 110px !important;
@@ -2880,7 +2890,10 @@ body {
         max-height: 110px !important;
     }
 
-    .step-item:last-child .step-icon img {
+    .journey-step:nth-child(6) .step-icon img,
+    .journey-steps > *:nth-child(6) .step-icon img,
+    .steps-container > *:nth-child(6) .step-icon img,
+    .process-step:nth-child(6) .step-icon img {
         width: 50px !important;
         height: 50px !important;
         max-width: 50px !important;
