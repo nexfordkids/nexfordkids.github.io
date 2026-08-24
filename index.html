@@ -7017,7 +7017,6 @@ max-height:40px;
 
 }
 
-}
 
 /*=========================================
 SMALL MOBILE
@@ -8885,6 +8884,120 @@ opacity:0;
         width:31px !important;
         height:4px !important;
     }
+}
+
+/* =====================================================
+   FIX CENTER CIRCLE IMAGE - MOBILE
+   Override old image positioning
+   ===================================================== */
+
+@media (max-width:768px){
+
+    .center-circle img{
+        position:absolute !important;
+
+        /* DISABLE OLD inset:0 */
+        inset:auto !important;
+
+        /* PERFECT CENTER */
+        top:50% !important;
+        left:50% !important;
+
+        transform:translate(-50%,-50%) !important;
+
+        /* IMAGE SIZE */
+        width:90px !important;
+        height:90px !important;
+
+        /* DON'T CROP THE LOGO */
+        object-fit:contain !important;
+        object-position:center !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        border-radius:0 !important;
+
+        z-index:5 !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+/* =====================================================
+   MOBILE CENTER LOGO
+   SLOW ROTATION WHEN SECTION APPEARS
+   ===================================================== */
+
+@media (max-width:768px){
+
+    .center-circle img{
+        position:absolute !important;
+
+        inset:auto !important;
+
+        top:50% !important;
+        left:50% !important;
+
+        width:110px !important;
+        height:110px !important;
+
+        transform:translate(-50%, -50%) rotate(0deg) !important;
+
+        object-fit:contain !important;
+        object-position:center !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        z-index:5 !important;
+
+        /* Animation */
+        animation: mobileLogoRotate 8s ease-in-out forwards !important;
+        animation-play-state: paused !important;
+    }
+
+
+    /* Start animation when section is activated */
+    .center-circle.animate img{
+        animation-play-state:running !important;
+    }
+
+}
+
+
+/* =====================================================
+   SLOW ROTATION
+   ===================================================== */
+
+@keyframes mobileLogoRotate{
+
+    0%{
+        transform:translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        transform:translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width:576px){
+
+    .center-circle img{
+        width:75px !important;
+        height:75px !important;
+    }
+
 }
 
 </style>
@@ -12433,6 +12546,38 @@ window.removeEventListener("scroll",toggleTopButton);
 
 });
 
+/* =====================================================
+   START LOGO ROTATION WHEN CURRICULUM SECTION APPEARS
+   ===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const centerCircle = document.querySelector(".center-circle");
+
+    if (!centerCircle) return;
+
+    const observer = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    centerCircle.classList.add("animate");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.4
+        }
+    );
+
+    observer.observe(centerCircle);
+
+});
 
 </script>
 
