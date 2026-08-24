@@ -2278,6 +2278,181 @@ gap:20px;
 
 }
 
+/* =====================================================
+   NEW MOBILE / TABLET MENU
+   RIGHT SIDE 60% MENU
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    /* Disable old navbar behavior */
+    .navbar {
+        display: block !important;
+        position: fixed !important;
+
+        top: 0 !important;
+        right: 0 !important;
+        left: auto !important;
+
+        width: 60vw !important;
+        max-width: 60vw !important;
+        height: 100vh !important;
+
+        background: #ffffff !important;
+
+        padding: 110px 25px 30px !important;
+
+        z-index: 9998 !important;
+
+        box-shadow: -10px 0 30px rgba(0,0,0,0.12);
+
+        overflow-y: auto !important;
+
+        transform: translateX(100%) !important;
+
+        transition: transform 0.35s ease !important;
+    }
+
+
+    /* OPEN MENU */
+
+    .navbar.show {
+        transform: translateX(0) !important;
+    }
+
+
+    /* MENU LIST */
+
+    .navbar ul {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        justify-content: flex-start !important;
+
+        gap: 0 !important;
+
+        width: 100% !important;
+    }
+
+
+    /* MENU ITEMS */
+
+    .navbar ul li {
+        width: 100% !important;
+
+        text-align: center !important;
+
+        margin-bottom: 28px !important;
+    }
+
+
+    /* MENU LINKS */
+
+    .navbar ul li a {
+        display: inline-block !important;
+
+        font-size: 17px !important;
+
+        font-weight: 500 !important;
+
+        color: #142653 !important;
+
+        padding: 4px 0 !important;
+    }
+
+
+    /* ACTIVE LINK */
+
+    .navbar ul li a.active {
+        color: #238044 !important;
+    }
+
+
+    .navbar ul li a.active::after {
+        bottom: -8px !important;
+
+        width: 38px !important;
+
+        height: 3px !important;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-btn {
+        display: flex !important;
+
+        position: relative !important;
+
+        z-index: 10000 !important;
+
+        width: 55px !important;
+
+        height: 55px !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        background: #f5f7fb !important;
+
+        border-radius: 18px !important;
+
+        cursor: pointer !important;
+
+        font-size: 28px !important;
+
+        color: #142653 !important;
+    }
+
+
+    /* APPLY BUTTON IN HEADER HIDDEN */
+
+    .franchise-btn {
+        display: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 60vw !important;
+        max-width: 60vw !important;
+
+        padding: 95px 18px 25px !important;
+    }
+
+
+    .navbar ul li {
+        margin-bottom: 24px !important;
+    }
+
+
+    .navbar ul li a {
+        font-size: 16px !important;
+    }
+
+
+    .menu-btn {
+        width: 52px !important;
+        height: 52px !important;
+
+        border-radius: 17px !important;
+
+        font-size: 25px !important;
+    }
+
+}
+
 </style>
 
 
@@ -2510,7 +2685,7 @@ alt="Nexford Kids Campus">
 
 
 <img class="fox"
-src="fox.PNG"
+src="fox.png"
 alt="Nexford Fox">
 
 
@@ -3481,37 +3656,57 @@ All Rights Reserved.
 MOBILE MENU
 =========================================*/
 
+/* =====================================================
+   NEW MOBILE / TABLET MENU
+   ===================================================== */
 
-const menuBtn =
-document.querySelector(".menu-btn");
+/* =====================================================
+   MOBILE / TABLET MENU
+   ===================================================== */
+
+const menuBtn = document.querySelector(".menu-btn");
+const navbar = document.querySelector(".navbar");
+
+if (menuBtn && navbar) {
+
+    /* OPEN / CLOSE MENU BUTTON */
+    menuBtn.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+        navbar.classList.toggle("show");
+
+    });
 
 
-const navbar =
-document.querySelector(".navbar");
+    /* CLOSE WHEN CLICKING MENU LINK */
+    navbar.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navbar.classList.remove("show");
+
+        });
+
+    });
 
 
+    /* CLOSE WHEN CLICKING THE 40% WEBPAGE AREA */
+    document.addEventListener("click", function (e) {
 
-if(menuBtn){
+        if (
+            navbar.classList.contains("show") &&
+            !navbar.contains(e.target) &&
+            !menuBtn.contains(e.target)
+        ) {
 
+            navbar.classList.remove("show");
 
-menuBtn.addEventListener("click",()=>{
+        }
 
-
-navbar.classList.toggle("show");
-
-
-menuBtn.classList.toggle("active");
-
-
-});
-
+    });
 
 }
-
-
-
-
-
 
 /* CLOSE MENU ON CLICK */
 
