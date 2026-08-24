@@ -280,20 +280,129 @@ box-shadow:0 15px 30px rgba(255,116,24,.3);
 
 
 
-.menu-btn{
+/*=========================================
+NEW MOBILE + TABLET MENU
+60% MENU / 40% WEBSITE
+=========================================*/
 
-display:none;
+.mobile-menu{
+    position:fixed;
+    top:92px;
+    right:-60%;
+    width:60%;
+    height:calc(100vh - 92px);
+    background:#ffffff;
+    padding:45px 30px;
+    box-shadow:-10px 0 35px rgba(0,0,0,.12);
+    transition:right .4s ease;
+    z-index:9999;
+    overflow-y:auto;
+}
 
-font-size:25px;
+.mobile-menu.active{
+    right:0;
+}
 
-cursor:pointer;
+.mobile-menu ul{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    margin:0;
+    padding:0;
+}
 
-position:relative;
+.mobile-menu a{
+    display:block;
+    font-size:18px;
+    font-weight:500;
+    color:var(--black);
+    transition:.3s;
+}
 
-z-index:1001;
+.mobile-menu a:hover{
+    color:var(--secondary);
+    padding-left:8px;
+}
+
+
+/*=========================================
+MENU BUTTON
+=========================================*/
+
+.menu-toggle{
+    display:none;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:12px;
+    background:#F4F6FA;
+    font-size:22px;
+    color:var(--primary);
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.menu-toggle:hover{
+    background:var(--secondary);
+    color:#fff;
+}
+
+
+/*=========================================
+TABLET + MOBILE
+=========================================*/
+
+@media(max-width:992px){
+
+    .nav-menu{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .apply-btn{
+        padding:12px 20px;
+        font-size:14px;
+    }
 
 }
 
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media(max-width:576px){
+
+    .header .container{
+        height:82px;
+    }
+
+    .logo img{
+        height:58px;
+    }
+
+    .apply-btn{
+        display:none;
+    }
+
+    .mobile-menu{
+        top:82px;
+        height:calc(100vh - 82px);
+        width:60%;
+        right:-60%;
+        padding:40px 25px;
+    }
+
+    .mobile-menu.active{
+        right:0;
+    }
+
+}
 
 
 
@@ -2505,8 +2614,409 @@ font-size:24px;
 
 }
 
+/* =====================================================
+   NEW MOBILE + TABLET MENU
+   60% MENU + 40% WEBSITE
+   ===================================================== */
+
+@media (max-width: 992px){
+
+    /* ===============================
+       HEADER
+       =============================== */
+
+    .header{
+        position:sticky;
+        top:0;
+        z-index:10000;
+    }
 
 
+    /* ===============================
+       MENU BUTTON
+       =============================== */
+
+    .menu-btn{
+        display:flex !important;
+        align-items:center;
+        justify-content:center;
+
+        width:52px;
+        height:52px;
+
+        font-size:30px;
+
+        color:#142653;
+
+        cursor:pointer;
+
+        position:relative;
+
+        z-index:10002;
+
+        flex-shrink:0;
+    }
+
+
+    .menu-btn i{
+        pointer-events:none;
+    }
+
+
+    /* ===============================
+       HIDE DESKTOP NAVIGATION
+       =============================== */
+
+    .navbar{
+        display:block !important;
+
+        position:fixed;
+
+        top:85px;
+
+        right:-60vw;
+
+        width:60vw;
+
+        height:calc(100vh - 85px);
+
+        background:#ffffff;
+
+        padding:45px 30px;
+
+        box-shadow:-10px 0 30px rgba(0,0,0,.15);
+
+        z-index:10001;
+
+        overflow-y:auto;
+
+        transition:right .4s ease;
+
+        visibility:hidden;
+    }
+
+
+    /* ===============================
+       OPEN MENU
+       =============================== */
+
+    .navbar.show{
+        display:block !important;
+
+        right:0;
+
+        visibility:visible;
+
+        width:60vw;
+
+        left:auto;
+
+        top:85px;
+
+        height:calc(100vh - 85px);
+
+        position:fixed;
+
+        background:#ffffff;
+
+        padding:45px 30px;
+
+        box-shadow:-10px 0 30px rgba(0,0,0,.15);
+
+        z-index:10001;
+
+        overflow-y:auto;
+    }
+
+
+    /* ===============================
+       MENU LIST
+       =============================== */
+
+    .navbar ul{
+
+        display:flex !important;
+
+        flex-direction:column !important;
+
+        align-items:flex-start !important;
+
+        justify-content:flex-start !important;
+
+        gap:28px !important;
+
+        width:100%;
+
+        margin:0;
+
+        padding:0;
+    }
+
+
+    /* ===============================
+       MENU LINKS
+       =============================== */
+
+    .navbar ul li{
+
+        width:100%;
+
+        margin:0;
+
+        padding:0;
+    }
+
+
+    .navbar ul li a{
+
+        display:block;
+
+        width:100%;
+
+        font-size:18px;
+
+        font-weight:500;
+
+        color:#142653;
+
+        padding:5px 0;
+
+        text-align:left;
+
+        position:relative;
+    }
+
+
+    /* ===============================
+       ACTIVE LINK
+       =============================== */
+
+    .navbar ul li a.active{
+
+        color:#238044;
+    }
+
+
+    .navbar ul li a.active::after{
+
+        left:0;
+
+        transform:none;
+
+        bottom:-6px;
+
+        width:35px;
+
+        height:3px;
+
+        background:#238044;
+    }
+
+
+    /* ===============================
+       APPLY BUTTON
+       =============================== */
+
+    .franchise-btn{
+
+        display:none !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width:600px){
+
+    .menu-btn{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:28px;
+    }
+
+
+    .navbar{
+
+        top:85px;
+
+        right:-60vw;
+
+        width:60vw;
+
+        height:calc(100vh - 85px);
+
+        padding:35px 22px;
+    }
+
+
+    .navbar.show{
+
+        top:85px;
+
+        right:0;
+
+        width:60vw;
+
+        height:calc(100vh - 85px);
+
+        padding:35px 22px;
+    }
+
+
+    .navbar ul{
+
+        gap:25px !important;
+    }
+
+
+    .navbar ul li a{
+
+        font-size:17px;
+    }
+
+}
+
+/* =========================================
+   NEW MOBILE / TABLET MENU
+   RIGHT 60% MENU + LEFT 40% WEBSITE
+========================================= */
+
+@media (max-width: 992px) {
+
+    /* Menu button */
+    .menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 10001;
+        cursor: pointer;
+    }
+
+    /* Hide old navbar by default */
+    .navbar {
+        display: block !important;
+        position: fixed !important;
+
+        top: 0 !important;
+        right: -60% !important;
+        left: auto !important;
+
+        width: 60% !important;
+        height: 100vh !important;
+
+        background: #ffffff !important;
+
+        padding: 110px 35px 30px !important;
+
+        z-index: 10000 !important;
+
+        box-shadow: -10px 0 30px rgba(0,0,0,0.10);
+
+        transition: right 0.35s ease !important;
+
+        overflow-y: auto;
+    }
+
+    /* OPEN MENU */
+    .navbar.show {
+        right: 0 !important;
+        left: auto !important;
+
+        width: 60% !important;
+    }
+
+    /* Menu list */
+    .navbar ul,
+    .navbar.show ul {
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+
+        gap: 0 !important;
+
+        width: 100%;
+    }
+
+    /* Menu items */
+    .navbar ul li {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    /* Menu links */
+    .navbar ul li a {
+        display: block;
+
+        width: 100%;
+
+        font-size: 18px;
+
+        font-weight: 500;
+
+        color: #142653;
+
+        padding: 5px 0;
+    }
+
+    /* Active link */
+    .navbar ul li a.active {
+        color: #238044;
+    }
+
+    /* Active underline */
+    .navbar ul li a.active::after {
+        left: 0;
+        transform: none;
+
+        bottom: -8px;
+
+        width: 52px;
+    }
+
+    /* Hide desktop franchise button */
+    .franchise-btn {
+        display: none !important;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        width: 60% !important;
+
+        right: -60% !important;
+
+        padding: 45px 30px 30px !important;
+    }
+
+    .navbar.show {
+        width: 60% !important;
+
+        right: 0 !important;
+    }
+
+    .navbar ul li {
+        margin-bottom: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 18px !important;
+        line-height: 1.0; 
+    }
+}
 
 </style>
 
@@ -3603,17 +4113,105 @@ gap:20px;
 
 <script>
 
+/* =====================================================
+   NEW MOBILE + TABLET MENU
+   ===================================================== */
+
 const menuBtn = document.querySelector(".menu-btn");
+
 const navbar = document.querySelector(".navbar");
 
-menuBtn.addEventListener("click", function(){
 
-    navbar.classList.toggle("show");
+/* ===============================
+   OPEN / CLOSE MENU
+   =============================== */
+
+if(menuBtn && navbar){
+
+    menuBtn.addEventListener("click", function(e){
+
+        e.stopPropagation();
+
+        navbar.classList.toggle("show");
+
+    });
+
+}
+
+
+/* ===============================
+   CLOSE WHEN MENU LINK IS CLICKED
+   =============================== */
+
+document.querySelectorAll(".navbar a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        navbar.classList.remove("show");
+
+    });
+
+});
+
+
+/* ===============================
+   CLOSE WHEN 40% WEBSITE AREA
+   IS CLICKED
+   =============================== */
+
+document.addEventListener("click", function(e){
+
+    if(!navbar.classList.contains("show")){
+        return;
+    }
+
+
+    /* If click is NOT inside menu
+       and NOT on menu button */
+
+    if(
+        !navbar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ){
+
+        navbar.classList.remove("show");
+
+    }
+
+});
+
+
+/* ===============================
+   CLOSE WITH ESC KEY
+   =============================== */
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+
+        navbar.classList.remove("show");
+
+    }
+
+});
+
+
+/* ===============================
+   RESET MENU WHEN SCREEN
+   BECOMES DESKTOP
+   =============================== */
+
+window.addEventListener("resize", function(){
+
+    if(window.innerWidth > 992){
+
+        navbar.classList.remove("show");
+
+    }
 
 });
 
 </script>
-
 <script>
 
 document.getElementById("whatsappForm").addEventListener("submit", function(event){
