@@ -9000,6 +9000,381 @@ opacity:0;
 
 }
 
+/* =========================================================
+   DESKTOP CURRICULUM CARDS
+   PERFECT CIRCULAR ALIGNMENT
+   ========================================================= */
+
+@media (min-width:1101px){
+
+    /* Main curriculum area */
+    .curriculum-wheel,
+    .curriculum-orbit,
+    .curriculum-container{
+        position:relative !important;
+        width:100% !important;
+        max-width:1100px !important;
+        height:700px !important;
+        margin:0 auto !important;
+    }
+
+
+    /* Center circle */
+    .center-circle{
+        position:absolute !important;
+
+        top:50% !important;
+        left:50% !important;
+
+        transform:translate(-50%,-50%) !important;
+
+        width:220px !important;
+        height:220px !important;
+
+        z-index:10 !important;
+    }
+
+
+    /* =====================================================
+       ALL CARDS
+       ===================================================== */
+
+    .curriculum-card{
+        position:absolute !important;
+
+        width:180px !important;
+        min-height:145px !important;
+
+        box-sizing:border-box !important;
+
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:center !important;
+
+        text-align:center !important;
+
+        margin:0 !important;
+
+        z-index:20 !important;
+    }
+
+
+    /* =====================================================
+       TOP LEFT
+       ===================================================== */
+
+    .curriculum-card:nth-child(1){
+        top:35px !important;
+        left:20px !important;
+    }
+
+
+    /* =====================================================
+       TOP CENTER
+       ===================================================== */
+
+    .curriculum-card:nth-child(2){
+        top:0 !important;
+        left:50% !important;
+
+        transform:translateX(-50%) !important;
+    }
+
+
+    /* =====================================================
+       TOP RIGHT
+       ===================================================== */
+
+    .curriculum-card:nth-child(3){
+        top:35px !important;
+        right:20px !important;
+    }
+
+
+    /* =====================================================
+       MIDDLE LEFT
+       ===================================================== */
+
+    .curriculum-card:nth-child(4){
+        top:40% !important;
+        left:0 !important;
+
+        transform:translateY(-50%) !important;
+    }
+
+
+    /* =====================================================
+       MIDDLE RIGHT
+       ===================================================== */
+
+    .curriculum-card:nth-child(5){
+        top:40% !important;
+        right:0 !important;
+
+        transform:translateY(-50%) !important;
+    }
+
+
+    /* =====================================================
+       BOTTOM LEFT
+       ===================================================== */
+
+    .curriculum-card:nth-child(6){
+        bottom:90px !important;
+        left:30px !important;
+    }
+
+
+    /* =====================================================
+       BOTTOM CENTER
+       ===================================================== */
+
+    .curriculum-card:nth-child(7){
+        bottom:0 !important;
+        left:50% !important;
+
+        transform:translateX(-50%) !important;
+    }
+
+
+    /* =====================================================
+       BOTTOM RIGHT
+       ===================================================== */
+
+    .curriculum-card:nth-child(8){
+        bottom:-30px !important;
+        right:30px !important;
+    }
+
+}
+
+/* =========================================================
+   TESTIMONIAL CAROUSEL
+   iOS / iPHONE + ANDROID TOUCH FIX
+   ========================================================= */
+
+/* Main carousel area */
+.testimonial-wrapper {
+    position: relative !important;
+
+    width: 100% !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    -webkit-overflow-scrolling: touch !important;
+
+    touch-action: pan-x !important;
+
+    overscroll-behavior-x: contain !important;
+
+    scrollbar-width: none !important;
+}
+
+/* Hide scrollbar on Chrome / Safari / iPhone */
+.testimonial-wrapper::-webkit-scrollbar {
+    display: none !important;
+}
+
+
+/* =========================================================
+   TRACK
+   ========================================================= */
+
+.testimonial-track {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    flex-wrap: nowrap !important;
+
+    gap: 18px !important;
+
+    width: max-content !important;
+
+    min-width: max-content !important;
+
+    touch-action: pan-x !important;
+
+    -webkit-overflow-scrolling: touch !important;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.testimonial-card {
+    flex: 0 0 202px !important;
+
+    width: 202px !important;
+
+    min-width: 202px !important;
+
+    max-width: 202px !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    box-sizing: border-box !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* =========================================================
+   IPHONE / IOS
+   ========================================================= */
+
+@supports (-webkit-touch-callout: none) {
+
+    .testimonial-wrapper {
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        -webkit-overflow-scrolling: touch !important;
+
+        touch-action: pan-x !important;
+
+        overscroll-behavior-x: contain !important;
+    }
+
+    .testimonial-track {
+        display: flex !important;
+
+        flex-wrap: nowrap !important;
+
+        width: max-content !important;
+
+        min-width: max-content !important;
+
+        transform-style: preserve-3d !important;
+    }
+
+    .testimonial-card {
+        display: flex !important;
+
+        flex: 0 0 202px !important;
+
+        min-width: 202px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .testimonial-wrapper {
+        width: 100% !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        -webkit-overflow-scrolling: touch !important;
+
+        touch-action: pan-x !important;
+
+        scrollbar-width: none !important;
+    }
+
+    .testimonial-track {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        flex-wrap: nowrap !important;
+
+        width: max-content !important;
+
+        min-width: max-content !important;
+
+        gap: 16px !important;
+    }
+
+    .testimonial-card {
+        display: flex !important;
+
+        flex: 0 0 82vw !important;
+
+        width: 82vw !important;
+
+        min-width: 82vw !important;
+
+        max-width: 82vw !important;
+
+        min-height: 245px !important;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL IPHONE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .testimonial-wrapper {
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        -webkit-overflow-scrolling: touch !important;
+
+        touch-action: pan-x !important;
+    }
+
+    .testimonial-track {
+        display: flex !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 14px !important;
+
+        width: max-content !important;
+    }
+
+    .testimonial-card {
+        display: flex !important;
+
+        flex: 0 0 82vw !important;
+
+        width: 82vw !important;
+
+        min-width: 82vw !important;
+
+        max-width: 82vw !important;
+    }
+
+}
+
+
+/* =========================================================
+   PREVENT TEXT / IMAGE DRAG INTERFERENCE
+   ========================================================= */
+
+.testimonial-card,
+.testimonial-card img,
+.testimonial-card p {
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
+
+/* =========================================================
+   KEEP ARROWS ABOVE CARDS
+   ========================================================= */
+
+.carousel-btn {
+    z-index: 50 !important;
+    touch-action: manipulation !important;
+}
+
 </style>
 </head>
 
