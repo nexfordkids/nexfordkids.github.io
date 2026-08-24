@@ -1605,7 +1605,7 @@ YOU GET BENEFITS CARD
 
     width:120px;
 
-    margin:20px auto 10px;
+    margin:-70px auto 10px;
 
 }
 
@@ -1730,7 +1730,7 @@ JOURNEY SECTION
 
     top:-10px;
 
-    left:calc(50% - 65px);
+    right:35px;
 
     background:#198344;
 
@@ -2206,13 +2206,13 @@ footer{
 
 display:block;
 
-position:fixed;
+position:absolute;
 
 top:75px;
 
-right:0;
+left:0;
 
-width:60vw;
+width:100%;
 
 background:white;
 
@@ -2234,50 +2234,46 @@ gap:20px;
 
 }
 
-.step img {
-    width: 85px;
-    height: 85px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 20px;
-}
-
 /* =========================================
-   MOBILE HERO IMAGE POSITION
-   Image comes below banner only on mobile
+   MOBILE APPLY FRANCHISE BUTTON
    ========================================= */
 
-@media(max-width:700px){
+.mobile-apply {
+    display: none !important;
+}
 
-    .franchise-hero .container{
-        gap:0;
+@media (max-width: 992px) {
+
+    .mobile-apply {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 8px !important;
     }
 
-    .hero-content{
-        display:contents;
+    .mobile-apply a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+
+        background: #ff7418 !important;
+        color: #ffffff !important;
+
+        padding: 11px 15px !important;
+
+        border-radius: 25px !important;
+
+        font-size: 15px !important;
+        font-weight: 600 !important;
+
+        width: 100% !important;
+
+        box-shadow: 0 8px 20px rgba(255,116,24,.20) !important;
     }
 
-    .hero-content h1{
-        order:1;
-        width:100%;
-        margin-bottom:15px;
-    }
-
-    .hero-banner{
-        order:2;
-        margin-bottom:15px;
-    }
-
-    .hero-image{
-        order:3;
-        width:100%;
-        margin-top:0;
-        margin-bottom:20px;
-    }
-
-    .hero-points{
-        order:4;
-        width:100%;
+    .mobile-apply a:hover {
+        background: #e96510 !important;
+        color: #ffffff !important;
     }
 
 }
@@ -2333,7 +2329,7 @@ About Us
 
 
 <li>
-<a href="curriculum.html">
+<a href="circulum.PNG">
 Curriculum
 </a>
 </li>
@@ -2361,6 +2357,13 @@ Contact Us
 </a>
 </li>
 
+<li class="mobile-apply">
+    <a href="apply-franchise.html">
+        <i class="fa-solid fa-user-plus"></i>
+        Apply for Franchise
+    </a>
+</li>
+
 
 </ul>
 
@@ -2370,7 +2373,7 @@ Contact Us
 
 
 
-<a href="apply-franchise.html" class="franchise-btn">
+<a href="#" class="franchise-btn">
 
 <i class="fa-solid fa-users"></i>
 
@@ -2397,15 +2400,7 @@ Apply for Franchise
 
 
 
-<div id="floating-buttons"></div>
 
-<script>
-fetch("floating-buttons.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("floating-buttons").innerHTML = data;
-    });
-</script>
 
 
 
@@ -2509,20 +2504,37 @@ Make a Difference in Children's Lives
 <div class="hero-image">
 
 
-<img src="main1.jpeg"
+<img src="main.PNG"
 alt="Nexford Kids Campus">
 
 
 
 <img class="fox"
-src="fox.PNG"
+src="fox.png"
 alt="Nexford Fox">
 
 
 
 
 
+<div class="experience-badge">
 
+
+<strong>
+30+
+</strong>
+
+
+<span>
+Years of
+<br>
+Educational
+<br>
+Expertise
+</span>
+
+
+</div>
 
 
 
@@ -2565,7 +2577,7 @@ TRUST BAR
 </h3>
 
 <p>
-Years of combined experties
+Years of Educational Expertise
 </p>
 
 </div>
@@ -2583,7 +2595,7 @@ Years of combined experties
 </h3>
 
 <p>
-Brain boosting activities Throughout the Year
+Activities Throughout the Year
 </p>
 
 </div>
@@ -2619,7 +2631,7 @@ ISO
 </h3>
 
 <p>
-9001 & 27001 Certified
+9001:2015 & 27001:2022 Certified
 </p>
 
 </div>
@@ -2974,9 +2986,7 @@ Classrooms
 <li>
 Expected Monthly Revenue
 <span>
-<a href="apply-franchise.html">
-Enquiry Now
-</a>
+₹1.5 - ₹2.5 Lakhs*
 </span>
 </li>
 
@@ -3010,7 +3020,7 @@ Tier 2, Tier 3 Cities
 
 
 
-<a href="apply-franchise.html">
+<a href="#">
 Know More About A Model
 </a>
 
@@ -3032,7 +3042,7 @@ Know More About A Model
 <div class="benefits-card">
 
 
-<img src="logo.jpeg">
+<img src="fox.png">
 
 
 <h3>
@@ -3136,9 +3146,7 @@ Classrooms
 <li>
 Expected Monthly Revenue
 <span>
-<a href="apply-franchise.html">
-Enquiry Now
-</a>
+₹3 - ₹5 Lakhs*
 </span>
 </li>
 
@@ -3172,7 +3180,7 @@ Metro Cities & High Potential Locations
 
 
 
-<a href="apply-franchise.html">
+<a href="#">
 Know More About B Model
 </a>
 
@@ -3344,7 +3352,7 @@ Complete setup and branding
 06
 </span>
 
-<img src="grandopening.jpeg" alt="Grand Opening">
+<i class="fa-solid fa-party-horn"></i>
 
 <h3>
 Grand Opening
@@ -3388,7 +3396,7 @@ BOTTOM CTA
 
 <div class="cta-image">
 
-<img src="fox.PNG">
+<img src="images/child.png">
 
 </div>
 
@@ -3421,12 +3429,12 @@ while growing a successful business.
 <div class="cta-buttons">
 
 
-<a href="apply-franchise.html">
+<a href="#">
 Explore A Model
 </a>
 
 
-<a href="apply-franchise.html">
+<a href="#">
 Explore B Model
 </a>
 
@@ -3482,72 +3490,53 @@ const navbar =
 document.querySelector(".navbar");
 
 
-/*=========================================
-OPEN / CLOSE MENU
-=========================================*/
 
 if(menuBtn){
 
-    menuBtn.addEventListener("click",(e)=>{
 
-        e.stopPropagation();
+menuBtn.addEventListener("click",()=>{
 
-        navbar.classList.toggle("show");
 
-        menuBtn.classList.toggle("active");
+navbar.classList.toggle("show");
 
-    });
+
+menuBtn.classList.toggle("active");
+
+
+});
+
 
 }
 
 
-/*=========================================
-CLOSE MENU WHEN LINK IS CLICKED
-=========================================*/
+
+
+
+
+/* CLOSE MENU ON CLICK */
+
 
 document
 .querySelectorAll(".navbar a")
 .forEach(link=>{
 
-    link.addEventListener("click",()=>{
 
-        navbar.classList.remove("show");
+link.addEventListener("click",()=>{
 
-        menuBtn.classList.remove("active");
 
-    });
+navbar.classList.remove("show");
+
 
 });
 
 
-/*=========================================
-CLOSE MENU WHEN WEBSITE IS CLICKED
-=========================================*/
-
-document.addEventListener("click",(e)=>{
-
-    /* Menu is closed */
-    if(!navbar.classList.contains("show")){
-
-        return;
-
-    }
-
-
-    /* Click outside menu */
-
-    if(
-        !navbar.contains(e.target) &&
-        !menuBtn.contains(e.target)
-    ){
-
-        navbar.classList.remove("show");
-
-        menuBtn.classList.remove("active");
-
-    }
-
 });
+
+
+
+
+
+
 
 /*=========================================
 STICKY HEADER EFFECT
@@ -4115,7 +4104,7 @@ document.body.classList.add(
 
 </script>
 
-<a href="https://wa.me/918885733772"
+<a href="https://wa.me/919151553756"
 class="whatsapp-btn"
 target="_blank">
 
