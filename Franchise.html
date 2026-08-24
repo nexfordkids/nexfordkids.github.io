@@ -2961,6 +2961,485 @@ body {
         margin-top: 5px !important;
     }
 }
+
+/* =========================================================
+   FINAL CLEAN RESPONSIVE OVERRIDES
+   Nexford Kids Franchise Page
+   ========================================================= */
+
+
+/* =========================================================
+   1. JOURNEY - DESKTOP
+   ========================================================= */
+
+.journey-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.journey-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    position: relative !important;
+    align-items: start !important;
+}
+
+/* Connection line */
+.journey-wrapper::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    top: 37px !important;
+    left: 8% !important;
+    width: 84% !important;
+    height: 0 !important;
+    border-top: 2px dashed #bdbdbd !important;
+    z-index: 0 !important;
+}
+
+
+/* =========================================================
+   2. ALL SIX STEPS - IDENTICAL STRUCTURE
+   ========================================================= */
+
+.journey-wrapper .step {
+    position: relative !important;
+    text-align: center !important;
+    min-width: 0 !important;
+    z-index: 1 !important;
+}
+
+/* Number circles */
+.journey-wrapper .step > span {
+    position: absolute !important;
+    top: -8px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateX(-35px) !important;
+
+    width: 25px !important;
+    height: 25px !important;
+
+    background: #198344 !important;
+    color: #ffffff !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 11px !important;
+    line-height: 1 !important;
+
+    z-index: 5 !important;
+}
+
+
+/* =========================================================
+   3. FIRST FIVE ICONS
+   ========================================================= */
+
+.journey-wrapper .step > i {
+    width: 75px !important;
+    height: 75px !important;
+
+    min-width: 75px !important;
+    min-height: 75px !important;
+
+    max-width: 75px !important;
+    max-height: 75px !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    font-size: 25px !important;
+}
+
+
+/* =========================================================
+   4. SIXTH ICON - EXACTLY SAME SIZE
+   ========================================================= */
+
+.journey-wrapper .step:nth-child(6) .icon-circle {
+    width: 75px !important;
+    height: 75px !important;
+
+    min-width: 75px !important;
+    min-height: 75px !important;
+
+    max-width: 75px !important;
+    max-height: 75px !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    border: 2px solid #19a7a0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+
+    position: relative !important;
+}
+
+
+/* Sixth image */
+.journey-wrapper .step:nth-child(6) .icon-circle img {
+    width: 48px !important;
+    height: 48px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    max-width: 48px !important;
+    max-height: 48px !important;
+
+    object-fit: contain !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* =========================================================
+   5. JOURNEY HEADINGS
+   ========================================================= */
+
+.journey-wrapper .step h3 {
+    margin: 15px 0 3px !important;
+
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+
+    color: #142653 !important;
+
+    white-space: normal !important;
+}
+
+.journey-wrapper .step p {
+    margin: 0 !important;
+
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+
+    color: #555555 !important;
+}
+
+
+/* =========================================================
+   6. TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .journey-wrapper {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        row-gap: 45px !important;
+    }
+
+    .journey-wrapper::before {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   7. MOBILE JOURNEY
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .journey-section {
+        padding: 35px 0 50px !important;
+    }
+
+    .journey-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 55px !important;
+
+        width: 100% !important;
+    }
+
+    .journey-wrapper::before {
+        display: none !important;
+    }
+
+    .journey-wrapper .step {
+        width: 100% !important;
+    }
+
+    /* Number position */
+    .journey-wrapper .step > span {
+        top: -7px !important;
+        left: calc(50% - 55px) !important;
+        transform: none !important;
+    }
+
+    /* All circles remain identical */
+    .journey-wrapper .step > i,
+    .journey-wrapper .step:nth-child(6) .icon-circle {
+        width: 75px !important;
+        height: 75px !important;
+
+        min-width: 75px !important;
+        min-height: 75px !important;
+
+        max-width: 75px !important;
+        max-height: 75px !important;
+
+        margin: 0 auto !important;
+    }
+
+    /* Sixth image */
+    .journey-wrapper .step:nth-child(6) .icon-circle img {
+        width: 45px !important;
+        height: 45px !important;
+
+        min-width: 45px !important;
+        min-height: 45px !important;
+
+        max-width: 45px !important;
+        max-height: 45px !important;
+    }
+
+    .journey-wrapper .step h3 {
+        margin-top: 14px !important;
+        font-size: 19px !important;
+    }
+
+    .journey-wrapper .step p {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+        padding: 0 20px !important;
+    }
+}
+
+
+/* =========================================================
+   8. HERO MOBILE ORDER
+   Red Banner
+        ↓
+   Main Image
+        ↓
+   Bullet Points
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .franchise-hero > .container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .franchise-hero .hero-content {
+        display: contents !important;
+    }
+
+    /* Heading */
+    .franchise-hero .hero-content h1 {
+        order: 1 !important;
+    }
+
+    /* Red banner */
+    .franchise-hero .hero-banner {
+        order: 2 !important;
+
+        width: calc(100% - 20px) !important;
+        max-width: calc(100% - 20px) !important;
+
+        margin: 0 auto 12px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* Main image */
+    .franchise-hero .hero-image {
+        order: 3 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 auto 15px !important;
+
+        padding: 0 !important;
+
+        position: relative !important;
+
+        display: block !important;
+
+        overflow: visible !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* Main image itself */
+    .franchise-hero .hero-image > img:first-child {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        display: block !important;
+
+        object-fit: contain !important;
+
+        margin: 0 auto !important;
+
+        border-radius: 0 !important;
+    }
+
+    /* Bullet list AFTER image */
+    .franchise-hero .hero-points {
+        order: 4 !important;
+
+        width: 100% !important;
+
+        margin: 5px 0 0 !important;
+
+        padding-left: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   9. FOX - SMALL AND BOTTOM LEFT
+   ========================================================= */
+
+.franchise-hero .hero-image {
+    position: relative !important;
+}
+
+.franchise-hero .hero-image > img.fox {
+    position: absolute !important;
+
+    left: 2% !important;
+    bottom: 1% !important;
+
+    width: 55px !important;
+    height: auto !important;
+
+    max-width: 55px !important;
+
+    z-index: 10 !important;
+
+    object-fit: contain !important;
+
+    margin: 0 !important;
+}
+
+
+/* Mobile fox */
+@media (max-width: 700px) {
+
+    .franchise-hero .hero-image > img.fox {
+        width: 45px !important;
+        max-width: 45px !important;
+
+        left: 2% !important;
+        bottom: 1% !important;
+    }
+}
+
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .franchise-hero .hero-image > img.fox {
+        width: 38px !important;
+        max-width: 38px !important;
+
+        left: 2% !important;
+        bottom: 1% !important;
+    }
+}
+
+
+/* =========================================================
+   10. EXPERIENCE BADGE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .franchise-hero .experience-badge {
+        transform: scale(.75) !important;
+        transform-origin: top right !important;
+    }
+}
+
+
+/* =========================================================
+   11. MOBILE WIDTH PROTECTION
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+    .franchise-hero,
+    .journey-section {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
+    }
+
+    .franchise-hero *,
+    .journey-section * {
+        box-sizing: border-box !important;
+    }
+}
+
+
+/* =========================================================
+   12. VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .journey-wrapper .step h3 {
+        font-size: 18px !important;
+    }
+
+    .journey-wrapper .step p {
+        font-size: 13px !important;
+    }
+
+    .franchise-hero .hero-banner {
+        font-size: 12px !important;
+    }
+
+}
     
 </style>
 
