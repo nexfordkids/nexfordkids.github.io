@@ -3124,6 +3124,94 @@ animation:none;
 
 }
 
+/* =========================================
+   NEW 60% MOBILE/TABLET MENU
+   ========================================= */
+
+@media (max-width: 992px) {
+
+    /* Menu button */
+    .menu-btn {
+        display: block;
+        position: relative;
+        z-index: 10001;
+        cursor: pointer;
+    }
+
+    /* Hide normal navigation */
+    .navbar {
+        display: block !important;
+        position: fixed !important;
+
+        top: 0 !important;
+        left: auto !important;
+        right: -60% !important;
+
+        width: 60% !important;
+        height: 100vh !important;
+
+        background: #ffffff !important;
+
+        padding: 100px 25px 30px !important;
+
+        z-index: 10000 !important;
+
+        box-shadow: -10px 0 30px rgba(0,0,0,.15);
+
+        transition: right .35s ease !important;
+
+        overflow-y: auto;
+    }
+
+    /* OPEN MENU */
+    .navbar.show {
+        right: 0 !important;
+    }
+
+    /* Menu list */
+    .navbar ul,
+    .navbar.show ul {
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        gap: 22px !important;
+
+        width: 100% !important;
+    }
+
+    /* Menu links */
+    .navbar ul li {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .navbar ul li a {
+        display: inline-block !important;
+
+        font-size: 18px !important;
+        font-weight: 500 !important;
+
+        color: #142653 !important;
+
+        padding: 8px 0 !important;
+    }
+
+    /* Active link */
+    .navbar ul li a.active {
+        color: #238044 !important;
+    }
+
+    /* Remove old active underline */
+    .navbar ul li a.active::after {
+        bottom: -2px !important;
+        height: 3px !important;
+        width: 35px !important;
+    }
+
+}
+
 </style>
 
 
@@ -4509,29 +4597,23 @@ menuBtn.classList.toggle("active");
 
 
 
-/* CLOSE MENU AFTER CLICK */
 
+document.addEventListener("click", function(e){
 
-document
-.querySelectorAll(".navbar a")
-.forEach(link=>{
+    const menu = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
 
+    if (!menu || !menuBtn) return;
 
-link.addEventListener("click",()=>{
-
-
-navbar.classList.remove("show");
-
+    if (
+        menu.classList.contains("show") &&
+        !menu.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ){
+        menu.classList.remove("show");
+    }
 
 });
-
-
-});
-
-
-
-
-
 
 
 
