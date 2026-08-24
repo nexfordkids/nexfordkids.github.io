@@ -9375,6 +9375,2509 @@ opacity:0;
     touch-action: manipulation !important;
 }
 
+/* =========================================================
+   FINAL FIX — EQUAL SIZE + NO OVERLAPPING
+   ========================================================= */
+
+.curriculum-orbit {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    height: 700px !important;
+    margin: 0 auto !important;
+}
+
+
+/* OVAL */
+
+.curriculum-orbit::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 560px !important;
+    height: 520px !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    border: 1px dashed #d4e1f5 !important;
+
+    border-radius: 50% !important;
+
+    pointer-events: none !important;
+
+    z-index: 1 !important;
+}
+
+
+/* =========================================================
+   ALL CARDS — EXACT SAME SIZE
+   ========================================================= */
+
+.curriculum-card {
+    position: absolute !important;
+
+    width: 150px !important;
+    height: 140px !important;
+
+    min-width: 150px !important;
+    max-width: 150px !important;
+
+    min-height: 140px !important;
+    max-height: 140px !important;
+
+    padding: 14px 10px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #e5ebf5 !important;
+
+    border-radius: 16px !important;
+
+    box-sizing: border-box !important;
+
+    text-align: center !important;
+
+    z-index: 10 !important;
+
+    overflow: hidden !important;
+
+    box-shadow:
+        0 12px 30px rgba(20,38,83,.10) !important;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.curriculum-card .icon {
+    width: 48px !important;
+    height: 48px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    margin: 0 auto 7px !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 19px !important;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.curriculum-card h3 {
+    margin: 0 0 5px !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+
+    white-space: normal !important;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.curriculum-card p {
+    margin: 0 !important;
+
+    font-size: 9px !important;
+
+    line-height: 1.4 !important;
+
+    max-width: 130px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* =========================================================
+   EXACT POSITIONS
+   ========================================================= */
+
+
+/* 1 — INNOVATION */
+
+.curriculum-card:nth-child(1) {
+    left: 25px !important;
+    top: 50px !important;
+
+    transform: none !important;
+}
+
+
+/* 2 — LANGUAGE */
+
+.curriculum-card:nth-child(2) {
+    left: 50% !important;
+    top: 0 !important;
+
+    transform: translateX(-50%) !important;
+}
+
+
+/* 3 — MATHEMATICS */
+
+.curriculum-card:nth-child(3) {
+    right: 25px !important;
+    top: 50px !important;
+
+    transform: none !important;
+}
+
+
+/* 4 — STEM */
+
+.curriculum-card:nth-child(4) {
+    right: 0 !important;
+    top: 280px !important;
+
+    transform: none !important;
+}
+
+
+/* 5 — CREATIVE ARTS */
+
+.curriculum-card:nth-child(5) {
+    right: 25px !important;
+    bottom: 40px !important;
+
+    transform: none !important;
+}
+
+
+/* 6 — LIFE SKILLS */
+
+.curriculum-card:nth-child(6) {
+    left: 50% !important;
+    bottom: 0 !important;
+
+    transform: translateX(-50%) !important;
+}
+
+
+/* 7 — PHYSICAL FITNESS */
+
+.curriculum-card:nth-child(7) {
+    left: 25px !important;
+    bottom: 40px !important;
+
+    transform: none !important;
+}
+
+
+/* 8 — GLOBAL AWARENESS */
+
+.curriculum-card:nth-child(8) {
+    left: 0 !important;
+    top: 280px !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   CENTER LOGO
+   ========================================================= */
+
+.curriculum-center {
+    position: absolute !important;
+
+    width: 145px !important;
+    height: 145px !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 15 !important;
+
+    box-shadow:
+        0 15px 40px rgba(20,38,83,.15) !important;
+}
+
+
+.curriculum-center img {
+    width: 110px !important;
+    height: 110px !important;
+
+    object-fit: contain !important;
+
+    border-radius: 50% !important;
+}
+
+
+/* =========================================================
+   REMOVE HOVER POSITION CONFLICT
+   ========================================================= */
+
+.curriculum-card:hover {
+    transform: translateY(-6px) !important;
+}
+
+
+/* TOP AND BOTTOM CENTER CARDS */
+
+.curriculum-card:nth-child(2):hover,
+.curriculum-card:nth-child(6):hover {
+    transform: translateX(-50%) translateY(-6px) !important;
+}
+
+
+/* =========================================================
+   DESKTOP ONLY
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    .curriculum-orbit {
+        display: block !important;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+
+    .curriculum-orbit {
+        transform: scale(.90) !important;
+        transform-origin: top center !important;
+
+        margin-bottom: -70px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .curriculum-orbit {
+        height: auto !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 20px !important;
+
+        padding: 30px 15px !important;
+
+        transform: none !important;
+    }
+
+
+    .curriculum-orbit::before {
+        display: none !important;
+    }
+
+
+    .curriculum-card,
+    .curriculum-card:nth-child(1),
+    .curriculum-card:nth-child(2),
+    .curriculum-card:nth-child(3),
+    .curriculum-card:nth-child(4),
+    .curriculum-card:nth-child(5),
+    .curriculum-card:nth-child(6),
+    .curriculum-card:nth-child(7),
+    .curriculum-card:nth-child(8) {
+
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        width: 150px !important;
+        height: 140px !important;
+
+        margin: auto !important;
+    }
+
+
+    .curriculum-center {
+
+        position: relative !important;
+
+        left: auto !important;
+        top: auto !important;
+
+        transform: none !important;
+
+        grid-column: 1 / -1 !important;
+
+        margin: 0 auto 20px !important;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .curriculum-orbit {
+
+        grid-template-columns: 1fr !important;
+
+    }
+
+}
+
+/* =========================================================
+   FINAL CARD POSITION FIX
+   STEM + ALL CARDS
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    .curriculum-orbit {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 1100px !important;
+        height: 700px !important;
+        margin: 0 auto !important;
+    }
+
+
+    /* ALL CARDS SAME SIZE */
+
+    .curriculum-card {
+        position: absolute !important;
+
+        width: 150px !important;
+        height: 140px !important;
+
+        min-width: 150px !important;
+        max-width: 150px !important;
+
+        min-height: 140px !important;
+        max-height: 140px !important;
+
+        padding: 14px 10px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        z-index: 20 !important;
+    }
+
+
+    /* ==============================
+       1. INNOVATION
+       ============================== */
+
+    .curriculum-card:nth-of-type(1) {
+        left: 25px !important;
+        top: 50px !important;
+    }
+
+
+    /* ==============================
+       2. LANGUAGE
+       ============================== */
+
+    .curriculum-card:nth-of-type(2) {
+        left: 50% !important;
+        top: 0 !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* ==============================
+       3. MATHEMATICS
+       ============================== */
+
+    .curriculum-card:nth-of-type(3) {
+        right: 25px !important;
+        top: 50px !important;
+    }
+
+
+    /* ==============================
+       4. STEM
+       ============================== */
+
+    .curriculum-card:nth-of-type(4) {
+        right: 0 !important;
+        top: 280px !important;
+
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+
+    /* ==============================
+       5. CREATIVE ARTS
+       ============================== */
+
+    .curriculum-card:nth-of-type(5) {
+        right: 25px !important;
+        bottom: 40px !important;
+    }
+
+
+    /* ==============================
+       6. LIFE SKILLS
+       ============================== */
+
+    .curriculum-card:nth-of-type(6) {
+        left: 50% !important;
+        bottom: 0 !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* ==============================
+       7. PHYSICAL FITNESS
+       ============================== */
+
+    .curriculum-card:nth-of-type(7) {
+        left: 25px !important;
+        bottom: 40px !important;
+    }
+
+
+    /* ==============================
+       8. GLOBAL AWARENESS
+       ============================== */
+
+    .curriculum-card:nth-of-type(8) {
+        left: 0 !important;
+        top: 280px !important;
+    }
+
+
+    /* ==============================
+       HOVER
+       ============================== */
+
+    .curriculum-card:nth-of-type(2):hover,
+    .curriculum-card:nth-of-type(6):hover {
+
+        transform:
+            translateX(-50%)
+            translateY(-6px) !important;
+    }
+
+
+    .curriculum-card:not(:nth-of-type(2)):not(:nth-of-type(6)):hover {
+
+        transform: translateY(-6px) !important;
+    }
+
+}
+
+/* =========================================================
+   FINAL DESKTOP FIX
+   EQUAL CARDS + NO OVERLAP + STEM VISIBLE
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    .curriculum-orbit {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 1100px !important;
+        height: 700px !important;
+        margin: 0 auto !important;
+    }
+
+
+    /* ===============================
+       ALL CURRICULUM CARDS
+       =============================== */
+
+    .curriculum-orbit .curriculum-card {
+        position: absolute !important;
+
+        width: 150px !important;
+        height: 140px !important;
+
+        min-width: 150px !important;
+        max-width: 150px !important;
+
+        min-height: 140px !important;
+        max-height: 140px !important;
+
+        padding: 14px 10px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        z-index: 50 !important;
+
+        background: #ffffff !important;
+
+        border-radius: 16px !important;
+
+        border: 1px solid #e5ebf5 !important;
+
+        box-shadow:
+            0 12px 30px rgba(20,38,83,.10) !important;
+    }
+
+
+    /* ===============================
+       CARD CONTENT
+       =============================== */
+
+    .curriculum-orbit .curriculum-card .icon {
+        width: 48px !important;
+        height: 48px !important;
+
+        margin: 0 auto 7px !important;
+
+        border-radius: 50% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+
+    .curriculum-orbit .curriculum-card h3 {
+        font-size: 14px !important;
+
+        line-height: 1.2 !important;
+
+        margin: 0 0 5px !important;
+    }
+
+
+    .curriculum-orbit .curriculum-card p {
+        font-size: 9px !important;
+
+        line-height: 1.4 !important;
+
+        margin: 0 auto !important;
+
+        max-width: 130px !important;
+    }
+
+
+    /* =====================================================
+       USE POSITION BASED ON THE ORDER OF THE ARTICLES
+       ===================================================== */
+
+
+    /* INNOVATION */
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(1) {
+        left: 25px !important;
+        top: 50px !important;
+    }
+
+
+    /* LANGUAGE */
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(2) {
+        left: 50% !important;
+        top: 0 !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* MATHEMATICS */
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(3) {
+        right: 25px !important;
+        top: 50px !important;
+    }
+
+
+    /* STEM */
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(4) {
+        right: 0 !important;
+        top: 280px !important;
+
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        z-index: 100 !important;
+    }
+
+
+    /* CREATIVE ARTS */
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(5) {
+        right: 25px !important;
+        bottom: 40px !important;
+    }
+
+
+    /* LIFE SKILLS */
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(6) {
+        left: 50% !important;
+        bottom: 0 !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* PHYSICAL FITNESS */
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(7) {
+        left: 25px !important;
+        bottom: 40px !important;
+    }
+
+
+    /* GLOBAL AWARENESS */
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(8) {
+        left: 0 !important;
+        top: 280px !important;
+    }
+
+
+    /* =====================================================
+       CENTER LOGO
+       ===================================================== */
+
+    .curriculum-orbit .curriculum-center {
+        position: absolute !important;
+
+        width: 145px !important;
+        height: 145px !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        border-radius: 50% !important;
+
+        background: #ffffff !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        z-index: 20 !important;
+    }
+
+
+    .curriculum-orbit .curriculum-center img {
+        width: 110px !important;
+        height: 110px !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* =====================================================
+       HOVER
+       ===================================================== */
+
+    .curriculum-orbit article.curriculum-card:hover {
+        transform: translateY(-6px) !important;
+    }
+
+
+    .curriculum-orbit article.curriculum-card:nth-of-type(2):hover,
+    .curriculum-orbit article.curriculum-card:nth-of-type(6):hover {
+        transform:
+            translateX(-50%)
+            translateY(-6px) !important;
+    }
+
+}
+
+/* =========================================================
+   FINAL CURRICULUM OVAL LAYOUT
+   ========================================================= */
+
+/* Main oval/circle wrapper */
+.curriculum-section,
+.curriculum-orbit,
+.curriculum-container,
+.orbit-container {
+    overflow: visible !important;
+}
+
+/* If your main circle wrapper is using overflow hidden */
+.curriculum-orbit {
+    position: relative !important;
+    width: 1000px !important;
+    height: 680px !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+}
+
+
+/* =========================================================
+   ALL CARDS
+   ========================================================= */
+
+.curriculum-card {
+    position: absolute !important;
+
+    width: 150px !important;
+    height: 135px !important;
+
+    min-width: 150px !important;
+    max-width: 150px !important;
+
+    min-height: 135px !important;
+    max-height: 135px !important;
+
+    padding: 15px 10px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #e4e9f2 !important;
+
+    border-radius: 16px !important;
+
+    box-shadow: 0 12px 30px rgba(20, 38, 83, 0.10) !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    text-align: center !important;
+
+    overflow: visible !important;
+
+    z-index: 20 !important;
+}
+
+
+/* =========================================================
+   CARD 1 - INNOVATION
+   ========================================================= */
+
+.curriculum-card:nth-child(1) {
+    left: 20px !important;
+    top: 80px !important;
+}
+
+
+/* =========================================================
+   CARD 2 - LANGUAGE
+   ========================================================= */
+
+.curriculum-card:nth-child(2) {
+    left: 425px !important;
+    top: 0 !important;
+}
+
+
+/* =========================================================
+   CARD 3 - MATHEMATICS
+   ========================================================= */
+
+.curriculum-card:nth-child(3) {
+    right: 20px !important;
+    top: 80px !important;
+}
+
+
+/* =========================================================
+   CARD 4 - GLOBAL AWARENESS
+   ========================================================= */
+
+.curriculum-card:nth-child(4) {
+    left: 0 !important;
+    top: 275px !important;
+}
+
+
+/* =========================================================
+   CARD 5 - STEM
+   ========================================================= */
+
+.curriculum-card:nth-child(5) {
+    right: 0 !important;
+    top: 275px !important;
+
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    z-index: 100 !important;
+}
+
+
+/* =========================================================
+   CARD 6 - PHYSICAL FITNESS
+   ========================================================= */
+
+.curriculum-card:nth-child(6) {
+    left: 20px !important;
+    bottom: 25px !important;
+}
+
+
+/* =========================================================
+   CARD 7 - CREATIVE ARTS
+   ========================================================= */
+
+.curriculum-card:nth-child(7) {
+    right: 20px !important;
+    bottom: 25px !important;
+}
+
+
+/* =========================================================
+   CARD 8 - LIFE SKILLS
+   ========================================================= */
+
+.curriculum-card:nth-child(8) {
+    left: 425px !important;
+    bottom: 0 !important;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.curriculum-card .icon,
+.curriculum-card .card-icon,
+.curriculum-card .curriculum-icon {
+    width: 52px !important;
+    height: 52px !important;
+
+    min-width: 52px !important;
+    min-height: 52px !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin-bottom: 8px !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.curriculum-card h3 {
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+
+    margin: 3px 0 7px !important;
+
+    color: #17449b !important;
+
+    white-space: normal !important;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.curriculum-card p {
+    font-size: 11px !important;
+
+    line-height: 1.45 !important;
+
+    margin: 0 !important;
+
+    color: #5c6675 !important;
+
+    max-width: 130px !important;
+}
+
+
+/* =========================================================
+   CENTER CIRCLE / LOGO
+   ========================================================= */
+
+.curriculum-center,
+.center-logo,
+.orbit-center {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    width: 220px !important;
+    height: 220px !important;
+
+    border-radius: 50% !important;
+
+    z-index: 5 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #dbe5f5 !important;
+
+    box-shadow:
+        0 15px 40px rgba(20, 38, 83, 0.12) !important;
+}
+
+
+/* =========================================================
+   CENTER LOGO IMAGE
+   ========================================================= */
+
+.curriculum-center img,
+.center-logo img,
+.orbit-center img {
+    width: 150px !important;
+    height: 150px !important;
+
+    object-fit: contain !important;
+
+    border-radius: 50% !important;
+}
+
+
+/* =========================================================
+   OVAL BORDER
+   ========================================================= */
+
+.curriculum-orbit::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    width: 620px !important;
+    height: 520px !important;
+
+    border: 1px dashed #c9d9f3 !important;
+
+    border-radius: 50% !important;
+
+    z-index: 1 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   IMPORTANT - MAKE SURE STEM CANNOT DISAPPEAR
+   ========================================================= */
+
+.curriculum-card:nth-child(5),
+.curriculum-card:nth-child(5) * {
+    visibility: visible !important;
+}
+
+.curriculum-card:nth-child(5) {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+
+/* =========================================================
+   REMOVE OLD TRANSFORMS
+   ========================================================= */
+
+.curriculum-card {
+    transform: none !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1000px) {
+
+    .curriculum-orbit {
+        width: 1000px !important;
+        height: 680px !important;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 999px) and (min-width: 769px) {
+
+    .curriculum-orbit {
+        width: 900px !important;
+        height: 650px !important;
+
+        transform: scale(.9);
+        transform-origin: top center;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .curriculum-orbit {
+        width: 100% !important;
+        height: auto !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 20px !important;
+
+        padding: 20px !important;
+
+        transform: none !important;
+    }
+
+
+    .curriculum-orbit::before {
+        display: none !important;
+    }
+
+
+    .curriculum-card,
+    .curriculum-card:nth-child(1),
+    .curriculum-card:nth-child(2),
+    .curriculum-card:nth-child(3),
+    .curriculum-card:nth-child(4),
+    .curriculum-card:nth-child(5),
+    .curriculum-card:nth-child(6),
+    .curriculum-card:nth-child(7),
+    .curriculum-card:nth-child(8) {
+
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+
+        max-width: 180px !important;
+
+        height: 140px !important;
+
+        margin: auto !important;
+    }
+
+
+    .curriculum-center,
+    .center-logo,
+    .orbit-center {
+        position: relative !important;
+
+        left: auto !important;
+        top: auto !important;
+
+        transform: none !important;
+
+        grid-column: 1 / -1 !important;
+
+        margin: 20px auto !important;
+
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+}
+
+/* =========================================================
+   FINAL FIX - ALL 8 CURRICULUM CARDS
+   SAME SIZE / NO OVERLAP / GLOBAL + STEM VISIBLE
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    .curriculum-orbit {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 1100px !important;
+        height: 700px !important;
+        margin: 0 auto !important;
+        overflow: visible !important;
+    }
+
+
+    /* ==============================
+       ALL CARDS SAME SIZE
+       ============================== */
+
+    .curriculum-card {
+        position: absolute !important;
+
+        width: 150px !important;
+        height: 135px !important;
+
+        min-width: 150px !important;
+        max-width: 150px !important;
+
+        min-height: 135px !important;
+        max-height: 135px !important;
+
+        padding: 14px 10px !important;
+
+        box-sizing: border-box !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        overflow: hidden !important;
+
+        background: #ffffff !important;
+
+        border: 1px solid #e5ebf5 !important;
+        border-radius: 16px !important;
+
+        box-shadow: 0 12px 30px rgba(20,38,83,.10) !important;
+
+        z-index: 50 !important;
+
+        transform: none !important;
+    }
+
+
+    /* ==============================
+       1 - INNOVATION
+       ============================== */
+
+    .curriculum-card:nth-child(1) {
+        left: 30px !important;
+        top: 70px !important;
+    }
+
+
+    /* ==============================
+       2 - LANGUAGE
+       ============================== */
+
+    .curriculum-card:nth-child(2) {
+        left: 50% !important;
+        top: 0 !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* ==============================
+       3 - MATHEMATICS
+       ============================== */
+
+    .curriculum-card:nth-child(3) {
+        right: 30px !important;
+        top: 70px !important;
+    }
+
+
+    /* ==============================
+       4 - GLOBAL AWARENESS
+       ============================== */
+
+    .curriculum-card:nth-child(4) {
+        left: 0 !important;
+        top: 285px !important;
+
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        z-index: 100 !important;
+    }
+
+
+    /* ==============================
+       5 - STEM
+       ============================== */
+
+    .curriculum-card:nth-child(5) {
+        right: 0 !important;
+        top: 285px !important;
+
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        z-index: 100 !important;
+    }
+
+
+    /* ==============================
+       6 - PHYSICAL FITNESS
+       ============================== */
+
+    .curriculum-card:nth-child(6) {
+        left: 30px !important;
+        bottom: 30px !important;
+    }
+
+
+    /* ==============================
+       7 - CREATIVE ARTS
+       ============================== */
+
+    .curriculum-card:nth-child(7) {
+        right: 30px !important;
+        bottom: 30px !important;
+    }
+
+
+    /* ==============================
+       8 - LIFE SKILLS
+       ============================== */
+
+    .curriculum-card:nth-child(8) {
+        left: 50% !important;
+        bottom: 0 !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* ==============================
+       ICON
+       ============================== */
+
+    .curriculum-card .icon {
+        width: 48px !important;
+        height: 48px !important;
+
+        min-width: 48px !important;
+        min-height: 48px !important;
+
+        margin: 0 auto 7px !important;
+
+        border-radius: 50% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    /* ==============================
+       TITLE
+       ============================== */
+
+    .curriculum-card h3 {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+
+        margin: 0 0 5px !important;
+
+        text-align: center !important;
+    }
+
+
+    /* ==============================
+       DESCRIPTION
+       ============================== */
+
+    .curriculum-card p {
+        font-size: 10px !important;
+        line-height: 1.4 !important;
+
+        margin: 0 auto !important;
+
+        max-width: 125px !important;
+
+        text-align: center !important;
+    }
+
+
+    /* ==============================
+       CENTER LOGO
+       ============================== */
+
+    .curriculum-center {
+        position: absolute !important;
+
+        width: 210px !important;
+        height: 210px !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        border-radius: 50% !important;
+
+        background: #ffffff !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        z-index: 20 !important;
+
+        box-shadow: 0 15px 40px rgba(20,38,83,.12) !important;
+    }
+
+
+    .curriculum-center img {
+        width: 145px !important;
+        height: 145px !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* ==============================
+       OVAL BORDER
+       ============================== */
+
+    .curriculum-orbit::before {
+        content: "" !important;
+
+        position: absolute !important;
+
+        width: 620px !important;
+        height: 520px !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        border: 1px dashed #cbdaf0 !important;
+
+        border-radius: 50% !important;
+
+        z-index: 1 !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* ==============================
+       HOVER
+       ============================== */
+
+    .curriculum-card:hover {
+        transform: translateY(-6px) !important;
+    }
+
+
+    .curriculum-card:nth-child(2):hover,
+    .curriculum-card:nth-child(8):hover {
+        transform:
+            translateX(-50%)
+            translateY(-6px) !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE - DON'T USE OVAL
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .curriculum-orbit {
+        width: 100% !important;
+        height: auto !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 20px !important;
+
+        padding: 20px 10px !important;
+
+        transform: none !important;
+
+        overflow: visible !important;
+    }
+
+
+    .curriculum-orbit::before {
+        display: none !important;
+    }
+
+
+    .curriculum-card,
+    .curriculum-card:nth-child(1),
+    .curriculum-card:nth-child(2),
+    .curriculum-card:nth-child(3),
+    .curriculum-card:nth-child(4),
+    .curriculum-card:nth-child(5),
+    .curriculum-card:nth-child(6),
+    .curriculum-card:nth-child(7),
+    .curriculum-card:nth-child(8) {
+
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        width: 150px !important;
+        height: 135px !important;
+
+        margin: 0 auto !important;
+    }
+
+
+    .curriculum-center {
+        position: relative !important;
+
+        left: auto !important;
+        top: auto !important;
+
+        transform: none !important;
+
+        grid-column: 1 / -1 !important;
+
+        margin: 10px auto 20px !important;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .curriculum-orbit {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+/* =========================================
+   GLOBAL AWARENESS - OVAL POSITION
+   ========================================= */
+
+.curriculum-card:nth-child(4) {
+    position: absolute !important;
+
+    left: 75px !important;
+    top: 285px !important;
+
+    width: 150px !important;
+    height: 135px !important;
+
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    z-index: 100 !important;
+
+    transform: none !important;
+
+    background: #ffffff !important;
+}
+
+.curriculum-card:nth-child(4) {
+    z-index: 200 !important;
+}
+
+.curriculum-card:nth-child(5) {
+    z-index: 100 !important;
+}
+
+.curriculum-card:nth-child(4) {
+    right: 210px !important;
+    bottom: 205px !important;
+}
+
+/* =========================================
+   FINAL CARD POSITIONS - DESKTOP
+========================================= */
+
+@media (min-width: 993px) {
+
+    /* GLOBAL AWARENESS */
+    .global-awareness {
+        position: absolute !important;
+        top: 230px !important;
+        right: 0 !important;
+        left: auto !important;
+        transform: none !important;
+        z-index: 20 !important;
+    }
+
+    /* STEM - LEFT MIDDLE */
+    .stem {
+        position: absolute !important;
+        top: 230px !important;
+        left: 0 !important;
+        right: auto !important;
+        transform: none !important;
+        z-index: 20 !important;
+    }
+
+}
+
+/* =========================================
+   8 CARD PERFECT ORBIT
+========================================= */
+
+.curriculum-orbit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    overflow: visible;
+}
+
+.orbit-circle {
+    width: 700px;
+    height: 700px;
+
+    position: relative;
+
+    border: 1px dashed #d5e3f5;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+}
+
+
+/* =========================================
+   CENTER LOGO
+========================================= */
+
+.orbit-center {
+    width: 120px;
+    height: 120px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 15px 35px rgba(20, 38, 83, 0.15);
+
+    z-index: 5;
+}
+
+.orbit-center img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   ALL CARDS
+========================================= */
+
+.orbit-card {
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe8f3;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+
+    padding: 14px 10px;
+
+    box-shadow: 0 12px 30px rgba(20, 38, 83, 0.10);
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+
+    flex-shrink: 0;
+}
+
+
+/* ICON COLORS */
+
+.green {
+    background: #16b85b;
+}
+
+.orange {
+    background: #ff8a00;
+}
+
+.pink {
+    background: #ed3b88;
+}
+
+.red {
+    background: #ef3333;
+}
+
+.teal {
+    background: #0eaaa5;
+}
+
+.cyan {
+    background: #10a99d;
+}
+
+.blue {
+    background: #3478e5;
+}
+
+.purple {
+    background: #8147ed;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.orbit-card h3 {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+
+    line-height: 1.2;
+
+    color: #173f91;
+
+    font-weight: 700;
+}
+
+.orbit-card p {
+    margin: 0;
+
+    font-size: 9px;
+
+    line-height: 1.45;
+
+    color: #596579;
+
+    max-width: 120px;
+}
+
+
+/* =========================================
+   EXACT 8 POSITIONS
+========================================= */
+
+
+/* 1 - TOP */
+
+.card-top {
+    top: -70px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* 2 - TOP RIGHT */
+
+.card-top-right {
+    top: 65px;
+    right: -70px;
+}
+
+
+/* 3 - RIGHT */
+
+.card-right {
+    top: 50%;
+    right: -70px;
+
+    transform: translateY(-50%);
+}
+
+
+/* 4 - BOTTOM RIGHT */
+
+.card-bottom-right {
+    bottom: 65px;
+    right: -70px;
+}
+
+
+/* 5 - BOTTOM */
+
+.card-bottom {
+    bottom: -70px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* 6 - BOTTOM LEFT */
+
+.card-bottom-left {
+    bottom: 65px;
+    left: -70px;
+}
+
+
+/* 7 - LEFT */
+
+.card-left {
+    top: 50%;
+    left: -70px;
+
+    transform: translateY(-50%);
+}
+
+
+/* 8 - TOP LEFT */
+
+.card-top-left {
+    top: 65px;
+    left: -70px;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.orbit-card {
+    transition: 0.3s ease;
+}
+
+.orbit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(20, 38, 83, 0.16);
+}
+
+
+/* =========================================
+   KEEP TRANSFORM FOR SIDE CARDS
+========================================= */
+
+.card-top:hover,
+.card-bottom:hover {
+    transform: translateX(-50%) translateY(-6px);
+}
+
+.card-left:hover,
+.card-right:hover {
+    transform: translateY(-50%) translateX(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .orbit-circle {
+        width: 600px;
+        height: 600px;
+    }
+
+    .orbit-card {
+        width: 125px;
+        height: 125px;
+        padding: 11px 8px;
+    }
+
+    .card-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .orbit-card h3 {
+        font-size: 13px;
+    }
+
+    .orbit-card p {
+        font-size: 8px;
+    }
+
+    .card-top,
+    .card-bottom {
+        left: 50%;
+    }
+
+    .card-top-right,
+    .card-right,
+    .card-bottom-right {
+        right: -60px;
+    }
+
+    .card-top-left,
+    .card-left,
+    .card-bottom-left {
+        left: -60px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .curriculum-orbit {
+        padding: 50px 10px;
+    }
+
+    .orbit-circle {
+        width: 420px;
+        height: 420px;
+    }
+
+    .orbit-card {
+        width: 105px;
+        height: 105px;
+        padding: 8px 5px;
+    }
+
+    .card-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .orbit-card h3 {
+        font-size: 11px;
+    }
+
+    .orbit-card p {
+        font-size: 7px;
+    }
+
+    .orbit-center {
+        width: 90px;
+        height: 90px;
+    }
+
+    .orbit-center img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .card-top {
+        top: -52px;
+    }
+
+    .card-bottom {
+        bottom: -52px;
+    }
+
+    .card-top-right,
+    .card-right,
+    .card-bottom-right {
+        right: -52px;
+    }
+
+    .card-top-left,
+    .card-left,
+    .card-bottom-left {
+        left: -52px;
+    }
+
+}
+
+/* =========================================
+   FINAL FIX - ONLY ONE ORBIT CIRCLE
+========================================= */
+
+/* Remove every extra decorative circle */
+.curriculum-orbit::before,
+.curriculum-orbit::after,
+.orbit-circle::before,
+.orbit-circle::after {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* Main orbit container */
+.orbit-circle {
+    width: 700px !important;
+    height: 700px !important;
+
+    position: relative !important;
+
+    border: 1px dashed #d5e3f5 !important;
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    box-shadow: none !important;
+
+    overflow: visible !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+/* Remove any background circles/shadows from parent */
+.curriculum-orbit {
+    position: relative !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* Center logo - no extra circle around it */
+.orbit-center {
+    width: 165px !important;
+    height: 165px !important;
+
+    position: absolute !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #dce6f3 !important;
+
+    box-shadow: 0 12px 30px rgba(20,38,83,.12) !important;
+
+    z-index: 20 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+.orbit-center img {
+    width: 115px !important;
+    height: 115px !important;
+
+    object-fit: contain !important;
+
+    border-radius: 50% !important;
+}
+
+/* =========================================================
+   FINAL ORBIT SECTION FIX
+   CENTER EVERYTHING + COMPLETE CIRCLE + NO SECTION TOUCH
+========================================================= */
+
+/* Main section */
+.curriculum-orbit {
+    width: 100% !important;
+    min-height: 950px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 130px 150px 150px !important;
+
+    margin: 0 auto !important;
+
+    position: relative !important;
+
+    background: #ffffff !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* Orbit wrapper */
+.orbit-circle {
+    width: 700px !important;
+    height: 700px !important;
+
+    min-width: 700px !important;
+    min-height: 700px !important;
+
+    position: relative !important;
+
+    margin: 0 auto !important;
+
+    border: 1px dashed #cddff3 !important;
+
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    box-shadow: 0 0 0 15px rgba(230,238,247,.20) !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: visible !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* Remove unwanted extra circles */
+.curriculum-orbit::before,
+.curriculum-orbit::after,
+.orbit-circle::before,
+.orbit-circle::after {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* =========================================================
+   CENTER LOGO
+========================================================= */
+
+.orbit-center {
+    position: absolute !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    width: 165px !important;
+    height: 165px !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #d8e3f0 !important;
+
+    box-shadow: 0 15px 35px rgba(20,38,83,.12) !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 50 !important;
+}
+
+
+.orbit-center img {
+    width: 115px !important;
+    height: 115px !important;
+
+    object-fit: contain !important;
+
+    border-radius: 50% !important;
+}
+
+
+/* =========================================================
+   ALL 8 CARDS - SAME SIZE
+========================================================= */
+
+.orbit-card {
+    width: 140px !important;
+    height: 140px !important;
+
+    position: absolute !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #dce6f1 !important;
+
+    border-radius: 15px !important;
+
+    padding: 14px 10px !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    text-align: center !important;
+
+    box-shadow: 0 12px 30px rgba(20,38,83,.10) !important;
+
+    z-index: 100 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   CARD POSITIONS
+========================================================= */
+
+/* TOP */
+.card-top {
+    top: -70px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+
+/* TOP RIGHT */
+.card-top-right {
+    top: 65px !important;
+    right: -70px !important;
+}
+
+
+/* RIGHT */
+.card-right {
+    top: 50% !important;
+    right: -70px !important;
+    transform: translateY(-50%) !important;
+}
+
+
+/* BOTTOM RIGHT */
+.card-bottom-right {
+    bottom: 65px !important;
+    right: -70px !important;
+}
+
+
+/* BOTTOM */
+.card-bottom {
+    bottom: -70px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+
+/* BOTTOM LEFT */
+.card-bottom-left {
+    bottom: 65px !important;
+    left: -70px !important;
+}
+
+
+/* LEFT */
+.card-left {
+    top: 50% !important;
+    left: -70px !important;
+    transform: translateY(-50%) !important;
+}
+
+
+/* TOP LEFT */
+.card-top-left {
+    top: 65px !important;
+    left: -70px !important;
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.card-icon {
+    width: 48px !important;
+    height: 48px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin-bottom: 8px !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.orbit-card h3 {
+    margin: 0 0 5px !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.2 !important;
+
+    color: #173f91 !important;
+
+    font-weight: 700 !important;
+}
+
+
+.orbit-card p {
+    margin: 0 !important;
+
+    font-size: 9px !important;
+
+    line-height: 1.4 !important;
+
+    color: #596579 !important;
+
+    max-width: 120px !important;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.orbit-card {
+    transition: transform .3s ease, box-shadow .3s ease !important;
+}
+
+.card-top:hover,
+.card-bottom:hover {
+    transform: translateX(-50%) translateY(-5px) !important;
+}
+
+.card-left:hover,
+.card-right:hover {
+    transform: translateY(-50%) translateX(0) !important;
+}
+
+.card-top-left:hover,
+.card-top-right:hover,
+.card-bottom-left:hover,
+.card-bottom-right:hover {
+    transform: translateY(-5px) !important;
+}
+
+
+/* =========================================================
+   DESKTOP - KEEP SECTION CENTERED
+========================================================= */
+
+@media (min-width: 1101px) {
+
+    .curriculum-orbit {
+        max-width: 1200px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .curriculum-orbit {
+        min-height: 850px !important;
+
+        padding: 110px 100px 130px !important;
+    }
+
+    .orbit-circle {
+        width: 600px !important;
+        height: 600px !important;
+
+        min-width: 600px !important;
+        min-height: 600px !important;
+    }
+
+    .orbit-card {
+        width: 125px !important;
+        height: 125px !important;
+    }
+
+    .card-top {
+        top: -62px !important;
+    }
+
+    .card-bottom {
+        bottom: -62px !important;
+    }
+
+    .card-top-right,
+    .card-right,
+    .card-bottom-right {
+        right: -62px !important;
+    }
+
+    .card-top-left,
+    .card-left,
+    .card-bottom-left {
+        left: -62px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .curriculum-orbit {
+        min-height: 700px !important;
+
+        padding: 90px 55px 110px !important;
+
+        overflow: hidden !important;
+    }
+
+    .orbit-circle {
+        width: 400px !important;
+        height: 400px !important;
+
+        min-width: 400px !important;
+        min-height: 400px !important;
+    }
+
+    .orbit-card {
+        width: 90px !important;
+        height: 90px !important;
+
+        padding: 7px 5px !important;
+    }
+
+    .card-icon {
+        width: 30px !important;
+        height: 30px !important;
+
+        min-width: 30px !important;
+        min-height: 30px !important;
+
+        font-size: 13px !important;
+
+        margin-bottom: 4px !important;
+    }
+
+    .orbit-card h3 {
+        font-size: 10px !important;
+    }
+
+    .orbit-card p {
+        font-size: 6px !important;
+    }
+
+    .orbit-center {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .orbit-center img {
+        width: 65px !important;
+        height: 65px !important;
+    }
+
+}
+
 </style>
 </head>
 
@@ -10192,154 +12695,90 @@ CURRICULUM & LEARNING FRAMEWORK
             </p>
 
         </div>
+    </section>
 
         <!--==============================
         CURRICULUM WRAPPER
         ==============================-->
+<section class="curriculum-orbit">
 
-        <div class="curriculum-wrapper">
+    <div class="orbit-circle">
 
-            <!-- Center Circle -->
+        <!-- CENTER -->
+        <div class="orbit-center">
+            <img src="lumined.jpeg" alt="LuminEd">
+        </div>
 
-            <div class="curriculum-center">
-
-                <div class="center-circle">
-
-                    <img src="lumined.jpeg"
-                         alt="Curriculum">
-
-
-                </div>
-
+        <!-- 1. TOP -->
+        <div class="orbit-card card-top">
+            <div class="card-icon green">
+                <i class="fa-solid fa-book-open"></i>
             </div>
+            <h3>Language</h3>
+            <p>Reading, Writing & Communication</p>
+        </div>
 
-            <!--==============================
-            LEARNING MODULES
-            ==============================-->
-
-            <div class="curriculum-item item1">
-
-                <div class="curriculum-icon">
-
-                    <i class="fa-solid fa-book-open"></i>
-
-                </div>
-
-                <h4>Language</h4>
-
-                <p>Reading, Writing & Communication</p>
-
+        <!-- 2. TOP RIGHT -->
+        <div class="orbit-card card-top-right">
+            <div class="card-icon orange">
+                <i class="fa-solid fa-calculator"></i>
             </div>
+            <h3>Mathematics</h3>
+            <p>Numbers, Logic & Reasoning</p>
+        </div>
 
-            <div class="curriculum-item item2">
-
-                <div class="curriculum-icon">
-
-                    <i class="fa-solid fa-calculator"></i>
-
-                </div>
-
-                <h4>Mathematics</h4>
-
-                <p>Numbers, Logic & Reasoning</p>
-
+        <!-- 3. RIGHT -->
+        <div class="orbit-card card-right">
+            <div class="card-icon pink">
+                <i class="fa-solid fa-palette"></i>
             </div>
+            <h3>Creative Arts</h3>
+            <p>Drawing, Music & Craft</p>
+        </div>
 
-            <div class="curriculum-item item3">
-
-                <div class="curriculum-icon">
-
-                    <i class="fa-solid fa-flask"></i>
-
-                </div>
-
-                <h4>STEM</h4>
-
-                <p>Science & Discovery Activities</p>
-
+        <!-- 4. BOTTOM RIGHT -->
+        <div class="orbit-card card-bottom-right">
+            <div class="card-icon red">
+                <i class="fa-solid fa-heart"></i>
             </div>
+            <h3>Life Skills</h3>
+            <p>Confidence & Emotional Growth</p>
+        </div>
 
-            <div class="curriculum-item item4">
-
-                <div class="curriculum-icon">
-
-                    <i class="fa-solid fa-palette"></i>
-
-                </div>
-
-                <h4>Creative Arts</h4>
-
-                <p>Drawing, Music & Craft</p>
-
+        <!-- 5. BOTTOM -->
+        <div class="orbit-card card-bottom">
+            <div class="card-icon teal">
+                <i class="fa-solid fa-futbol"></i>
             </div>
+            <h3>Physical Fitness</h3>
+            <p>Sports & Motor Development</p>
+        </div>
 
-            <div class="curriculum-item item5">
-
-                <div class="curriculum-icon">
-
-                    <i class="fa-solid fa-heart"></i>
-
-                </div>
-
-                <h4>Life Skills</h4>
-
-                <p>Confidence & Emotional Growth</p>
-
+        <!-- 6. BOTTOM LEFT -->
+        <div class="orbit-card card-bottom-left">
+            <div class="card-icon cyan">
+                <i class="fa-solid fa-globe"></i>
             </div>
+            <h3>Global Awareness</h3>
+            <p>Culture & Environmental Learning</p>
+        </div>
 
-            <div class="curriculum-item item6">
-
-                <div class="curriculum-icon">
-
-                    <i class="fa-solid fa-futbol"></i>
-
-                </div>
-
-                <h4>Physical Fitness</h4>
-
-                <p>Sports & Motor Development</p>
-
+        <!-- 7. LEFT -->
+        <div class="orbit-card card-left">
+            <div class="card-icon blue">
+                <i class="fa-solid fa-flask"></i>
             </div>
+            <h3>STEM</h3>
+            <p>Science & Discovery</p>
+        </div>
 
-            <div class="curriculum-item item7">
-
-                <div class="curriculum-icon">
-
-                    <i class="fa-solid fa-globe"></i>
-
-                </div>
-
-                <h4>Global Awareness</h4>
-
-                <p>Culture & Environmental Learning</p>
-
+        <!-- 8. TOP LEFT -->
+        <div class="orbit-card card-top-left">
+            <div class="card-icon purple">
+                <i class="fa-solid fa-lightbulb"></i>
             </div>
-
-            <div class="curriculum-item item8">
-
-                <div class="curriculum-icon">
-
-                    <i class="fa-solid fa-lightbulb"></i>
-
-                </div>
-
-                <h4>Innovation</h4>
-
-                <p>Critical Thinking & Creativity</p>
-
-            </div>
-
-            <!-- Decorative Ring -->
-
-            <div class="outer-ring"></div>
-
-            <!-- Decorative Dots -->
-
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-            <span class="dot dot4"></span>
-
+            <h3>Innovation</h3>
+            <p>Critical Thinking & Creativity</p>
         </div>
 
     </div>
@@ -10997,6 +13436,441 @@ body {
     .carousel-next {
         right: 8px;
     }
+}
+
+/* =========================================================
+   PERFECT OVAL CURRICULUM LAYOUT
+   ========================================================= */
+
+.curriculum-orbit {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 720px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   OVAL
+   ========================================================= */
+
+.curriculum-orbit::before {
+    content: "";
+    position: absolute;
+
+    width: 620px;
+    height: 570px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px dashed #c9d9f5;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 12px rgba(32, 128, 68, 0.025),
+        0 0 0 25px rgba(32, 128, 68, 0.015);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CENTER LOGO
+   ========================================================= */
+
+.curriculum-center {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 20px 50px rgba(20, 38, 83, 0.16),
+        0 0 0 1px #dce6f7;
+
+    z-index: 10;
+}
+
+
+.curriculum-center img {
+    width: 135px;
+    height: 135px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   ALL CARDS
+   ========================================================= */
+
+.curriculum-card {
+    position: absolute;
+
+    width: 180px;
+    min-height: 145px;
+
+    padding: 18px 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7edf7;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 35px rgba(20, 38, 83, 0.10);
+
+    z-index: 20;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.curriculum-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 22px 45px rgba(20, 38, 83, 0.16);
+}
+
+
+/* =========================================================
+   CARD ICON
+   ========================================================= */
+
+.curriculum-card .icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 10px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.curriculum-card h3 {
+    margin: 0 0 7px;
+
+    font-size: 16px;
+
+    line-height: 1.25;
+
+    color: #173d8f;
+
+    font-weight: 700;
+}
+
+
+.curriculum-card p {
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    color: #5d6879;
+}
+
+
+/* =========================================================
+   CARD 1 - INNOVATION
+   ========================================================= */
+
+.curriculum-card:nth-child(1) {
+
+    left: 55px;
+    top: 80px;
+
+}
+
+
+/* =========================================================
+   CARD 2 - LANGUAGE
+   ========================================================= */
+
+.curriculum-card:nth-child(2) {
+
+    left: 50%;
+    top: 5px;
+
+    transform: translateX(-50%);
+
+}
+
+
+.curriculum-card:nth-child(2):hover {
+
+    transform:
+        translateX(-50%)
+        translateY(-8px);
+
+}
+
+
+/* =========================================================
+   CARD 3 - MATHEMATICS
+   ========================================================= */
+
+.curriculum-card:nth-child(3) {
+
+    right: 55px;
+    top: 80px;
+
+}
+
+
+/* =========================================================
+   CARD 4 - STEM
+   ========================================================= */
+
+.curriculum-card:nth-child(4) {
+
+    right: 5px;
+    top: 285px;
+
+}
+
+
+/* =========================================================
+   CARD 5 - CREATIVE ARTS
+   ========================================================= */
+
+.curriculum-card:nth-child(5) {
+
+    right: 55px;
+    bottom: 70px;
+
+}
+
+
+/* =========================================================
+   CARD 6 - LIFE SKILLS
+   ========================================================= */
+
+.curriculum-card:nth-child(6) {
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+}
+
+
+.curriculum-card:nth-child(6):hover {
+
+    transform:
+        translateX(-50%)
+        translateY(-8px);
+
+}
+
+
+/* =========================================================
+   CARD 7 - PHYSICAL FITNESS
+   ========================================================= */
+
+.curriculum-card:nth-child(7) {
+
+    left: 55px;
+    bottom: 70px;
+
+}
+
+
+/* =========================================================
+   CARD 8 - GLOBAL AWARENESS
+   ========================================================= */
+
+.curriculum-card:nth-child(8) {
+
+    left: 5px;
+    top: 285px;
+
+}
+
+
+/* =========================================================
+   ICON COLORS
+   ========================================================= */
+
+.curriculum-card:nth-child(1) .icon {
+    background: #8745ed;
+}
+
+.curriculum-card:nth-child(2) .icon {
+    background: #16b957;
+}
+
+.curriculum-card:nth-child(3) .icon {
+    background: #ff8500;
+}
+
+.curriculum-card:nth-child(4) .icon {
+    background: #3476e8;
+}
+
+.curriculum-card:nth-child(5) .icon {
+    background: #ed3b82;
+}
+
+.curriculum-card:nth-child(6) .icon {
+    background: #f33131;
+}
+
+.curriculum-card:nth-child(7) .icon {
+    background: #0ca8a3;
+}
+
+.curriculum-card:nth-child(8) .icon {
+    background: #14a59c;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .curriculum-orbit {
+        transform: scale(0.90);
+        transform-origin: top center;
+        margin-bottom: -70px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .curriculum-orbit {
+        height: auto;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+        transform: none;
+
+        padding: 30px 20px;
+    }
+
+
+    .curriculum-orbit::before {
+        display: none;
+    }
+
+
+    .curriculum-center {
+        position: relative;
+
+        width: 160px;
+        height: 160px;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        grid-column: 1 / -1;
+
+        grid-row: 1;
+
+        margin: 0 auto 20px;
+    }
+
+
+    .curriculum-card,
+    .curriculum-card:nth-child(1),
+    .curriculum-card:nth-child(2),
+    .curriculum-card:nth-child(3),
+    .curriculum-card:nth-child(4),
+    .curriculum-card:nth-child(5),
+    .curriculum-card:nth-child(6),
+    .curriculum-card:nth-child(7),
+    .curriculum-card:nth-child(8) {
+
+        position: relative;
+
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+
+        transform: none !important;
+
+        width: 100%;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .curriculum-orbit {
+
+        grid-template-columns: 1fr;
+
+        padding: 20px 10px;
+
+    }
+
+
+    .curriculum-center {
+
+        grid-column: auto;
+
+    }
+
+
+    .curriculum-card {
+
+        max-width: 280px;
+
+        margin: 0 auto;
+
+    }
+
 }
 
 </style>
