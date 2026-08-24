@@ -289,7 +289,7 @@ ABOUT HERO SECTION
 
     color:#39764b;
 
-    font-size:14px;
+    font-size:24px;
 
     font-weight:700;
 
@@ -335,9 +335,13 @@ ABOUT HERO SECTION
 
     font-weight:600;
 
-    color:#ef8b18;
+    color:#173B82;
 
     margin-bottom:25px;
+
+    .orange-word{
+    color:#FF8A00;
+}
 
 }
 
@@ -2768,6 +2772,61 @@ transform:translateY(-5px);
 
 }
 
+/* ABOUT PAGE - REDUCE LOGO SIZE */
+.hero-right img{
+    width:85% !important;
+    max-width:570px !important;
+    height:auto !important;
+
+    /* Move image down */
+    margin-top:10px !important;
+
+    /* Space between image and paragraph */
+    margin-bottom:35px !important;
+}
+
+/* =========================================
+   ABOUT SECTION - REDUCE TEXT SPACING
+   ========================================= */
+
+.small-title{
+    margin-bottom:5px !important;
+}
+
+.hero-left h1{
+    margin-top:0 !important;
+    margin-bottom:8px !important;
+}
+
+.hero-left h2{
+    margin-top:0 !important;
+    margin-bottom:10px !important;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width:768px){
+
+    .small-title{
+        margin-bottom:3px !important;
+    }
+
+    .hero-left h1{
+        margin-top:-2px !important;
+        margin-bottom:4px !important;
+    }
+
+    .hero-left h2{
+        margin-top:0 !important;
+        margin-bottom:4px !important;
+    }
+
+}
+
+
     </style>
 
 </head>
@@ -2856,9 +2915,7 @@ About Nexford Kids
 </h1>
 
 <h2>
-
-Because ordinary was never the plan
-
+    Because <span class="orange-word">ordinary</span> was never the plan
 </h2>
 <p>
     About Nexford Kids Building Bright Futures, One Preschool at a Time.
