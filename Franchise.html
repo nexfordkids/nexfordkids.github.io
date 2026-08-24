@@ -2677,6 +2677,66 @@ body {
     margin: 0 auto;
 }
 
+/* =========================================
+   HERO MAIN IMAGE - MOBILE FIT
+   ========================================= */
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 85% !important;
+    max-width: 650px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-image {
+        width: 100% !important;
+        margin-top: 10px !important;
+        overflow: hidden !important;
+    }
+
+    .hero-image img {
+        width: 92% !important;
+        max-width: 500px !important;
+        height: auto !important;
+        object-fit: contain !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .hero-image {
+        width: 100% !important;
+        margin-top: 5px !important;
+    }
+
+    .hero-image img {
+        width: 100% !important;
+        max-width: 420px !important;
+        height: auto !important;
+    }
+}
+
 </style>
 
 
