@@ -3062,6 +3062,59 @@ font-size:24px;
 
 }
 
+/* =========================================
+   REMOVE GREEN LINE UNDER CONTACT US
+   ========================================= */
+
+/* Remove decorative lines from Contact page */
+.contact-hero::before,
+.contact-hero::after,
+.contact-section::before,
+.contact-section::after,
+
+.contact-hero .section-title::before,
+.contact-hero .section-title::after,
+.contact-section .section-title::before,
+.contact-section .section-title::after,
+
+.contact-hero .small-title::before,
+.contact-hero .small-title::after,
+.contact-section .small-title::before,
+.contact-section .small-title::after,
+
+.contact-hero h2::before,
+.contact-hero h2::after,
+.contact-section h2::before,
+.contact-section h2::after,
+
+.contact-hero h3::before,
+.contact-hero h3::after,
+.contact-section h3::before,
+.contact-section h3::after,
+
+.contact-hero .section-heading::before,
+.contact-hero .section-heading::after,
+.contact-section .section-heading::before,
+.contact-section .section-heading::after {
+
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    border: none !important;
+    background: none !important;
+}
+
+
+/* Also remove borders that may be creating the line */
+.contact-hero .small-title,
+.contact-section .small-title,
+.contact-hero .section-title,
+.contact-section .section-title {
+
+    border: none !important;
+}
+
 </style>
 
 </head>
