@@ -11878,6 +11878,274 @@ opacity:0;
 
 }
 
+/* =====================================================
+   MOBILE VIEW - 2 CARDS PER ROW
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Main section */
+    .curriculum-orbit {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 30px 15px 40px !important;
+        margin: 0 !important;
+        overflow: visible !important;
+        position: relative !important;
+    }
+
+    /* Remove desktop circle */
+    .curriculum-orbit .orbit-circle {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+
+        transform: none !important;
+
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+
+        padding: 0 !important;
+        margin: 0 auto !important;
+    }
+
+
+    /* =================================================
+       CENTER LUMINED IMAGE
+       ================================================= */
+
+    .curriculum-orbit .orbit-center {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        grid-column: 1 / -1 !important;
+
+        width: 150px !important;
+        height: 150px !important;
+
+        margin: 0 auto 25px auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        z-index: 10 !important;
+    }
+
+    .curriculum-orbit .orbit-center img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: contain !important;
+
+        display: block !important;
+    }
+
+
+    /* =================================================
+       ALL 8 CARDS
+       ================================================= */
+
+    .curriculum-orbit .orbit-card {
+
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        width: 100% !important;
+        height: 145px !important;
+        min-height: 145px !important;
+
+        margin: 0 !important;
+
+        padding: 15px 8px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+
+        z-index: 5 !important;
+    }
+
+
+    /* Remove desktop positioning */
+    .curriculum-orbit .card-top,
+    .curriculum-orbit .card-top-right,
+    .curriculum-orbit .card-right,
+    .curriculum-orbit .card-bottom-right,
+    .curriculum-orbit .card-bottom,
+    .curriculum-orbit .card-bottom-left,
+    .curriculum-orbit .card-left,
+    .curriculum-orbit .card-top-left {
+
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* =================================================
+       ICONS
+       ================================================= */
+
+    .curriculum-orbit .card-icon {
+
+        width: 50px !important;
+        height: 50px !important;
+
+        min-width: 50px !important;
+        min-height: 50px !important;
+
+        border-radius: 50% !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 0 8px 0 !important;
+    }
+
+
+    .curriculum-orbit .card-icon i {
+        font-size: 20px !important;
+    }
+
+
+    /* =================================================
+       CARD TEXT
+       ================================================= */
+
+    .curriculum-orbit .orbit-card h3 {
+
+        font-size: 15px !important;
+
+        line-height: 1.2 !important;
+
+        margin: 0 0 6px 0 !important;
+
+        text-align: center !important;
+    }
+
+
+    .curriculum-orbit .orbit-card p {
+
+        font-size: 10px !important;
+
+        line-height: 1.4 !important;
+
+        margin: 0 !important;
+
+        text-align: center !important;
+
+        max-width: 150px !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .curriculum-orbit {
+
+        padding: 25px 12px 35px !important;
+    }
+
+
+    .curriculum-orbit .orbit-circle {
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 12px !important;
+    }
+
+
+    .curriculum-orbit .orbit-center {
+
+        width: 130px !important;
+        height: 130px !important;
+
+        margin-bottom: 20px !important;
+    }
+
+
+    .curriculum-orbit .orbit-card {
+
+        height: 135px !important;
+        min-height: 135px !important;
+
+        padding: 12px 6px !important;
+    }
+
+
+    .curriculum-orbit .card-icon {
+
+        width: 45px !important;
+        height: 45px !important;
+
+        min-width: 45px !important;
+        min-height: 45px !important;
+    }
+
+
+    .curriculum-orbit .card-icon i {
+
+        font-size: 18px !important;
+    }
+
+
+    .curriculum-orbit .orbit-card h3 {
+
+        font-size: 13px !important;
+    }
+
+
+    .curriculum-orbit .orbit-card p {
+
+        font-size: 9px !important;
+        line-height: 1.35 !important;
+    }
+
+}
+
 </style>
 </head>
 
