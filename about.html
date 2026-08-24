@@ -2724,6 +2724,50 @@ transform:translateY(-5px);
 
 }
 
+/* =========================================
+   MOBILE APPLY FRANCHISE BUTTON
+   ========================================= */
+
+.mobile-apply {
+    display: none !important;
+}
+
+@media (max-width: 992px) {
+
+    .mobile-apply {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 8px !important;
+    }
+
+    .mobile-apply a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+
+        background: #ff7418 !important;
+        color: #ffffff !important;
+
+        padding: 11px 15px !important;
+
+        border-radius: 25px !important;
+
+        font-size: 15px !important;
+        font-weight: 600 !important;
+
+        width: 100% !important;
+
+        box-shadow: 0 8px 20px rgba(255,116,24,.20) !important;
+    }
+
+    .mobile-apply a:hover {
+        background: #e96510 !important;
+        color: #ffffff !important;
+    }
+
+}
+
     </style>
 
 </head>
@@ -2759,6 +2803,13 @@ HEADER
                 <li><a href="gallery.html">Gallery</a></li>
 
                 <li><a href="contact.html">Contact</a></li>
+
+                <li class="mobile-apply">
+    <a href="apply-franchise.html">
+        <i class="fa-solid fa-user-plus"></i>
+        Apply for Franchise
+    </a>
+</li>
 
             </ul>
 
