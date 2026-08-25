@@ -14618,6 +14618,76 @@ body {
 
 }
 
+/* =========================================================
+   FIRST 2 AWARD IMAGES - CIRCULAR FORMAT
+   ========================================================= */
+
+/* Make the first two icon containers circular */
+.award-card:nth-child(1) .award-icon,
+.award-card:nth-child(2) .award-icon {
+    width: 128px !important;
+    height: 128px !important;
+
+    border-radius: 50% !important;
+    overflow: hidden !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 auto 30px !important;
+
+    padding: 0 !important;
+
+    background: #ffffff !important;
+}
+
+
+/* Make the actual images fill the circle */
+.award-card:nth-child(1) .award-icon img,
+.award-card:nth-child(2) .award-icon img {
+    width: 100% !important;
+    height: 100% !important;
+
+    border-radius: 50% !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   OPTIONAL: MATCH THE SIZE OF YOUR OTHER 2 CIRCLES
+   ========================================================= */
+
+.award-card:nth-child(1) .award-icon,
+.award-card:nth-child(2) .award-icon {
+    width: 125px !important;
+    height: 125px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .award-card:nth-child(1) .award-icon,
+    .award-card:nth-child(2) .award-icon {
+        width: 105px !important;
+        height: 105px !important;
+    }
+}
+
 </style>
 </head>
 
