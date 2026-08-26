@@ -3264,7 +3264,37 @@ transform:translateY(-5px);
     opacity: 0 !important;
     pointer-events: none !important;
 }
-    
+
+/* FORCE REMOVE BACK-TO-TOP ORANGE ARROW */
+#topBtn,
+#topBtn.show {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    pointer-events: none !important;
+}
+
+/* REMOVE ONLY THE ORANGE FLOATING BUTTON */
+.floating-call-bg,
+.call-bg,
+.phone-bg,
+.orange-call,
+.orange-button {
+    display: none !important;
+}
+
+/* REMOVE ORANGE CIRCLE ONLY */
+.call-btn,
+.call-btn::before,
+.call-btn::after {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 
     </style>
 
@@ -5068,7 +5098,7 @@ Why Families Trust nexfordkids
                 Apply Now
             </a>
 
-            <a href="#consultation" class="consultation-btn">
+            <a href="contact.html" class="consultation-btn">
                 Book Consultation
             </a>
 
@@ -5099,11 +5129,7 @@ FOOTER
 
 </footer>
 
-<button id="topBtn">
 
-<i class="fa-solid fa-arrow-up"></i>
-
-</button>
 
 
 
