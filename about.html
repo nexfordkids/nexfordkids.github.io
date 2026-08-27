@@ -3658,6 +3658,81 @@ transform:translateY(-5px);
 
 }
 
+/* =========================================
+   FIX SPACE BETWEEN HEADER AND MAIN HEADING
+   ========================================= */
+
+/* Header */
+header,
+.navbar,
+.site-header,
+.main-header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Header container */
+.header-container,
+.nav-container,
+.navbar-container {
+    margin-bottom: 0 !important;
+}
+
+/* Main / Hero section */
+main,
+.hero,
+.hero-section,
+.banner,
+.home-hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Remove unwanted first-child spacing */
+main > section:first-child,
+.hero-section:first-child,
+.hero:first-child {
+    margin-top: 0 !important;
+}
+
+/* Heading */
+.hero h1,
+.hero-section h1,
+.home-hero h1,
+main h1 {
+    margin-top: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    header,
+    .navbar,
+    .site-header,
+    .main-header {
+        height: auto !important;
+        min-height: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .hero,
+    .hero-section,
+    .banner,
+    .home-hero,
+    main {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .hero h1,
+    .hero-section h1,
+    .home-hero h1,
+    main h1 {
+        margin-top: 0 !important;
+    }
+}
+
 
     </style>
 
