@@ -4080,6 +4080,74 @@ font-size:24px;
     pointer-events: none !important;
 }
 
+/* =========================================================
+   USE navigation.html FOR MOBILE + TABLET
+   ADD THIS AT THE VERY END OF CSS
+   ========================================================= */
+
+@media screen and (max-width: 992px) {
+
+    /* Hide the OLD page navigation */
+    body > header.header {
+        display: none !important;
+    }
+
+    /* Hide OLD mobile navigation elements */
+    body > .mobile-menu-panel,
+    body > .mobile-menu-backdrop,
+    body > .mobile-menu-button {
+        display: none !important;
+    }
+
+    /* Show the NEW navigation.html */
+    #navigation {
+        display: block !important;
+        width: 100% !important;
+        position: relative !important;
+        z-index: 99999 !important;
+    }
+
+    #navigation .nk-responsive-nav {
+        display: block !important;
+        width: 100% !important;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   Keep your existing desktop header
+   ========================================================= */
+
+@media screen and (min-width: 993px) {
+
+    #navigation {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE + TABLET
+   REDUCE SPACE AFTER NAVIGATION
+   ========================================================= */
+
+@media screen and (max-width: 992px) {
+
+    .hero,
+    .hero-section,
+    #hero {
+        margin-top: 0 !important;
+    }
+
+    .hero-content {
+        margin-top: 0 !important;
+    }
+
+}
+
 </style>
 
 
@@ -4088,7 +4156,7 @@ font-size:24px;
 
 <body>
 
-
+<div id="navigation"></div>
 
 
 <!-- =====================================
@@ -5753,6 +5821,48 @@ fetch("footer.html")
     });
 </script>
 
+<script>
+fetch("navigation.html")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("navigation.html not found");
+        }
+        return response.text();
+    })
+    .then(html => {
+
+        const container = document.getElementById("navigation");
+
+        // Insert HTML + CSS + JS
+        container.innerHTML = html;
+
+        // Execute scripts from navigation.html
+        container.querySelectorAll("script").forEach(oldScript => {
+
+            const newScript = document.createElement("script");
+
+            // Copy script attributes
+            Array.from(oldScript.attributes).forEach(attribute => {
+                newScript.setAttribute(
+                    attribute.name,
+                    attribute.value
+                );
+            });
+
+            // Copy JavaScript code
+            newScript.textContent = oldScript.textContent;
+
+            oldScript.parentNode.replaceChild(
+                newScript,
+                oldScript
+            );
+        });
+
+    })
+    .catch(error => {
+        console.error("Navigation loading error:", error);
+    });
+</script>
 
 </body>
 
