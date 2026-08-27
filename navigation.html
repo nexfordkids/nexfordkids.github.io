@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Nexford Kids Navigation</title>
+
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+
+<style>
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   MOBILE / TABLET NAVIGATION
+   HIDDEN ON DESKTOP
+   ========================================================= */
+
+.nk-responsive-nav {
+    display: none;
+}
+
+
+/* =========================================================
+   TABLET + MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 992px) {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .nk-responsive-nav {
+
+        display: block;
+
+        width: 100%;
+
+        height: 100px;
+
+        background: #ffffff;
+
+        position: relative;
+
+        z-index: 99990;
+    }
+
+
+    .nk-nav-inner {
+
+        width: 100%;
+
+        height: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    /* =====================================================
+       LOGO
+       ===================================================== */
+
+    .nk-nav-logo {
+
+        display: flex;
+
+        align-items: center;
+
+        width: auto;
+
+        max-width: calc(100% - 90px);
+
+        text-decoration: none;
+
+        flex-shrink: 1;
+    }
+
+
+    .nk-nav-logo img {
+
+        display: block;
+
+        width: 210px;
+
+        max-width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+    }
+
+
+    /* =====================================================
+       HAMBURGER BUTTON
+       ===================================================== */
+
+    .nk-menu-toggle {
+
+        position: relative;
+
+        width: 58px;
+
+        height: 58px;
+
+        min-width: 58px;
+
+        max-width: 58px;
+
+        padding: 0;
+
+        margin: 0;
+
+        border: none;
+
+        outline: none;
+
+        background: transparent;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 7px;
+
+        cursor: pointer;
+
+        flex-shrink: 0;
+
+        -webkit-tap-highlight-color: transparent;
+
+        z-index: 100002;
+    }
+
+
+    /* =====================================================
+       HAMBURGER LINES
+       ===================================================== */
+
+    .nk-menu-toggle span {
+
+        display: block;
+
+        width: 42px;
+
+        height: 7px;
+
+        margin: 0;
+
+        padding: 0;
+
+        background: #193a68;
+
+        border-radius: 10px;
+
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease;
+    }
+
+
+    /* =====================================================
+       ACTIVE HAMBURGER → X
+       ===================================================== */
+
+    .nk-menu-toggle.active {
+
+        gap: 0;
+    }
+
+
+    .nk-menu-toggle.active span:nth-child(1) {
+
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+
+    .nk-menu-toggle.active span:nth-child(2) {
+
+        opacity: 0;
+    }
+
+
+    .nk-menu-toggle.active span:nth-child(3) {
+
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+
+    /* =====================================================
+       DARK OVERLAY
+       ===================================================== */
+
+    .nk-menu-overlay {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        background:
+            rgba(0, 0, 0, 0.12);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+        z-index: 99994;
+    }
+
+
+    .nk-menu-overlay.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+    }
+
+
+    /* =====================================================
+       RIGHT SIDE MENU
+       EXACTLY 60% OF SCREEN
+       ===================================================== */
+
+    .nk-menu-drawer {
+
+        position: fixed;
+
+        top: 0;
+
+        right: 0;
+
+        width: 60vw;
+
+        height: 100vh;
+
+        height: 100dvh;
+
+        background: #ffffff;
+
+        z-index: 99999;
+
+        overflow-x: hidden;
+
+        overflow-y: auto;
+
+        -webkit-overflow-scrolling: touch;
+
+        transform: translateX(100%);
+
+        transition:
+            transform 0.32s
+            cubic-bezier(
+                0.4,
+                0,
+                0.2,
+                1
+            );
+
+        padding-top: 70px;
+
+        padding-left: 28px;
+
+        padding-right: 28px;
+
+        padding-bottom: 35px;
+    }
+
+
+    .nk-menu-drawer.active {
+
+        transform: translateX(0);
+    }
+
+
+    /* =====================================================
+       MENU LIST
+       ===================================================== */
+
+    .nk-menu-list {
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    .nk-menu-list li {
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+    }
+
+
+    /* =====================================================
+       MENU LINKS
+       ===================================================== */
+
+    .nk-menu-list li > a {
+
+        position: relative;
+
+        display: inline-block;
+
+        width: auto;
+
+        max-width: 100%;
+
+        padding-top: 14px;
+
+        padding-bottom: 12px;
+
+        color: #182d50;
+
+        text-decoration: none;
+
+        font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+
+        font-size: clamp(
+            18px,
+            3.6vw,
+            30px
+        );
+
+        font-weight: 500;
+
+        line-height: 1.15;
+
+        white-space: nowrap;
+
+        transition:
+            color 0.2s ease;
+    }
+
+
+    /* =====================================================
+       HOVER
+       ===================================================== */
+
+    .nk-menu-list li > a:hover {
+
+        color: #367b58;
+    }
+
+
+    /* =====================================================
+       ACTIVE PAGE
+       ===================================================== */
+
+    .nk-menu-list li > a.active {
+
+        color: #367b58;
+
+        font-weight: 600;
+    }
+
+
+    /* =====================================================
+       ACTIVE UNDERLINE
+       ===================================================== */
+
+    .nk-menu-list li > a.active::after {
+
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+
+        bottom: 3px;
+
+        width: 100%;
+
+        height: 5px;
+
+        background: #367b58;
+
+        border-radius: 10px;
+    }
+
+
+    /* =====================================================
+       APPLY FRANCHISE BUTTON
+       ===================================================== */
+
+    .nk-menu-list li > a.nk-apply-franchise {
+
+        display: flex !important;
+
+        width: 100% !important;
+
+        max-width: 100%;
+
+        min-height: 82px;
+
+        margin-top: 28px;
+
+        padding: 14px 12px !important;
+
+        background: #ff7418 !important;
+
+        color: #ffffff !important;
+
+        border-radius: 28px;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        text-align: center;
+
+        white-space: normal !important;
+
+        line-height: 1.05;
+
+        font-size: clamp(
+            15px,
+            3vw,
+            24px
+        ) !important;
+
+        font-weight: 700 !important;
+
+        box-shadow:
+            0 8px 20px
+            rgba(
+                255,
+                116,
+                24,
+                0.15
+            );
+    }
+
+
+    .nk-apply-franchise i {
+
+        flex-shrink: 0;
+
+        font-size: clamp(
+            25px,
+            5vw,
+            38px
+        );
+    }
+
+
+    /* =====================================================
+       PHONE
+       ===================================================== */
+
+    @media screen and (max-width: 600px) {
+
+        .nk-responsive-nav {
+
+            height: 92px;
+        }
+
+
+        .nk-nav-inner {
+
+            padding-left: 15px;
+
+            padding-right: 15px;
+        }
+
+
+        .nk-nav-logo {
+
+            max-width:
+                calc(100% - 75px);
+        }
+
+
+        .nk-nav-logo img {
+
+            width: 180px;
+
+            max-width: 55vw;
+        }
+
+
+        .nk-menu-toggle {
+
+            width: 52px;
+
+            height: 52px;
+
+            min-width: 52px;
+
+            max-width: 52px;
+        }
+
+
+        .nk-menu-toggle span {
+
+            width: 38px;
+
+            height: 6px;
+        }
+
+
+        .nk-menu-drawer {
+
+            width: 60vw;
+
+            padding-top: 62px;
+
+            padding-left: 20px;
+
+            padding-right: 20px;
+
+            padding-bottom: 25px;
+        }
+
+
+        .nk-menu-list li > a {
+
+            font-size:
+                clamp(
+                    17px,
+                    5vw,
+                    22px
+                );
+
+            padding-top: 12px;
+
+            padding-bottom: 10px;
+        }
+
+
+        .nk-menu-list li > a.active::after {
+
+            height: 4px;
+
+            bottom: 2px;
+        }
+
+
+        .nk-menu-list li > a.nk-apply-franchise {
+
+            min-height: 78px;
+
+            margin-top: 24px;
+
+            border-radius: 25px;
+
+            font-size:
+                clamp(
+                    14px,
+                    4vw,
+                    18px
+                ) !important;
+        }
+
+
+        .nk-apply-franchise i {
+
+            font-size: 28px;
+        }
+    }
+
+
+    /* =====================================================
+       VERY SMALL PHONES
+       ===================================================== */
+
+    @media screen and (max-width: 360px) {
+
+        .nk-responsive-nav {
+
+            height: 88px;
+        }
+
+
+        .nk-nav-inner {
+
+            padding-left: 12px;
+
+            padding-right: 12px;
+        }
+
+
+        .nk-nav-logo img {
+
+            width: 155px;
+        }
+
+
+        .nk-menu-toggle {
+
+            width: 48px;
+
+            height: 48px;
+
+            min-width: 48px;
+
+            max-width: 48px;
+        }
+
+
+        .nk-menu-toggle span {
+
+            width: 35px;
+
+            height: 5px;
+        }
+
+
+        .nk-menu-drawer {
+
+            width: 60vw;
+
+            padding-top: 55px;
+
+            padding-left: 15px;
+
+            padding-right: 15px;
+        }
+
+
+        .nk-menu-list li > a {
+
+            font-size: 16px;
+
+            padding-top: 10px;
+
+            padding-bottom: 9px;
+        }
+
+
+        .nk-menu-list li > a.nk-apply-franchise {
+
+            min-height: 68px;
+
+            margin-top: 20px;
+
+            border-radius: 20px;
+
+            font-size: 13px !important;
+        }
+
+
+        .nk-apply-franchise i {
+
+            font-size: 23px;
+        }
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="nk-responsive-nav">
+
+    <div class="nk-nav-inner">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="nk-nav-logo"
+        >
+
+            <img
+                src="logo1.jpeg"
+                alt="Nexford Kids"
+            >
+
+        </a>
+
+
+        <!-- HAMBURGER -->
+
+        <button
+            type="button"
+            id="nkMenuToggle"
+            class="nk-menu-toggle"
+            aria-label="Open Menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     OVERLAY
+     ========================================================= -->
+
+<div
+    id="nkMenuOverlay"
+    class="nk-menu-overlay"
+></div>
+
+
+<!-- =========================================================
+     DRAWER
+     ========================================================= -->
+
+<aside
+    id="nkMenuDrawer"
+    class="nk-menu-drawer"
+>
+
+    <ul class="nk-menu-list">
+
+
+        <!-- HOME -->
+
+        <li>
+
+            <a
+                href="index.html"
+                data-page="index.html"
+            >
+                Home
+            </a>
+
+        </li>
+
+
+        <!-- ABOUT -->
+
+        <li>
+
+            <a
+                href="about.html"
+                data-page="about.html"
+            >
+                About Us
+            </a>
+
+        </li>
+
+
+        <!-- CURRICULUM -->
+
+        <li>
+
+            <a
+                href="curriculum.html"
+                data-page="curriculum.html"
+            >
+                Curriculum
+            </a>
+
+        </li>
+
+
+        <!-- FRANCHISE -->
+
+        <li>
+
+            <a
+                href="Franchise.html"
+                data-page="franchise.html"
+            >
+                Franchise
+            </a>
+
+        </li>
+
+
+        <!-- GALLERY -->
+
+        <li>
+
+            <a
+                href="gallery.html"
+                data-page="gallery.html"
+            >
+                Gallery
+            </a>
+
+        </li>
+
+
+        <!-- CONTACT -->
+
+        <li>
+
+            <a
+                href="contact.html"
+                data-page="contact.html"
+            >
+                Contact Us
+            </a>
+
+        </li>
+
+
+        <!-- APPLY -->
+
+        <li>
+
+            <a
+                href="apply-franchise.html"
+                class="nk-apply-franchise"
+            >
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                <span>
+                    Apply for<br>
+                    Franchise
+                </span>
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</aside>
+
+
+<script>
+
+/* =========================================================
+   NEXFORD KIDS NAVIGATION JS
+   ========================================================= */
+
+(function () {
+
+
+    const menuButton =
+        document.getElementById(
+            "nkMenuToggle"
+        );
+
+
+    const menuDrawer =
+        document.getElementById(
+            "nkMenuDrawer"
+        );
+
+
+    const menuOverlay =
+        document.getElementById(
+            "nkMenuOverlay"
+        );
+
+
+    /* =====================================================
+       SAFETY CHECK
+       ===================================================== */
+
+    if (
+        !menuButton ||
+        !menuDrawer ||
+        !menuOverlay
+    ) {
+
+        return;
+
+    }
+
+
+    /* =====================================================
+       OPEN MENU
+       ===================================================== */
+
+    function openMenu() {
+
+        menuButton.classList.add(
+            "active"
+        );
+
+        menuDrawer.classList.add(
+            "active"
+        );
+
+        menuOverlay.classList.add(
+            "active"
+        );
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        document.body.style.overflow =
+            "hidden";
+    }
+
+
+    /* =====================================================
+       CLOSE MENU
+       ===================================================== */
+
+    function closeMenu() {
+
+        menuButton.classList.remove(
+            "active"
+        );
+
+        menuDrawer.classList.remove(
+            "active"
+        );
+
+        menuOverlay.classList.remove(
+            "active"
+        );
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        document.body.style.overflow =
+            "";
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+       ===================================================== */
+
+    menuButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+
+            if (
+                menuDrawer.classList.contains(
+                    "active"
+                )
+            ) {
+
+                closeMenu();
+
+            } else {
+
+                openMenu();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       OVERLAY
+       ===================================================== */
+
+    menuOverlay.addEventListener(
+        "click",
+        function () {
+
+            closeMenu();
+
+        }
+    );
+
+
+    /* =====================================================
+       ESCAPE KEY
+       ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeMenu();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       ACTIVE PAGE
+       ===================================================== */
+
+    let currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+
+    /* Root website */
+
+    if (
+        currentPage === ""
+    ) {
+
+        currentPage =
+            "index.html";
+    }
+
+
+    const navLinks =
+        menuDrawer.querySelectorAll(
+            "a[data-page]"
+        );
+
+
+    navLinks.forEach(
+        function (link) {
+
+            const page =
+                link
+                    .getAttribute(
+                        "data-page"
+                    )
+                    .toLowerCase();
+
+
+            if (
+                page === currentPage
+            ) {
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE AFTER NAVIGATION
+       ===================================================== */
+
+    menuDrawer
+        .querySelectorAll(
+            "a"
+        )
+        .forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        closeMenu();
+
+                    }
+                );
+
+            }
+        );
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
