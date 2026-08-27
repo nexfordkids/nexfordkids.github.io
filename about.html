@@ -4521,6 +4521,87 @@ marketing and operational support.
     }
 
 }
+
+/* =========================================================
+   FINAL NAVIGATION FIX
+   navigation.html = MOBILE + TABLET
+   Existing header = DESKTOP
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   DESKTOP
+   --------------------------------------------------------- */
+
+@media screen and (min-width: 993px) {
+
+    /* Hide loaded navigation.html */
+    #navigation {
+        display: none !important;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE + TABLET
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 992px) {
+
+    /* Hide the OLD header completely */
+    body > header.header {
+        display: none !important;
+    }
+
+    /* Hide OLD mobile navigation */
+    body > .mobile-menu-panel {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    body > .mobile-menu-backdrop {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* Hide OLD hamburger */
+    body > header.header .mobile-menu-button {
+        display: none !important;
+    }
+
+    /* Show NEW navigation.html */
+    #navigation {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+        z-index: 999999 !important;
+    }
+
+    #navigation .nk-responsive-nav {
+        display: block !important;
+        width: 100% !important;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   IMPORTANT: PREVENT OLD MENU FROM APPEARING AS TEXT
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 992px) {
+
+    .mobile-menu-panel:not(#navigation .mobile-menu-panel) {
+        display: none !important;
+    }
+
+    .mobile-menu-backdrop:not(#navigation .mobile-menu-backdrop) {
+        display: none !important;
+    }
+
+}
+    
 </style>
 
 
